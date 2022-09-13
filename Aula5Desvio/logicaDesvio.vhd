@@ -1,13 +1,13 @@
 	library ieee;
 use ieee.std_logic_1164.all;
 
-entity decoderGeneric is
-  port ( entrada : in std_logic_vector(3 downto 0);
-         saida : out std_logic_vector(6 downto 0)
+entity logicaDesvio is
+  port ( entrada : in std_logic_vector(2 downto 0);
+         saida : out std_logic
   );
 end entity;
 
-architecture comportamento of decoderGeneric is
+architecture comportamento of logicaDesvio is
 
   constant NOP  : std_logic_vector(3 downto 0) := "0000";
   constant LDA  : std_logic_vector(3 downto 0) := "0001";

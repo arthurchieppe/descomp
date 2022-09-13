@@ -32,7 +32,7 @@ architecture arquitetura of Aula5 is
 	signal saida_MUXProxPC: std_logic_vector (larguraDados downto 0);
 	signal saida_ULA: std_logic_vector (larguraDados - 1 downto 0);
 	signal flagzero: std_logic;
-	signal saida_flip_flop: std_logic;
+	signal saida_reg_flagzero: std_logic;
 	signal saida_logica_desvio: std_logic;
 	
 begin
@@ -53,8 +53,8 @@ REGA : entity work.registradorGenerico   generic map (larguraDados => larguraDad
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
           port map (entradaA => saida_REGA, entradaB => saida_MUXDado_ULA, seletor => saida_DEC_instrucao(4 downto 3), saida => saida_ULA, flagzero => flagzero);
 
-FlagZero : entity work.flipflopGenerico
-				port map (CLK => clk, DIN => flagzero, ENABLE => saida_DEC_instrucao(2), RST => '0', DOUT => saida_flip_flop);
+FlagZero : entity work.registradorGenerico generic map(larguraDados => 1)
+				port map (CLK => clk, DIN => flagzero, ENABLE => saida_DEC_instrucao(2), RST => '0', DOUT => saida_reg_flagzero);
 
 -- LogicaDesvio1:
 
