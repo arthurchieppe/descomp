@@ -13,8 +13,8 @@ end entity;
 
 architecture comportamento of muxGenericoNx1 is
   begin
-    saida_MUX <= entrada0_MUX when (seletor_MUX = '00') else entradaA_MUX
-						entrada1_MUX when (seletor_MUX = '01') else entradaA_MUX
-						entrada2_MUX when (seletor_MUX = '10') else entradaA_MUX
-						entrada3_MUX when (seletor_MUX = '11') else entradaA_MUX;
+    saida_MUX <= entrada0_MUX when (seletor_MUX = "00") else 
+					  entrada1_MUX when (seletor_MUX = "01") else
+					  entrada2_MUX when (seletor_MUX = "10") else
+					  entrada3_MUX when (seletor_MUX = "11");
 end architecture;

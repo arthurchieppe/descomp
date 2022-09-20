@@ -1,9 +1,11 @@
-library ieee;
+	library ieee;
 use ieee.std_logic_1164.all;
 
 entity decoderGeneric is
   port ( entrada : in std_logic_vector(3 downto 0);
-         saida : out std_logic_vector(11 downto 0)
+			flag    : in std_logic;
+         saida : out std_logic_vector(11 downto 0);
+			saida_desvio: out std_logic_vector(1 downto 0)
   );
 end entity;
 
@@ -35,4 +37,9 @@ saida <= "000000000000" when entrada = NOP else
 			"100100000000" when entrada = JSR else
 			"001000000000" when entrada = RET else
          "000000000000";  
+
+saida_desvio <= --"01" when entrada = (JMP  or (flag and JEQ) or JSR) else
+					 "10" when entrada = RET else
+					 "00";
+
 end architecture;
