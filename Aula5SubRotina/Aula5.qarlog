@@ -1,0 +1,26 @@
+Quartus Prime Archive log --	C:/descomp/Aula5SubRotina/Aula5.qarlog
+
+Archive:	C:/descomp/Aula5SubRotina/Aula5.qar
+Date:		Tue Sep 20 10:29:30 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/descomp/Aula5SubRotina/Aula5.qpf
+C:/descomp/Aula5SubRotina/Aula5.qsf
+C:/descomp/Aula5SubRotina/Aula5.vhd
+C:/descomp/Aula5SubRotina/ULASomaSub.vhd
+C:/descomp/Aula5SubRotina/Waveform.vwf
+C:/descomp/Aula5SubRotina/decoderGeneric.vhd
+C:/descomp/Aula5SubRotina/edgeDetector.vhd
+C:/descomp/Aula5SubRotina/flipFlopGenerico.vhd
+C:/descomp/Aula5SubRotina/memoriaRAM.vhd
+C:/descomp/Aula5SubRotina/memoriaROM.vhd
+C:/descomp/Aula5SubRotina/muxGenerico2x1.vhd
+C:/descomp/Aula5SubRotina/muxGenericoNx1.vhd
+C:/descomp/Aula5SubRotina/registradorGenerico.vhd
+C:/descomp/Aula5SubRotina/somaConstante.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
