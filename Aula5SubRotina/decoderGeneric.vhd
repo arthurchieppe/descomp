@@ -38,7 +38,8 @@ saida <= "000000000000" when entrada = NOP else
 			"001000000000" when entrada = RET else
          "000000000000";  
 
-saida_desvio <= --"01" when entrada = (JMP  or (flag and JEQ) or JSR) else
+saida_desvio <= "01" when entrada = JMP 
+						or (flag = '1' and entrada = JEQ) or entrada = JSR else
 					 "10" when entrada = RET else
 					 "00";
 

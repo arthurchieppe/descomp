@@ -1,5 +1,5 @@
 Flow report for Aula5
-Tue Sep 20 12:19:27 2022
+Tue Sep 20 09:48:46 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Sep 20 12:19:09 2022       ;
+; Flow Status                     ; Successful - Tue Sep 20 09:48:39 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula5                                       ;
 ; Top-level Entity Name           ; Aula5                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 17 / 56,480 ( < 1 % )                       ;
-; Total registers                 ; 25                                          ;
+; Logic utilization (in ALMs)     ; 24 / 56,480 ( < 1 % )                       ;
+; Total registers                 ; 27                                          ;
 ; Total pins                      ; 23 / 268 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/20/2022 12:16:18 ;
+; Start date & time ; 09/20/2022 09:47:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Aula5               ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 181124901786078.166368697715068        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 110352857499383.166367806716284        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -98,24 +98,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4879 MB             ; 00:00:50                           ;
-; Fitter               ; 00:01:48     ; 1.0                     ; 6899 MB             ; 00:04:05                           ;
-; Assembler            ; 00:00:36     ; 1.0                     ; 4841 MB             ; 00:00:26                           ;
-; Timing Analyzer      ; 00:00:16     ; 1.0                     ; 5224 MB             ; 00:00:16                           ;
-; Total                ; 00:03:03     ; --                      ; --                  ; 00:05:37                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4874 MB             ; 00:00:19                           ;
+; Fitter               ; 00:00:35     ; 1.0                     ; 6921 MB             ; 00:01:34                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4837 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 5220 MB             ; 00:00:06                           ;
+; Total                ; 00:00:56     ; --                      ; --                  ; 00:02:06                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+----------------------+-----------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname      ; OS Name    ; OS Version ; Processor type ;
-+----------------------+-----------------------+------------+------------+----------------+
-; Analysis & Synthesis ; ELLER-DESKTOP-NJCREO5 ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; ELLER-DESKTOP-NJCREO5 ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; ELLER-DESKTOP-NJCREO5 ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; ELLER-DESKTOP-NJCREO5 ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+-----------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Blade-Arthur     ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Blade-Arthur     ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Blade-Arthur     ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Blade-Arthur     ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
