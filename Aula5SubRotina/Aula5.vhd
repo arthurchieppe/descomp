@@ -2,7 +2,6 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity Aula5 is
-  -- Total de bits das entradas e saidas
   generic ( larguraDados : natural := 8;
         larguraEnderecos : natural := 9;
         simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
@@ -26,20 +25,19 @@ architecture arquitetura of Aula5 is
 	signal saida_ROM: std_logic_vector(12 downto 0);
 	signal saida_PC: std_logic_vector(larguraDados downto 0);
 	signal saida_RAM: std_logic_vector(larguraDados-1 downto 0);
-	signal saida_incrementaPC: std_logic_vector(larguraDados downto 0);
-	signal saida_DEC_instrucao: std_logic_vector (8 downto 0);
-	signal saida_MUXDado_ULA: std_logic_vector (larguraDados - 1 downto 0);
-	signal saida_MUXProxPC: std_logic_vector (larguraDados downto 0);
+	signal saida_DEC_instrucao: std_logic_vector (11 downto 0);
+	signal saida_MUX_EntradaB_ULA: std_logic_vector (larguraDados - 1 downto 0);
 	signal saida_ULA: std_logic_vector (larguraDados - 1 downto 0);
-	signal flagzero: std_logic;
-	signal saida_flip_flop: std_logic;
+	signal saida_flag: std_logic;
+	signal flag_igual: std_logic;
+	signal saida_incrementaPC: std_logic_vector(larguraDados downto 0);
+	signal saida_reg_retorno: std_logic_vector(larguraDados downto 0);
+	signal saida_desvio: std_logic_vector(1 downto 0);
+	signal saida_MUX_PC: std_logic_vector (larguraDados downto 0);
 	signal saida_logica_desvio: std_logic;
 	
 begin
 
--- Instanciando os componentes:
-
--- Para simular, fica mais simples tirar o edgeDetector
 gravar:  if simulacao generate
 CLK <= KEY;
 else generate
@@ -50,34 +48,43 @@ end generate;
 REGA : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
 			port map (CLK => CLK, DIN => saida_ULA, ENABLE => saida_DEC_instrucao(5),  RST => '0', DOUT => saida_REGA);
 
-ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
-          port map (entradaA => saida_REGA, entradaB => saida_MUXDado_ULA, seletor => saida_DEC_instrucao(4 downto 3), saida => saida_ULA, flagzero => flagzero);
-
-FlagZero : entity work.flipflopGenerico
-				port map (CLK => clk, DIN => flagzero, ENABLE => saida_DEC_instrucao(2), RST => '0', DOUT => saida_flip_flop);
-
--- LogicaDesvio1:
-
-incrementaPC :  entity work.somaConstante  generic map (larguraDados => larguraEnderecos, constante => 1)
-						port map( entrada => saida_PC, saida => saida_incrementaPC);
-		
 ROM1 : entity work.memoriaROM   generic map (dataWidth => 13, addrWidth => larguraEnderecos)
-          port map (Endereco => saida_PC, Dado => saida_ROM);
-
+			port map (Endereco => saida_PC, Dado => saida_ROM);
+ 
 RAM1 : entity work.memoriaRAM   generic map (dataWidth => larguraDados, addrWidth => larguraDados)
-          port map (addr => saida_ROM(7 downto 0), clk => CLK, dado_in => saida_REGA, habilita => saida_ROM(8), re => saida_DEC_instrucao(1), we => saida_DEC_instrucao(0), dado_out => saida_RAM);
+         port map (addr => saida_ROM(7 downto 0), clk => CLK, dado_in => saida_REGA, habilita => saida_ROM(8), re => saida_DEC_instrucao(1), we => saida_DEC_instrucao(0), dado_out => saida_RAM);
 
+MUX_EntradaB_ULA :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
+			port map( entradaA_MUX => saida_RAM, entradaB_MUX =>  saida_ROM(7 downto 0), seletor_MUX => saida_DEC_instrucao(6), saida_MUX => saida_MUX_EntradaB_ULA);
+		
+ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
+         port map (entradaA => saida_REGA, entradaB => saida_MUX_EntradaB_ULA, seletor => saida_DEC_instrucao(4 downto 3), saida => saida_ULA, flagzero => saida_flag);
+
+FLAG_IGUAL: entity work.registradorGenerico   generic map (larguraDados => larguraEnderecos)
+			port map (CLK => CLK, DIN => saida_flag, ENABLE => saida_DEC_instrucao(2),  RST => '0', DOUT => flag_igual);
+	
+incrementaPC :  entity work.somaConstante  generic map (larguraDados => larguraEnderecos, constante => 1)
+			port map( entrada => saida_PC, saida => saida_incrementaPC);
+
+DESVIO: entity work.registradorGenerico   generic map (larguraDados => larguraEnderecos)
+			port map()
+			
+REG_RETORNO: entity work.registradorGenerico   generic map (larguraDados => larguraEnderecos)
+			port map (CLK => CLK, DIN => saida_incrementaPC, ENABLE => saida_DEC_instrucao(11),  RST => '0', DOUT => saida_reg_retorno);
+		   
+MUX_PC :  entity work.muxGenericoNx1  generic map (larguraDados => larguraDados)
+			port map(entrada0_MUX => saida_incrementaPC,
+						entrada1_MUX => saida_ROM(8 downto 0),
+						entrada2_MUX => saida_reg_retorno,
+						entrada3_MUX => '0',
+						seletor_MUX => saida_desvio, 
+						saida_MUX => saida_MUX_PC);					
+						
 DEC_instrucao :  entity work.decoderGeneric
         port map( entrada => saida_ROM(12 downto 9), saida => saida_DEC_instrucao);	
-		   
-MUXProxPC :  entity work.muxGenerico2x1  generic map (larguraDados => larguraEnderecos)
-					port map( entradaA_MUX => saida_incrementaPC, entradaB_MUX =>  saida_ROM(8 downto 0), seletor_MUX => saida_logica_desvio, saida_MUX => saida_MUXProxPC);
-
-MUXDado_ULA :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
-						port map( entradaA_MUX => saida_RAM, entradaB_MUX =>  saida_ROM(7 downto 0), seletor_MUX => saida_DEC_instrucao(6), saida_MUX => saida_MUXDado_ULA);
-				
+	
 PC : entity work.registradorGenerico   generic map (larguraDados => larguraEnderecos)
-          port map (CLK => CLK, DIN => saida_MUXProxPC, ENABLE => '1',  RST => '0', DOUT => saida_PC);	 
+          port map (CLK => CLK, DIN => saida_MUX_PC, ENABLE => '1',  RST => '0', DOUT => saida_PC);	 
 
 PC_OUT <= saida_PC;
 Palavra_Controle <= saida_Dec_instrucao;

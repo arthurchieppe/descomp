@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity decoderGeneric is
   port ( entrada : in std_logic_vector(3 downto 0);
-         saida : out std_logic_vector(11 downto 0)
+         saida : out std_logic_vector(6 downto 0)
   );
 end entity;
 
@@ -18,21 +18,17 @@ architecture comportamento of decoderGeneric is
   constant JMP  : std_logic_vector(3 downto 0) := "0110";
   constant JEQ  : std_logic_vector(3 downto 0) := "0111";
   constant CEQ  : std_logic_vector(3 downto 0) := "1000";
-  constant JSR  : std_logic_vector(3 downto 0) := "1001";
-  constant RET  : std_logic_vector(3 downto 0) := "1010";
 
   begin
-  
-saida <= "000000000000" when entrada = NOP else
-         "000000110001" when entrada = LDA else
-         "000000100000" when entrada = SOMA else
-         "000000101000" when entrada = SUB else
-         "000001110000" when entrada = LDI else
-			"000000000001" when entrada = STA else
-			"010000000000" when entrada = JMP else
-			"000010000000" when entrada = JEQ else
-			"000000001110" when entrada = CEQ else
-			"100100000000" when entrada = JSR else
-			"001000000000" when entrada = RET else
-         "000000000000";  
+ -- 9 bit agr
+saida <= "0000000" when entrada = NOP else
+         "0011010" when entrada = LDA else
+         "0010010" when entrada = SOMA else
+         "0010110" when entrada = SUB else
+         "0111000" when entrada = LDI else
+			"0001001" when entrada = STA else
+			"1000000" when entrada = JMP else
+			"1000000" when entrada = JEQ else
+			"1000000" when entrada = CEQ else
+         "0000000";  -- NOP para os entradas Indefinidas
 end architecture;
