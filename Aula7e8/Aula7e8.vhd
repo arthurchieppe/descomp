@@ -9,8 +9,8 @@ entity Aula7e8 is
   );
   port   (
     CLOCK_50,FPGA_RESET : in std_logic;
-	 LEDR : out std_logic_vector (larguraEnderecos downto 0)
-	 
+	 LEDR : out std_logic_vector (larguraEnderecos downto 0);
+	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6: out std_logic_vector(6 downto 0) 
   );
 end entity;
 
@@ -76,10 +76,89 @@ logica_LED: entity work.ledComponent
 		   wr => hab_wr,
 		   Data_OUT => data_out,
 		   dec_bloco => saida_decoder_blocos(4),
+			habilita_led => not data_add_out(5),
 		   dec_ende => saida_decoder_enderecos(2 downto 0),
 	 	   saida_led => saida_led
 			);
 
+comp_HEX0: entity work.hexComponent
+			port map(
+		   CLK => CLK,
+		   wr => hab_wr,
+		   Data_OUT => data_out(3 downto 0),
+		   dec_bloco => saida_decoder_blocos(4),
+			habilita_hex => data_add_out(5),
+		   dec_ende => saida_decoder_enderecos(0),
+	 	   saida_7seg => HEX0
+			);
+			
+comp_HEX1: entity work.hexComponent
+			port map(
+		   CLK => CLK,
+		   wr => hab_wr,
+		   Data_OUT => data_out(3 downto 0),
+		   dec_bloco => saida_decoder_blocos(4),
+			habilita_hex => data_add_out(5),
+		   dec_ende => saida_decoder_enderecos(1),
+	 	   saida_7seg => HEX1
+			);
+
+comp_HEX2: entity work.hexComponent
+			port map(
+		   CLK => CLK,
+		   wr => hab_wr,
+		   Data_OUT => data_out(3 downto 0),
+		   dec_bloco => saida_decoder_blocos(4),
+			habilita_hex => data_add_out(5),
+		   dec_ende => saida_decoder_enderecos(2),
+	 	   saida_7seg => HEX2
+			);
+			
+comp_HEX3: entity work.hexComponent
+			port map(
+		   CLK => CLK,
+		   wr => hab_wr,
+		   Data_OUT => data_out(3 downto 0),
+		   dec_bloco => saida_decoder_blocos(4),
+			habilita_hex => data_add_out(5),
+		   dec_ende => saida_decoder_enderecos(3),
+	 	   saida_7seg => HEX3
+			);
+			
+			
+comp_HEX4: entity work.hexComponent
+			port map(
+		   CLK => CLK,
+		   wr => hab_wr,
+		   Data_OUT => data_out(3 downto 0),
+		   dec_bloco => saida_decoder_blocos(4),
+			habilita_hex => data_add_out(5),
+		   dec_ende => saida_decoder_enderecos(4),
+	 	   saida_7seg => HEX4
+			);
+			
+comp_HEX5: entity work.hexComponent
+			port map(
+		   CLK => CLK,
+		   wr => hab_wr,
+		   Data_OUT => data_out(3 downto 0),
+		   dec_bloco => saida_decoder_blocos(4),
+			habilita_hex => data_add_out(5),
+		   dec_ende => saida_decoder_enderecos(5),
+	 	   saida_7seg => HEX5
+			);
+			
+comp_HEX6: entity work.hexComponent
+			port map(
+		   CLK => CLK,
+		   wr => hab_wr,
+		   Data_OUT => data_out(3 downto 0),
+		   dec_bloco => saida_decoder_blocos(4),
+			habilita_hex => data_add_out(5),
+		   dec_ende => saida_decoder_enderecos(6),
+	 	   saida_7seg => HEX6
+			);
+			
 LEDR <= saida_led;
 
 end architecture;

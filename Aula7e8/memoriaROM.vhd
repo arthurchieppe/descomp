@@ -1,4 +1,4 @@
-library IEEE;
+	library IEEE;
 use IEEE.std_logic_1164.all;
 use ieee.numeric_std.all;
 
@@ -33,8 +33,19 @@ architecture assincrona of memoriaROM is
   function initMemory
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
-		  tmp(0)   := JSR  & '1' & "00001110";
-		  
+		  tmp(0)    := LDI  & '0' & x"01";
+        tmp(1)    := STA  & '1' & x"00";
+        tmp(2)    := SOMA & '0' & x"00";
+        tmp(3)    := STA  & '1' & x"00";
+		  tmp(4)    := SOMA & '0' & x"00";
+        tmp(5)    := STA  & '1' & x"01";
+		  tmp(6)    := SOMA & '0' & x"00";
+        tmp(7)    := STA  & '1' & x"02";
+		  tmp(8)    := SOMA & '0' & x"00";
+        tmp(9)    := STA  & '1' & x"03";
+		  tmp(10)   := SOMA & '0' & x"00";
+        tmp(11)   := STA  & '1' & x"04";
+		  tmp(12)   := JMP  & '0' & x"02";
 		  
         return tmp;
     end initMemory;

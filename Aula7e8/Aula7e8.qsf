@@ -67,4 +67,6 @@ set_global_assignment -name VHDL_FILE CPU.vhd
 set_global_assignment -name VHDL_FILE decoder3x8.vhd
 set_global_assignment -name VHDL_FILE edgeDetector.vhd
 set_global_assignment -name VHDL_FILE ledComponent.vhd
+set_global_assignment -name VHDL_FILE output_files/hexComponent.vhd
+set_global_assignment -name VHDL_FILE output_files/conversorHex7Seg.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
