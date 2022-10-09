@@ -2,6 +2,16 @@
 CLOCK_50 => edgedetector:detectorSub0.clk
 FPGA_RESET => cpu:CPU.FPGA_RESET
 FPGA_RESET => edgedetector:detectorSub0.entrada
+LEDR[0] <= ledcomponent:logica_LED.saida_led[0]
+LEDR[1] <= ledcomponent:logica_LED.saida_led[1]
+LEDR[2] <= ledcomponent:logica_LED.saida_led[2]
+LEDR[3] <= ledcomponent:logica_LED.saida_led[3]
+LEDR[4] <= ledcomponent:logica_LED.saida_led[4]
+LEDR[5] <= ledcomponent:logica_LED.saida_led[5]
+LEDR[6] <= ledcomponent:logica_LED.saida_led[6]
+LEDR[7] <= ledcomponent:logica_LED.saida_led[7]
+LEDR[8] <= ledcomponent:logica_LED.saida_led[8]
+LEDR[9] <= ledcomponent:logica_LED.saida_led[9]
 
 
 |Aula7e8|edgeDetector:detectorSub0
@@ -554,7 +564,7 @@ dado_out[6] <= dado_out[6].DB_MAX_OUTPUT_PORT_TYPE
 dado_out[7] <= dado_out[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula7e8|decoder3x8:DEC
+|Aula7e8|decoder3x8:DEC_Blocos
 entrada[0] => Equal0.IN2
 entrada[0] => Equal1.IN0
 entrada[0] => Equal2.IN2
@@ -587,5 +597,134 @@ saida[4] <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
 saida[5] <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
 saida[6] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|decoder3x8:DEC_Enderecos
+entrada[0] => Equal0.IN2
+entrada[0] => Equal1.IN0
+entrada[0] => Equal2.IN2
+entrada[0] => Equal3.IN1
+entrada[0] => Equal4.IN2
+entrada[0] => Equal5.IN1
+entrada[0] => Equal6.IN2
+entrada[0] => Equal7.IN2
+entrada[1] => Equal0.IN1
+entrada[1] => Equal1.IN2
+entrada[1] => Equal2.IN0
+entrada[1] => Equal3.IN0
+entrada[1] => Equal4.IN1
+entrada[1] => Equal5.IN2
+entrada[1] => Equal6.IN1
+entrada[1] => Equal7.IN1
+entrada[2] => Equal0.IN0
+entrada[2] => Equal1.IN1
+entrada[2] => Equal2.IN1
+entrada[2] => Equal3.IN2
+entrada[2] => Equal4.IN0
+entrada[2] => Equal5.IN0
+entrada[2] => Equal6.IN0
+entrada[2] => Equal7.IN0
+saida[0] <= Equal7.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Equal6.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Equal5.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Equal4.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|ledComponent:logica_LED
+CLK => flipflopgenerico:LED9.CLK
+CLK => flipflopgenerico:LED8.CLK
+CLK => registradorgenerico:LED0to7.CLK
+wr => comb.IN0
+wr => comb.IN0
+wr => comb.IN0
+Data_OUT[0] => flipflopgenerico:LED9.DIN
+Data_OUT[0] => flipflopgenerico:LED8.DIN
+Data_OUT[0] => registradorgenerico:LED0to7.DIN[0]
+Data_OUT[1] => registradorgenerico:LED0to7.DIN[1]
+Data_OUT[2] => registradorgenerico:LED0to7.DIN[2]
+Data_OUT[3] => registradorgenerico:LED0to7.DIN[3]
+Data_OUT[4] => registradorgenerico:LED0to7.DIN[4]
+Data_OUT[5] => registradorgenerico:LED0to7.DIN[5]
+Data_OUT[6] => registradorgenerico:LED0to7.DIN[6]
+Data_OUT[7] => registradorgenerico:LED0to7.DIN[7]
+dec_bloco => comb.IN1
+dec_bloco => comb.IN1
+dec_bloco => comb.IN1
+dec_ende[0] => comb.IN1
+dec_ende[1] => comb.IN1
+dec_ende[2] => comb.IN1
+saida_led[0] <= registradorgenerico:LED0to7.DOUT[0]
+saida_led[1] <= registradorgenerico:LED0to7.DOUT[1]
+saida_led[2] <= registradorgenerico:LED0to7.DOUT[2]
+saida_led[3] <= registradorgenerico:LED0to7.DOUT[3]
+saida_led[4] <= registradorgenerico:LED0to7.DOUT[4]
+saida_led[5] <= registradorgenerico:LED0to7.DOUT[5]
+saida_led[6] <= registradorgenerico:LED0to7.DOUT[6]
+saida_led[7] <= registradorgenerico:LED0to7.DOUT[7]
+saida_led[8] <= flipflopgenerico:LED8.DOUT
+saida_led[9] <= flipflopgenerico:LED9.DOUT
+
+
+|Aula7e8|ledComponent:logica_LED|flipFlopGenerico:LED9
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
+
+
+|Aula7e8|ledComponent:logica_LED|flipFlopGenerico:LED8
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
+
+
+|Aula7e8|ledComponent:logica_LED|registradorGenerico:LED0to7
+DIN[0] => DOUT[0]~reg0.DATAIN
+DIN[1] => DOUT[1]~reg0.DATAIN
+DIN[2] => DOUT[2]~reg0.DATAIN
+DIN[3] => DOUT[3]~reg0.DATAIN
+DIN[4] => DOUT[4]~reg0.DATAIN
+DIN[5] => DOUT[5]~reg0.DATAIN
+DIN[6] => DOUT[6]~reg0.DATAIN
+DIN[7] => DOUT[7]~reg0.DATAIN
+DOUT[0] <= DOUT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[7] <= DOUT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT[7]~reg0.ENA
+ENABLE => DOUT[6]~reg0.ENA
+ENABLE => DOUT[5]~reg0.ENA
+ENABLE => DOUT[4]~reg0.ENA
+ENABLE => DOUT[3]~reg0.ENA
+ENABLE => DOUT[2]~reg0.ENA
+ENABLE => DOUT[1]~reg0.ENA
+ENABLE => DOUT[0]~reg0.ENA
+CLK => DOUT[0]~reg0.CLK
+CLK => DOUT[1]~reg0.CLK
+CLK => DOUT[2]~reg0.CLK
+CLK => DOUT[3]~reg0.CLK
+CLK => DOUT[4]~reg0.CLK
+CLK => DOUT[5]~reg0.CLK
+CLK => DOUT[6]~reg0.CLK
+CLK => DOUT[7]~reg0.CLK
+RST => DOUT[0]~reg0.ACLR
+RST => DOUT[1]~reg0.ACLR
+RST => DOUT[2]~reg0.ACLR
+RST => DOUT[3]~reg0.ACLR
+RST => DOUT[4]~reg0.ACLR
+RST => DOUT[5]~reg0.ACLR
+RST => DOUT[6]~reg0.ACLR
+RST => DOUT[7]~reg0.ACLR
 
 
