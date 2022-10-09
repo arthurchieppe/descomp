@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity CPU is
+  generic ( 
+		  larguraDados : natural := 8;
+        larguraEnderecos : natural := 12;
+  );
+  port   (
+	 Instruction_IN: in std_logic_vector(larguraEnderecos downto 0);
+	 Data_IN: in std_logic_vector(larguraDados downto 0);
+	
+	 Data_OUT: out std_logic_vector(larguraDados downto 0);
+	 Data_Address: out std_logic_vector(larguraDados downto 0);
+	 Control: out std_logic_vector(4 downto 0);
+	 ROM_Adrress: out std_logic_vector(larguraDados downto 0);
+);
+end entity;
+
+
+architecture arquitetura of CPU is
+	signal CLK : std_logic;
+begin
+
+detectorSub0: work.edgeDetector(bordaSubida)
+        port map (clk => CLOCK_50, entrada => (not KEY), saida => CLK);
+
+
+end architecture;
