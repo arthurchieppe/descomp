@@ -6,7 +6,7 @@ entity Aula7e8 is
 		  larguraDados : natural := 8;
 		  larguraEnderecos : natural := 9;
         largurainstrucao : natural := 13;
-		  simulacao : boolean := FALSE
+		  simulacao : boolean := TRUE
   );
   port   (
     CLOCK_50:in std_logic;

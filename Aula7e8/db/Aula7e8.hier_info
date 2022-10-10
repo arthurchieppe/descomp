@@ -1,6 +1,15 @@
 |Aula7e8
-CLOCK_50 => edgedetector:gravar:detectorSub0.clk
-KEY[0] => edgedetector:gravar:detectorSub0.entrada
+CLOCK_50 => ~NO_FANOUT~
+KEY[0] => cpu:CPU.CLOCK_50
+KEY[0] => memoriaram:RAM.clk
+KEY[0] => ledcomponent:logica_LED.CLK
+KEY[0] => hexcomponent:comp_HEX0.CLK
+KEY[0] => hexcomponent:comp_HEX1.CLK
+KEY[0] => hexcomponent:comp_HEX2.CLK
+KEY[0] => hexcomponent:comp_HEX3.CLK
+KEY[0] => hexcomponent:comp_HEX4.CLK
+KEY[0] => hexcomponent:comp_HEX5.CLK
+KEY[0] => hexcomponent:comp_HEX6.CLK
 KEY[1] => cpu:CPU.FPGA_RESET
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
@@ -63,13 +72,6 @@ HEX6[3] <= hexcomponent:comp_HEX6.saida_7seg[3]
 HEX6[4] <= hexcomponent:comp_HEX6.saida_7seg[4]
 HEX6[5] <= hexcomponent:comp_HEX6.saida_7seg[5]
 HEX6[6] <= hexcomponent:comp_HEX6.saida_7seg[6]
-
-
-|Aula7e8|edgeDetector:\gravar:detectorSub0
-clk => saidaQ.CLK
-entrada => saida.IN1
-entrada => saidaQ.DATAIN
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula7e8|CPU:CPU
