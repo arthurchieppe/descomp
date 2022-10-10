@@ -1,4 +1,4 @@
-		library ieee;
+	library ieee;
 use ieee.std_logic_1164.all;
 
 entity decoderGeneric is
@@ -26,9 +26,9 @@ architecture comportamento of decoderGeneric is
   begin
   
 saida <= "000000000000" when entrada = NOP else
-         "000000110010" when entrada = LDA else
-         "000000100010" when entrada = SOMA else
-         "000000101010" when entrada = SUB else
+         "000000110001" when entrada = LDA else
+         "000000100000" when entrada = SOMA else
+         "000000101000" when entrada = SUB else
          "000001110000" when entrada = LDI else
 			"000000000001" when entrada = STA else
 			"010000000000" when entrada = JMP else
@@ -38,7 +38,8 @@ saida <= "000000000000" when entrada = NOP else
 			"001000000000" when entrada = RET else
          "000000000000";  
 
-saida_desvio <= "01" when entrada = JMP or (flag = '1' and entrada = JEQ) or entrada = JSR else
+saida_desvio <= "01" when entrada = JMP 
+						or (flag = '1' and entrada = JEQ) or entrada = JSR else
 					 "10" when entrada = RET else
 					 "00";
 

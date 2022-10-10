@@ -1,7 +1,9 @@
 |Aula7e8
-CLOCK_50 => edgedetector:detectorSub0.clk
-FPGA_RESET => cpu:CPU.FPGA_RESET
-FPGA_RESET => edgedetector:detectorSub0.entrada
+CLOCK_50 => edgedetector:gravar:detectorSub0.clk
+KEY[0] => edgedetector:gravar:detectorSub0.entrada
+KEY[1] => cpu:CPU.FPGA_RESET
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
 LEDR[0] <= ledcomponent:logica_LED.saida_led[0]
 LEDR[1] <= ledcomponent:logica_LED.saida_led[1]
 LEDR[2] <= ledcomponent:logica_LED.saida_led[2]
@@ -63,7 +65,7 @@ HEX6[5] <= hexcomponent:comp_HEX6.saida_7seg[5]
 HEX6[6] <= hexcomponent:comp_HEX6.saida_7seg[6]
 
 
-|Aula7e8|edgeDetector:detectorSub0
+|Aula7e8|edgeDetector:\gravar:detectorSub0
 clk => saidaQ.CLK
 entrada => saida.IN1
 entrada => saidaQ.DATAIN

@@ -5,10 +5,12 @@ entity Aula7e8 is
   generic ( 
 		  larguraDados : natural := 8;
 		  larguraEnderecos : natural := 9;
-        largurainstrucao : natural := 13
+        largurainstrucao : natural := 13;
+		  simulacao : boolean := FALSE
   );
   port   (
-    CLOCK_50,FPGA_RESET : in std_logic;
+    CLOCK_50:in std_logic;
+	 KEY: in  std_logic_vector(3 downto 0);
 	 LEDR : out std_logic_vector (larguraEnderecos downto 0);
 	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6: out std_logic_vector(6 downto 0) 
   );
@@ -28,13 +30,17 @@ architecture arquitetura of Aula7e8 is
 
 begin
 
+gravar:  if simulacao generate
+CLK <= KEY(0);
+else generate
 detectorSub0: work.edgeDetector(bordaSubida)
-        port map (clk => CLOCK_50, entrada => (not FPGA_RESET), saida => CLK);
+        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK);
+end generate;
 
 CPU: entity work.CPU 
 		  port map (
 		  CLOCK_50 => CLK,
-		  FPGA_RESET => FPGA_RESET,
+		  FPGA_RESET => KEY(1),
         Instruction_IN => saida_ROM,
 		  Data_IN => saida_RAM,
  		  Data_OUT => data_out,
