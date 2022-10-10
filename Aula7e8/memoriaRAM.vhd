@@ -5,11 +5,11 @@ use ieee.numeric_std.all;
 entity memoriaRAM is
    generic (
          dataWidth: natural := 8;
-         addrWidth: natural := 8
+         addrWidth: natural := 6
     );
     port
     (
-        addr     : in std_logic_vector(5 downto 0);
+        addr     : in std_logic_vector(addrWidth-1 downto 0);
         we, re   : in std_logic;
         habilita : in std_logic;
         clk      : in std_logic;
