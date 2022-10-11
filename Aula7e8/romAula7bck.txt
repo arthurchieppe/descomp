@@ -1,0 +1,12 @@
+tmp(0)    := LDI  & x"01";
+tmp(1)    := STA  & std_logic_vector(to_unsigned(0, addrWidth));
+tmp(2)    := SOMA & std_logic_vector(to_unsigned(0, addrWidth));
+tmp(3)    := STA  & std_logic_vector(to_unsigned(1, addrWidth));
+tmp(4)    := LDA  & std_logic_vector(to_unsigned(0, addrWidth));
+tmp(5)    := STA  & std_logic_vector(to_unsigned(257, addrWidth));
+tmp(6)    := STA  & std_logic_vector(to_unsigned(258, addrWidth));
+tmp(7)    := LDI  & x"55";
+tmp(8)    := STA  & std_logic_vector(to_unsigned(256, addrWidth));
+tmp(9)    := LDI  & x"AA";
+tmp(10)   := STA  & std_logic_vector(to_unsigned(256, addrWidth));
+tmp(11)   := JMP  & std_logic_vector(to_unsigned(11, addrWidth));

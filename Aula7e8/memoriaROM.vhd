@@ -17,9 +17,9 @@ architecture assincrona of memoriaROM is
 
 	constant NOP  : std_logic_vector(4 downto 0) := "00000";
 	constant LDA  : std_logic_vector(3 downto 0) := "0001";
-	constant SOMA : std_logic_vector(4 downto 0) := "00100";
+	constant SOMA : std_logic_vector(3 downto 0) := "0010";
 	constant LDI  : std_logic_vector(4 downto 0) := "01000";
-	constant SUB  : std_logic_vector(4 downto 0) := "00110";
+	constant SUB  : std_logic_vector(3 downto 0) := "0011";
 	constant STA  : std_logic_vector(3 downto 0) := "0101";
 	constant JMP  : std_logic_vector(3 downto 0) := "0110";
 	constant JEQ  : std_logic_vector(3 downto 0) := "0111";
@@ -33,34 +33,23 @@ architecture assincrona of memoriaROM is
   function initMemory
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
---		  tmp(0)    := LDI  & '0' & x"01";
---        tmp(1)    := STA  & '1' & x"00";
---        tmp(2)    := SOMA & '0' & x"00";
---        tmp(3)    := STA  & '1' & x"00";
---		  tmp(4)    := SOMA & '0' & x"00";
---        tmp(5)    := STA  & '1' & x"01";
---		  tmp(6)    := SOMA & '0' & x"00";
---        tmp(7)    := STA  & '1' & x"02";
---		  tmp(8)    := SOMA & '0' & x"00";
---        tmp(9)    := STA  & '1' & x"03";
---		  tmp(10)   := SOMA & '0' & x"00";
---        tmp(11)   := STA  & '1' & x"04";
---		  tmp(12)   := JMP  & '0' & x"02";
-		  
+
 		  tmp(0)    := LDI  & x"01";
---												conv_std_logic_vector(SOME_INTEGER, 4);
---        tmp(1)    := STA  & x"000";
 		  tmp(1)    := STA  & std_logic_vector(to_unsigned(0, addrWidth));
-        tmp(2)    := SOMA & x"00";
-        tmp(3)    := STA  & std_logic_vector(to_unsigned(1, addrWidth));
-		  tmp(4)    := LDA  & std_logic_vector(to_unsigned(0, addrWidth));
-        tmp(5)    := STA  & std_logic_vector(to_unsigned(257, addrWidth));
-		  tmp(6)    := STA  & std_logic_vector(to_unsigned(258, addrWidth));
-        tmp(7)    := LDI  & x"55";
-		  tmp(8)    := STA  & std_logic_vector(to_unsigned(256, addrWidth));
-        tmp(9)    := LDI  & x"AA";
-		  tmp(10)   := STA  & std_logic_vector(to_unsigned(256, addrWidth));
-		  tmp(11)   := JMP  & std_logic_vector(to_unsigned(11, addrWidth));
+        tmp(2)    := SOMA & std_logic_vector(to_unsigned(0, addrWidth));
+        tmp(3)    := STA  & std_logic_vector(to_unsigned(288, addrWidth));
+		  tmp(4)    := SOMA  & std_logic_vector(to_unsigned(0, addrWidth));
+        tmp(5)    := STA  & std_logic_vector(to_unsigned(289, addrWidth));
+		  tmp(6)    := SOMA  & std_logic_vector(to_unsigned(0, addrWidth));
+        tmp(7)    := STA  & std_logic_vector(to_unsigned(290, addrWidth));
+		  tmp(8)    := SOMA  & std_logic_vector(to_unsigned(0, addrWidth));
+        tmp(9)    := STA  & std_logic_vector(to_unsigned(291, addrWidth));
+		  tmp(10)   := SOMA  & std_logic_vector(to_unsigned(0, addrWidth));
+		  tmp(11)   := STA  & std_logic_vector(to_unsigned(292, addrWidth));
+		  tmp(12)   := SOMA  & std_logic_vector(to_unsigned(0, addrWidth));
+		  tmp(13)   := STA  & std_logic_vector(to_unsigned(293, addrWidth));
+		  tmp(14)   := JMP  & std_logic_vector(to_unsigned(2, addrWidth));
+		  
         return tmp;
     end initMemory;
 

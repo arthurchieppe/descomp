@@ -23,11 +23,13 @@ architecture arch_name of hexComponent is
 	signal saida7seg: std_logic_vector(6 downto 0); 
 begin
 
-REG: entity work.registradorGenerico
+REG: entity work.registradorGenerico generic map (larguraDados => larguraDados)
    	  port map (CLK => CLK, DIN => Data_OUT, ENABLE => (habilita_hex and wr and dec_bloco and dec_ende),  RST => '0', DOUT => saida_REG);
 		
 converSeg: entity work.conversorHex7Seg
 		  port map(dadoHex => saida_REG,
 				  saida7seg => saida7seg);
+
+saida_7seg <= saida7seg;
 		
 end architecture;

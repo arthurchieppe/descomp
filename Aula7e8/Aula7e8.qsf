@@ -71,4 +71,8 @@ set_global_assignment -name VHDL_FILE decoder3x8.vhd
 set_global_assignment -name VHDL_FILE edgeDetector.vhd
 set_global_assignment -name VHDL_FILE ledComponent.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VHDL_FILE buffer_3_state_8portas.vhd
+set_global_assignment -name VHDL_FILE buffer_3_state_1portas.vhd
+set_global_assignment -name VHDL_FILE logicaKeys.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

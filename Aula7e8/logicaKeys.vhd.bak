@@ -1,0 +1,63 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity logicaKeys is
+  port ( key0, key1, key2, key3, FPGA_reset : in std_logic;
+         hab_rd : in std_logic;
+			bloco : in std_logic;
+			endereco : in std_logic_vector (4 downto 0);
+			addr5 : in std_logic;
+         saida : out std_logic_vector (7 downto 0)
+  );
+end entity;
+
+architecture comportamento of logicaKeys is
+  signal habilitaKey0 : std_logic;
+  signal habilitaKey1 : std_logic;
+  signal habilitaKey2 : std_logic;
+  signal habilitaKey3 : std_logic;
+  signal habilitaKeyFPGAReset : std_logic;
+  
+  signal saidaKey0: std_logic;
+  signal saidaKey1: std_logic;
+  signal saidaKey2: std_logic;
+  signal saidaKey3: std_logic;
+  signal saidaFPGAReset: std_logic;
+  
+ begin 
+ 
+ key0: entity work.buffer_3_state_1portas
+			port map (
+			entrada => KEY(0),
+			saida => Data_IN,
+			habilita => data_add_out(5) and hab_rd and saida_decoder_enderecos(0) and saida_decoder_blocos(5)
+			);
+			
+key1: entity work.buffer_3_state_1portas
+			port map (
+			entrada => KEY(1),
+			saida => Data_IN,
+			habilita => data_add_out(5) and hab_rd and saida_decoder_enderecos(1) and saida_decoder_blocos(5)
+			);
+
+key2: entity work.buffer_3_state_1portas
+			port map (
+			entrada => KEY(2),
+			saida => Data_IN,
+			habilita => data_add_out(5) and hab_rd and saida_decoder_enderecos(2) and saida_decoder_blocos(5)
+			);
+			
+key3: entity work.buffer_3_state_1portas
+			port map (
+			entrada => KEY(3),
+			saida => Data_IN,
+			habilita => data_add_out(5) and hab_rd and saida_decoder_enderecos(3) and saida_decoder_blocos(5)
+			);
+			
+			
+key4: entity work.buffer_3_state_1portas
+			port map (
+			entrada => KEY(4),
+			saida => Data_IN,
+			habilita => data_add_out(5) and hab_rd and saida_decoder_enderecos(4) and saida_decoder_blocos(5)
+			);

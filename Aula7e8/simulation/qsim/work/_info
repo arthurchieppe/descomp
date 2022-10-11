@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/descomp/Aula7e8/simulation/qsim
 Eaula7e8
-Z1 w1665441584
+Z1 w1665445366
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,7 +20,7 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 2
+!i122 12
 R0
 Z11 8Aula7e8.vho
 Z12 FAula7e8.vho
@@ -30,9 +30,9 @@ Ve?;EnX`PnVdY^VOGeFOK_3
 !s100 PELm<o9zZMRal?0kCdRLo1
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1665441586
+Z14 !s110 1665445367
 !i10b 1
-Z15 !s108 1665441585.000000
+Z15 !s108 1665445367.000000
 Z16 !s90 -work|work|Aula7e8.vho|
 Z17 !s107 Aula7e8.vho|
 !i113 1
@@ -49,11 +49,11 @@ R8
 R9
 R10
 DEx4 work 7 aula7e8 0 22 e?;EnX`PnVdY^VOGeFOK_3
-!i122 2
-l440
-L121 4377
-VFcfS23UHTzQZczKNRBfX30
-!s100 W1za141bWNB>ZXVg1N7X<0
+!i122 12
+l385
+L121 4308
+VWZ7eSoj>kAz:2_5QR_H800
+!s100 _][ZcDFkS<HG>cAO:`XGT3
 R13
 32
 R14
@@ -65,13 +65,13 @@ R17
 R18
 R19
 Eaula7e8_vhd_vec_tst
-Z20 w1665441583
+Z20 w1665445365
 R8
 R9
-!i122 3
+!i122 13
 R0
-Z21 8Waveform.vwf.vht
-Z22 FWaveform.vwf.vht
+Z21 8Waveform2.vwf.vht
+Z22 FWaveform2.vwf.vht
 l0
 L32 1
 VJWLY`EbdehXLR`XIX9io]3
@@ -80,28 +80,28 @@ R13
 32
 R14
 !i10b 1
-Z23 !s108 1665441586.000000
-Z24 !s90 -work|work|Waveform.vwf.vht|
-Z25 !s107 Waveform.vwf.vht|
+R15
+Z23 !s90 -work|work|Waveform2.vwf.vht|
+Z24 !s107 Waveform2.vwf.vht|
 !i113 1
 R18
 R19
 Aaula7e8_arch
 R8
 R9
-Z26 DEx4 work 19 aula7e8_vhd_vec_tst 0 22 JWLY`EbdehXLR`XIX9io]3
-!i122 3
+Z25 DEx4 work 19 aula7e8_vhd_vec_tst 0 22 JWLY`EbdehXLR`XIX9io]3
+!i122 13
 l61
-Z27 L34 83
-Z28 V^OUI0m_H;Efb477303fe:3
-Z29 !s100 z75D6YjCC@N81T6`VBiX73
+Z26 L34 83
+Z27 V^OUI0m_H;Efb477303fe:3
+Z28 !s100 z75D6YjCC@N81T6`VBiX73
 R13
 32
 R14
 !i10b 1
+R15
 R23
 R24
-R25
 !i113 1
 R18
 R19
