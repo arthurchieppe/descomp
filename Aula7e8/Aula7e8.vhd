@@ -6,7 +6,7 @@ entity Aula7e8 is
 		  larguraDados : natural := 8;
 		  larguraEnderecos : natural := 9;
         largurainstrucao : natural := 13;
-		  simulacao : boolean := FALSE
+		  simulacao : boolean := TRUE
   );
   port   (
     CLOCK_50:in std_logic;
@@ -33,7 +33,7 @@ architecture arquitetura of Aula7e8 is
 begin
 
 gravar:  if simulacao generate
-CLK <= KEY(0);
+CLK <= CLOCK_50;
 else generate
 detectorSub0: work.edgeDetector(bordaSubida)
         port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK);

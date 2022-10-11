@@ -1,7 +1,14 @@
 |Aula7e8
-CLOCK_50 => edgedetector:gravar:detectorSub0.clk
+CLOCK_50 => cpu:CPU.CLOCK_50
+CLOCK_50 => memoriaram:RAM.clk
+CLOCK_50 => ledcomponent:logica_LED.CLK
+CLOCK_50 => hexcomponent:comp_HEX0.CLK
+CLOCK_50 => hexcomponent:comp_HEX1.CLK
+CLOCK_50 => hexcomponent:comp_HEX2.CLK
+CLOCK_50 => hexcomponent:comp_HEX3.CLK
+CLOCK_50 => hexcomponent:comp_HEX4.CLK
+CLOCK_50 => hexcomponent:comp_HEX5.CLK
 KEY[0] => logicakeys:logicaKeys.key0
-KEY[0] => edgedetector:gravar:detectorSub0.entrada
 KEY[1] => logicakeys:logicaKeys.key1
 KEY[2] => logicakeys:logicaKeys.key2
 KEY[3] => logicakeys:logicaKeys.key3
@@ -76,13 +83,6 @@ SW[6] => buffer_3_state_8portas:switch8entradas.entrada[6]
 SW[7] => buffer_3_state_8portas:switch8entradas.entrada[7]
 SW[8] => buffer_3_state_1portas:switch8.entrada
 SW[9] => buffer_3_state_1portas:switch9.entrada
-
-
-|Aula7e8|edgeDetector:\gravar:detectorSub0
-clk => saidaQ.CLK
-entrada => saida.IN1
-entrada => saidaQ.DATAIN
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula7e8|CPU:CPU
