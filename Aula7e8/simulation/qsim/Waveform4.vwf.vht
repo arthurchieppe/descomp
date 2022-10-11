@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/11/2022 10:34:24"
+-- Generated on "10/11/2022 10:49:04"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Aula7e8
 -- 
@@ -49,14 +49,14 @@ COMPONENT Aula7e8
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
 	FPGA_RESET : IN STD_LOGIC;
-	HEX0 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX1 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX2 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX3 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX4 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX5 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	LEDR : BUFFER STD_LOGIC_VECTOR(9 DOWNTO 0);
+	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
@@ -129,7 +129,11 @@ BEGIN
 	KEY(0) <= '0';
 	WAIT FOR 20000 ps;
 	KEY(0) <= '1';
-	WAIT FOR 2300000 ps;
+	WAIT FOR 460000 ps;
+	KEY(0) <= '0';
+	WAIT FOR 40000 ps;
+	KEY(0) <= '1';
+	WAIT FOR 1800000 ps;
 	KEY(0) <= '0';
 WAIT;
 END PROCESS t_prcs_KEY_0;

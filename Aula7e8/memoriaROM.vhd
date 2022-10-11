@@ -52,8 +52,10 @@ architecture assincrona of memoriaROM is
        tmp(33)    := LDA  & std_logic_vector(to_unsigned(2, addrWidth));
        tmp(34)    := SOMA & std_logic_vector(to_unsigned(1, addrWidth));
        tmp(35)    := STA  & std_logic_vector(to_unsigned(2, addrWidth));
-       tmp(36)    := STA  & std_logic_vector(to_unsigned(258, addrWidth));
-       tmp(37)    := RET  & x"00";
+--       tmp(36)    := STA  & std_logic_vector(to_unsigned(258, addrWidth));
+		tmp(36) := STA & std_logic_vector(to_unsigned(289, addrWidth));
+		tmp(37) := STA & std_logic_vector(to_unsigned(258, addrWidth));
+       tmp(38)    := RET  & x"00";
 
 		-- tmp(0)     := LDA  & std_logic_vector(to_unsigned(320, addrWidth));
         -- tmp(1)     := STA  & std_logic_vector(to_unsigned(288, addrWidth));

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/descomp/Aula7e8/simulation/qsim
 Eaula7e8
-Z1 w1665495266
+Z1 w1665496145
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,19 +20,19 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 42
+!i122 50
 R0
 Z11 8Aula7e8.vho
 Z12 FAula7e8.vho
 l0
 L39 1
-V@oSc1XIU^VD[A[TGU3H]<3
-!s100 32XoK?6^g9EM0>MR1SQQ40
+V_Nk@UC_bJ2G`1O45YIC_A2
+!s100 o8kjBf1`hDGDW[A22_B?<0
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1665495267
+Z14 !s110 1665496146
 !i10b 1
-Z15 !s108 1665495267.000000
+Z15 !s108 1665496146.000000
 Z16 !s90 -work|work|Aula7e8.vho|
 Z17 !s107 Aula7e8.vho|
 !i113 1
@@ -48,12 +48,12 @@ R7
 R8
 R9
 R10
-DEx4 work 7 aula7e8 0 22 @oSc1XIU^VD[A[TGU3H]<3
-!i122 42
-l574
-L126 5776
-Vk>FDE0685QZljMnzfK:QR1
-!s100 mc]f8kQbIG[z>TL>0AFY:3
+DEx4 work 7 aula7e8 0 22 _Nk@UC_bJ2G`1O45YIC_A2
+!i122 50
+l801
+L55 8617
+V65]HP=N@b6HH1nNFn37L31
+!s100 LgQF]ci>Gh<@zT[gQL6lK1
 R13
 32
 R14
@@ -65,10 +65,10 @@ R17
 R18
 R19
 Eaula7e8_vhd_vec_tst
-Z20 w1665495264
+Z20 w1665496144
 R8
 R9
-!i122 43
+!i122 51
 R0
 Z21 8Waveform4.vwf.vht
 Z22 FWaveform4.vwf.vht
@@ -78,30 +78,30 @@ VJWLY`EbdehXLR`XIX9io]3
 !s100 SZgC<^6K2gMC[_=GS:>jg1
 R13
 32
-R14
+Z23 !s110 1665496147
 !i10b 1
-R15
-Z23 !s90 -work|work|Waveform4.vwf.vht|
-Z24 !s107 Waveform4.vwf.vht|
+Z24 !s108 1665496147.000000
+Z25 !s90 -work|work|Waveform4.vwf.vht|
+Z26 !s107 Waveform4.vwf.vht|
 !i113 1
 R18
 R19
 Aaula7e8_arch
 R8
 R9
-Z25 DEx4 work 19 aula7e8_vhd_vec_tst 0 22 JWLY`EbdehXLR`XIX9io]3
-!i122 43
+Z27 DEx4 work 19 aula7e8_vhd_vec_tst 0 22 JWLY`EbdehXLR`XIX9io]3
+!i122 51
 l63
-Z26 L34 163
-Vnzf?Vn]5;JZ>0`l3hTTF`2
-!s100 7Nz=<a2FaVCPRJY9S>3RA3
+Z28 L34 167
+Z29 V7G2M22:Vm>YY2FoTSUS2O1
+Z30 !s100 mMEkJ_S;YHgHG959c5CS`0
 R13
 32
-R14
-!i10b 1
-R15
 R23
+!i10b 1
 R24
+R25
+R26
 !i113 1
 R18
 R19

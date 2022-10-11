@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/10/2022 20:42:45"
+-- Generated on "10/11/2022 10:44:48"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Aula7e8
 -- 
@@ -35,27 +35,29 @@ ARCHITECTURE Aula7e8_arch OF Aula7e8_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLOCK_50 : STD_LOGIC;
+SIGNAL FPGA_RESET : STD_LOGIC;
 SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
-SIGNAL HEX6 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL LEDR : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 COMPONENT Aula7e8
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
+	FPGA_RESET : IN STD_LOGIC;
 	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX6 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -63,15 +65,16 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	CLOCK_50 => CLOCK_50,
+	FPGA_RESET => FPGA_RESET,
 	HEX0 => HEX0,
 	HEX1 => HEX1,
 	HEX2 => HEX2,
 	HEX3 => HEX3,
 	HEX4 => HEX4,
 	HEX5 => HEX5,
-	HEX6 => HEX6,
 	KEY => KEY,
-	LEDR => LEDR
+	LEDR => LEDR,
+	SW => SW
 	);
 
 -- CLOCK_50

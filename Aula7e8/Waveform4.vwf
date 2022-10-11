@@ -21,6 +21,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,6 +40,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
@@ -1329,7 +1331,9 @@ TRANSITION_LIST("KEY[0]")
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 520.0;
 		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 2300.0;
+		LEVEL 1 FOR 460.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 1800.0;
 		LEVEL 0 FOR 20.0;
 	}
 }

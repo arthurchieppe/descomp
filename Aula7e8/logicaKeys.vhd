@@ -28,63 +28,63 @@ architecture comportamento of logicaKeys is
   
  begin 
  
- BUFF0_0 : ENTITY work.buffer_3_state_1portas
-        PORT MAP(
-            entrada => saida_ff,
-            habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
-            saida => key0Out(0)
-        );
+clear0_0 : ENTITY work.buffer_3_state_1portas
+	  PORT MAP(
+			entrada => saida_ff,
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
+			saida => key0Out(0)
+	  );
 
-    BUFF0_1 : ENTITY work.buffer_3_state_1portas
-        PORT MAP(
-            entrada => '0',
-            habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
-            saida => key0Out(1)
-        );
+clear0_1 : ENTITY work.buffer_3_state_1portas
+	  PORT MAP(
+			entrada => '0',
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
+			saida => key0Out(1)
+	  );
 
-    BUFF0_2 : ENTITY work.buffer_3_state_1portas
-        PORT MAP(
-            entrada => '0',
-            habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
-            saida => key0Out(2)
-        );
+clear0_2 : ENTITY work.buffer_3_state_1portas
+	  PORT MAP(
+			entrada => '0',
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
+			saida => key0Out(2)
+	  );
 
-    BUFF0_3 : ENTITY work.buffer_3_state_1portas
-        PORT MAP(
-            entrada => '0',
-            habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
-            saida => key0Out(3)
-        );
+clear0_3 : ENTITY work.buffer_3_state_1portas
+	  PORT MAP(
+			entrada => '0',
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
+			saida => key0Out(3)
+	  );
 
-    BUFF0_4 : ENTITY work.buffer_3_state_1portas
-        PORT MAP(
-            entrada => '0',
-            habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
-            saida => key0Out(4)
-        );
+clear0_4 : ENTITY work.buffer_3_state_1portas
+	  PORT MAP(
+			entrada => '0',
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
+			saida => key0Out(4)
+	  );
 
-    BUFF0_5 : ENTITY work.buffer_3_state_1portas
-        PORT MAP(
-            entrada => '0',
-            habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
-            saida => key0Out(5)
-        );
+clear0_5 : ENTITY work.buffer_3_state_1portas
+	  PORT MAP(
+			entrada => '0',
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
+			saida => key0Out(5)
+	  );
 
-    BUFF0_6 : ENTITY work.buffer_3_state_1portas
-        PORT MAP(
-            entrada => '0',
-            habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
-            saida => key0Out(6)
-        );
+clear0_6 : ENTITY work.buffer_3_state_1portas
+	  PORT MAP(
+			entrada => '0',
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
+			saida => key0Out(6)
+	  );
 
-    BUFF0_7 : ENTITY work.buffer_3_state_1portas
-        PORT MAP(
-            entrada => '0',
-            habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
-            saida => key0Out(7)
-        );
+clear0_7 : ENTITY work.buffer_3_state_1portas
+	  PORT MAP(
+			entrada => '0',
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco,
+			saida => key0Out(7)
+	  );
  
- KEY_1: entity work.buffer_3_state_1portas
+KEY_1: entity work.buffer_3_state_1portas
 			port map (
 			entrada => key1,
 			saida => key1Out,
