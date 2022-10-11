@@ -1592,10 +1592,22 @@ hab_rd => comb.IN0
 hab_rd => comb.IN0
 hab_rd => comb.IN0
 hab_rd => comb.IN0
-hab_rd => saida.IN0
+hab_rd => comb.IN0
+hab_rd => comb.IN0
+hab_rd => comb.IN0
+hab_rd => comb.IN0
+hab_rd => comb.IN0
+hab_rd => comb.IN0
+hab_rd => comb.IN0
 hab_rst511 => flipflopgenerico:FF.RST
 decoder_enderecos[0] => comb.IN1
-decoder_enderecos[0] => saida.IN1
+decoder_enderecos[0] => comb.IN1
+decoder_enderecos[0] => comb.IN1
+decoder_enderecos[0] => comb.IN1
+decoder_enderecos[0] => comb.IN1
+decoder_enderecos[0] => comb.IN1
+decoder_enderecos[0] => comb.IN1
+decoder_enderecos[0] => comb.IN1
 decoder_enderecos[1] => comb.IN1
 decoder_enderecos[2] => comb.IN1
 decoder_enderecos[3] => comb.IN1
@@ -1605,21 +1617,85 @@ decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
-decoder_bloco => saida.IN1
-saida[0] <= saidaFPGAReset.DB_MAX_OUTPUT_PORT_TYPE
-saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
-saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
-saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
-saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
-saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
-saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
-saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
+decoder_bloco => comb.IN1
+decoder_bloco => comb.IN1
+decoder_bloco => comb.IN1
+decoder_bloco => comb.IN1
+decoder_bloco => comb.IN1
+decoder_bloco => comb.IN1
+decoder_bloco => comb.IN1
+key1Out <= buffer_3_state_1portas:KEY_1.saida
+key2Out <= buffer_3_state_1portas:KEY_2.saida
+key3Out <= buffer_3_state_1portas:KEY_3.saida
+keyFPGAResetOut <= buffer_3_state_1portas:FPGARESET.saida
+key0Out[0] <= buffer_3_state_1portas:BUFF0_0.saida
+key0Out[1] <= buffer_3_state_1portas:BUFF0_1.saida
+key0Out[2] <= buffer_3_state_1portas:BUFF0_2.saida
+key0Out[3] <= buffer_3_state_1portas:BUFF0_3.saida
+key0Out[4] <= buffer_3_state_1portas:BUFF0_4.saida
+key0Out[5] <= buffer_3_state_1portas:BUFF0_5.saida
+key0Out[6] <= buffer_3_state_1portas:BUFF0_6.saida
+key0Out[7] <= buffer_3_state_1portas:BUFF0_7.saida
 data_add_out5 => comb.IN1
 data_add_out5 => comb.IN1
 data_add_out5 => comb.IN1
 data_add_out5 => comb.IN1
 data_add_out5 => comb.IN1
-data_add_out5 => saida.IN1
+data_add_out5 => comb.IN1
+data_add_out5 => comb.IN1
+data_add_out5 => comb.IN1
+data_add_out5 => comb.IN1
+data_add_out5 => comb.IN1
+data_add_out5 => comb.IN1
+data_add_out5 => comb.IN1
+
+
+|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_0
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_1
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_2
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_3
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_4
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_5
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_6
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_7
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:KEY_1
@@ -1641,12 +1717,6 @@ saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:FPGARESET
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:KEY_0
 entrada => saida.DATAIN
 habilita => saida.OE
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE

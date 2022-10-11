@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula7e8
-Tue Oct 11 09:11:36 2022
+Tue Oct 11 10:30:34 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -42,22 +42,29 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  34. Parameter Settings for User Entity Instance: hexComponent:comp_HEX5
  35. Parameter Settings for User Entity Instance: hexComponent:comp_HEX5|registradorGenerico:REG
  36. Port Connectivity Checks: "logicaKeys:logicaKeys|flipFlopGenerico:FF"
- 37. Port Connectivity Checks: "hexComponent:comp_HEX0|conversorHex7Seg:converSeg"
- 38. Port Connectivity Checks: "hexComponent:comp_HEX0|registradorGenerico:REG"
- 39. Port Connectivity Checks: "ledComponent:logica_LED|registradorGenerico:LED0to7"
- 40. Port Connectivity Checks: "ledComponent:logica_LED|flipFlopGenerico:LED8"
- 41. Port Connectivity Checks: "ledComponent:logica_LED|flipFlopGenerico:LED9"
- 42. Port Connectivity Checks: "decoder3x8:DEC_Enderecos"
- 43. Port Connectivity Checks: "decoder3x8:DEC_Blocos"
- 44. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
- 45. Port Connectivity Checks: "CPU:CPU|registradorGenerico:REG_RETORNO"
- 46. Port Connectivity Checks: "CPU:CPU|muxGenericoNx1:MUX_PC"
- 47. Port Connectivity Checks: "CPU:CPU|registradorGenerico:REGA"
- 48. Port Connectivity Checks: "CPU:CPU|flipFlopGenerico:REG_FLAG"
- 49. Port Connectivity Checks: "CPU:CPU|decoderGeneric:DEC_instrucao"
- 50. Post-Synthesis Netlist Statistics for Top Partition
- 51. Elapsed Time Per Partition
- 52. Analysis & Synthesis Messages
+ 37. Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_7"
+ 38. Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_6"
+ 39. Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_5"
+ 40. Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_4"
+ 41. Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_3"
+ 42. Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_2"
+ 43. Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_1"
+ 44. Port Connectivity Checks: "hexComponent:comp_HEX0|conversorHex7Seg:converSeg"
+ 45. Port Connectivity Checks: "hexComponent:comp_HEX0|registradorGenerico:REG"
+ 46. Port Connectivity Checks: "ledComponent:logica_LED|registradorGenerico:LED0to7"
+ 47. Port Connectivity Checks: "ledComponent:logica_LED|flipFlopGenerico:LED8"
+ 48. Port Connectivity Checks: "ledComponent:logica_LED|flipFlopGenerico:LED9"
+ 49. Port Connectivity Checks: "decoder3x8:DEC_Enderecos"
+ 50. Port Connectivity Checks: "decoder3x8:DEC_Blocos"
+ 51. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 52. Port Connectivity Checks: "CPU:CPU|registradorGenerico:REG_RETORNO"
+ 53. Port Connectivity Checks: "CPU:CPU|muxGenericoNx1:MUX_PC"
+ 54. Port Connectivity Checks: "CPU:CPU|registradorGenerico:REGA"
+ 55. Port Connectivity Checks: "CPU:CPU|flipFlopGenerico:REG_FLAG"
+ 56. Port Connectivity Checks: "CPU:CPU|decoderGeneric:DEC_instrucao"
+ 57. Post-Synthesis Netlist Statistics for Top Partition
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
 
 
 
@@ -84,7 +91,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 11 09:11:36 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 11 10:30:34 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula7e8                                     ;
 ; Top-level Entity Name           ; Aula7e8                                     ;
@@ -245,12 +252,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 98             ;
+; Estimate of Logic utilization (ALMs needed) ; 99             ;
 ;                                             ;                ;
 ; Combinational ALUT usage for logic          ; 170            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 22             ;
-;     -- 5 input functions                    ; 43             ;
+;     -- 6 input functions                    ; 23             ;
+;     -- 5 input functions                    ; 42             ;
 ;     -- 4 input functions                    ; 40             ;
 ;     -- <=3 input functions                  ; 65             ;
 ;                                             ;                ;
@@ -262,7 +269,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 58             ;
-; Total fan-out                               ; 944            ;
+; Total fan-out                               ; 945            ;
 ; Average fan-out                             ; 2.59           ;
 +---------------------------------------------+----------------+
 
@@ -1098,6 +1105,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+-------------------------------------------+
 
 
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_7" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; entrada ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_6" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; entrada ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_5" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; entrada ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_4" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; entrada ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_3" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; entrada ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_2" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; entrada ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "logicaKeys:logicaKeys|buffer_3_state_1portas:BUFF0_1" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; entrada ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "hexComponent:comp_HEX0|conversorHex7Seg:converSeg" ;
 +----------+-------+----------+-------------------------------------------------+
@@ -1241,8 +1311,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         2 data inputs ; 15                          ;
 ;         3 data inputs ; 39                          ;
 ;         4 data inputs ; 39                          ;
-;         5 data inputs ; 29                          ;
-;         6 data inputs ; 22                          ;
+;         5 data inputs ; 28                          ;
+;         6 data inputs ; 23                          ;
 ; boundary_port         ; 68                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.30                        ;
@@ -1255,7 +1325,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1265,7 +1335,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 11 09:11:05 2022
+    Info: Processing started: Tue Oct 11 10:30:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula7e8 -c Aula7e8
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1325,7 +1395,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file buffer_
     Info (12022): Found design unit 1: buffer_3_state_1portas-comportamento File: C:/descomp/Aula7e8/buffer_3_state_1portas.vhd Line: 12
     Info (12023): Found entity 1: buffer_3_state_1portas File: C:/descomp/Aula7e8/buffer_3_state_1portas.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file logicakeys.vhd
-    Info (12022): Found design unit 1: logicaKeys-comportamento File: C:/descomp/Aula7e8/logicaKeys.vhd Line: 16
+    Info (12022): Found design unit 1: logicaKeys-comportamento File: C:/descomp/Aula7e8/logicaKeys.vhd Line: 18
     Info (12023): Found entity 1: logicaKeys File: C:/descomp/Aula7e8/logicaKeys.vhd Line: 4
 Info (12127): Elaborating entity "Aula7e8" for the top level hierarchy
 Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: C:/descomp/Aula7e8/Aula7e8.vhd Line: 42
@@ -1356,7 +1426,7 @@ Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "hexComponent:
 Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "buffer_3_state_8portas:switch8entradas" File: C:/descomp/Aula7e8/Aula7e8.vhd Line: 158
 Info (12128): Elaborating entity "buffer_3_state_1portas" for hierarchy "buffer_3_state_1portas:switch8" File: C:/descomp/Aula7e8/Aula7e8.vhd Line: 165
 Info (12128): Elaborating entity "logicaKeys" for hierarchy "logicaKeys:logicaKeys" File: C:/descomp/Aula7e8/Aula7e8.vhd Line: 179
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "logicaKeys:logicaKeys|edgeDetector:DEB" File: C:/descomp/Aula7e8/logicaKeys.vhd Line: 66
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "logicaKeys:logicaKeys|edgeDetector:DEB" File: C:/descomp/Aula7e8/logicaKeys.vhd Line: 123
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/descomp/Aula7e8/memoriaRAM.vhd Line: 27
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
@@ -1393,9 +1463,9 @@ Info (21057): Implemented 277 device resources after synthesis - the final resou
     Info (21059): Implemented 52 output pins
     Info (21061): Implemented 209 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Tue Oct 11 09:11:36 2022
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:01:10
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Tue Oct 11 10:30:34 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:08
 
 

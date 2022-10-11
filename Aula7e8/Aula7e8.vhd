@@ -185,10 +185,15 @@ logicaKeys: entity work.logicaKeys
 			key3 => KEY(3),
 			FPGA_RESET => FPGA_RESET,
 			hab_rd => hab_rd,
-			hab_rst511 => data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and hab_wr,  
+			hab_rst511 => data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and data_add_out(8) and hab_wr,  
 			decoder_enderecos => saida_decoder_enderecos(4 downto 0),
 			decoder_bloco => saida_decoder_blocos(5),
-			saida => Data_IN,
+			key1Out => Data_IN(0),
+			key2Out => Data_IN(0),
+			key3Out => Data_IN(0),
+			keyFPGAResetOut => Data_IN(0),
+			key0Out => Data_IN,
+
 			data_add_out5 => data_add_out(5)
 			);
 			

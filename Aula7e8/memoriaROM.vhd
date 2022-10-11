@@ -43,7 +43,7 @@ architecture assincrona of memoriaROM is
        tmp(6)     := LDA  & std_logic_vector(to_unsigned(352, addrWidth));
        tmp(7)     := STA  & std_logic_vector(to_unsigned(288, addrWidth));
        tmp(8)     := CEQ  & std_logic_vector(to_unsigned(0, addrWidth));
-       tmp(9)     := JEQ  & std_logic_vector(to_unsigned(10, addrWidth));
+       tmp(9)     := JEQ  & std_logic_vector(to_unsigned(11, addrWidth));
        tmp(10)    := JSR  & std_logic_vector(to_unsigned(32, addrWidth));
        tmp(11)    := NOP;
        tmp(12)    := JMP  & std_logic_vector(to_unsigned(5, addrWidth));
