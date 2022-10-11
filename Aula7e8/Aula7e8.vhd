@@ -13,7 +13,7 @@ entity Aula7e8 is
 	 KEY: in  std_logic_vector(3 downto 0);
 	 FPGA_RESET : in std_logic;
 	 LEDR : out std_logic_vector (larguraEnderecos downto 0);
-	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6: out std_logic_vector(6 downto 0);
+	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0);
 	 SW: in std_logic_vector(9 downto 0) 
   );
 end entity;
@@ -42,8 +42,7 @@ end generate;
 CPU: entity work.CPU 
 		  port map (
 		  CLOCK_50 => CLK,
-		  FPGA_RESET => FPGA_RESET,
-        Instruction_IN => saida_ROM,
+          Instruction_IN => saida_ROM,
 		  Data_IN => Data_IN,
  		  Data_OUT => data_out,
 		  Rd => hab_rd, 
@@ -156,12 +155,10 @@ comp_HEX5: entity work.hexComponent
 	 	   saida_7seg => HEX5
 			);
 			
-			
-			
 switch8entradas: entity work.buffer_3_state_8portas
 			port map (
-			entrada => SW(7 downto 0),
-			saida => Data_IN(larguraDados-1 downto 0),
+			entrada => SW(larguraDados-1 downto 0),
+			saida => Data_IN,
 			habilita => (not data_add_out(5)) and hab_rd and saida_decoder_enderecos(0) and saida_decoder_blocos(5)
 			);
 			
@@ -181,12 +178,14 @@ switch9: entity work.buffer_3_state_1portas
 			
 logicaKeys: entity work.logicaKeys 
 			port map(
+			CLK => CLK, 
 			key0 => KEY(0),
 			key1 => KEY(1),
 			key2 => KEY(2),
 			key3 => KEY(3),
 			FPGA_RESET => FPGA_RESET,
 			hab_rd => hab_rd,
+			hab_rst511 => data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and hab_wr,  
 			decoder_enderecos => saida_decoder_enderecos(4 downto 0),
 			decoder_bloco => saida_decoder_blocos(5),
 			saida => Data_IN,

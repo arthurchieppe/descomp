@@ -9,12 +9,12 @@ end entity;
 
 architecture comportamento of decoder3x8 is
   begin
-    saida(7) <= '1' when (entrada = "111") else '0';
-    saida(6) <= '1' when (entrada = "110") else '0';
-    saida(5) <= '1' when (entrada = "101") else '0';
-    saida(4) <= '1' when (entrada = "100") else '0';
-    saida(3) <= '1' when (entrada = "011") else '0';
-    saida(2) <= '1' when (entrada = "010") else '0';
-    saida(1) <= '1' when (entrada = "001") else '0';
-    saida(0) <= '1' when (entrada = "000") else '0';
+    saida <= "00000001" when entrada = "000" else
+            "00000010" when entrada = "001" else
+            "00000100" when entrada = "010" else
+            "00001000" when entrada = "011" else
+            "00010000" when entrada = "100" else
+            "00100000" when entrada = "101" else
+            "01000000" when entrada = "110" else
+            "10000000";
 end architecture;

@@ -8,7 +8,7 @@ entity CPU is
         largurainstrucao : natural := 13
   );
   port   (
-	 CLOCK_50, FPGA_RESET: in std_logic;
+	 CLOCK_50: in std_logic;
 	 Instruction_IN: in std_logic_vector(largurainstrucao - 1 downto 0);
 	 Data_IN: in std_logic_vector(larguraDados - 1 downto 0);
 	

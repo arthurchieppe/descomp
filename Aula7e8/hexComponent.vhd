@@ -28,6 +28,9 @@ REG: entity work.registradorGenerico generic map (larguraDados => larguraDados)
 		
 converSeg: entity work.conversorHex7Seg
 		  port map(dadoHex => saida_REG,
+				  apaga => '0',
+				  negativo => '0',
+				  overflow => '0',
 				  saida7seg => saida7seg);
 
 saida_7seg <= saida7seg;
