@@ -1581,9 +1581,10 @@ saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula7e8|logicaKeys:logicaKeys
-CLK => edgedetector:DEB.clk
-key0 => edgedetector:DEB.entrada
-key1 => buffer_3_state_1portas:KEY_1.entrada
+CLK => keydebounce:KEY_0.CLK
+CLK => keydebounce:KEY_1.CLK
+key0 => keydebounce:KEY_0.key_in
+key1 => keydebounce:KEY_1.key_in
 key2 => buffer_3_state_1portas:KEY_2.entrada
 key3 => buffer_3_state_1portas:KEY_3.entrada
 FPGA_reset => buffer_3_state_1portas:FPGARESET.entrada
@@ -1592,21 +1593,8 @@ hab_rd => comb.IN0
 hab_rd => comb.IN0
 hab_rd => comb.IN0
 hab_rd => comb.IN0
-hab_rd => comb.IN0
-hab_rd => comb.IN0
-hab_rd => comb.IN0
-hab_rd => comb.IN0
-hab_rd => comb.IN0
-hab_rd => comb.IN0
-hab_rd => comb.IN0
-hab_rst511 => flipflopgenerico:FF.RST
-decoder_enderecos[0] => comb.IN1
-decoder_enderecos[0] => comb.IN1
-decoder_enderecos[0] => comb.IN1
-decoder_enderecos[0] => comb.IN1
-decoder_enderecos[0] => comb.IN1
-decoder_enderecos[0] => comb.IN1
-decoder_enderecos[0] => comb.IN1
+hab_rst511 => keydebounce:KEY_0.clear_read
+hab_rst511 => keydebounce:KEY_1.clear_read
 decoder_enderecos[0] => comb.IN1
 decoder_enderecos[1] => comb.IN1
 decoder_enderecos[2] => comb.IN1
@@ -1617,32 +1605,25 @@ decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
-decoder_bloco => comb.IN1
-decoder_bloco => comb.IN1
-decoder_bloco => comb.IN1
-decoder_bloco => comb.IN1
-decoder_bloco => comb.IN1
-decoder_bloco => comb.IN1
-decoder_bloco => comb.IN1
-key1Out <= buffer_3_state_1portas:KEY_1.saida
 key2Out <= buffer_3_state_1portas:KEY_2.saida
 key3Out <= buffer_3_state_1portas:KEY_3.saida
 keyFPGAResetOut <= buffer_3_state_1portas:FPGARESET.saida
-key0Out[0] <= buffer_3_state_1portas:clear0_0.saida
-key0Out[1] <= buffer_3_state_1portas:clear0_1.saida
-key0Out[2] <= buffer_3_state_1portas:clear0_2.saida
-key0Out[3] <= buffer_3_state_1portas:clear0_3.saida
-key0Out[4] <= buffer_3_state_1portas:clear0_4.saida
-key0Out[5] <= buffer_3_state_1portas:clear0_5.saida
-key0Out[6] <= buffer_3_state_1portas:clear0_6.saida
-key0Out[7] <= buffer_3_state_1portas:clear0_7.saida
-data_add_out5 => comb.IN1
-data_add_out5 => comb.IN1
-data_add_out5 => comb.IN1
-data_add_out5 => comb.IN1
-data_add_out5 => comb.IN1
-data_add_out5 => comb.IN1
-data_add_out5 => comb.IN1
+key0Out[0] <= keydebounce:KEY_0.key_out[0]
+key0Out[1] <= keydebounce:KEY_0.key_out[1]
+key0Out[2] <= keydebounce:KEY_0.key_out[2]
+key0Out[3] <= keydebounce:KEY_0.key_out[3]
+key0Out[4] <= keydebounce:KEY_0.key_out[4]
+key0Out[5] <= keydebounce:KEY_0.key_out[5]
+key0Out[6] <= keydebounce:KEY_0.key_out[6]
+key0Out[7] <= keydebounce:KEY_0.key_out[7]
+key1Out[0] <= keydebounce:KEY_1.key_out[0]
+key1Out[1] <= keydebounce:KEY_1.key_out[1]
+key1Out[2] <= keydebounce:KEY_1.key_out[2]
+key1Out[3] <= keydebounce:KEY_1.key_out[3]
+key1Out[4] <= keydebounce:KEY_1.key_out[4]
+key1Out[5] <= keydebounce:KEY_1.key_out[5]
+key1Out[6] <= keydebounce:KEY_1.key_out[6]
+key1Out[7] <= keydebounce:KEY_1.key_out[7]
 data_add_out5 => comb.IN1
 data_add_out5 => comb.IN1
 data_add_out5 => comb.IN1
@@ -1650,58 +1631,118 @@ data_add_out5 => comb.IN1
 data_add_out5 => comb.IN1
 
 
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:clear0_0
-entrada => saida.DATAIN
-habilita => saida.OE
+|Aula7e8|logicaKeys:logicaKeys|keyDebounce:KEY_0
+CLK => edgedetector:KEY.clk
+key_in => edgedetector:KEY.entrada
+hab_key => buffer_3_state_8portas:buff.habilita
+clear_read => flipflopgenerico:FF0.RST
+key_out[0] <= buffer_3_state_8portas:buff.saida[0]
+key_out[1] <= buffer_3_state_8portas:buff.saida[1]
+key_out[2] <= buffer_3_state_8portas:buff.saida[2]
+key_out[3] <= buffer_3_state_8portas:buff.saida[3]
+key_out[4] <= buffer_3_state_8portas:buff.saida[4]
+key_out[5] <= buffer_3_state_8portas:buff.saida[5]
+key_out[6] <= buffer_3_state_8portas:buff.saida[6]
+key_out[7] <= buffer_3_state_8portas:buff.saida[7]
+
+
+|Aula7e8|logicaKeys:logicaKeys|keyDebounce:KEY_0|edgeDetector:KEY
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:clear0_1
-entrada => saida.DATAIN
-habilita => saida.OE
+|Aula7e8|logicaKeys:logicaKeys|keyDebounce:KEY_0|flipFlopGenerico:FF0
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
+
+
+|Aula7e8|logicaKeys:logicaKeys|keyDebounce:KEY_0|buffer_3_state_8portas:buff
+entrada[0] => saida[0].DATAIN
+entrada[1] => saida[1].DATAIN
+entrada[2] => saida[2].DATAIN
+entrada[3] => saida[3].DATAIN
+entrada[4] => saida[4].DATAIN
+entrada[5] => saida[5].DATAIN
+entrada[6] => saida[6].DATAIN
+entrada[7] => saida[7].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula7e8|logicaKeys:logicaKeys|keyDebounce:KEY_1
+CLK => edgedetector:KEY.clk
+key_in => edgedetector:KEY.entrada
+hab_key => buffer_3_state_8portas:buff.habilita
+clear_read => flipflopgenerico:FF0.RST
+key_out[0] <= buffer_3_state_8portas:buff.saida[0]
+key_out[1] <= buffer_3_state_8portas:buff.saida[1]
+key_out[2] <= buffer_3_state_8portas:buff.saida[2]
+key_out[3] <= buffer_3_state_8portas:buff.saida[3]
+key_out[4] <= buffer_3_state_8portas:buff.saida[4]
+key_out[5] <= buffer_3_state_8portas:buff.saida[5]
+key_out[6] <= buffer_3_state_8portas:buff.saida[6]
+key_out[7] <= buffer_3_state_8portas:buff.saida[7]
+
+
+|Aula7e8|logicaKeys:logicaKeys|keyDebounce:KEY_1|edgeDetector:KEY
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:clear0_2
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+|Aula7e8|logicaKeys:logicaKeys|keyDebounce:KEY_1|flipFlopGenerico:FF0
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
 
 
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:clear0_3
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:clear0_4
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:clear0_5
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:clear0_6
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:clear0_7
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:KEY_1
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+|Aula7e8|logicaKeys:logicaKeys|keyDebounce:KEY_1|buffer_3_state_8portas:buff
+entrada[0] => saida[0].DATAIN
+entrada[1] => saida[1].DATAIN
+entrada[2] => saida[2].DATAIN
+entrada[3] => saida[3].DATAIN
+entrada[4] => saida[4].DATAIN
+entrada[5] => saida[5].DATAIN
+entrada[6] => saida[6].DATAIN
+entrada[7] => saida[7].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula7e8|logicaKeys:logicaKeys|buffer_3_state_1portas:KEY_2
@@ -1720,20 +1761,5 @@ saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 entrada => saida.DATAIN
 habilita => saida.OE
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Aula7e8|logicaKeys:logicaKeys|edgeDetector:DEB
-clk => saidaQ.CLK
-entrada => saida.IN1
-entrada => saidaQ.DATAIN
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Aula7e8|logicaKeys:logicaKeys|flipFlopGenerico:FF
-DIN => DOUT~reg0.DATAIN
-DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ENABLE => DOUT~reg0.ENA
-CLK => DOUT~reg0.CLK
-RST => DOUT~reg0.ACLR
 
 
