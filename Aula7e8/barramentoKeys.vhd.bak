@@ -1,0 +1,21 @@
+library IEEE;
+use ieee.std_logic_1164.ALL;
+
+entity barramentoKeys is 
+	port (
+		key_in: in std_logic;
+		hab_key: in std_logic;
+		key_out: out std_logic_vector(7 downto 0)
+	);
+end entity;
+
+architecture comportamento of barramentoKeys is 
+
+begin
+	buffer : entity work.buffer_3_state_8portas
+		port map (
+			entrada => "0000000" & key_in,
+			habilita => hab_key,
+			saida => key_out
+		);
+end architecture;
