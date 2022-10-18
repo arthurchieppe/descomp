@@ -5,7 +5,8 @@ entity contador_intermediario is
   generic ( 
 		  larguraDados : natural := 8;
 		  larguraEnderecos : natural := 9;
-        largurainstrucao : natural := 13;
+        larguraInstrucao : natural := 15;
+		  larguraEndBancoRegs : natural := 2;
 		  simulacao : boolean := TRUE
   );
   port   (
@@ -21,7 +22,7 @@ end entity;
 
 architecture arquitetura of contador_intermediario is
 	signal CLK, hab_rd, hab_wr: std_logic;
-	signal saida_ROM: std_logic_vector (largurainstrucao-1 downto 0);
+	signal saida_ROM: std_logic_vector (larguraInstrucao-1 downto 0);
 	signal Data_IN: std_logic_vector (larguraDados-1 downto 0);
 	signal data_out: std_logic_vector (larguraDados-1 downto 0);
 	signal data_add_out: std_logic_vector (larguraEnderecos-1 downto 0);
@@ -39,7 +40,9 @@ detectorSub0: work.edgeDetector(bordaSubida)
         port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK);
 end generate;
 
-CPU: entity work.CPU 
+CPU: entity work.CPU generic map(larguraDados => larguraDados, 
+			larguraEnderecos => larguraEnderecos, larguraInstrucao => larguraInstrucao)
+		  
 		  port map (
 		  CLOCK_50 => CLK,
           Instruction_IN => saida_ROM,
@@ -51,7 +54,7 @@ CPU: entity work.CPU
 		  ROM_Adrress => rom_add_out
 		  );
 
-ROM: entity work.memoriaROM
+ROM: entity work.memoriaROM generic map (dataWidth => larguraInstrucao, addrWidth =>larguraEnderecos)
 		  port map (Endereco => rom_add_out, Dado => saida_ROM);
 
 RAM: entity work.memoriaRAM

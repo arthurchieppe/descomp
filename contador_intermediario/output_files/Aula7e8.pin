@@ -108,7 +108,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA8       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA9       :        :                   :         : 3B        :                
 HEX2[2]                      : AA10      : output : 3.3-V LVTTL       :         : 3B        : Y              
 GND                          : AA11      : gnd    :                   :         :           :                
-FPGA_RESET                   : AA12      : input  : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 3B        :                
 SW[7]                        : AA13      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 SW[6]                        : AA14      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 SW[4]                        : AA15      : input  : 3.3-V LVTTL       :         : 4A        : Y              
@@ -482,7 +482,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : U8        :        :                   :      
 GND                          : U9        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U10       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U11       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U12       :        :                   :         : 3B        :                
+FPGA_RESET                   : U12       : input  : 2.5 V             :         : 3B        : N              
 SW[0]                        : U13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : U14       : power  :                   : 3.3V    : 4A        :                
 HEX4[4]                      : U15       : output : 3.3-V LVTTL       :         : 4A        : Y              

@@ -5,13 +5,13 @@ entity CPU is
   generic ( 
 		  larguraDados : natural := 8;
 		  larguraEnderecos : natural := 9;
-        largurainstrucao : natural := 13
+        larguraInstrucao : natural := 15;
+		  larguraEndBancoRegs : natural := 2
   );
   port   (
 	 CLOCK_50: in std_logic;
-	 Instruction_IN: in std_logic_vector(largurainstrucao - 1 downto 0);
+	 Instruction_IN: in std_logic_vector(larguraInstrucao - 1 downto 0);
 	 Data_IN: in std_logic_vector(larguraDados - 1 downto 0);
-	
 	 Data_OUT: out std_logic_vector(larguraDados - 1 downto 0);
 	 Rd, Wr: out std_logic;
 	 Data_Address: out std_logic_vector(larguraEnderecos - 1 downto 0);
@@ -27,7 +27,7 @@ architecture arquitetura of CPU is
 	signal saida_DEC_instrucao : std_logic_vector (11 downto 0);
 	signal saida_desvio: std_logic_vector(1 downto 0);
 	signal saida_flag: std_logic;
-	signal saida_REGA : std_logic_vector (larguraDados-1 downto 0);
+	signal saida_REG : std_logic_vector (larguraDados-1 downto 0);
 	signal saida_ULA: std_logic_vector (larguraDados - 1 downto 0);	
 	signal saida_incrementaPC: std_logic_vector(larguraDados downto 0);
 	signal saida_reg_retorno: std_logic_vector(larguraDados downto 0);
@@ -40,16 +40,22 @@ MUX_EntradaB_ULA :  entity work.muxGenerico2x1  generic map (larguraDados => lar
 			port map( entradaA_MUX => Data_IN, entradaB_MUX =>  Instruction_IN(7 downto 0), seletor_MUX => saida_DEC_instrucao(6), saida_MUX => saida_MUX_EntradaB_ULA);
 
 DEC_instrucao :  entity work.decoderGeneric
-        port map( entrada => Instruction_IN(12 downto 9), flag => flag_igual, saida => saida_DEC_instrucao, saida_desvio => saida_desvio);	
+        port map( entrada => Instruction_IN(14 downto 11), flag => flag_igual, saida => saida_DEC_instrucao, saida_desvio => saida_desvio);	
 
 REG_FLAG: entity work.flipFlopGenerico
    	  port map (CLK => CLOCK_50, DIN => saida_flag, ENABLE => saida_DEC_instrucao(2),  RST => '0', DOUT => flag_igual);
 
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
-        port map (entradaA => saida_REGA, entradaB => saida_MUX_EntradaB_ULA, seletor => saida_DEC_instrucao(4 downto 3), saida => saida_ULA, flagzero => saida_flag);
-		  
-REGA : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
-			port map (CLK => CLOCK_50, DIN => saida_ULA, ENABLE => saida_DEC_instrucao(5),  RST => '0', DOUT => saida_REGA);
+        port map (entradaA => saida_REG, entradaB => saida_MUX_EntradaB_ULA, seletor => saida_DEC_instrucao(4 downto 3), saida => saida_ULA, flagzero => saida_flag);
+
+BANCO_REG : entity work.bancoRegistradoresArqRegMem   generic map (larguraDados => larguraDados, larguraEndBancoRegs => larguraEndBancoRegs)
+          port map ( clk => CLOCK_50,
+              endereco => Instruction_IN(10 downto 9),
+              dadoEscrita => saida_ULA,
+              habilitaEscrita => saida_DEC_instrucao(5),
+              saida  => saida_REG);		  
+--REGA : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
+--			port map (CLK => CLOCK_50, DIN => saida_ULA, ENABLE => saida_DEC_instrucao(5),  RST => '0', DOUT => saida_REG);
 
 MUX_PC :  entity work.muxGenericoNx1  generic map (larguraDados => larguraEnderecos)
 			port map(entrada0_MUX => saida_incrementaPC,
@@ -70,7 +76,7 @@ PC : entity work.registradorGenerico   generic map (larguraDados => larguraEnder
 		
 		
 			
-Data_OUT <= saida_REGA;
+Data_OUT <= saida_REG;
 Rd <= saida_DEC_instrucao(1); 
 Wr <= saida_DEC_instrucao(0);
 Data_Address <= Instruction_IN(8 downto 0);
