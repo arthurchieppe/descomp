@@ -16,5 +16,5 @@ architecture comportamento of muxGenericoNx1 is
     saida_MUX <= entrada0_MUX when (seletor_MUX = "00") else 
 					  entrada1_MUX when (seletor_MUX = "01") else
 					  entrada2_MUX when (seletor_MUX = "10") else
-					  entrada3_MUX;
+					  entrada3_MUX when (seletor_MUX = "11");
 end architecture;
