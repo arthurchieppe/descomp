@@ -12,7 +12,7 @@ entity contador_intermediario is
   port   (
     CLOCK_50:in std_logic;
 	 KEY: in  std_logic_vector(3 downto 0);
-	 FPGA_RESET : in std_logic;
+	 FPGA_RESET_N : in std_logic;
 	 LEDR : out std_logic_vector (larguraEnderecos downto 0);
 	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0);
 	 SW: in std_logic_vector(9 downto 0) 
@@ -186,7 +186,7 @@ logicaKeys: entity work.logicaKeys
 			key1 => KEY(1),
 			key2 => KEY(2),
 			key3 => KEY(3),
-			FPGA_RESET => FPGA_RESET,
+			FPGA_reset => FPGA_RESET_N,
 			hab_rd => hab_rd,
 			hab_rst511 => data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and data_add_out(8) and hab_wr,  
 			decoder_enderecos => saida_decoder_enderecos(4 downto 0),

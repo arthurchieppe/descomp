@@ -46,24 +46,24 @@ architecture assincrona of memoriaROM is
        tmp(0)     := LDI & "00" & std_logic_vector(to_unsigned(0, addrWidth));
        tmp(1)     := STA & "00" & std_logic_vector(to_unsigned(0, addrWidth));
        tmp(2)     := STA & "00" & std_logic_vector(to_unsigned(2, addrWidth));
-       tmp(3)     := LDI  & "01" & std_logic_vector(to_unsigned(1, addrWidth));
-       tmp(4)     := STA & "01" & std_logic_vector(to_unsigned(1, addrWidth));
+       tmp(3)     := LDI  & "00" & std_logic_vector(to_unsigned(1, addrWidth));
+       tmp(4)     := STA & "00" & std_logic_vector(to_unsigned(1, addrWidth));
        tmp(5)     := NOP;
        tmp(6)     := LDA & "00" & std_logic_vector(to_unsigned(352, addrWidth));
-       tmp(7)     := STA & "00" & std_logic_vector(to_unsigned(288, addrWidth));
-       tmp(8)     := CEQ & "00" & std_logic_vector(to_unsigned(0, addrWidth));
-       tmp(9)     := JEQ & "00" & std_logic_vector(to_unsigned(11, addrWidth));
-       tmp(10)    := JSR & "00" & std_logic_vector(to_unsigned(32, addrWidth));
-       tmp(11)    := NOP;
-       tmp(12)    := JMP & "00" & std_logic_vector(to_unsigned(5, addrWidth));
+       
+       tmp(7)     := CEQ & "00" & std_logic_vector(to_unsigned(0, addrWidth));
+       tmp(8)     := JEQ & "00" & std_logic_vector(to_unsigned(11, addrWidth));
+       tmp(9)    := JSR & "00" & std_logic_vector(to_unsigned(32, addrWidth));
+       tmp(10)    := NOP;
+       tmp(11)    := JMP & "00" & std_logic_vector(to_unsigned(5, addrWidth));
 
        tmp(32)    := STA & "00" & std_logic_vector(to_unsigned(511, addrWidth));
        tmp(33)    := LDA & "00" & std_logic_vector(to_unsigned(2, addrWidth));
        tmp(34)    := SOMA & "00" & std_logic_vector(to_unsigned(1, addrWidth));
        tmp(35)    := STA & "00" & std_logic_vector(to_unsigned(2, addrWidth));
 --       tmp(36)    := STA  & std_logic_vector(to_unsigned(258, addrWidth));
-		tmp(36) := STA & "00" & std_logic_vector(to_unsigned(289, addrWidth));
-		tmp(37) := STA & "00" & std_logic_vector(to_unsigned(258, addrWidth));
+		tmp(36) := STA & "00" & std_logic_vector(to_unsigned(258, addrWidth));
+		tmp(37)     := STA & "00" & std_logic_vector(to_unsigned(288, addrWidth));
        tmp(38)    := RET & "00" & std_logic_vector(to_unsigned(0, addrWidth));
 
 		-- tmp(0)     := LDA  & std_logic_vector(to_unsigned(320, addrWidth));
