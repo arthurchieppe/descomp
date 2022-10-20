@@ -24,9 +24,11 @@ architecture arquitetura of CPU is
 
 	signal saida_MUX_EntradaB_ULA : std_logic_vector (larguraDados-1 downto 0);
 	signal flag_igual: std_logic;
+	signal flag_less: std_logic;
 	signal saida_DEC_instrucao : std_logic_vector (11 downto 0);
 	signal saida_desvio: std_logic_vector(1 downto 0);
-	signal saida_flag: std_logic;
+	signal saida_flagzero: std_logic;
+	signal saida_flagless: std_logic;
 	signal saida_REG : std_logic_vector (larguraDados-1 downto 0);
 	signal saida_ULA: std_logic_vector (larguraDados - 1 downto 0);	
 	signal saida_incrementaPC: std_logic_vector(larguraDados downto 0);
@@ -40,13 +42,16 @@ MUX_EntradaB_ULA :  entity work.muxGenerico2x1  generic map (larguraDados => lar
 			port map( entradaA_MUX => Data_IN, entradaB_MUX =>  Instruction_IN(7 downto 0), seletor_MUX => saida_DEC_instrucao(6), saida_MUX => saida_MUX_EntradaB_ULA);
 
 DEC_instrucao :  entity work.decoderGeneric
-        port map( entrada => Instruction_IN(14 downto 11), flag => flag_igual, saida => saida_DEC_instrucao, saida_desvio => saida_desvio);	
+        port map( entrada => Instruction_IN(14 downto 11), flagzero => flag_igual, flagless => flag_less, saida => saida_DEC_instrucao, saida_desvio => saida_desvio);	
 
-REG_FLAG: entity work.flipFlopGenerico
-   	  port map (CLK => CLOCK_50, DIN => saida_flag, ENABLE => saida_DEC_instrucao(2),  RST => '0', DOUT => flag_igual);
+REG_FLAG_ZERO: entity work.flipFlopGenerico
+   	  port map (CLK => CLOCK_50, DIN => saida_flagzero, ENABLE => saida_DEC_instrucao(2),  RST => '0', DOUT => flag_igual);
+		  
+REG_FLAG_LESS: entity work.flipFlopGenerico
+   	  port map (CLK => CLOCK_50, DIN => saida_flagless, ENABLE => saida_DEC_instrucao(2),  RST => '0', DOUT => flag_less);
 
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
-        port map (entradaA => saida_REG, entradaB => saida_MUX_EntradaB_ULA, seletor => saida_DEC_instrucao(4 downto 3), saida => saida_ULA, flagzero => saida_flag);
+        port map (entradaA => saida_REG, entradaB => saida_MUX_EntradaB_ULA, seletor => saida_DEC_instrucao(4 downto 3), saida => saida_ULA, flagzero => saida_flagzero, flagless => saida_flagless);
 
 BANCO_REG : entity work.bancoRegistradoresArqRegMem   generic map (larguraDados => larguraDados, larguraEndBancoRegs => larguraEndBancoRegs)
           port map ( clk => CLOCK_50,

@@ -76,10 +76,20 @@ SW[6] => buffer_3_state_8portas:switch8entradas.entrada[6]
 SW[7] => buffer_3_state_8portas:switch8entradas.entrada[7]
 SW[8] => buffer_3_state_1portas:switch8.entrada
 SW[9] => buffer_3_state_1portas:switch9.entrada
+PC_OUT[0] <= cpu:CPU.ROM_Adrress[0]
+PC_OUT[1] <= cpu:CPU.ROM_Adrress[1]
+PC_OUT[2] <= cpu:CPU.ROM_Adrress[2]
+PC_OUT[3] <= cpu:CPU.ROM_Adrress[3]
+PC_OUT[4] <= cpu:CPU.ROM_Adrress[4]
+PC_OUT[5] <= cpu:CPU.ROM_Adrress[5]
+PC_OUT[6] <= cpu:CPU.ROM_Adrress[6]
+PC_OUT[7] <= cpu:CPU.ROM_Adrress[7]
+PC_OUT[8] <= cpu:CPU.ROM_Adrress[8]
 
 
 |contador_intermediario|CPU:CPU
-CLOCK_50 => flipflopgenerico:REG_FLAG.CLK
+CLOCK_50 => flipflopgenerico:REG_FLAG_ZERO.CLK
+CLOCK_50 => flipflopgenerico:REG_FLAG_LESS.CLK
 CLOCK_50 => bancoregistradoresarqregmem:BANCO_REG.clk
 CLOCK_50 => registradorgenerico:REG_RETORNO.CLK
 CLOCK_50 => registradorgenerico:PC.CLK
@@ -189,51 +199,65 @@ saida_MUX[7] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |contador_intermediario|CPU:CPU|decoderGeneric:DEC_instrucao
-entrada[0] => Equal0.IN1
-entrada[0] => Equal1.IN3
-entrada[0] => Equal2.IN2
-entrada[0] => Equal3.IN3
-entrada[0] => Equal4.IN1
-entrada[0] => Equal5.IN3
-entrada[0] => Equal6.IN2
-entrada[0] => Equal7.IN3
-entrada[0] => Equal8.IN2
-entrada[0] => Equal9.IN3
+entrada[0] => Equal0.IN3
+entrada[0] => Equal1.IN1
+entrada[0] => Equal2.IN3
+entrada[0] => Equal3.IN1
+entrada[0] => Equal4.IN3
+entrada[0] => Equal5.IN2
+entrada[0] => Equal6.IN3
+entrada[0] => Equal7.IN1
+entrada[0] => Equal8.IN3
+entrada[0] => Equal9.IN2
 entrada[0] => Equal10.IN3
-entrada[1] => Equal0.IN3
-entrada[1] => Equal1.IN1
-entrada[1] => Equal2.IN1
-entrada[1] => Equal3.IN2
-entrada[1] => Equal4.IN3
+entrada[0] => Equal11.IN2
+entrada[0] => Equal12.IN3
+entrada[0] => Equal13.IN3
+entrada[1] => Equal0.IN0
+entrada[1] => Equal1.IN0
+entrada[1] => Equal2.IN2
+entrada[1] => Equal3.IN3
+entrada[1] => Equal4.IN1
 entrada[1] => Equal5.IN1
-entrada[1] => Equal6.IN1
-entrada[1] => Equal7.IN2
-entrada[1] => Equal8.IN3
-entrada[1] => Equal9.IN2
+entrada[1] => Equal6.IN2
+entrada[1] => Equal7.IN3
+entrada[1] => Equal8.IN1
+entrada[1] => Equal9.IN1
 entrada[1] => Equal10.IN2
-entrada[2] => Equal0.IN0
-entrada[2] => Equal1.IN0
+entrada[1] => Equal11.IN3
+entrada[1] => Equal12.IN2
+entrada[1] => Equal13.IN2
+entrada[2] => Equal0.IN2
+entrada[2] => Equal1.IN3
 entrada[2] => Equal2.IN0
-entrada[2] => Equal3.IN1
-entrada[2] => Equal4.IN2
-entrada[2] => Equal5.IN2
-entrada[2] => Equal6.IN3
-entrada[2] => Equal7.IN1
-entrada[2] => Equal8.IN1
-entrada[2] => Equal9.IN1
+entrada[2] => Equal3.IN0
+entrada[2] => Equal4.IN0
+entrada[2] => Equal5.IN0
+entrada[2] => Equal6.IN1
+entrada[2] => Equal7.IN2
+entrada[2] => Equal8.IN2
+entrada[2] => Equal9.IN3
 entrada[2] => Equal10.IN1
-entrada[3] => Equal0.IN2
+entrada[2] => Equal11.IN1
+entrada[2] => Equal12.IN1
+entrada[2] => Equal13.IN1
+entrada[3] => Equal0.IN1
 entrada[3] => Equal1.IN2
-entrada[3] => Equal2.IN3
-entrada[3] => Equal3.IN0
-entrada[3] => Equal4.IN0
-entrada[3] => Equal5.IN0
+entrada[3] => Equal2.IN1
+entrada[3] => Equal3.IN2
+entrada[3] => Equal4.IN2
+entrada[3] => Equal5.IN3
 entrada[3] => Equal6.IN0
 entrada[3] => Equal7.IN0
 entrada[3] => Equal8.IN0
 entrada[3] => Equal9.IN0
 entrada[3] => Equal10.IN0
-flag => saida_desvio.IN1
+entrada[3] => Equal11.IN0
+entrada[3] => Equal12.IN0
+entrada[3] => Equal13.IN0
+flagzero => saida_desvio.IN1
+flagzero => saida_desvio.IN1
+flagless => saida_desvio.IN1
 saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
@@ -250,7 +274,15 @@ saida_desvio[0] <= saida_desvio.DB_MAX_OUTPUT_PORT_TYPE
 saida_desvio[1] <= saida_desvio.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|contador_intermediario|CPU:CPU|flipFlopGenerico:REG_FLAG
+|contador_intermediario|CPU:CPU|flipFlopGenerico:REG_FLAG_ZERO
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
+
+
+|contador_intermediario|CPU:CPU|flipFlopGenerico:REG_FLAG_LESS
 DIN => DOUT~reg0.DATAIN
 DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ENABLE => DOUT~reg0.ENA
@@ -312,6 +344,7 @@ saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 flagzero <= flagzero.DB_MAX_OUTPUT_PORT_TYPE
+flagless <= flagless.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |contador_intermediario|CPU:CPU|bancoRegistradoresArqRegMem:BANCO_REG

@@ -3,7 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity decoderGeneric is
   port ( entrada : in std_logic_vector(3 downto 0);
-			flag    : in std_logic;
+			flagzero    : in std_logic;
+			flagless    : in std_logic;
          saida : out std_logic_vector(11 downto 0);
 			saida_desvio: out std_logic_vector(1 downto 0)
   );
@@ -22,6 +23,9 @@ architecture comportamento of decoderGeneric is
   constant CEQ  : std_logic_vector(3 downto 0) := "1000";
   constant JSR  : std_logic_vector(3 downto 0) := "1001";
   constant RET  : std_logic_vector(3 downto 0) := "1010";
+  constant JNE  : std_logic_vector(3 downto 0) := "1011";
+  constant CLT  : std_logic_vector(3 downto 0) := "1100";
+  constant JLT  : std_logic_vector(3 downto 0) := "1101";
 
   begin
   
@@ -36,9 +40,13 @@ saida <= "000000000000" when entrada = NOP else
 			"000000001110" when entrada = CEQ else
 			"100100000000" when entrada = JSR else
 			"001000000000" when entrada = RET else
+			"000010000000" when entrada = JNE else
+			"000000001110" when entrada = CLT else
+			"000010000000" when entrada = JLT else
          "000000000000";  
 
-saida_desvio <= "01" when entrada = JMP or (flag = '1' and entrada = JEQ) or entrada = JSR else
+saida_desvio <= "01" when entrada = JMP or (flagzero = '1' and entrada = JEQ) or (flagzero = '0' and entrada = JNE) or 
+						(flagless = '1' and entrada = JLT) or entrada = JSR else
 					 "10" when entrada = RET else
 					 "00";
 
