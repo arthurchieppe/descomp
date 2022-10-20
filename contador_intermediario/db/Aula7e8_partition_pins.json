@@ -220,11 +220,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[8]",
+					"name" : "KEY[3]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[3]",
+					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
