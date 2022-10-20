@@ -15,8 +15,8 @@ entity contador_intermediario is
 	 FPGA_RESET_N : in std_logic;
 	 LEDR : out std_logic_vector(larguraEnderecos downto 0);
 	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0);
-	 SW: in std_logic_vector(9 downto 0);
-	 PC_OUT: out std_logic_vector(larguraEnderecos-1 downto 0) 
+	 SW: in std_logic_vector(9 downto 0)
+--	 PC_OUT: out std_logic_vector(larguraEnderecos-1 downto 0) 
   );
 end entity;
 
@@ -203,6 +203,6 @@ logicaKeys: entity work.logicaKeys
 			
 			
 LEDR <= saida_led;
-PC_OUT <= rom_add_out;
+--PC_OUT <= rom_add_out;
 
 end architecture;

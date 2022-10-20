@@ -76,15 +76,6 @@ SW[6] => buffer_3_state_8portas:switch8entradas.entrada[6]
 SW[7] => buffer_3_state_8portas:switch8entradas.entrada[7]
 SW[8] => buffer_3_state_1portas:switch8.entrada
 SW[9] => buffer_3_state_1portas:switch9.entrada
-PC_OUT[0] <= cpu:CPU.ROM_Adrress[0]
-PC_OUT[1] <= cpu:CPU.ROM_Adrress[1]
-PC_OUT[2] <= cpu:CPU.ROM_Adrress[2]
-PC_OUT[3] <= cpu:CPU.ROM_Adrress[3]
-PC_OUT[4] <= cpu:CPU.ROM_Adrress[4]
-PC_OUT[5] <= cpu:CPU.ROM_Adrress[5]
-PC_OUT[6] <= cpu:CPU.ROM_Adrress[6]
-PC_OUT[7] <= cpu:CPU.ROM_Adrress[7]
-PC_OUT[8] <= cpu:CPU.ROM_Adrress[8]
 
 
 |contador_intermediario|CPU:CPU
