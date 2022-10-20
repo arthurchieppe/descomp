@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Oct 20 12:48:58 2022
+    Info: Processing started: Thu Oct 20 15:56:03 2022
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off contador_intermediario -c Aula7e8 --vector_source=C:/descomp/contador_intermediario/Waveform5.vwf --testbench_file=C:/descomp/contador_intermediario/simulation/qsim/Waveform5.vwf.vht
 Info (119006): Selected device 5CEBA4F23C7 for design "Aula7e8"
 
@@ -55,15 +55,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Oct 20 12:48:59 2022
+    Info: Processing started: Thu Oct 20 15:56:04 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/descomp/contador_intermediario/simulation/qsim/ contador_intermediario -c Aula7e8
 Info (119006): Selected device 5CEBA4F23C7 for design "Aula7e8"
 Info (204019): Generated file Aula7e8.vho in folder "C:/descomp/contador_intermediario/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Thu Oct 20 12:49:00 2022
+    Info: Processing ended: Thu Oct 20 15:56:05 2022
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -79,14 +79,14 @@ c:/intelfpga_lite/20.1/modelsim_ase/win32aloem//vsim -c -do contador_intermediar
 
 Reading pref.tcl
 
-
 # 2020.1
+
 
 # do contador_intermediario.do
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:49:01 on Oct 20,2022
+# Start time: 15:56:06 on Oct 20,2022
 # vcom -work work Aula7e8.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -96,16 +96,15 @@ Reading pref.tcl
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
 # -- Loading package altera_lnsim_components
-
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
 # -- Compiling entity contador_intermediario
 # -- Compiling architecture structure of contador_intermediario
 
-# End time: 12:49:01 on Oct 20,2022, Elapsed time: 0:00:00
+# End time: 15:56:06 on Oct 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:49:01 on Oct 20,2022
+# Start time: 15:56:06 on Oct 20,2022
 # vcom -work work Waveform5.vwf.vht 
 
 # -- Loading package STANDARD
@@ -113,11 +112,11 @@ Reading pref.tcl
 # -- Loading package std_logic_1164
 # -- Compiling entity contador_intermediario_vhd_vec_tst
 # -- Compiling architecture contador_intermediario_arch of contador_intermediario_vhd_vec_tst
-# End time: 12:49:01 on Oct 20,2022, Elapsed time: 0:00:00
+# End time: 15:56:06 on Oct 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.contador_intermediario_vhd_vec_tst 
-# Start time: 12:49:01 on Oct 20,2022
+# Start time: 15:56:06 on Oct 20,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -135,11 +134,11 @@ Reading pref.tcl
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 58050 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 34434 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
 
-# End time: 12:49:02 on Oct 20,2022, Elapsed time: 0:00:01
+# End time: 15:56:06 on Oct 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -152,7 +151,7 @@ Reading C:/descomp/contador_intermediario/simulation/qsim/contador_intermediario
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/descomp/contador_intermediario/simulation/qsim/contador_intermediario_20221020124902.sim.vwf
+Writing the resulting VWF to C:/descomp/contador_intermediario/simulation/qsim/contador_intermediario_20221020155607.sim.vwf
 
 Finished VCD to VWF conversion.
 

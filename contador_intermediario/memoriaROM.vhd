@@ -37,12 +37,15 @@ architecture assincrona of memoriaROM is
   
 tmp(0) := x"4" & "00" & std_logic_vector(to_unsigned(5, addrWidth));	-- LDI %R0 $10
 tmp(1) := x"5" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- STA %R0 @0
-tmp(2) := x"4" & "01" & std_logic_vector(to_unsigned(10, addrWidth));	-- LDI %R1 $5
-tmp(3) := x"C" & "01" & std_logic_vector(to_unsigned(0, addrWidth));	-- CLT %R1 @0
-tmp(4) := x"0" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- NOP
-tmp(5) := x"D" & "00" & std_logic_vector(to_unsigned(20, addrWidth));	-- JLT @20
-tmp(6) := x"0" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- NOP
-tmp(7) := x"6" & "00" & std_logic_vector(to_unsigned(30, addrWidth));	-- JMP @30
+tmp(2) := x"4" & "01" & std_logic_vector(to_unsigned(5, addrWidth));	-- LDI %R1 $5
+tmp(3) := x"8" & "01" & std_logic_vector(to_unsigned(0, addrWidth));	-- CEQ %R1 @0
+tmp(4) := x"B" & "00" & std_logic_vector(to_unsigned(40, addrWidth));	-- JNE @40
+tmp(5) := x"0" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- NOP
+tmp(6) := x"D" & "00" & std_logic_vector(to_unsigned(20, addrWidth));	-- JLT @20
+tmp(7) := x"0" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- NOP
+tmp(8) := x"6" & "00" & std_logic_vector(to_unsigned(30, addrWidth));	-- JMP @30
+
+
 
 
 
