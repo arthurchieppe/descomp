@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula7e8
-Fri Oct 21 10:03:59 2022
+Fri Oct 21 10:40:59 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -84,7 +84,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct 21 10:03:59 2022       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 21 10:40:59 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula7e8                                     ;
 ; Top-level Entity Name           ; contador_intermediario                      ;
@@ -248,13 +248,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 485            ;
+; Estimate of Logic utilization (ALMs needed) ; 486            ;
 ;                                             ;                ;
 ; Combinational ALUT usage for logic          ; 512            ;
-;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 276            ;
-;     -- 5 input functions                    ; 62             ;
-;     -- 4 input functions                    ; 65             ;
+;     -- 7 input functions                    ; 3              ;
+;     -- 6 input functions                    ; 278            ;
+;     -- 5 input functions                    ; 60             ;
+;     -- 4 input functions                    ; 63             ;
 ;     -- <=3 input functions                  ; 108            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 602            ;
@@ -265,8 +265,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 600            ;
-; Total fan-out                               ; 4456           ;
-; Average fan-out                             ; 3.56           ;
+; Total fan-out                               ; 4461           ;
+; Average fan-out                             ; 3.57           ;
 +---------------------------------------------+----------------+
 
 
@@ -286,7 +286,8 @@ https://fpgasoftware.intel.com/eula.
 ;       |registradorGenerico:PC|                ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|registradorGenerico:PC                               ; registradorGenerico         ; work         ;
 ;       |registradorGenerico:REG_RETORNO|       ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|registradorGenerico:REG_RETORNO                      ; registradorGenerico         ; work         ;
 ;       |somaConstante:incrementaPC|            ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|somaConstante:incrementaPC                           ; somaConstante               ; work         ;
-;    |hexComponent:comp_HEX0|                   ; 9 (2)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX0                                       ; hexComponent                ; work         ;
+;    |decoder3x8:DEC_Blocos|                    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|decoder3x8:DEC_Blocos                                        ; decoder3x8                  ; work         ;
+;    |hexComponent:comp_HEX0|                   ; 8 (1)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX0                                       ; hexComponent                ; work         ;
 ;       |conversorHex7Seg:converSeg|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX0|conversorHex7Seg:converSeg            ; conversorHex7Seg            ; work         ;
 ;       |registradorGenerico:REG|               ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX0|registradorGenerico:REG               ; registradorGenerico         ; work         ;
 ;    |hexComponent:comp_HEX1|                   ; 8 (1)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX1                                       ; hexComponent                ; work         ;
@@ -301,10 +302,10 @@ https://fpgasoftware.intel.com/eula.
 ;    |hexComponent:comp_HEX4|                   ; 8 (1)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX4                                       ; hexComponent                ; work         ;
 ;       |conversorHex7Seg:converSeg|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX4|conversorHex7Seg:converSeg            ; conversorHex7Seg            ; work         ;
 ;       |registradorGenerico:REG|               ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX4|registradorGenerico:REG               ; registradorGenerico         ; work         ;
-;    |hexComponent:comp_HEX5|                   ; 9 (2)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX5                                       ; hexComponent                ; work         ;
+;    |hexComponent:comp_HEX5|                   ; 8 (1)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX5                                       ; hexComponent                ; work         ;
 ;       |conversorHex7Seg:converSeg|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX5|conversorHex7Seg:converSeg            ; conversorHex7Seg            ; work         ;
 ;       |registradorGenerico:REG|               ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|hexComponent:comp_HEX5|registradorGenerico:REG               ; registradorGenerico         ; work         ;
-;    |ledComponent:logica_LED|                  ; 7 (5)               ; 10 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|ledComponent:logica_LED                                      ; ledComponent                ; work         ;
+;    |ledComponent:logica_LED|                  ; 5 (3)               ; 10 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|ledComponent:logica_LED                                      ; ledComponent                ; work         ;
 ;       |flipFlopGenerico:LED8|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|ledComponent:logica_LED|flipFlopGenerico:LED8                ; flipFlopGenerico            ; work         ;
 ;       |flipFlopGenerico:LED9|                 ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|ledComponent:logica_LED|flipFlopGenerico:LED9                ; flipFlopGenerico            ; work         ;
 ;       |registradorGenerico:LED0to7|           ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|ledComponent:logica_LED|registradorGenerico:LED0to7          ; registradorGenerico         ; work         ;
@@ -315,8 +316,8 @@ https://fpgasoftware.intel.com/eula.
 ;       |keyDebounce:KEY_1|                     ; 1 (0)               ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|logicaKeys:logicaKeys|keyDebounce:KEY_1                      ; keyDebounce                 ; work         ;
 ;          |edgeDetector:KEY|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|logicaKeys:logicaKeys|keyDebounce:KEY_1|edgeDetector:KEY     ; edgeDetector                ; work         ;
 ;          |flipFlopGenerico:FF0|               ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|logicaKeys:logicaKeys|keyDebounce:KEY_1|flipFlopGenerico:FF0 ; flipFlopGenerico            ; work         ;
-;    |memoriaRAM:RAM|                           ; 299 (299)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|memoriaRAM:RAM                                               ; memoriaRAM                  ; work         ;
-;    |memoriaROM:ROM|                           ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|memoriaROM:ROM                                               ; memoriaROM                  ; work         ;
+;    |memoriaRAM:RAM|                           ; 298 (298)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|memoriaRAM:RAM                                               ; memoriaRAM                  ; work         ;
+;    |memoriaROM:ROM|                           ; 68 (68)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|memoriaROM:ROM                                               ; memoriaROM                  ; work         ;
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -764,18 +765,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
 ;         5 data inputs ; 16                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 485                         ;
-;         2 data inputs ; 78                          ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 65                          ;
-;         5 data inputs ; 46                          ;
-;         6 data inputs ; 276                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 483                         ;
+;         2 data inputs ; 81                          ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 63                          ;
+;         5 data inputs ; 44                          ;
+;         6 data inputs ; 278                         ;
 ; boundary_port         ; 68                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.20                       ;
-; Average LUT depth     ; 6.42                        ;
+; Average LUT depth     ; 6.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -794,7 +795,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Oct 21 10:03:50 2022
+    Info: Processing started: Fri Oct 21 10:40:50 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contador_intermediario -c Aula7e8
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file contador_intermediario.vhd
@@ -904,9 +905,9 @@ Info (21057): Implemented 1169 device resources after synthesis - the final reso
     Info (21059): Implemented 52 output pins
     Info (21061): Implemented 1101 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Fri Oct 21 10:03:59 2022
+    Info: Peak virtual memory: 4875 megabytes
+    Info: Processing ended: Fri Oct 21 10:40:59 2022
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:11
 
 
