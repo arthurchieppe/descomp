@@ -1,5 +1,5 @@
 Fitter report for Aula7e8
-Thu Oct 20 22:33:55 2022
+Fri Oct 21 10:05:49 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Oct 20 22:33:55 2022       ;
+; Fitter Status                   ; Successful - Fri Oct 21 10:05:49 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula7e8                                     ;
 ; Top-level Entity Name           ; contador_intermediario                      ;
@@ -153,16 +153,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.0%      ;
-;     Processor 3            ;   0.9%      ;
-;     Processor 4            ;   0.9%      ;
-;     Processor 5            ;   0.9%      ;
-;     Processor 6            ;   0.9%      ;
+;     Processor 2            ;   0.9%      ;
+;     Processor 3            ;   0.8%      ;
+;     Processor 4            ;   0.8%      ;
+;     Processor 5            ;   0.8%      ;
+;     Processor 6            ;   0.8%      ;
 +----------------------------+-------------+
 
 
@@ -256,7 +256,7 @@ The pin-out file can be found in C:/descomp/contador_intermediario/output_files/
 ;     -- 5 input functions                                    ; 62                    ;       ;
 ;     -- 4 input functions                                    ; 65                    ;       ;
 ;     -- <=3 input functions                                  ; 111                   ;       ;
-; Combinational ALUT usage for route-throughs                 ; 140                   ;       ;
+; Combinational ALUT usage for route-throughs                 ; 152                   ;       ;
 ;                                                             ;                       ;       ;
 ; Dedicated logic registers                                   ; 611                   ;       ;
 ;     -- By type:                                             ;                       ;       ;
@@ -290,12 +290,12 @@ The pin-out file can be found in C:/descomp/contador_intermediario/output_files/
 ; Remote update blocks                                        ; 0 / 1                 ; 0 %   ;
 ; Oscillator blocks                                           ; 0 / 1                 ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3                 ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 1.2% / 1.2% / 1.1%    ;       ;
-; Peak interconnect usage (total/H/V)                         ; 18.2% / 18.1% / 18.6% ;       ;
+; Average interconnect usage (total/H/V)                      ; 1.1% / 1.2% / 1.1%    ;       ;
+; Peak interconnect usage (total/H/V)                         ; 17.7% / 17.7% / 18.0% ;       ;
 ; Maximum fan-out                                             ; 609                   ;       ;
 ; Highest non-global fan-out                                  ; 138                   ;       ;
-; Total fan-out                                               ; 4617                  ;       ;
-; Average fan-out                                             ; 3.29                  ;       ;
+; Total fan-out                                               ; 4629                  ;       ;
+; Average fan-out                                             ; 3.27                  ;       ;
 +-------------------------------------------------------------+-----------------------+-------+
 
 
@@ -330,7 +330,7 @@ The pin-out file can be found in C:/descomp/contador_intermediario/output_files/
 ;     -- 5 input functions                                    ; 62                    ; 0                              ;
 ;     -- 4 input functions                                    ; 65                    ; 0                              ;
 ;     -- <=3 input functions                                  ; 111                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 140                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 152                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
@@ -358,7 +358,7 @@ The pin-out file can be found in C:/descomp/contador_intermediario/output_files/
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 4617                  ; 0                              ;
+;     -- Total Connections                                    ; 4629                  ; 0                              ;
 ;     -- Registered Connections                               ; 1018                  ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
@@ -1094,7 +1094,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[9]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; KEY[2]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; FPGA_RESET_N ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; SW[1]        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[1]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[2]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[3]        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; SW[4]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
@@ -1125,7 +1125,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; FPGA_RESET_N                                                                  ;                   ;         ;
 ;      - Data_IN[0]~2                                                           ; 1                 ; 0       ;
 ; SW[1]                                                                         ;                   ;         ;
-;      - Data_IN[1]~4                                                           ; 1                 ; 0       ;
+;      - Data_IN[1]~4                                                           ; 0                 ; 0       ;
 ; SW[2]                                                                         ;                   ;         ;
 ;      - Data_IN[2]~5                                                           ; 0                 ; 0       ;
 ; SW[3]                                                                         ;                   ;         ;
@@ -1160,7 +1160,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CPU:CPU|bancoRegistradoresArqRegMem:BANCO_REG|registrador~54   ; LABCELL_X31_Y4_N12  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; CPU:CPU|decoderGeneric:DEC_instrucao|Equal14~3                 ; LABCELL_X25_Y6_N0   ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; CPU:CPU|decoderGeneric:DEC_instrucao|saida[2]~6                ; LABCELL_X25_Y6_N21  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; comb~5                                                         ; LABCELL_X24_Y5_N48  ; 2       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; comb~5                                                         ; LABCELL_X24_Y5_N36  ; 2       ; Async. clear ; no     ; --                   ; --               ; --                        ;
 ; hexComponent:comp_HEX0|comb~1                                  ; MLABCELL_X23_Y4_N0  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; hexComponent:comp_HEX1|comb~0                                  ; MLABCELL_X28_Y7_N24 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; hexComponent:comp_HEX2|comb~0                                  ; MLABCELL_X28_Y7_N57 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
@@ -1170,36 +1170,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ledComponent:logica_LED|comb~2                                 ; LABCELL_X26_Y6_N24  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; logicaKeys:logicaKeys|keyDebounce:KEY_0|edgeDetector:KEY|saida ; LABCELL_X10_Y2_N6   ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; logicaKeys:logicaKeys|keyDebounce:KEY_1|edgeDetector:KEY|saida ; LABCELL_X12_Y1_N24  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~696                                         ; LABCELL_X24_Y7_N33  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~698                                         ; MLABCELL_X28_Y9_N57 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~700                                         ; LABCELL_X26_Y4_N12  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~696                                         ; LABCELL_X24_Y7_N39  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~698                                         ; MLABCELL_X28_Y9_N51 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~700                                         ; LABCELL_X26_Y4_N0   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~702                                         ; MLABCELL_X28_Y8_N36 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~704                                         ; LABCELL_X31_Y7_N18  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~706                                         ; LABCELL_X26_Y8_N0   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~706                                         ; LABCELL_X26_Y8_N36  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~708                                         ; LABCELL_X20_Y5_N21  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~710                                         ; MLABCELL_X23_Y8_N15 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~712                                         ; LABCELL_X24_Y7_N42  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~710                                         ; MLABCELL_X23_Y8_N3  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~712                                         ; LABCELL_X24_Y7_N6   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~714                                         ; LABCELL_X26_Y9_N30  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~716                                         ; LABCELL_X25_Y7_N12  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~716                                         ; LABCELL_X25_Y7_N24  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~718                                         ; MLABCELL_X28_Y8_N24 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~720                                         ; LABCELL_X21_Y7_N48  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~722                                         ; LABCELL_X32_Y6_N33  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~722                                         ; LABCELL_X32_Y6_N45  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~724                                         ; LABCELL_X25_Y2_N36  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~726                                         ; LABCELL_X26_Y4_N30  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~728                                         ; MLABCELL_X23_Y6_N21 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~730                                         ; MLABCELL_X23_Y6_N3  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~732                                         ; LABCELL_X32_Y5_N42  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~734                                         ; MLABCELL_X23_Y8_N0  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~736                                         ; LABCELL_X26_Y8_N27  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~738                                         ; LABCELL_X26_Y7_N18  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~734                                         ; MLABCELL_X23_Y8_N24 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~736                                         ; LABCELL_X26_Y8_N51  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~738                                         ; LABCELL_X26_Y7_N6   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~740                                         ; LABCELL_X20_Y3_N39  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~742                                         ; MLABCELL_X28_Y8_N21 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~744                                         ; LABCELL_X24_Y7_N30  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~742                                         ; MLABCELL_X28_Y8_N33 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~744                                         ; LABCELL_X24_Y7_N36  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~746                                         ; LABCELL_X31_Y8_N18  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~748                                         ; LABCELL_X32_Y5_N12  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~750                                         ; LABCELL_X31_Y8_N21  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~752                                         ; MLABCELL_X23_Y7_N54 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~754                                         ; LABCELL_X32_Y6_N42  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~752                                         ; MLABCELL_X23_Y7_N18 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~754                                         ; LABCELL_X32_Y6_N6   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~756                                         ; LABCELL_X20_Y6_N48  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~758                                         ; LABCELL_X31_Y5_N12  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~760                                         ; LABCELL_X32_Y3_N39  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
@@ -1207,16 +1207,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; memoriaRAM:RAM|ram~764                                         ; LABCELL_X32_Y3_N48  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~766                                         ; MLABCELL_X23_Y6_N18 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~768                                         ; LABCELL_X31_Y7_N12  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~770                                         ; LABCELL_X25_Y7_N48  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~772                                         ; LABCELL_X21_Y5_N18  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~774                                         ; LABCELL_X26_Y8_N54  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~770                                         ; LABCELL_X25_Y7_N0   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~772                                         ; LABCELL_X21_Y5_N54  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~774                                         ; LABCELL_X26_Y8_N18  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~776                                         ; LABCELL_X26_Y2_N21  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~778                                         ; LABCELL_X26_Y9_N54  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~780                                         ; MLABCELL_X23_Y3_N57 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~782                                         ; LABCELL_X25_Y7_N21  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~784                                         ; LABCELL_X25_Y2_N24  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~784                                         ; LABCELL_X25_Y2_N42  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~786                                         ; LABCELL_X21_Y6_N54  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~788                                         ; LABCELL_X25_Y4_N24  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~788                                         ; LABCELL_X25_Y4_N54  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~790                                         ; LABCELL_X20_Y5_N36  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~792                                         ; LABCELL_X20_Y3_N42  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~794                                         ; LABCELL_X20_Y5_N0   ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
@@ -1224,15 +1224,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; memoriaRAM:RAM|ram~798                                         ; LABCELL_X20_Y5_N18  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~800                                         ; LABCELL_X31_Y6_N18  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~802                                         ; LABCELL_X25_Y8_N54  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~804                                         ; LABCELL_X31_Y6_N42  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~806                                         ; LABCELL_X26_Y3_N12  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~804                                         ; LABCELL_X31_Y6_N48  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~806                                         ; LABCELL_X26_Y3_N36  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~808                                         ; LABCELL_X25_Y3_N36  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~810                                         ; LABCELL_X26_Y2_N12  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~812                                         ; LABCELL_X31_Y5_N42  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~814                                         ; LABCELL_X29_Y5_N57  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~816                                         ; LABCELL_X25_Y4_N21  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~814                                         ; LABCELL_X29_Y5_N21  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~816                                         ; LABCELL_X25_Y4_N39  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~818                                         ; LABCELL_X26_Y2_N15  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~820                                         ; LABCELL_X29_Y5_N54  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~820                                         ; LABCELL_X29_Y5_N18  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; memoriaRAM:RAM|ram~822                                         ; LABCELL_X29_Y7_N36  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -1251,21 +1251,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 1,878 / 140,056 ( 1 % ) ;
-; C12 interconnects            ; 17 / 6,048 ( < 1 % )    ;
-; C2 interconnects             ; 671 / 54,648 ( 1 % )    ;
-; C4 interconnects             ; 385 / 25,920 ( 1 % )    ;
+; Block interconnects          ; 1,866 / 140,056 ( 1 % ) ;
+; C12 interconnects            ; 15 / 6,048 ( < 1 % )    ;
+; C2 interconnects             ; 630 / 54,648 ( 1 % )    ;
+; C4 interconnects             ; 376 / 25,920 ( 1 % )    ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 96 / 140,056 ( < 1 % )  ;
+; Direct links                 ; 102 / 140,056 ( < 1 % ) ;
 ; Global clocks                ; 1 / 16 ( 6 % )          ;
-; Local interconnects          ; 307 / 36,960 ( < 1 % )  ;
+; Local interconnects          ; 299 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 93 / 5,984 ( 2 % )      ;
-; R14/C12 interconnect drivers ; 99 / 9,504 ( 1 % )      ;
+; R14 interconnects            ; 80 / 5,984 ( 1 % )      ;
+; R14/C12 interconnect drivers ; 88 / 9,504 ( < 1 % )    ;
 ; R3 interconnects             ; 807 / 60,192 ( 1 % )    ;
-; R6 interconnects             ; 1,713 / 127,072 ( 1 % ) ;
+; R6 interconnects             ; 1,641 / 127,072 ( 1 % ) ;
 ; Spine clocks                 ; 2 / 120 ( 2 % )         ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
@@ -1448,7 +1448,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+------------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s)   ; Delay Added in ns ;
 +-----------------+------------------------+-------------------+
-; CLOCK_50        ; CLOCK_50,KEY[0],KEY[1] ; 85.0              ;
+; CLOCK_50        ; CLOCK_50,KEY[0],KEY[1] ; 84.9              ;
 ; CLOCK_50        ; KEY[0],KEY[1]          ; 5.2               ;
 ; I/O             ; CLOCK_50               ; 5.1               ;
 +-----------------+------------------------+-------------------+
@@ -1498,10 +1498,10 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:05
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:01:00
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:45
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
@@ -1510,19 +1510,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 14% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:11
-Info (11888): Total time spent on timing analysis during the Fitter is 3.19 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:09
+Info (11888): Total time spent on timing analysis during the Fitter is 2.24 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:07
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Info (144001): Generated suppressed messages file C:/descomp/contador_intermediario/output_files/Aula7e8.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 6443 megabytes
-    Info: Processing ended: Thu Oct 20 22:33:57 2022
-    Info: Elapsed time: 00:02:21
-    Info: Total CPU time (on all processors): 00:01:15
+    Info: Peak virtual memory: 6437 megabytes
+    Info: Processing ended: Fri Oct 21 10:05:50 2022
+    Info: Elapsed time: 00:01:50
+    Info: Total CPU time (on all processors): 00:00:59
 
 
 +----------------------------+

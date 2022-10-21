@@ -66,7 +66,7 @@ tmp(27) := x"7" & "00" & std_logic_vector(to_unsigned(33, addrWidth));	-- JEQ @C
 tmp(28) := x"4" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- LDI %R0 $0
 tmp(29) := x"5" & "00" & std_logic_vector(to_unsigned(511, addrWidth));	-- STA %R0 @511
 tmp(30) := x"1" & "10" & std_logic_vector(to_unsigned(10, addrWidth));	-- LDA %R2 @10
-tmp(31) := x"2" & "10" & std_logic_vector(to_unsigned(1, addrWidth));	-- SOMA %R2 @1
+tmp(31) := x"E" & "10" & std_logic_vector(to_unsigned(1, addrWidth));	-- ADDI %R2 $1
 tmp(32) := x"5" & "10" & std_logic_vector(to_unsigned(10, addrWidth));	-- STA %R2 @10
 tmp(33) := x"1" & "10" & std_logic_vector(to_unsigned(10, addrWidth));	-- LDA %R2 @10
 tmp(34) := x"C" & "10" & std_logic_vector(to_unsigned(30, addrWidth));	-- CLT %R2 @30
@@ -131,6 +131,8 @@ tmp(92) := x"5" & "00" & std_logic_vector(to_unsigned(15, addrWidth));	-- STA %R
 tmp(93) := x"4" & "00" & std_logic_vector(to_unsigned(1, addrWidth));	-- LDI %R0 $1
 tmp(94) := x"5" & "00" & std_logic_vector(to_unsigned(257, addrWidth));	-- STA %R0 @257
 tmp(95) := x"A" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- RET 
+
+
 
 
 
