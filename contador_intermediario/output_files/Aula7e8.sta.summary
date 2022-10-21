@@ -3,147 +3,147 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -10.032
-TNS   : -4046.322
+Slack : -9.994
+TNS   : -4406.966
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.470
+Slack : 0.539
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'KEY[0]'
-Slack : -3.463
-TNS   : -3.463
+Slack : -3.509
+TNS   : -3.509
 
 Type  : Slow 1100mV 85C Model Recovery 'KEY[1]'
-Slack : -3.432
-TNS   : -3.432
+Slack : -3.387
+TNS   : -3.387
 
 Type  : Slow 1100mV 85C Model Removal 'KEY[1]'
-Slack : 0.802
+Slack : 0.924
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'KEY[0]'
-Slack : 0.862
+Slack : 1.161
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[1]'
-Slack : -0.876
-TNS   : -1.547
+Slack : -0.774
+TNS   : -1.341
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.762
-TNS   : -1.317
+Slack : -0.619
+TNS   : -1.157
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -0.538
-TNS   : -539.066
+TNS   : -540.166
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -9.921
-TNS   : -3968.884
+Slack : -9.942
+TNS   : -4262.448
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.505
+Slack : 0.569
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'KEY[0]'
-Slack : -3.644
-TNS   : -3.644
+Slack : -3.766
+TNS   : -3.766
 
 Type  : Slow 1100mV 0C Model Recovery 'KEY[1]'
-Slack : -3.589
-TNS   : -3.589
+Slack : -3.648
+TNS   : -3.648
 
 Type  : Slow 1100mV 0C Model Removal 'KEY[1]'
-Slack : 0.860
+Slack : 1.034
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'KEY[0]'
-Slack : 0.944
+Slack : 1.292
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[1]'
-Slack : -0.919
-TNS   : -1.734
+Slack : -0.853
+TNS   : -1.549
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.857
-TNS   : -1.546
+Slack : -0.656
+TNS   : -1.194
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -0.538
-TNS   : -477.817
+TNS   : -477.560
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -4.720
-TNS   : -1817.147
+Slack : -4.641
+TNS   : -1981.087
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.184
+Slack : 0.199
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'KEY[0]'
-Slack : -1.642
-TNS   : -1.642
+Slack : -1.559
+TNS   : -1.559
 
 Type  : Fast 1100mV 85C Model Recovery 'KEY[1]'
-Slack : -1.543
-TNS   : -1.543
+Slack : -1.521
+TNS   : -1.521
 
 Type  : Fast 1100mV 85C Model Removal 'KEY[1]'
-Slack : 0.404
+Slack : 0.523
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'KEY[0]'
-Slack : 0.532
+Slack : 0.589
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[1]'
-Slack : -0.904
-TNS   : -2.313
+Slack : -0.851
+TNS   : -2.126
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.849
-TNS   : -2.039
+Slack : -0.746
+TNS   : -1.770
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.409
-TNS   : -276.190
+Slack : -0.410
+TNS   : -277.766
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -4.168
-TNS   : -1561.166
+Slack : -4.175
+TNS   : -1723.566
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.177
+Slack : 0.176
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'KEY[0]'
-Slack : -1.493
-TNS   : -1.493
+Slack : -1.456
+TNS   : -1.456
 
 Type  : Fast 1100mV 0C Model Recovery 'KEY[1]'
-Slack : -1.393
-TNS   : -1.393
+Slack : -1.414
+TNS   : -1.414
 
 Type  : Fast 1100mV 0C Model Removal 'KEY[1]'
-Slack : 0.392
+Slack : 0.505
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'KEY[0]'
-Slack : 0.519
+Slack : 0.582
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[1]'
-Slack : -0.891
-TNS   : -2.400
+Slack : -0.863
+TNS   : -2.280
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.873
-TNS   : -2.233
+Slack : -0.767
+TNS   : -1.964
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.446
-TNS   : -329.664
+Slack : -0.447
+TNS   : -330.526
 
 ------------------------------------------------------------

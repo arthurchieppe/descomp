@@ -26,6 +26,7 @@ architecture comportamento of decoderGeneric is
   constant JNE  : std_logic_vector(3 downto 0) := "1011";
   constant CLT  : std_logic_vector(3 downto 0) := "1100";
   constant JLT  : std_logic_vector(3 downto 0) := "1101";
+  constant ADDI  : std_logic_vector(3 downto 0) := "1110";
 
   begin
   
@@ -43,6 +44,7 @@ saida <= "000000000000" when entrada = NOP else
 			"000010000000" when entrada = JNE else
 			"000000001110" when entrada = CLT else
 			"000010000000" when entrada = JLT else
+			"000001100000" when entrada = ADDI else
          "000000000000";  
 
 saida_desvio <= "01" when entrada = JMP or (flagzero = '1' and entrada = JEQ) or (flagzero = '0' and entrada = JNE) or 
