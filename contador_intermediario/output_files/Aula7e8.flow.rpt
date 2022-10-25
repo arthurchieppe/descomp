@@ -1,5 +1,5 @@
 Flow report for Aula7e8
-Fri Oct 21 11:26:36 2022
+Tue Oct 25 15:43:36 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Oct 21 11:26:29 2022       ;
+; Flow Status                     ; Successful - Tue Oct 25 15:43:29 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula7e8                                     ;
 ; Top-level Entity Name           ; contador_intermediario                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 414 / 18,480 ( 2 % )                        ;
-; Total registers                 ; 613                                         ;
+; Logic utilization (in ALMs)     ; 399 / 18,480 ( 2 % )                        ;
+; Total registers                 ; 610                                         ;
 ; Total pins                      ; 68 / 224 ( 30 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/21/2022 11:24:29 ;
+; Start date & time ; 10/25/2022 15:39:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Aula7e8             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+------------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name            ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 110352857499383.166636226914480        ; --            ; --                     ; --         ;
+; COMPILER_SIGNATURE_ID               ; 110352857499383.166672319007324        ; --            ; --                     ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                     ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                     ; --         ;
 ; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --                     ; --         ;
@@ -100,11 +100,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4863 MB             ; 00:00:11                           ;
-; Fitter               ; 00:01:45     ; 1.0                     ; 6422 MB             ; 00:01:13                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4831 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.7                     ; 5115 MB             ; 00:00:05                           ;
-; Total                ; 00:02:03     ; --                      ; --                  ; 00:01:31                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4873 MB             ; 00:00:10                           ;
+; Fitter               ; 00:03:14     ; 1.0                     ; 6414 MB             ; 00:03:31                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4830 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.7                     ; 5115 MB             ; 00:00:06                           ;
+; Total                ; 00:03:41     ; --                      ; --                  ; 00:03:50                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

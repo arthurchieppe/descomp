@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula7e8
-Fri Oct 21 11:24:38 2022
+Tue Oct 25 15:40:05 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -84,7 +84,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct 21 11:24:38 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 25 15:40:05 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula7e8                                     ;
 ; Top-level Entity Name           ; contador_intermediario                      ;
@@ -248,14 +248,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 482            ;
+; Estimate of Logic utilization (ALMs needed) ; 486            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 515            ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 286            ;
-;     -- 5 input functions                    ; 44             ;
-;     -- 4 input functions                    ; 63             ;
-;     -- <=3 input functions                  ; 122            ;
+; Combinational ALUT usage for logic          ; 509            ;
+;     -- 7 input functions                    ; 3              ;
+;     -- 6 input functions                    ; 277            ;
+;     -- 5 input functions                    ; 61             ;
+;     -- 4 input functions                    ; 65             ;
+;     -- <=3 input functions                  ; 103            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 602            ;
 ;                                             ;                ;
@@ -265,8 +265,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 600            ;
-; Total fan-out                               ; 4446           ;
-; Average fan-out                             ; 3.55           ;
+; Total fan-out                               ; 4457           ;
+; Average fan-out                             ; 3.57           ;
 +---------------------------------------------+----------------+
 
 
@@ -275,11 +275,11 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name                 ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------------------+--------------+
-; |contador_intermediario                       ; 515 (18)            ; 602 (0)                   ; 0                 ; 0          ; 68   ; 0            ; |contador_intermediario                                                              ; contador_intermediario      ; work         ;
-;    |CPU:CPU|                                  ; 73 (0)              ; 52 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU                                                      ; CPU                         ; work         ;
+; |contador_intermediario                       ; 509 (17)            ; 602 (0)                   ; 0                 ; 0          ; 68   ; 0            ; |contador_intermediario                                                              ; contador_intermediario      ; work         ;
+;    |CPU:CPU|                                  ; 72 (0)              ; 52 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU                                                      ; CPU                         ; work         ;
 ;       |ULASomaSub:ULA1|                       ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|ULASomaSub:ULA1                                      ; ULASomaSub                  ; work         ;
 ;       |bancoRegistradoresArqRegMem:BANCO_REG| ; 12 (12)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|bancoRegistradoresArqRegMem:BANCO_REG                ; bancoRegistradoresArqRegMem ; work         ;
-;       |decoderGeneric:DEC_instrucao|          ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|decoderGeneric:DEC_instrucao                         ; decoderGeneric              ; work         ;
+;       |decoderGeneric:DEC_instrucao|          ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|decoderGeneric:DEC_instrucao                         ; decoderGeneric              ; work         ;
 ;       |flipFlopGenerico:REG_FLAG_LESS|        ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|flipFlopGenerico:REG_FLAG_LESS                       ; flipFlopGenerico            ; work         ;
 ;       |flipFlopGenerico:REG_FLAG_ZERO|        ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|flipFlopGenerico:REG_FLAG_ZERO                       ; flipFlopGenerico            ; work         ;
 ;       |muxGenericoNx1:MUX_PC|                 ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|CPU:CPU|muxGenericoNx1:MUX_PC                                ; muxGenericoNx1              ; work         ;
@@ -317,7 +317,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |edgeDetector:KEY|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|logicaKeys:logicaKeys|keyDebounce:KEY_1|edgeDetector:KEY     ; edgeDetector                ; work         ;
 ;          |flipFlopGenerico:FF0|               ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|logicaKeys:logicaKeys|keyDebounce:KEY_1|flipFlopGenerico:FF0 ; flipFlopGenerico            ; work         ;
 ;    |memoriaRAM:RAM|                           ; 299 (299)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|memoriaRAM:RAM                                               ; memoriaRAM                  ; work         ;
-;    |memoriaROM:ROM|                           ; 68 (68)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|memoriaROM:ROM                                               ; memoriaROM                  ; work         ;
+;    |memoriaROM:ROM|                           ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador_intermediario|memoriaROM:ROM                                               ; memoriaROM                  ; work         ;
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -760,21 +760,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 555                         ;
 ;     ENA SLD           ; 32                          ;
 ;     plain             ; 13                          ;
-; arriav_lcell_comb     ; 515                         ;
+; arriav_lcell_comb     ; 509                         ;
 ;     arith             ; 26                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
 ;         5 data inputs ; 16                          ;
-;     normal            ; 489                         ;
-;         2 data inputs ; 85                          ;
-;         3 data inputs ; 27                          ;
-;         4 data inputs ; 63                          ;
-;         5 data inputs ; 28                          ;
-;         6 data inputs ; 286                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 480                         ;
+;         2 data inputs ; 77                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 65                          ;
+;         5 data inputs ; 45                          ;
+;         6 data inputs ; 277                         ;
 ; boundary_port         ; 68                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.20                       ;
-; Average LUT depth     ; 6.43                        ;
+; Max LUT depth         ; 10.10                       ;
+; Average LUT depth     ; 6.37                        ;
 +-----------------------+-----------------------------+
 
 
@@ -783,7 +785,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -793,7 +795,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Oct 21 11:24:29 2022
+    Info: Processing started: Tue Oct 25 15:39:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contador_intermediario -c Aula7e8
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file contador_intermediario.vhd
@@ -898,14 +900,14 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1172 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1166 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 1104 logic cells
+    Info (21061): Implemented 1098 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Fri Oct 21 11:24:38 2022
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 4873 megabytes
+    Info: Processing ended: Tue Oct 25 15:40:05 2022
+    Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:11
 
 
