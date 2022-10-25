@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity contador_intermediario is
+  generic ( 
+		  larguraDados : natural := 8;
+		  larguraEnderecos : natural := 9;
+        larguraInstrucao : natural := 15;
+		  larguraEndBancoRegs : natural := 2;
+		  simulacao : boolean := TRUE
+  );
+  port   (
+    CLOCK_50:in std_logic;
+	 KEY: in  std_logic_vector(3 downto 0);
+	 FPGA_RESET_N : in std_logic;
+	 LEDR : out std_logic_vector(larguraEnderecos downto 0);
+	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0);
+	 SW: in std_logic_vector(9 downto 0)
+--	 PC_OUT: out std_logic_vector(larguraEnderecos-1 downto 0) 
+  );
+end entity;
+
+
+architecture arquitetura of contador_intermediario is
+	
+
+begin
+
+gravar:  if simulacao generate
+CLK <= CLOCK_50;
+else generate
+detectorSub0: work.edgeDetector(bordaSubida)
+        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK);
+end generate;
+
+
+end architecture;
