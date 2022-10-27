@@ -202,7 +202,7 @@ logicaKeys: entity work.logicaKeys
 			data_add_out5 => data_add_out(5)
 			);
 
-interfaceBaseTempo1Seg : entity work.divisorGenerico_e_Interface
+interfaceBaseTempo1Seg : entity work.divisorGenerico_e_Interface generic map (divisorTopLevel => 12500000)
               port map (clk => CLK,
               habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(5) and saida_decoder_blocos(5),
               limpaLeitura => data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and data_add_out(8) and hab_wr,

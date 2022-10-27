@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula7e8
-Thu Oct 27 17:54:14 2022
+Thu Oct 27 18:01:49 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -40,26 +40,27 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  32. Parameter Settings for User Entity Instance: hexComponent:comp_HEX4|registradorGenerico:REG
  33. Parameter Settings for User Entity Instance: hexComponent:comp_HEX5
  34. Parameter Settings for User Entity Instance: hexComponent:comp_HEX5|registradorGenerico:REG
- 35. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo
- 36. Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo1Seg|flipFlopGenerico:registraUmSegundo"
- 37. Port Connectivity Checks: "logicaKeys:logicaKeys|keyDebounce:KEY_0|buffer_3_state_8portas:buff"
- 38. Port Connectivity Checks: "logicaKeys:logicaKeys|keyDebounce:KEY_0|flipFlopGenerico:FF0"
- 39. Port Connectivity Checks: "hexComponent:comp_HEX0|conversorHex7Seg:converSeg"
- 40. Port Connectivity Checks: "hexComponent:comp_HEX0|registradorGenerico:REG"
- 41. Port Connectivity Checks: "ledComponent:logica_LED|registradorGenerico:LED0to7"
- 42. Port Connectivity Checks: "ledComponent:logica_LED|flipFlopGenerico:LED8"
- 43. Port Connectivity Checks: "ledComponent:logica_LED|flipFlopGenerico:LED9"
- 44. Port Connectivity Checks: "decoder3x8:DEC_Enderecos"
- 45. Port Connectivity Checks: "decoder3x8:DEC_Blocos"
- 46. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
- 47. Port Connectivity Checks: "CPU:CPU|registradorGenerico:REG_RETORNO"
- 48. Port Connectivity Checks: "CPU:CPU|muxGenericoNx1:MUX_PC"
- 49. Port Connectivity Checks: "CPU:CPU|flipFlopGenerico:REG_FLAG_LESS"
- 50. Port Connectivity Checks: "CPU:CPU|flipFlopGenerico:REG_FLAG_ZERO"
- 51. Port Connectivity Checks: "CPU:CPU|decoderGeneric:DEC_instrucao"
- 52. Post-Synthesis Netlist Statistics for Top Partition
- 53. Elapsed Time Per Partition
- 54. Analysis & Synthesis Messages
+ 35. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo1Seg
+ 36. Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo
+ 37. Port Connectivity Checks: "divisorGenerico_e_Interface:interfaceBaseTempo1Seg|flipFlopGenerico:registraUmSegundo"
+ 38. Port Connectivity Checks: "logicaKeys:logicaKeys|keyDebounce:KEY_0|buffer_3_state_8portas:buff"
+ 39. Port Connectivity Checks: "logicaKeys:logicaKeys|keyDebounce:KEY_0|flipFlopGenerico:FF0"
+ 40. Port Connectivity Checks: "hexComponent:comp_HEX0|conversorHex7Seg:converSeg"
+ 41. Port Connectivity Checks: "hexComponent:comp_HEX0|registradorGenerico:REG"
+ 42. Port Connectivity Checks: "ledComponent:logica_LED|registradorGenerico:LED0to7"
+ 43. Port Connectivity Checks: "ledComponent:logica_LED|flipFlopGenerico:LED8"
+ 44. Port Connectivity Checks: "ledComponent:logica_LED|flipFlopGenerico:LED9"
+ 45. Port Connectivity Checks: "decoder3x8:DEC_Enderecos"
+ 46. Port Connectivity Checks: "decoder3x8:DEC_Blocos"
+ 47. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 48. Port Connectivity Checks: "CPU:CPU|registradorGenerico:REG_RETORNO"
+ 49. Port Connectivity Checks: "CPU:CPU|muxGenericoNx1:MUX_PC"
+ 50. Port Connectivity Checks: "CPU:CPU|flipFlopGenerico:REG_FLAG_LESS"
+ 51. Port Connectivity Checks: "CPU:CPU|flipFlopGenerico:REG_FLAG_ZERO"
+ 52. Port Connectivity Checks: "CPU:CPU|decoderGeneric:DEC_instrucao"
+ 53. Post-Synthesis Netlist Statistics for Top Partition
+ 54. Elapsed Time Per Partition
+ 55. Analysis & Synthesis Messages
 
 
 
@@ -86,7 +87,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 27 17:54:14 2022       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 27 18:01:49 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula7e8                                     ;
 ; Top-level Entity Name           ; relogio                                     ;
@@ -617,6 +618,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo1Seg ;
++-----------------+----------+--------------------------------------------------------------------+
+; Parameter Name  ; Value    ; Type                                                               ;
++-----------------+----------+--------------------------------------------------------------------+
+; divisortoplevel ; 12500000 ; Signed Integer                                                     ;
++-----------------+----------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo ;
 +----------------+----------+-----------------------------------------------------------------------------------------------+
@@ -823,7 +834,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 27 17:54:03 2022
+    Info: Processing started: Thu Oct 27 18:01:39 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogio -c Aula7e8
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
@@ -891,7 +902,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file bancore
     Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/descomp/relogio/bancoRegistradoresArqRegMem.vhd Line: 23
     Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/descomp/relogio/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico_e_interface.vhd
-    Info (12022): Found design unit 1: divisorGenerico_e_Interface-interface File: C:/descomp/relogio/divisorGenerico_e_Interface.vhd Line: 14
+    Info (12022): Found design unit 1: divisorGenerico_e_Interface-interface File: C:/descomp/relogio/divisorGenerico_e_Interface.vhd Line: 15
     Info (12023): Found entity 1: divisorGenerico_e_Interface File: C:/descomp/relogio/divisorGenerico_e_Interface.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
     Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/descomp/relogio/divisorGenerico.vhd Line: 15
@@ -920,7 +931,7 @@ Info (12128): Elaborating entity "logicaKeys" for hierarchy "logicaKeys:logicaKe
 Info (12128): Elaborating entity "keyDebounce" for hierarchy "logicaKeys:logicaKeys|keyDebounce:KEY_0" File: C:/descomp/relogio/logicaKeys.vhd Line: 23
 Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "logicaKeys:logicaKeys|keyDebounce:KEY_0|edgeDetector:KEY" File: C:/descomp/relogio/keyDebounce.vhd Line: 20
 Info (12128): Elaborating entity "divisorGenerico_e_Interface" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo1Seg" File: C:/descomp/relogio/relogio.vhd Line: 205
-Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo" File: C:/descomp/relogio/divisorGenerico_e_Interface.vhd Line: 19
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo" File: C:/descomp/relogio/divisorGenerico_e_Interface.vhd Line: 20
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/descomp/relogio/memoriaRAM.vhd Line: 27
     Info (276004): RAM logic "CPU:CPU|bancoRegistradoresArqRegMem:BANCO_REG|registrador" is uninferred due to inappropriate RAM size File: C:/descomp/relogio/bancoRegistradoresArqRegMem.vhd Line: 29
@@ -941,9 +952,9 @@ Info (21057): Implemented 1199 device resources after synthesis - the final reso
     Info (21059): Implemented 52 output pins
     Info (21061): Implemented 1131 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4872 megabytes
-    Info: Processing ended: Thu Oct 27 17:54:14 2022
-    Info: Elapsed time: 00:00:11
+    Info: Peak virtual memory: 4873 megabytes
+    Info: Processing ended: Thu Oct 27 18:01:49 2022
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:09
 
 
