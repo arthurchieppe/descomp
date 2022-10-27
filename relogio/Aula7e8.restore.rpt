@@ -1,0 +1,93 @@
+Restore Archived Project report for Aula7e8
+Thu Oct 27 14:54:23 2022
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Thu Oct 27 14:54:23 2022 ;
+; Revision Name                   ; Aula7e8                               ;
+; Top-level Entity Name           ; contador_intermediario                ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/descomp/contador_intermediario/contador_intermediario_tmp_archive.qar' into the 'C:/descomp/relogio' directory
+Info: Generated report 'Aula7e8.restore.rpt'
+
+
++---------------------------------+
+; Files Restored                  ;
++---------------------------------+
+; File Name                       ;
++---------------------------------+
+; qar_info.json                   ;
+; Aula7e8.qsf                     ;
+; CPU.vhd                         ;
+; ULASomaSub.vhd                  ;
+; assignment_defaults.qdf         ;
+; bancoRegistradoresArqRegMem.vhd ;
+; buffer_3_state_1portas.vhd      ;
+; buffer_3_state_8portas.vhd      ;
+; contador_intermediario.qpf      ;
+; contador_intermediario.vhd      ;
+; conversorHex7Seg.vhd            ;
+; decoder3x8.vhd                  ;
+; decoderGeneric.vhd              ;
+; edgeDetector.vhd                ;
+; flipFlopGenerico.vhd            ;
+; hexComponent.vhd                ;
+; keyDebounce.vhd                 ;
+; ledComponent.vhd                ;
+; logicaKeys.vhd                  ;
+; memoriaRAM.vhd                  ;
+; memoriaROM.vhd                  ;
+; muxGenerico2x1.vhd              ;
+; muxGenericoNx1.vhd              ;
+; registradorGenerico.vhd         ;
+; somaConstante.vhd               ;
++---------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

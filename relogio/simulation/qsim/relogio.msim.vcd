@@ -1,0 +1,10994 @@
+$comment
+	File created using the following command:
+		vcd file relogio.msim.vcd -direction
+$end
+$date
+	Thu Oct 27 16:08:13 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module relogio_vhd_vec_tst $end
+$var wire 1 ! CLOCK_50 $end
+$var wire 1 " clockSegundo $end
+$var wire 1 # FPGA_RESET_N $end
+$var wire 1 $ HEX0 [6] $end
+$var wire 1 % HEX0 [5] $end
+$var wire 1 & HEX0 [4] $end
+$var wire 1 ' HEX0 [3] $end
+$var wire 1 ( HEX0 [2] $end
+$var wire 1 ) HEX0 [1] $end
+$var wire 1 * HEX0 [0] $end
+$var wire 1 + HEX1 [6] $end
+$var wire 1 , HEX1 [5] $end
+$var wire 1 - HEX1 [4] $end
+$var wire 1 . HEX1 [3] $end
+$var wire 1 / HEX1 [2] $end
+$var wire 1 0 HEX1 [1] $end
+$var wire 1 1 HEX1 [0] $end
+$var wire 1 2 HEX2 [6] $end
+$var wire 1 3 HEX2 [5] $end
+$var wire 1 4 HEX2 [4] $end
+$var wire 1 5 HEX2 [3] $end
+$var wire 1 6 HEX2 [2] $end
+$var wire 1 7 HEX2 [1] $end
+$var wire 1 8 HEX2 [0] $end
+$var wire 1 9 HEX3 [6] $end
+$var wire 1 : HEX3 [5] $end
+$var wire 1 ; HEX3 [4] $end
+$var wire 1 < HEX3 [3] $end
+$var wire 1 = HEX3 [2] $end
+$var wire 1 > HEX3 [1] $end
+$var wire 1 ? HEX3 [0] $end
+$var wire 1 @ HEX4 [6] $end
+$var wire 1 A HEX4 [5] $end
+$var wire 1 B HEX4 [4] $end
+$var wire 1 C HEX4 [3] $end
+$var wire 1 D HEX4 [2] $end
+$var wire 1 E HEX4 [1] $end
+$var wire 1 F HEX4 [0] $end
+$var wire 1 G HEX5 [6] $end
+$var wire 1 H HEX5 [5] $end
+$var wire 1 I HEX5 [4] $end
+$var wire 1 J HEX5 [3] $end
+$var wire 1 K HEX5 [2] $end
+$var wire 1 L HEX5 [1] $end
+$var wire 1 M HEX5 [0] $end
+$var wire 1 N KEY [3] $end
+$var wire 1 O KEY [2] $end
+$var wire 1 P KEY [1] $end
+$var wire 1 Q KEY [0] $end
+$var wire 1 R LEDR [9] $end
+$var wire 1 S LEDR [8] $end
+$var wire 1 T LEDR [7] $end
+$var wire 1 U LEDR [6] $end
+$var wire 1 V LEDR [5] $end
+$var wire 1 W LEDR [4] $end
+$var wire 1 X LEDR [3] $end
+$var wire 1 Y LEDR [2] $end
+$var wire 1 Z LEDR [1] $end
+$var wire 1 [ LEDR [0] $end
+$var wire 1 \ SW [9] $end
+$var wire 1 ] SW [8] $end
+$var wire 1 ^ SW [7] $end
+$var wire 1 _ SW [6] $end
+$var wire 1 ` SW [5] $end
+$var wire 1 a SW [4] $end
+$var wire 1 b SW [3] $end
+$var wire 1 c SW [2] $end
+$var wire 1 d SW [1] $end
+$var wire 1 e SW [0] $end
+
+$scope module i1 $end
+$var wire 1 f gnd $end
+$var wire 1 g vcc $end
+$var wire 1 h unknown $end
+$var wire 1 i devoe $end
+$var wire 1 j devclrn $end
+$var wire 1 k devpor $end
+$var wire 1 l ww_devoe $end
+$var wire 1 m ww_devclrn $end
+$var wire 1 n ww_devpor $end
+$var wire 1 o ww_CLOCK_50 $end
+$var wire 1 p ww_KEY [3] $end
+$var wire 1 q ww_KEY [2] $end
+$var wire 1 r ww_KEY [1] $end
+$var wire 1 s ww_KEY [0] $end
+$var wire 1 t ww_FPGA_RESET_N $end
+$var wire 1 u ww_LEDR [9] $end
+$var wire 1 v ww_LEDR [8] $end
+$var wire 1 w ww_LEDR [7] $end
+$var wire 1 x ww_LEDR [6] $end
+$var wire 1 y ww_LEDR [5] $end
+$var wire 1 z ww_LEDR [4] $end
+$var wire 1 { ww_LEDR [3] $end
+$var wire 1 | ww_LEDR [2] $end
+$var wire 1 } ww_LEDR [1] $end
+$var wire 1 ~ ww_LEDR [0] $end
+$var wire 1 !! ww_HEX0 [6] $end
+$var wire 1 "! ww_HEX0 [5] $end
+$var wire 1 #! ww_HEX0 [4] $end
+$var wire 1 $! ww_HEX0 [3] $end
+$var wire 1 %! ww_HEX0 [2] $end
+$var wire 1 &! ww_HEX0 [1] $end
+$var wire 1 '! ww_HEX0 [0] $end
+$var wire 1 (! ww_HEX1 [6] $end
+$var wire 1 )! ww_HEX1 [5] $end
+$var wire 1 *! ww_HEX1 [4] $end
+$var wire 1 +! ww_HEX1 [3] $end
+$var wire 1 ,! ww_HEX1 [2] $end
+$var wire 1 -! ww_HEX1 [1] $end
+$var wire 1 .! ww_HEX1 [0] $end
+$var wire 1 /! ww_HEX2 [6] $end
+$var wire 1 0! ww_HEX2 [5] $end
+$var wire 1 1! ww_HEX2 [4] $end
+$var wire 1 2! ww_HEX2 [3] $end
+$var wire 1 3! ww_HEX2 [2] $end
+$var wire 1 4! ww_HEX2 [1] $end
+$var wire 1 5! ww_HEX2 [0] $end
+$var wire 1 6! ww_HEX3 [6] $end
+$var wire 1 7! ww_HEX3 [5] $end
+$var wire 1 8! ww_HEX3 [4] $end
+$var wire 1 9! ww_HEX3 [3] $end
+$var wire 1 :! ww_HEX3 [2] $end
+$var wire 1 ;! ww_HEX3 [1] $end
+$var wire 1 <! ww_HEX3 [0] $end
+$var wire 1 =! ww_HEX4 [6] $end
+$var wire 1 >! ww_HEX4 [5] $end
+$var wire 1 ?! ww_HEX4 [4] $end
+$var wire 1 @! ww_HEX4 [3] $end
+$var wire 1 A! ww_HEX4 [2] $end
+$var wire 1 B! ww_HEX4 [1] $end
+$var wire 1 C! ww_HEX4 [0] $end
+$var wire 1 D! ww_HEX5 [6] $end
+$var wire 1 E! ww_HEX5 [5] $end
+$var wire 1 F! ww_HEX5 [4] $end
+$var wire 1 G! ww_HEX5 [3] $end
+$var wire 1 H! ww_HEX5 [2] $end
+$var wire 1 I! ww_HEX5 [1] $end
+$var wire 1 J! ww_HEX5 [0] $end
+$var wire 1 K! ww_SW [9] $end
+$var wire 1 L! ww_SW [8] $end
+$var wire 1 M! ww_SW [7] $end
+$var wire 1 N! ww_SW [6] $end
+$var wire 1 O! ww_SW [5] $end
+$var wire 1 P! ww_SW [4] $end
+$var wire 1 Q! ww_SW [3] $end
+$var wire 1 R! ww_SW [2] $end
+$var wire 1 S! ww_SW [1] $end
+$var wire 1 T! ww_SW [0] $end
+$var wire 1 U! ww_clockSegundo $end
+$var wire 1 V! \clockSegundo~output_o\ $end
+$var wire 1 W! \LEDR[0]~output_o\ $end
+$var wire 1 X! \LEDR[1]~output_o\ $end
+$var wire 1 Y! \LEDR[2]~output_o\ $end
+$var wire 1 Z! \LEDR[3]~output_o\ $end
+$var wire 1 [! \LEDR[4]~output_o\ $end
+$var wire 1 \! \LEDR[5]~output_o\ $end
+$var wire 1 ]! \LEDR[6]~output_o\ $end
+$var wire 1 ^! \LEDR[7]~output_o\ $end
+$var wire 1 _! \LEDR[8]~output_o\ $end
+$var wire 1 `! \LEDR[9]~output_o\ $end
+$var wire 1 a! \HEX0[0]~output_o\ $end
+$var wire 1 b! \HEX0[1]~output_o\ $end
+$var wire 1 c! \HEX0[2]~output_o\ $end
+$var wire 1 d! \HEX0[3]~output_o\ $end
+$var wire 1 e! \HEX0[4]~output_o\ $end
+$var wire 1 f! \HEX0[5]~output_o\ $end
+$var wire 1 g! \HEX0[6]~output_o\ $end
+$var wire 1 h! \HEX1[0]~output_o\ $end
+$var wire 1 i! \HEX1[1]~output_o\ $end
+$var wire 1 j! \HEX1[2]~output_o\ $end
+$var wire 1 k! \HEX1[3]~output_o\ $end
+$var wire 1 l! \HEX1[4]~output_o\ $end
+$var wire 1 m! \HEX1[5]~output_o\ $end
+$var wire 1 n! \HEX1[6]~output_o\ $end
+$var wire 1 o! \HEX2[0]~output_o\ $end
+$var wire 1 p! \HEX2[1]~output_o\ $end
+$var wire 1 q! \HEX2[2]~output_o\ $end
+$var wire 1 r! \HEX2[3]~output_o\ $end
+$var wire 1 s! \HEX2[4]~output_o\ $end
+$var wire 1 t! \HEX2[5]~output_o\ $end
+$var wire 1 u! \HEX2[6]~output_o\ $end
+$var wire 1 v! \HEX3[0]~output_o\ $end
+$var wire 1 w! \HEX3[1]~output_o\ $end
+$var wire 1 x! \HEX3[2]~output_o\ $end
+$var wire 1 y! \HEX3[3]~output_o\ $end
+$var wire 1 z! \HEX3[4]~output_o\ $end
+$var wire 1 {! \HEX3[5]~output_o\ $end
+$var wire 1 |! \HEX3[6]~output_o\ $end
+$var wire 1 }! \HEX4[0]~output_o\ $end
+$var wire 1 ~! \HEX4[1]~output_o\ $end
+$var wire 1 !" \HEX4[2]~output_o\ $end
+$var wire 1 "" \HEX4[3]~output_o\ $end
+$var wire 1 #" \HEX4[4]~output_o\ $end
+$var wire 1 $" \HEX4[5]~output_o\ $end
+$var wire 1 %" \HEX4[6]~output_o\ $end
+$var wire 1 &" \HEX5[0]~output_o\ $end
+$var wire 1 '" \HEX5[1]~output_o\ $end
+$var wire 1 (" \HEX5[2]~output_o\ $end
+$var wire 1 )" \HEX5[3]~output_o\ $end
+$var wire 1 *" \HEX5[4]~output_o\ $end
+$var wire 1 +" \HEX5[5]~output_o\ $end
+$var wire 1 ," \HEX5[6]~output_o\ $end
+$var wire 1 -" \CLOCK_50~input_o\ $end
+$var wire 1 ." \ROM|memROM~0_combout\ $end
+$var wire 1 /" \ROM|memROM~39_combout\ $end
+$var wire 1 0" \ROM|memROM~38_combout\ $end
+$var wire 1 1" \ROM|memROM~45_combout\ $end
+$var wire 1 2" \ROM|memROM~10_combout\ $end
+$var wire 1 3" \ROM|memROM~11_combout\ $end
+$var wire 1 4" \ROM|memROM~9_combout\ $end
+$var wire 1 5" \ROM|memROM~60_combout\ $end
+$var wire 1 6" \ROM|memROM~40_combout\ $end
+$var wire 1 7" \ROM|memROM~41_combout\ $end
+$var wire 1 8" \ROM|memROM~12_combout\ $end
+$var wire 1 9" \ROM|memROM~27_combout\ $end
+$var wire 1 :" \ROM|memROM~8_combout\ $end
+$var wire 1 ;" \ROM|memROM~13_combout\ $end
+$var wire 1 <" \ROM|memROM~42_combout\ $end
+$var wire 1 =" \ROM|memROM~14_combout\ $end
+$var wire 1 >" \ROM|memROM~15_combout\ $end
+$var wire 1 ?" \CPU|DEC_instrucao|Equal14~2_combout\ $end
+$var wire 1 @" \CPU|incrementaPC|Add0~14\ $end
+$var wire 1 A" \CPU|incrementaPC|Add0~18\ $end
+$var wire 1 B" \CPU|incrementaPC|Add0~22\ $end
+$var wire 1 C" \CPU|incrementaPC|Add0~2\ $end
+$var wire 1 D" \CPU|incrementaPC|Add0~5_sumout\ $end
+$var wire 1 E" \CPU|DEC_instrucao|Equal14~3_combout\ $end
+$var wire 1 F" \CPU|MUX_PC|saida_MUX[4]~1_combout\ $end
+$var wire 1 G" \ROM|memROM~43_combout\ $end
+$var wire 1 H" \ROM|memROM~44_combout\ $end
+$var wire 1 I" \ROM|memROM~25_combout\ $end
+$var wire 1 J" \ROM|memROM~26_combout\ $end
+$var wire 1 K" \CPU|incrementaPC|Add0~17_sumout\ $end
+$var wire 1 L" \CPU|MUX_PC|saida_MUX[1]~4_combout\ $end
+$var wire 1 M" \ROM|memROM~18_combout\ $end
+$var wire 1 N" \ROM|memROM~19_combout\ $end
+$var wire 1 O" \ROM|memROM~17_combout\ $end
+$var wire 1 P" \ROM|memROM~53_combout\ $end
+$var wire 1 Q" \CPU|incrementaPC|Add0~13_sumout\ $end
+$var wire 1 R" \CPU|MUX_PC|saida_MUX[0]~3_combout\ $end
+$var wire 1 S" \ROM|memROM~57_combout\ $end
+$var wire 1 T" \ROM|memROM~58_combout\ $end
+$var wire 1 U" \ROM|memROM~59_combout\ $end
+$var wire 1 V" \ROM|memROM~16_combout\ $end
+$var wire 1 W" \CPU|incrementaPC|Add0~21_sumout\ $end
+$var wire 1 X" \CPU|MUX_PC|saida_MUX[2]~5_combout\ $end
+$var wire 1 Y" \ROM|memROM~64_combout\ $end
+$var wire 1 Z" \ROM|memROM~65_combout\ $end
+$var wire 1 [" \ROM|memROM~66_combout\ $end
+$var wire 1 \" \ROM|memROM~28_combout\ $end
+$var wire 1 ]" \CPU|DEC_instrucao|saida~2_combout\ $end
+$var wire 1 ^" \CPU|DEC_instrucao|saida[6]~3_combout\ $end
+$var wire 1 _" \CPU|DEC_instrucao|saida[1]~7_combout\ $end
+$var wire 1 `" \CPU|DEC_instrucao|Equal14~1_combout\ $end
+$var wire 1 a" \CPU|DEC_instrucao|saida[1]~0_combout\ $end
+$var wire 1 b" \CPU|DEC_instrucao|saida[3]~1_combout\ $end
+$var wire 1 c" \ROM|memROM~6_combout\ $end
+$var wire 1 d" \ROM|memROM~7_combout\ $end
+$var wire 1 e" \RAM|process_0~0_combout\ $end
+$var wire 1 f" \RAM|dado_out~3_combout\ $end
+$var wire 1 g" \RAM|dado_out[0]~1_combout\ $end
+$var wire 1 h" \comb~0_combout\ $end
+$var wire 1 i" \comb~1_combout\ $end
+$var wire 1 j" \RAM|ram~695_combout\ $end
+$var wire 1 k" \CPU|DEC_instrucao|Equal14~0_combout\ $end
+$var wire 1 l" \RAM|process_0~1_combout\ $end
+$var wire 1 m" \RAM|ram~696_combout\ $end
+$var wire 1 n" \RAM|ram~18_q\ $end
+$var wire 1 o" \RAM|ram~727_combout\ $end
+$var wire 1 p" \RAM|ram~728_combout\ $end
+$var wire 1 q" \RAM|ram~82_q\ $end
+$var wire 1 r" \RAM|ram~759_combout\ $end
+$var wire 1 s" \RAM|ram~760_combout\ $end
+$var wire 1 t" \RAM|ram~50_q\ $end
+$var wire 1 u" \RAM|ram~791_combout\ $end
+$var wire 1 v" \RAM|ram~792_combout\ $end
+$var wire 1 w" \RAM|ram~114_q\ $end
+$var wire 1 x" \RAM|ram~590_combout\ $end
+$var wire 1 y" \RAM|ram~703_combout\ $end
+$var wire 1 z" \RAM|ram~704_combout\ $end
+$var wire 1 {" \RAM|ram~34_q\ $end
+$var wire 1 |" \RAM|ram~735_combout\ $end
+$var wire 1 }" \RAM|ram~736_combout\ $end
+$var wire 1 ~" \RAM|ram~98_q\ $end
+$var wire 1 !# \RAM|ram~767_combout\ $end
+$var wire 1 "# \RAM|ram~768_combout\ $end
+$var wire 1 ## \RAM|ram~66_q\ $end
+$var wire 1 $# \RAM|ram~799_combout\ $end
+$var wire 1 %# \RAM|ram~800_combout\ $end
+$var wire 1 &# \RAM|ram~130_q\ $end
+$var wire 1 '# \RAM|ram~591_combout\ $end
+$var wire 1 (# \RAM|ram~699_combout\ $end
+$var wire 1 )# \RAM|ram~700_combout\ $end
+$var wire 1 *# \RAM|ram~146_q\ $end
+$var wire 1 +# \RAM|ram~731_combout\ $end
+$var wire 1 ,# \RAM|ram~732_combout\ $end
+$var wire 1 -# \RAM|ram~210_q\ $end
+$var wire 1 .# \RAM|ram~763_combout\ $end
+$var wire 1 /# \RAM|ram~764_combout\ $end
+$var wire 1 0# \RAM|ram~178_q\ $end
+$var wire 1 1# \RAM|ram~807_combout\ $end
+$var wire 1 2# \RAM|ram~808_combout\ $end
+$var wire 1 3# \RAM|ram~242_q\ $end
+$var wire 1 4# \RAM|ram~592_combout\ $end
+$var wire 1 5# \RAM|ram~707_combout\ $end
+$var wire 1 6# \RAM|ram~708_combout\ $end
+$var wire 1 7# \RAM|ram~162_q\ $end
+$var wire 1 8# \RAM|ram~739_combout\ $end
+$var wire 1 9# \RAM|ram~740_combout\ $end
+$var wire 1 :# \RAM|ram~226_q\ $end
+$var wire 1 ;# \RAM|ram~771_combout\ $end
+$var wire 1 <# \RAM|ram~772_combout\ $end
+$var wire 1 =# \RAM|ram~194_q\ $end
+$var wire 1 ># \RAM|ram~815_combout\ $end
+$var wire 1 ?# \RAM|ram~816_combout\ $end
+$var wire 1 @# \RAM|ram~258_q\ $end
+$var wire 1 A# \RAM|ram~593_combout\ $end
+$var wire 1 B# \RAM|ram~594_combout\ $end
+$var wire 1 C# \RAM|ram~697_combout\ $end
+$var wire 1 D# \RAM|ram~698_combout\ $end
+$var wire 1 E# \RAM|ram~274_q\ $end
+$var wire 1 F# \RAM|ram~761_combout\ $end
+$var wire 1 G# \RAM|ram~762_combout\ $end
+$var wire 1 H# \RAM|ram~306_q\ $end
+$var wire 1 I# \RAM|ram~705_combout\ $end
+$var wire 1 J# \RAM|ram~706_combout\ $end
+$var wire 1 K# \RAM|ram~290_q\ $end
+$var wire 1 L# \RAM|ram~769_combout\ $end
+$var wire 1 M# \RAM|ram~770_combout\ $end
+$var wire 1 N# \RAM|ram~322_q\ $end
+$var wire 1 O# \RAM|ram~595_combout\ $end
+$var wire 1 P# \RAM|ram~729_combout\ $end
+$var wire 1 Q# \RAM|ram~730_combout\ $end
+$var wire 1 R# \RAM|ram~338_q\ $end
+$var wire 1 S# \RAM|ram~793_combout\ $end
+$var wire 1 T# \RAM|ram~794_combout\ $end
+$var wire 1 U# \RAM|ram~370_q\ $end
+$var wire 1 V# \RAM|ram~737_combout\ $end
+$var wire 1 W# \RAM|ram~738_combout\ $end
+$var wire 1 X# \RAM|ram~354_q\ $end
+$var wire 1 Y# \RAM|ram~801_combout\ $end
+$var wire 1 Z# \RAM|ram~802_combout\ $end
+$var wire 1 [# \RAM|ram~386_q\ $end
+$var wire 1 \# \RAM|ram~596_combout\ $end
+$var wire 1 ]# \RAM|ram~701_combout\ $end
+$var wire 1 ^# \RAM|ram~702_combout\ $end
+$var wire 1 _# \RAM|ram~402_q\ $end
+$var wire 1 `# \RAM|ram~765_combout\ $end
+$var wire 1 a# \RAM|ram~766_combout\ $end
+$var wire 1 b# \RAM|ram~434_q\ $end
+$var wire 1 c# \RAM|ram~709_combout\ $end
+$var wire 1 d# \RAM|ram~710_combout\ $end
+$var wire 1 e# \RAM|ram~418_q\ $end
+$var wire 1 f# \RAM|ram~773_combout\ $end
+$var wire 1 g# \RAM|ram~774_combout\ $end
+$var wire 1 h# \RAM|ram~450_q\ $end
+$var wire 1 i# \RAM|ram~597_combout\ $end
+$var wire 1 j# \RAM|ram~733_combout\ $end
+$var wire 1 k# \RAM|ram~734_combout\ $end
+$var wire 1 l# \RAM|ram~466_q\ $end
+$var wire 1 m# \RAM|ram~809_combout\ $end
+$var wire 1 n# \RAM|ram~810_combout\ $end
+$var wire 1 o# \RAM|ram~498_q\ $end
+$var wire 1 p# \RAM|ram~741_combout\ $end
+$var wire 1 q# \RAM|ram~742_combout\ $end
+$var wire 1 r# \RAM|ram~482_q\ $end
+$var wire 1 s# \RAM|ram~817_combout\ $end
+$var wire 1 t# \RAM|ram~818_combout\ $end
+$var wire 1 u# \RAM|ram~514_q\ $end
+$var wire 1 v# \RAM|ram~598_combout\ $end
+$var wire 1 w# \RAM|ram~599_combout\ $end
+$var wire 1 x# \RAM|ram~711_combout\ $end
+$var wire 1 y# \RAM|ram~712_combout\ $end
+$var wire 1 z# \RAM|ram~26_q\ $end
+$var wire 1 {# \RAM|ram~775_combout\ $end
+$var wire 1 |# \RAM|ram~776_combout\ $end
+$var wire 1 }# \RAM|ram~58_q\ $end
+$var wire 1 ~# \RAM|ram~715_combout\ $end
+$var wire 1 !$ \RAM|ram~716_combout\ $end
+$var wire 1 "$ \RAM|ram~154_q\ $end
+$var wire 1 #$ \RAM|ram~779_combout\ $end
+$var wire 1 $$ \RAM|ram~780_combout\ $end
+$var wire 1 %$ \RAM|ram~186_q\ $end
+$var wire 1 &$ \RAM|ram~600_combout\ $end
+$var wire 1 '$ \RAM|ram~743_combout\ $end
+$var wire 1 ($ \RAM|ram~744_combout\ $end
+$var wire 1 )$ \RAM|ram~90_q\ $end
+$var wire 1 *$ \RAM|ram~795_combout\ $end
+$var wire 1 +$ \RAM|ram~796_combout\ $end
+$var wire 1 ,$ \RAM|ram~122_q\ $end
+$var wire 1 -$ \RAM|ram~747_combout\ $end
+$var wire 1 .$ \RAM|ram~748_combout\ $end
+$var wire 1 /$ \RAM|ram~218_q\ $end
+$var wire 1 0$ \RAM|ram~811_combout\ $end
+$var wire 1 1$ \RAM|ram~812_combout\ $end
+$var wire 1 2$ \RAM|ram~250_q\ $end
+$var wire 1 3$ \RAM|ram~601_combout\ $end
+$var wire 1 4$ \RAM|ram~719_combout\ $end
+$var wire 1 5$ \RAM|ram~720_combout\ $end
+$var wire 1 6$ \RAM|ram~42_q\ $end
+$var wire 1 7$ \RAM|ram~783_combout\ $end
+$var wire 1 8$ \RAM|ram~784_combout\ $end
+$var wire 1 9$ \RAM|ram~74_q\ $end
+$var wire 1 :$ \RAM|ram~723_combout\ $end
+$var wire 1 ;$ \RAM|ram~724_combout\ $end
+$var wire 1 <$ \RAM|ram~170_q\ $end
+$var wire 1 =$ \RAM|ram~787_combout\ $end
+$var wire 1 >$ \RAM|ram~788_combout\ $end
+$var wire 1 ?$ \RAM|ram~202_q\ $end
+$var wire 1 @$ \RAM|ram~602_combout\ $end
+$var wire 1 A$ \RAM|ram~751_combout\ $end
+$var wire 1 B$ \RAM|ram~752_combout\ $end
+$var wire 1 C$ \RAM|ram~106_q\ $end
+$var wire 1 D$ \RAM|ram~803_combout\ $end
+$var wire 1 E$ \RAM|ram~804_combout\ $end
+$var wire 1 F$ \RAM|ram~138_q\ $end
+$var wire 1 G$ \RAM|ram~755_combout\ $end
+$var wire 1 H$ \RAM|ram~756_combout\ $end
+$var wire 1 I$ \RAM|ram~234_q\ $end
+$var wire 1 J$ \RAM|ram~819_combout\ $end
+$var wire 1 K$ \RAM|ram~820_combout\ $end
+$var wire 1 L$ \RAM|ram~266_q\ $end
+$var wire 1 M$ \RAM|ram~603_combout\ $end
+$var wire 1 N$ \RAM|ram~604_combout\ $end
+$var wire 1 O$ \RAM|ram~713_combout\ $end
+$var wire 1 P$ \RAM|ram~714_combout\ $end
+$var wire 1 Q$ \RAM|ram~282_q\ $end
+$var wire 1 R$ \RAM|ram~745_combout\ $end
+$var wire 1 S$ \RAM|ram~746_combout\ $end
+$var wire 1 T$ \RAM|ram~346_q\ $end
+$var wire 1 U$ \RAM|ram~777_combout\ $end
+$var wire 1 V$ \RAM|ram~778_combout\ $end
+$var wire 1 W$ \RAM|ram~314_q\ $end
+$var wire 1 X$ \RAM|ram~797_combout\ $end
+$var wire 1 Y$ \RAM|ram~798_combout\ $end
+$var wire 1 Z$ \RAM|ram~378_q\ $end
+$var wire 1 [$ \RAM|ram~605_combout\ $end
+$var wire 1 \$ \RAM|ram~721_combout\ $end
+$var wire 1 ]$ \RAM|ram~722_combout\ $end
+$var wire 1 ^$ \RAM|ram~298_q\ $end
+$var wire 1 _$ \RAM|ram~753_combout\ $end
+$var wire 1 `$ \RAM|ram~754_combout\ $end
+$var wire 1 a$ \RAM|ram~362_q\ $end
+$var wire 1 b$ \RAM|ram~785_combout\ $end
+$var wire 1 c$ \RAM|ram~786_combout\ $end
+$var wire 1 d$ \RAM|ram~330_q\ $end
+$var wire 1 e$ \RAM|ram~805_combout\ $end
+$var wire 1 f$ \RAM|ram~806_combout\ $end
+$var wire 1 g$ \RAM|ram~394_q\ $end
+$var wire 1 h$ \RAM|ram~606_combout\ $end
+$var wire 1 i$ \RAM|ram~717_combout\ $end
+$var wire 1 j$ \RAM|ram~718_combout\ $end
+$var wire 1 k$ \RAM|ram~410_q\ $end
+$var wire 1 l$ \RAM|ram~749_combout\ $end
+$var wire 1 m$ \RAM|ram~750_combout\ $end
+$var wire 1 n$ \RAM|ram~474_q\ $end
+$var wire 1 o$ \RAM|ram~781_combout\ $end
+$var wire 1 p$ \RAM|ram~782_combout\ $end
+$var wire 1 q$ \RAM|ram~442_q\ $end
+$var wire 1 r$ \RAM|ram~813_combout\ $end
+$var wire 1 s$ \RAM|ram~814_combout\ $end
+$var wire 1 t$ \RAM|ram~506_q\ $end
+$var wire 1 u$ \RAM|ram~607_combout\ $end
+$var wire 1 v$ \RAM|ram~725_combout\ $end
+$var wire 1 w$ \RAM|ram~726_combout\ $end
+$var wire 1 x$ \RAM|ram~426_q\ $end
+$var wire 1 y$ \RAM|ram~757_combout\ $end
+$var wire 1 z$ \RAM|ram~758_combout\ $end
+$var wire 1 {$ \RAM|ram~490_q\ $end
+$var wire 1 |$ \RAM|ram~789_combout\ $end
+$var wire 1 }$ \RAM|ram~790_combout\ $end
+$var wire 1 ~$ \RAM|ram~458_q\ $end
+$var wire 1 !% \RAM|ram~821_combout\ $end
+$var wire 1 "% \RAM|ram~822_combout\ $end
+$var wire 1 #% \RAM|ram~522_q\ $end
+$var wire 1 $% \RAM|ram~608_combout\ $end
+$var wire 1 %% \RAM|ram~609_combout\ $end
+$var wire 1 &% \RAM|ram~610_combout\ $end
+$var wire 1 '% \SW[3]~input_o\ $end
+$var wire 1 (% \Data_IN[3]~2_combout\ $end
+$var wire 1 )% \ROM|memROM~36_combout\ $end
+$var wire 1 *% \RAM|ram~17_q\ $end
+$var wire 1 +% \RAM|ram~145_q\ $end
+$var wire 1 ,% \RAM|ram~25_q\ $end
+$var wire 1 -% \RAM|ram~153_q\ $end
+$var wire 1 .% \RAM|ram~569_combout\ $end
+$var wire 1 /% \RAM|ram~81_q\ $end
+$var wire 1 0% \RAM|ram~209_q\ $end
+$var wire 1 1% \RAM|ram~89_q\ $end
+$var wire 1 2% \RAM|ram~217_q\ $end
+$var wire 1 3% \RAM|ram~570_combout\ $end
+$var wire 1 4% \RAM|ram~49_q\ $end
+$var wire 1 5% \RAM|ram~177_q\ $end
+$var wire 1 6% \RAM|ram~57_q\ $end
+$var wire 1 7% \RAM|ram~185_q\ $end
+$var wire 1 8% \RAM|ram~571_combout\ $end
+$var wire 1 9% \RAM|ram~113_q\ $end
+$var wire 1 :% \RAM|ram~241_q\ $end
+$var wire 1 ;% \RAM|ram~121_q\ $end
+$var wire 1 <% \RAM|ram~249_q\ $end
+$var wire 1 =% \RAM|ram~572_combout\ $end
+$var wire 1 >% \RAM|ram~573_combout\ $end
+$var wire 1 ?% \RAM|ram~273_q\ $end
+$var wire 1 @% \RAM|ram~337_q\ $end
+$var wire 1 A% \RAM|ram~281_q\ $end
+$var wire 1 B% \RAM|ram~345_q\ $end
+$var wire 1 C% \RAM|ram~574_combout\ $end
+$var wire 1 D% \RAM|ram~305_q\ $end
+$var wire 1 E% \RAM|ram~369_q\ $end
+$var wire 1 F% \RAM|ram~313_q\ $end
+$var wire 1 G% \RAM|ram~377_q\ $end
+$var wire 1 H% \RAM|ram~575_combout\ $end
+$var wire 1 I% \RAM|ram~401_q\ $end
+$var wire 1 J% \RAM|ram~465_q\ $end
+$var wire 1 K% \RAM|ram~409_q\ $end
+$var wire 1 L% \RAM|ram~473_q\ $end
+$var wire 1 M% \RAM|ram~576_combout\ $end
+$var wire 1 N% \RAM|ram~433_q\ $end
+$var wire 1 O% \RAM|ram~497_q\ $end
+$var wire 1 P% \RAM|ram~441_q\ $end
+$var wire 1 Q% \RAM|ram~505_q\ $end
+$var wire 1 R% \RAM|ram~577_combout\ $end
+$var wire 1 S% \RAM|ram~578_combout\ $end
+$var wire 1 T% \RAM|ram~33_q\ $end
+$var wire 1 U% \RAM|ram~65_q\ $end
+$var wire 1 V% \RAM|ram~41_q\ $end
+$var wire 1 W% \RAM|ram~73_q\ $end
+$var wire 1 X% \RAM|ram~579_combout\ $end
+$var wire 1 Y% \RAM|ram~97_q\ $end
+$var wire 1 Z% \RAM|ram~129_q\ $end
+$var wire 1 [% \RAM|ram~105_q\ $end
+$var wire 1 \% \RAM|ram~137_q\ $end
+$var wire 1 ]% \RAM|ram~580_combout\ $end
+$var wire 1 ^% \RAM|ram~161_q\ $end
+$var wire 1 _% \RAM|ram~193_q\ $end
+$var wire 1 `% \RAM|ram~169_q\ $end
+$var wire 1 a% \RAM|ram~201_q\ $end
+$var wire 1 b% \RAM|ram~581_combout\ $end
+$var wire 1 c% \RAM|ram~225_q\ $end
+$var wire 1 d% \RAM|ram~257_q\ $end
+$var wire 1 e% \RAM|ram~233_q\ $end
+$var wire 1 f% \RAM|ram~265_q\ $end
+$var wire 1 g% \RAM|ram~582_combout\ $end
+$var wire 1 h% \RAM|ram~583_combout\ $end
+$var wire 1 i% \RAM|ram~289_q\ $end
+$var wire 1 j% \RAM|ram~417_q\ $end
+$var wire 1 k% \RAM|ram~297_q\ $end
+$var wire 1 l% \RAM|ram~425_q\ $end
+$var wire 1 m% \RAM|ram~584_combout\ $end
+$var wire 1 n% \RAM|ram~353_q\ $end
+$var wire 1 o% \RAM|ram~481_q\ $end
+$var wire 1 p% \RAM|ram~361_q\ $end
+$var wire 1 q% \RAM|ram~489_q\ $end
+$var wire 1 r% \RAM|ram~585_combout\ $end
+$var wire 1 s% \RAM|ram~321_q\ $end
+$var wire 1 t% \RAM|ram~449_q\ $end
+$var wire 1 u% \RAM|ram~329_q\ $end
+$var wire 1 v% \RAM|ram~457_q\ $end
+$var wire 1 w% \RAM|ram~586_combout\ $end
+$var wire 1 x% \RAM|ram~385_q\ $end
+$var wire 1 y% \RAM|ram~513_q\ $end
+$var wire 1 z% \RAM|ram~393_q\ $end
+$var wire 1 {% \RAM|ram~521_q\ $end
+$var wire 1 |% \RAM|ram~587_combout\ $end
+$var wire 1 }% \RAM|ram~588_combout\ $end
+$var wire 1 ~% \RAM|ram~589_combout\ $end
+$var wire 1 !& \SW[2]~input_o\ $end
+$var wire 1 "& \Data_IN[2]~1_combout\ $end
+$var wire 1 #& \RAM|ram~16_q\ $end
+$var wire 1 $& \RAM|ram~48_q\ $end
+$var wire 1 %& \RAM|ram~32_q\ $end
+$var wire 1 && \RAM|ram~64_q\ $end
+$var wire 1 '& \RAM|ram~548_combout\ $end
+$var wire 1 (& \RAM|ram~80_q\ $end
+$var wire 1 )& \RAM|ram~112_q\ $end
+$var wire 1 *& \RAM|ram~96_q\ $end
+$var wire 1 +& \RAM|ram~128_q\ $end
+$var wire 1 ,& \RAM|ram~549_combout\ $end
+$var wire 1 -& \RAM|ram~24_q\ $end
+$var wire 1 .& \RAM|ram~56_q\ $end
+$var wire 1 /& \RAM|ram~40_q\ $end
+$var wire 1 0& \RAM|ram~72_q\ $end
+$var wire 1 1& \RAM|ram~550_combout\ $end
+$var wire 1 2& \RAM|ram~88_q\ $end
+$var wire 1 3& \RAM|ram~120_q\ $end
+$var wire 1 4& \RAM|ram~104_q\ $end
+$var wire 1 5& \RAM|ram~136_q\ $end
+$var wire 1 6& \RAM|ram~551_combout\ $end
+$var wire 1 7& \RAM|ram~552_combout\ $end
+$var wire 1 8& \RAM|ram~272_q\ $end
+$var wire 1 9& \RAM|ram~336_q\ $end
+$var wire 1 :& \RAM|ram~288_q\ $end
+$var wire 1 ;& \RAM|ram~352_q\ $end
+$var wire 1 <& \RAM|ram~553_combout\ $end
+$var wire 1 =& \RAM|ram~304_q\ $end
+$var wire 1 >& \RAM|ram~368_q\ $end
+$var wire 1 ?& \RAM|ram~320_q\ $end
+$var wire 1 @& \RAM|ram~384_q\ $end
+$var wire 1 A& \RAM|ram~554_combout\ $end
+$var wire 1 B& \RAM|ram~280_q\ $end
+$var wire 1 C& \RAM|ram~344_q\ $end
+$var wire 1 D& \RAM|ram~296_q\ $end
+$var wire 1 E& \RAM|ram~360_q\ $end
+$var wire 1 F& \RAM|ram~555_combout\ $end
+$var wire 1 G& \RAM|ram~312_q\ $end
+$var wire 1 H& \RAM|ram~376_q\ $end
+$var wire 1 I& \RAM|ram~328_q\ $end
+$var wire 1 J& \RAM|ram~392_q\ $end
+$var wire 1 K& \RAM|ram~556_combout\ $end
+$var wire 1 L& \RAM|ram~557_combout\ $end
+$var wire 1 M& \RAM|ram~144_q\ $end
+$var wire 1 N& \RAM|ram~160_q\ $end
+$var wire 1 O& \RAM|ram~152_q\ $end
+$var wire 1 P& \RAM|ram~168_q\ $end
+$var wire 1 Q& \RAM|ram~558_combout\ $end
+$var wire 1 R& \RAM|ram~208_q\ $end
+$var wire 1 S& \RAM|ram~224_q\ $end
+$var wire 1 T& \RAM|ram~216_q\ $end
+$var wire 1 U& \RAM|ram~232_q\ $end
+$var wire 1 V& \RAM|ram~559_combout\ $end
+$var wire 1 W& \RAM|ram~176_q\ $end
+$var wire 1 X& \RAM|ram~192_q\ $end
+$var wire 1 Y& \RAM|ram~184_q\ $end
+$var wire 1 Z& \RAM|ram~200_q\ $end
+$var wire 1 [& \RAM|ram~560_combout\ $end
+$var wire 1 \& \RAM|ram~240_q\ $end
+$var wire 1 ]& \RAM|ram~256_q\ $end
+$var wire 1 ^& \RAM|ram~248_q\ $end
+$var wire 1 _& \RAM|ram~264_q\ $end
+$var wire 1 `& \RAM|ram~561_combout\ $end
+$var wire 1 a& \RAM|ram~562_combout\ $end
+$var wire 1 b& \RAM|ram~400_q\ $end
+$var wire 1 c& \RAM|ram~432_q\ $end
+$var wire 1 d& \RAM|ram~416_q\ $end
+$var wire 1 e& \RAM|ram~448_q\ $end
+$var wire 1 f& \RAM|ram~563_combout\ $end
+$var wire 1 g& \RAM|ram~464_q\ $end
+$var wire 1 h& \RAM|ram~496_q\ $end
+$var wire 1 i& \RAM|ram~480_q\ $end
+$var wire 1 j& \RAM|ram~512_q\ $end
+$var wire 1 k& \RAM|ram~564_combout\ $end
+$var wire 1 l& \RAM|ram~408_q\ $end
+$var wire 1 m& \RAM|ram~440_q\ $end
+$var wire 1 n& \RAM|ram~424_q\ $end
+$var wire 1 o& \RAM|ram~456_q\ $end
+$var wire 1 p& \RAM|ram~565_combout\ $end
+$var wire 1 q& \RAM|ram~472_q\ $end
+$var wire 1 r& \RAM|ram~504_q\ $end
+$var wire 1 s& \RAM|ram~488_q\ $end
+$var wire 1 t& \RAM|ram~520_q\ $end
+$var wire 1 u& \RAM|ram~566_combout\ $end
+$var wire 1 v& \RAM|ram~567_combout\ $end
+$var wire 1 w& \RAM|ram~568_combout\ $end
+$var wire 1 x& \SW[1]~input_o\ $end
+$var wire 1 y& \Data_IN[1]~0_combout\ $end
+$var wire 1 z& \ROM|memROM~20_combout\ $end
+$var wire 1 {& \SW[0]~input_o\ $end
+$var wire 1 |& \SW[9]~input_o\ $end
+$var wire 1 }& \KEY[2]~input_o\ $end
+$var wire 1 ~& \RAM|dado_out[0]~2_combout\ $end
+$var wire 1 !' \SW[8]~input_o\ $end
+$var wire 1 "' \switch8|saida~0_combout\ $end
+$var wire 1 #' \switch8|saida~1_combout\ $end
+$var wire 1 $' \RAM|ram~15_q\ $end
+$var wire 1 %' \RAM|ram~271_q\ $end
+$var wire 1 &' \RAM|ram~143_q\ $end
+$var wire 1 '' \RAM|ram~399_q\ $end
+$var wire 1 (' \RAM|ram~527_combout\ $end
+$var wire 1 )' \RAM|ram~31_q\ $end
+$var wire 1 *' \RAM|ram~287_q\ $end
+$var wire 1 +' \RAM|ram~159_q\ $end
+$var wire 1 ,' \RAM|ram~415_q\ $end
+$var wire 1 -' \RAM|ram~528_combout\ $end
+$var wire 1 .' \RAM|ram~23_q\ $end
+$var wire 1 /' \RAM|ram~279_q\ $end
+$var wire 1 0' \RAM|ram~151_q\ $end
+$var wire 1 1' \RAM|ram~407_q\ $end
+$var wire 1 2' \RAM|ram~529_combout\ $end
+$var wire 1 3' \RAM|ram~39_q\ $end
+$var wire 1 4' \RAM|ram~295_q\ $end
+$var wire 1 5' \RAM|ram~167_q\ $end
+$var wire 1 6' \RAM|ram~423_q\ $end
+$var wire 1 7' \RAM|ram~530_combout\ $end
+$var wire 1 8' \RAM|ram~531_combout\ $end
+$var wire 1 9' \RAM|ram~79_q\ $end
+$var wire 1 :' \RAM|ram~335_q\ $end
+$var wire 1 ;' \RAM|ram~207_q\ $end
+$var wire 1 <' \RAM|ram~463_q\ $end
+$var wire 1 =' \RAM|ram~532_combout\ $end
+$var wire 1 >' \RAM|ram~95_q\ $end
+$var wire 1 ?' \RAM|ram~351_q\ $end
+$var wire 1 @' \RAM|ram~223_q\ $end
+$var wire 1 A' \RAM|ram~479_q\ $end
+$var wire 1 B' \RAM|ram~533_combout\ $end
+$var wire 1 C' \RAM|ram~87_q\ $end
+$var wire 1 D' \RAM|ram~343_q\ $end
+$var wire 1 E' \RAM|ram~215_q\ $end
+$var wire 1 F' \RAM|ram~471_q\ $end
+$var wire 1 G' \RAM|ram~534_combout\ $end
+$var wire 1 H' \RAM|ram~103_q\ $end
+$var wire 1 I' \RAM|ram~359_q\ $end
+$var wire 1 J' \RAM|ram~231_q\ $end
+$var wire 1 K' \RAM|ram~487_q\ $end
+$var wire 1 L' \RAM|ram~535_combout\ $end
+$var wire 1 M' \RAM|ram~536_combout\ $end
+$var wire 1 N' \RAM|ram~47_q\ $end
+$var wire 1 O' \RAM|ram~303_q\ $end
+$var wire 1 P' \RAM|ram~175_q\ $end
+$var wire 1 Q' \RAM|ram~431_q\ $end
+$var wire 1 R' \RAM|ram~537_combout\ $end
+$var wire 1 S' \RAM|ram~63_q\ $end
+$var wire 1 T' \RAM|ram~319_q\ $end
+$var wire 1 U' \RAM|ram~191_q\ $end
+$var wire 1 V' \RAM|ram~447_q\ $end
+$var wire 1 W' \RAM|ram~538_combout\ $end
+$var wire 1 X' \RAM|ram~55_q\ $end
+$var wire 1 Y' \RAM|ram~311_q\ $end
+$var wire 1 Z' \RAM|ram~183_q\ $end
+$var wire 1 [' \RAM|ram~439_q\ $end
+$var wire 1 \' \RAM|ram~539_combout\ $end
+$var wire 1 ]' \RAM|ram~71_q\ $end
+$var wire 1 ^' \RAM|ram~327_q\ $end
+$var wire 1 _' \RAM|ram~199_q\ $end
+$var wire 1 `' \RAM|ram~455_q\ $end
+$var wire 1 a' \RAM|ram~540_combout\ $end
+$var wire 1 b' \RAM|ram~541_combout\ $end
+$var wire 1 c' \RAM|ram~111_q\ $end
+$var wire 1 d' \RAM|ram~367_q\ $end
+$var wire 1 e' \RAM|ram~119_q\ $end
+$var wire 1 f' \RAM|ram~375_q\ $end
+$var wire 1 g' \RAM|ram~542_combout\ $end
+$var wire 1 h' \RAM|ram~127_q\ $end
+$var wire 1 i' \RAM|ram~383_q\ $end
+$var wire 1 j' \RAM|ram~135_q\ $end
+$var wire 1 k' \RAM|ram~391_q\ $end
+$var wire 1 l' \RAM|ram~543_combout\ $end
+$var wire 1 m' \RAM|ram~239_q\ $end
+$var wire 1 n' \RAM|ram~495_q\ $end
+$var wire 1 o' \RAM|ram~247_q\ $end
+$var wire 1 p' \RAM|ram~503_q\ $end
+$var wire 1 q' \RAM|ram~544_combout\ $end
+$var wire 1 r' \RAM|ram~255_q\ $end
+$var wire 1 s' \RAM|ram~511_q\ $end
+$var wire 1 t' \RAM|ram~263_q\ $end
+$var wire 1 u' \RAM|ram~519_q\ $end
+$var wire 1 v' \RAM|ram~545_combout\ $end
+$var wire 1 w' \RAM|ram~546_combout\ $end
+$var wire 1 x' \RAM|ram~547_combout\ $end
+$var wire 1 y' \FPGA_RESET_N~input_o\ $end
+$var wire 1 z' \interfaceBaseTempo|baseTempo|contador~1_combout\ $end
+$var wire 1 {' \interfaceBaseTempo|baseTempo|contador~0_combout\ $end
+$var wire 1 |' \interfaceBaseTempo|baseTempo|tick~0_combout\ $end
+$var wire 1 }' \interfaceBaseTempo|baseTempo|tick~q\ $end
+$var wire 1 ~' \ROM|memROM~21_combout\ $end
+$var wire 1 !( \ROM|memROM~22_combout\ $end
+$var wire 1 "( \ROM|memROM~23_combout\ $end
+$var wire 1 #( \ROM|memROM~24_combout\ $end
+$var wire 1 $( \comb~2_combout\ $end
+$var wire 1 %( \comb~3_combout\ $end
+$var wire 1 &( \comb~4_combout\ $end
+$var wire 1 '( \interfaceBaseTempo|registraUmSegundo|DOUT~q\ $end
+$var wire 1 (( \logicaKeys|FPGARESET|saida~0_combout\ $end
+$var wire 1 )( \logicaKeys|FPGARESET|saida~1_combout\ $end
+$var wire 1 *( \RAM|dado_out[0]~4_combout\ $end
+$var wire 1 +( \KEY[3]~input_o\ $end
+$var wire 1 ,( \KEY[1]~input_o\ $end
+$var wire 1 -( \logicaKeys|KEY_1|KEY|saidaQ~q\ $end
+$var wire 1 .( \logicaKeys|KEY_1|KEY|saida~combout\ $end
+$var wire 1 /( \logicaKeys|KEY_1|FF0|DOUT~q\ $end
+$var wire 1 0( \RAM|dado_out[0]~5_combout\ $end
+$var wire 1 1( \RAM|dado_out[0]~7_combout\ $end
+$var wire 1 2( \RAM|dado_out[0]~8_combout\ $end
+$var wire 1 3( \RAM|dado_out[0]~9_combout\ $end
+$var wire 1 4( \CPU|ULA1|Add0~1_sumout\ $end
+$var wire 1 5( \CPU|DEC_instrucao|saida~4_combout\ $end
+$var wire 1 6( \CPU|ULA1|Equal0~0_combout\ $end
+$var wire 1 7( \CPU|ULA1|Add1~34_cout\ $end
+$var wire 1 8( \CPU|ULA1|Add1~1_sumout\ $end
+$var wire 1 9( \CPU|ULA1|saida[0]~0_combout\ $end
+$var wire 1 :( \CPU|ULA1|Equal1~0_combout\ $end
+$var wire 1 ;( \ROM|memROM~73_combout\ $end
+$var wire 1 <( \ROM|memROM~74_combout\ $end
+$var wire 1 =( \ROM|memROM~75_combout\ $end
+$var wire 1 >( \ROM|memROM~70_combout\ $end
+$var wire 1 ?( \ROM|memROM~71_combout\ $end
+$var wire 1 @( \ROM|memROM~72_combout\ $end
+$var wire 1 A( \CPU|DEC_instrucao|saida[5]~5_combout\ $end
+$var wire 1 B( \CPU|BANCO_REG|registrador~51_combout\ $end
+$var wire 1 C( \CPU|BANCO_REG|registrador~11_q\ $end
+$var wire 1 D( \ROM|memROM~1_combout\ $end
+$var wire 1 E( \ROM|memROM~2_combout\ $end
+$var wire 1 F( \CPU|BANCO_REG|registrador~52_combout\ $end
+$var wire 1 G( \CPU|BANCO_REG|registrador~19_q\ $end
+$var wire 1 H( \CPU|BANCO_REG|registrador~53_combout\ $end
+$var wire 1 I( \CPU|BANCO_REG|registrador~27_q\ $end
+$var wire 1 J( \CPU|BANCO_REG|registrador~54_combout\ $end
+$var wire 1 K( \CPU|BANCO_REG|registrador~35_q\ $end
+$var wire 1 L( \CPU|BANCO_REG|registrador~43_combout\ $end
+$var wire 1 M( \CPU|ULA1|Add0~2\ $end
+$var wire 1 N( \CPU|ULA1|Add0~5_sumout\ $end
+$var wire 1 O( \CPU|ULA1|Add1~2\ $end
+$var wire 1 P( \CPU|ULA1|Add1~5_sumout\ $end
+$var wire 1 Q( \CPU|ULA1|saida[1]~1_combout\ $end
+$var wire 1 R( \CPU|BANCO_REG|registrador~12_q\ $end
+$var wire 1 S( \CPU|BANCO_REG|registrador~20_q\ $end
+$var wire 1 T( \CPU|BANCO_REG|registrador~28_q\ $end
+$var wire 1 U( \CPU|BANCO_REG|registrador~36_q\ $end
+$var wire 1 V( \CPU|BANCO_REG|registrador~44_combout\ $end
+$var wire 1 W( \CPU|ULA1|Add0~6\ $end
+$var wire 1 X( \CPU|ULA1|Add0~9_sumout\ $end
+$var wire 1 Y( \CPU|ULA1|Add1~6\ $end
+$var wire 1 Z( \CPU|ULA1|Add1~9_sumout\ $end
+$var wire 1 [( \CPU|ULA1|saida[2]~2_combout\ $end
+$var wire 1 \( \CPU|BANCO_REG|registrador~13_q\ $end
+$var wire 1 ]( \CPU|BANCO_REG|registrador~21_q\ $end
+$var wire 1 ^( \CPU|BANCO_REG|registrador~29_q\ $end
+$var wire 1 _( \CPU|BANCO_REG|registrador~37_q\ $end
+$var wire 1 `( \CPU|BANCO_REG|registrador~45_combout\ $end
+$var wire 1 a( \CPU|ULA1|Add0~10\ $end
+$var wire 1 b( \CPU|ULA1|Add0~13_sumout\ $end
+$var wire 1 c( \CPU|ULA1|saida[3]~3_combout\ $end
+$var wire 1 d( \CPU|BANCO_REG|registrador~14_q\ $end
+$var wire 1 e( \CPU|BANCO_REG|registrador~22_q\ $end
+$var wire 1 f( \CPU|BANCO_REG|registrador~30_q\ $end
+$var wire 1 g( \CPU|BANCO_REG|registrador~38_q\ $end
+$var wire 1 h( \CPU|BANCO_REG|registrador~46_combout\ $end
+$var wire 1 i( \CPU|ULA1|Add1~10\ $end
+$var wire 1 j( \CPU|ULA1|Add1~13_sumout\ $end
+$var wire 1 k( \ROM|memROM~29_combout\ $end
+$var wire 1 l( \RAM|ram~19_q\ $end
+$var wire 1 m( \RAM|ram~35_q\ $end
+$var wire 1 n( \RAM|ram~27_q\ $end
+$var wire 1 o( \RAM|ram~43_q\ $end
+$var wire 1 p( \RAM|ram~611_combout\ $end
+$var wire 1 q( \RAM|ram~83_q\ $end
+$var wire 1 r( \RAM|ram~99_q\ $end
+$var wire 1 s( \RAM|ram~91_q\ $end
+$var wire 1 t( \RAM|ram~107_q\ $end
+$var wire 1 u( \RAM|ram~612_combout\ $end
+$var wire 1 v( \RAM|ram~147_q\ $end
+$var wire 1 w( \RAM|ram~163_q\ $end
+$var wire 1 x( \RAM|ram~155_q\ $end
+$var wire 1 y( \RAM|ram~171_q\ $end
+$var wire 1 z( \RAM|ram~613_combout\ $end
+$var wire 1 {( \RAM|ram~211_q\ $end
+$var wire 1 |( \RAM|ram~227_q\ $end
+$var wire 1 }( \RAM|ram~219_q\ $end
+$var wire 1 ~( \RAM|ram~235_q\ $end
+$var wire 1 !) \RAM|ram~614_combout\ $end
+$var wire 1 ") \RAM|ram~615_combout\ $end
+$var wire 1 #) \RAM|ram~275_q\ $end
+$var wire 1 $) \RAM|ram~339_q\ $end
+$var wire 1 %) \RAM|ram~291_q\ $end
+$var wire 1 &) \RAM|ram~355_q\ $end
+$var wire 1 ') \RAM|ram~616_combout\ $end
+$var wire 1 () \RAM|ram~403_q\ $end
+$var wire 1 )) \RAM|ram~467_q\ $end
+$var wire 1 *) \RAM|ram~419_q\ $end
+$var wire 1 +) \RAM|ram~483_q\ $end
+$var wire 1 ,) \RAM|ram~617_combout\ $end
+$var wire 1 -) \RAM|ram~283_q\ $end
+$var wire 1 .) \RAM|ram~347_q\ $end
+$var wire 1 /) \RAM|ram~299_q\ $end
+$var wire 1 0) \RAM|ram~363_q\ $end
+$var wire 1 1) \RAM|ram~618_combout\ $end
+$var wire 1 2) \RAM|ram~411_q\ $end
+$var wire 1 3) \RAM|ram~475_q\ $end
+$var wire 1 4) \RAM|ram~427_q\ $end
+$var wire 1 5) \RAM|ram~491_q\ $end
+$var wire 1 6) \RAM|ram~619_combout\ $end
+$var wire 1 7) \RAM|ram~620_combout\ $end
+$var wire 1 8) \RAM|ram~51_q\ $end
+$var wire 1 9) \RAM|ram~67_q\ $end
+$var wire 1 :) \RAM|ram~179_q\ $end
+$var wire 1 ;) \RAM|ram~195_q\ $end
+$var wire 1 <) \RAM|ram~621_combout\ $end
+$var wire 1 =) \RAM|ram~115_q\ $end
+$var wire 1 >) \RAM|ram~131_q\ $end
+$var wire 1 ?) \RAM|ram~243_q\ $end
+$var wire 1 @) \RAM|ram~259_q\ $end
+$var wire 1 A) \RAM|ram~622_combout\ $end
+$var wire 1 B) \RAM|ram~59_q\ $end
+$var wire 1 C) \RAM|ram~75_q\ $end
+$var wire 1 D) \RAM|ram~187_q\ $end
+$var wire 1 E) \RAM|ram~203_q\ $end
+$var wire 1 F) \RAM|ram~623_combout\ $end
+$var wire 1 G) \RAM|ram~123_q\ $end
+$var wire 1 H) \RAM|ram~139_q\ $end
+$var wire 1 I) \RAM|ram~251_q\ $end
+$var wire 1 J) \RAM|ram~267_q\ $end
+$var wire 1 K) \RAM|ram~624_combout\ $end
+$var wire 1 L) \RAM|ram~625_combout\ $end
+$var wire 1 M) \RAM|ram~307_q\ $end
+$var wire 1 N) \RAM|ram~323_q\ $end
+$var wire 1 O) \RAM|ram~315_q\ $end
+$var wire 1 P) \RAM|ram~331_q\ $end
+$var wire 1 Q) \RAM|ram~626_combout\ $end
+$var wire 1 R) \RAM|ram~371_q\ $end
+$var wire 1 S) \RAM|ram~387_q\ $end
+$var wire 1 T) \RAM|ram~379_q\ $end
+$var wire 1 U) \RAM|ram~395_q\ $end
+$var wire 1 V) \RAM|ram~627_combout\ $end
+$var wire 1 W) \RAM|ram~435_q\ $end
+$var wire 1 X) \RAM|ram~451_q\ $end
+$var wire 1 Y) \RAM|ram~443_q\ $end
+$var wire 1 Z) \RAM|ram~459_q\ $end
+$var wire 1 [) \RAM|ram~628_combout\ $end
+$var wire 1 \) \RAM|ram~499_q\ $end
+$var wire 1 ]) \RAM|ram~515_q\ $end
+$var wire 1 ^) \RAM|ram~507_q\ $end
+$var wire 1 _) \RAM|ram~523_q\ $end
+$var wire 1 `) \RAM|ram~629_combout\ $end
+$var wire 1 a) \RAM|ram~630_combout\ $end
+$var wire 1 b) \RAM|ram~631_combout\ $end
+$var wire 1 c) \SW[4]~input_o\ $end
+$var wire 1 d) \Data_IN[4]~3_combout\ $end
+$var wire 1 e) \CPU|ULA1|Add0~14\ $end
+$var wire 1 f) \CPU|ULA1|Add0~17_sumout\ $end
+$var wire 1 g) \CPU|ULA1|saida[4]~4_combout\ $end
+$var wire 1 h) \CPU|BANCO_REG|registrador~15_q\ $end
+$var wire 1 i) \CPU|BANCO_REG|registrador~23_q\ $end
+$var wire 1 j) \CPU|BANCO_REG|registrador~31_q\ $end
+$var wire 1 k) \CPU|BANCO_REG|registrador~39_q\ $end
+$var wire 1 l) \CPU|BANCO_REG|registrador~47_combout\ $end
+$var wire 1 m) \CPU|ULA1|Add1~14\ $end
+$var wire 1 n) \CPU|ULA1|Add1~17_sumout\ $end
+$var wire 1 o) \RAM|ram~20_q\ $end
+$var wire 1 p) \RAM|ram~52_q\ $end
+$var wire 1 q) \RAM|ram~28_q\ $end
+$var wire 1 r) \RAM|ram~60_q\ $end
+$var wire 1 s) \RAM|ram~632_combout\ $end
+$var wire 1 t) \RAM|ram~84_q\ $end
+$var wire 1 u) \RAM|ram~116_q\ $end
+$var wire 1 v) \RAM|ram~92_q\ $end
+$var wire 1 w) \RAM|ram~124_q\ $end
+$var wire 1 x) \RAM|ram~633_combout\ $end
+$var wire 1 y) \RAM|ram~148_q\ $end
+$var wire 1 z) \RAM|ram~180_q\ $end
+$var wire 1 {) \RAM|ram~156_q\ $end
+$var wire 1 |) \RAM|ram~188_q\ $end
+$var wire 1 }) \RAM|ram~634_combout\ $end
+$var wire 1 ~) \RAM|ram~212_q\ $end
+$var wire 1 !* \RAM|ram~244_q\ $end
+$var wire 1 "* \RAM|ram~220_q\ $end
+$var wire 1 #* \RAM|ram~252_q\ $end
+$var wire 1 $* \RAM|ram~635_combout\ $end
+$var wire 1 %* \RAM|ram~636_combout\ $end
+$var wire 1 &* \RAM|ram~276_q\ $end
+$var wire 1 '* \RAM|ram~308_q\ $end
+$var wire 1 (* \RAM|ram~284_q\ $end
+$var wire 1 )* \RAM|ram~316_q\ $end
+$var wire 1 ** \RAM|ram~637_combout\ $end
+$var wire 1 +* \RAM|ram~340_q\ $end
+$var wire 1 ,* \RAM|ram~372_q\ $end
+$var wire 1 -* \RAM|ram~348_q\ $end
+$var wire 1 .* \RAM|ram~380_q\ $end
+$var wire 1 /* \RAM|ram~638_combout\ $end
+$var wire 1 0* \RAM|ram~404_q\ $end
+$var wire 1 1* \RAM|ram~436_q\ $end
+$var wire 1 2* \RAM|ram~412_q\ $end
+$var wire 1 3* \RAM|ram~444_q\ $end
+$var wire 1 4* \RAM|ram~639_combout\ $end
+$var wire 1 5* \RAM|ram~468_q\ $end
+$var wire 1 6* \RAM|ram~500_q\ $end
+$var wire 1 7* \RAM|ram~476_q\ $end
+$var wire 1 8* \RAM|ram~508_q\ $end
+$var wire 1 9* \RAM|ram~640_combout\ $end
+$var wire 1 :* \RAM|ram~641_combout\ $end
+$var wire 1 ;* \RAM|ram~36_q\ $end
+$var wire 1 <* \RAM|ram~100_q\ $end
+$var wire 1 =* \RAM|ram~44_q\ $end
+$var wire 1 >* \RAM|ram~108_q\ $end
+$var wire 1 ?* \RAM|ram~642_combout\ $end
+$var wire 1 @* \RAM|ram~68_q\ $end
+$var wire 1 A* \RAM|ram~132_q\ $end
+$var wire 1 B* \RAM|ram~76_q\ $end
+$var wire 1 C* \RAM|ram~140_q\ $end
+$var wire 1 D* \RAM|ram~643_combout\ $end
+$var wire 1 E* \RAM|ram~164_q\ $end
+$var wire 1 F* \RAM|ram~228_q\ $end
+$var wire 1 G* \RAM|ram~172_q\ $end
+$var wire 1 H* \RAM|ram~236_q\ $end
+$var wire 1 I* \RAM|ram~644_combout\ $end
+$var wire 1 J* \RAM|ram~196_q\ $end
+$var wire 1 K* \RAM|ram~260_q\ $end
+$var wire 1 L* \RAM|ram~204_q\ $end
+$var wire 1 M* \RAM|ram~268_q\ $end
+$var wire 1 N* \RAM|ram~645_combout\ $end
+$var wire 1 O* \RAM|ram~646_combout\ $end
+$var wire 1 P* \RAM|ram~292_q\ $end
+$var wire 1 Q* \RAM|ram~356_q\ $end
+$var wire 1 R* \RAM|ram~420_q\ $end
+$var wire 1 S* \RAM|ram~484_q\ $end
+$var wire 1 T* \RAM|ram~647_combout\ $end
+$var wire 1 U* \RAM|ram~324_q\ $end
+$var wire 1 V* \RAM|ram~388_q\ $end
+$var wire 1 W* \RAM|ram~452_q\ $end
+$var wire 1 X* \RAM|ram~516_q\ $end
+$var wire 1 Y* \RAM|ram~648_combout\ $end
+$var wire 1 Z* \RAM|ram~300_q\ $end
+$var wire 1 [* \RAM|ram~364_q\ $end
+$var wire 1 \* \RAM|ram~428_q\ $end
+$var wire 1 ]* \RAM|ram~492_q\ $end
+$var wire 1 ^* \RAM|ram~649_combout\ $end
+$var wire 1 _* \RAM|ram~332_q\ $end
+$var wire 1 `* \RAM|ram~396_q\ $end
+$var wire 1 a* \RAM|ram~460_q\ $end
+$var wire 1 b* \RAM|ram~524_q\ $end
+$var wire 1 c* \RAM|ram~650_combout\ $end
+$var wire 1 d* \RAM|ram~651_combout\ $end
+$var wire 1 e* \RAM|ram~652_combout\ $end
+$var wire 1 f* \SW[5]~input_o\ $end
+$var wire 1 g* \Data_IN[5]~4_combout\ $end
+$var wire 1 h* \CPU|ULA1|Add0~18\ $end
+$var wire 1 i* \CPU|ULA1|Add0~21_sumout\ $end
+$var wire 1 j* \CPU|ULA1|saida[5]~5_combout\ $end
+$var wire 1 k* \CPU|BANCO_REG|registrador~16_q\ $end
+$var wire 1 l* \CPU|BANCO_REG|registrador~24_q\ $end
+$var wire 1 m* \CPU|BANCO_REG|registrador~32_q\ $end
+$var wire 1 n* \CPU|BANCO_REG|registrador~40_q\ $end
+$var wire 1 o* \CPU|BANCO_REG|registrador~48_combout\ $end
+$var wire 1 p* \CPU|ULA1|Add1~18\ $end
+$var wire 1 q* \CPU|ULA1|Add1~21_sumout\ $end
+$var wire 1 r* \ROM|memROM~37_combout\ $end
+$var wire 1 s* \RAM|ram~21_q\ $end
+$var wire 1 t* \RAM|ram~53_q\ $end
+$var wire 1 u* \RAM|ram~149_q\ $end
+$var wire 1 v* \RAM|ram~181_q\ $end
+$var wire 1 w* \RAM|ram~653_combout\ $end
+$var wire 1 x* \RAM|ram~85_q\ $end
+$var wire 1 y* \RAM|ram~117_q\ $end
+$var wire 1 z* \RAM|ram~213_q\ $end
+$var wire 1 {* \RAM|ram~245_q\ $end
+$var wire 1 |* \RAM|ram~654_combout\ $end
+$var wire 1 }* \RAM|ram~37_q\ $end
+$var wire 1 ~* \RAM|ram~69_q\ $end
+$var wire 1 !+ \RAM|ram~165_q\ $end
+$var wire 1 "+ \RAM|ram~197_q\ $end
+$var wire 1 #+ \RAM|ram~655_combout\ $end
+$var wire 1 $+ \RAM|ram~101_q\ $end
+$var wire 1 %+ \RAM|ram~133_q\ $end
+$var wire 1 &+ \RAM|ram~229_q\ $end
+$var wire 1 '+ \RAM|ram~261_q\ $end
+$var wire 1 (+ \RAM|ram~656_combout\ $end
+$var wire 1 )+ \RAM|ram~657_combout\ $end
+$var wire 1 *+ \RAM|ram~277_q\ $end
+$var wire 1 ++ \RAM|ram~309_q\ $end
+$var wire 1 ,+ \RAM|ram~293_q\ $end
+$var wire 1 -+ \RAM|ram~325_q\ $end
+$var wire 1 .+ \RAM|ram~658_combout\ $end
+$var wire 1 /+ \RAM|ram~341_q\ $end
+$var wire 1 0+ \RAM|ram~373_q\ $end
+$var wire 1 1+ \RAM|ram~357_q\ $end
+$var wire 1 2+ \RAM|ram~389_q\ $end
+$var wire 1 3+ \RAM|ram~659_combout\ $end
+$var wire 1 4+ \RAM|ram~405_q\ $end
+$var wire 1 5+ \RAM|ram~437_q\ $end
+$var wire 1 6+ \RAM|ram~421_q\ $end
+$var wire 1 7+ \RAM|ram~453_q\ $end
+$var wire 1 8+ \RAM|ram~660_combout\ $end
+$var wire 1 9+ \RAM|ram~469_q\ $end
+$var wire 1 :+ \RAM|ram~501_q\ $end
+$var wire 1 ;+ \RAM|ram~485_q\ $end
+$var wire 1 <+ \RAM|ram~517_q\ $end
+$var wire 1 =+ \RAM|ram~661_combout\ $end
+$var wire 1 >+ \RAM|ram~662_combout\ $end
+$var wire 1 ?+ \RAM|ram~29_q\ $end
+$var wire 1 @+ \RAM|ram~93_q\ $end
+$var wire 1 A+ \RAM|ram~61_q\ $end
+$var wire 1 B+ \RAM|ram~125_q\ $end
+$var wire 1 C+ \RAM|ram~663_combout\ $end
+$var wire 1 D+ \RAM|ram~45_q\ $end
+$var wire 1 E+ \RAM|ram~109_q\ $end
+$var wire 1 F+ \RAM|ram~77_q\ $end
+$var wire 1 G+ \RAM|ram~141_q\ $end
+$var wire 1 H+ \RAM|ram~664_combout\ $end
+$var wire 1 I+ \RAM|ram~157_q\ $end
+$var wire 1 J+ \RAM|ram~221_q\ $end
+$var wire 1 K+ \RAM|ram~189_q\ $end
+$var wire 1 L+ \RAM|ram~253_q\ $end
+$var wire 1 M+ \RAM|ram~665_combout\ $end
+$var wire 1 N+ \RAM|ram~173_q\ $end
+$var wire 1 O+ \RAM|ram~237_q\ $end
+$var wire 1 P+ \RAM|ram~205_q\ $end
+$var wire 1 Q+ \RAM|ram~269_q\ $end
+$var wire 1 R+ \RAM|ram~666_combout\ $end
+$var wire 1 S+ \RAM|ram~667_combout\ $end
+$var wire 1 T+ \RAM|ram~285_q\ $end
+$var wire 1 U+ \RAM|ram~317_q\ $end
+$var wire 1 V+ \RAM|ram~413_q\ $end
+$var wire 1 W+ \RAM|ram~445_q\ $end
+$var wire 1 X+ \RAM|ram~668_combout\ $end
+$var wire 1 Y+ \RAM|ram~349_q\ $end
+$var wire 1 Z+ \RAM|ram~381_q\ $end
+$var wire 1 [+ \RAM|ram~477_q\ $end
+$var wire 1 \+ \RAM|ram~509_q\ $end
+$var wire 1 ]+ \RAM|ram~669_combout\ $end
+$var wire 1 ^+ \RAM|ram~301_q\ $end
+$var wire 1 _+ \RAM|ram~333_q\ $end
+$var wire 1 `+ \RAM|ram~429_q\ $end
+$var wire 1 a+ \RAM|ram~461_q\ $end
+$var wire 1 b+ \RAM|ram~670_combout\ $end
+$var wire 1 c+ \RAM|ram~365_q\ $end
+$var wire 1 d+ \RAM|ram~397_q\ $end
+$var wire 1 e+ \RAM|ram~493_q\ $end
+$var wire 1 f+ \RAM|ram~525_q\ $end
+$var wire 1 g+ \RAM|ram~671_combout\ $end
+$var wire 1 h+ \RAM|ram~672_combout\ $end
+$var wire 1 i+ \RAM|ram~673_combout\ $end
+$var wire 1 j+ \SW[6]~input_o\ $end
+$var wire 1 k+ \Data_IN[6]~5_combout\ $end
+$var wire 1 l+ \CPU|ULA1|Add0~22\ $end
+$var wire 1 m+ \CPU|ULA1|Add0~25_sumout\ $end
+$var wire 1 n+ \CPU|ULA1|saida[6]~6_combout\ $end
+$var wire 1 o+ \CPU|BANCO_REG|registrador~17_q\ $end
+$var wire 1 p+ \CPU|BANCO_REG|registrador~25_q\ $end
+$var wire 1 q+ \CPU|BANCO_REG|registrador~33_q\ $end
+$var wire 1 r+ \CPU|BANCO_REG|registrador~41_q\ $end
+$var wire 1 s+ \CPU|BANCO_REG|registrador~49_combout\ $end
+$var wire 1 t+ \CPU|ULA1|Add1~22\ $end
+$var wire 1 u+ \CPU|ULA1|Add1~25_sumout\ $end
+$var wire 1 v+ \RAM|ram~22_q\ $end
+$var wire 1 w+ \RAM|ram~86_q\ $end
+$var wire 1 x+ \RAM|ram~150_q\ $end
+$var wire 1 y+ \RAM|ram~214_q\ $end
+$var wire 1 z+ \RAM|ram~674_combout\ $end
+$var wire 1 {+ \RAM|ram~38_q\ $end
+$var wire 1 |+ \RAM|ram~102_q\ $end
+$var wire 1 }+ \RAM|ram~166_q\ $end
+$var wire 1 ~+ \RAM|ram~230_q\ $end
+$var wire 1 !, \RAM|ram~675_combout\ $end
+$var wire 1 ", \RAM|ram~30_q\ $end
+$var wire 1 #, \RAM|ram~94_q\ $end
+$var wire 1 $, \RAM|ram~158_q\ $end
+$var wire 1 %, \RAM|ram~222_q\ $end
+$var wire 1 &, \RAM|ram~676_combout\ $end
+$var wire 1 ', \RAM|ram~46_q\ $end
+$var wire 1 (, \RAM|ram~110_q\ $end
+$var wire 1 ), \RAM|ram~174_q\ $end
+$var wire 1 *, \RAM|ram~238_q\ $end
+$var wire 1 +, \RAM|ram~677_combout\ $end
+$var wire 1 ,, \RAM|ram~678_combout\ $end
+$var wire 1 -, \RAM|ram~54_q\ $end
+$var wire 1 ., \RAM|ram~70_q\ $end
+$var wire 1 /, \RAM|ram~62_q\ $end
+$var wire 1 0, \RAM|ram~78_q\ $end
+$var wire 1 1, \RAM|ram~679_combout\ $end
+$var wire 1 2, \RAM|ram~118_q\ $end
+$var wire 1 3, \RAM|ram~134_q\ $end
+$var wire 1 4, \RAM|ram~126_q\ $end
+$var wire 1 5, \RAM|ram~142_q\ $end
+$var wire 1 6, \RAM|ram~680_combout\ $end
+$var wire 1 7, \RAM|ram~182_q\ $end
+$var wire 1 8, \RAM|ram~198_q\ $end
+$var wire 1 9, \RAM|ram~190_q\ $end
+$var wire 1 :, \RAM|ram~206_q\ $end
+$var wire 1 ;, \RAM|ram~681_combout\ $end
+$var wire 1 <, \RAM|ram~246_q\ $end
+$var wire 1 =, \RAM|ram~262_q\ $end
+$var wire 1 >, \RAM|ram~254_q\ $end
+$var wire 1 ?, \RAM|ram~270_q\ $end
+$var wire 1 @, \RAM|ram~682_combout\ $end
+$var wire 1 A, \RAM|ram~683_combout\ $end
+$var wire 1 B, \RAM|ram~278_q\ $end
+$var wire 1 C, \RAM|ram~342_q\ $end
+$var wire 1 D, \RAM|ram~406_q\ $end
+$var wire 1 E, \RAM|ram~470_q\ $end
+$var wire 1 F, \RAM|ram~684_combout\ $end
+$var wire 1 G, \RAM|ram~294_q\ $end
+$var wire 1 H, \RAM|ram~358_q\ $end
+$var wire 1 I, \RAM|ram~422_q\ $end
+$var wire 1 J, \RAM|ram~486_q\ $end
+$var wire 1 K, \RAM|ram~685_combout\ $end
+$var wire 1 L, \RAM|ram~286_q\ $end
+$var wire 1 M, \RAM|ram~350_q\ $end
+$var wire 1 N, \RAM|ram~414_q\ $end
+$var wire 1 O, \RAM|ram~478_q\ $end
+$var wire 1 P, \RAM|ram~686_combout\ $end
+$var wire 1 Q, \RAM|ram~302_q\ $end
+$var wire 1 R, \RAM|ram~366_q\ $end
+$var wire 1 S, \RAM|ram~430_q\ $end
+$var wire 1 T, \RAM|ram~494_q\ $end
+$var wire 1 U, \RAM|ram~687_combout\ $end
+$var wire 1 V, \RAM|ram~688_combout\ $end
+$var wire 1 W, \RAM|ram~310_q\ $end
+$var wire 1 X, \RAM|ram~326_q\ $end
+$var wire 1 Y, \RAM|ram~318_q\ $end
+$var wire 1 Z, \RAM|ram~334_q\ $end
+$var wire 1 [, \RAM|ram~689_combout\ $end
+$var wire 1 \, \RAM|ram~374_q\ $end
+$var wire 1 ], \RAM|ram~390_q\ $end
+$var wire 1 ^, \RAM|ram~382_q\ $end
+$var wire 1 _, \RAM|ram~398_q\ $end
+$var wire 1 `, \RAM|ram~690_combout\ $end
+$var wire 1 a, \RAM|ram~438_q\ $end
+$var wire 1 b, \RAM|ram~454_q\ $end
+$var wire 1 c, \RAM|ram~446_q\ $end
+$var wire 1 d, \RAM|ram~462_q\ $end
+$var wire 1 e, \RAM|ram~691_combout\ $end
+$var wire 1 f, \RAM|ram~502_q\ $end
+$var wire 1 g, \RAM|ram~518_q\ $end
+$var wire 1 h, \RAM|ram~510_q\ $end
+$var wire 1 i, \RAM|ram~526_q\ $end
+$var wire 1 j, \RAM|ram~692_combout\ $end
+$var wire 1 k, \RAM|ram~693_combout\ $end
+$var wire 1 l, \RAM|ram~694_combout\ $end
+$var wire 1 m, \SW[7]~input_o\ $end
+$var wire 1 n, \Data_IN[7]~6_combout\ $end
+$var wire 1 o, \CPU|ULA1|Add0~26\ $end
+$var wire 1 p, \CPU|ULA1|Add0~29_sumout\ $end
+$var wire 1 q, \CPU|ULA1|saida[7]~7_combout\ $end
+$var wire 1 r, \CPU|BANCO_REG|registrador~18_q\ $end
+$var wire 1 s, \CPU|BANCO_REG|registrador~26_q\ $end
+$var wire 1 t, \CPU|BANCO_REG|registrador~34_q\ $end
+$var wire 1 u, \CPU|BANCO_REG|registrador~42_q\ $end
+$var wire 1 v, \CPU|BANCO_REG|registrador~50_combout\ $end
+$var wire 1 w, \CPU|ULA1|Add1~26\ $end
+$var wire 1 x, \CPU|ULA1|Add1~29_sumout\ $end
+$var wire 1 y, \CPU|ULA1|flagzero~0_combout\ $end
+$var wire 1 z, \CPU|ULA1|flagzero~combout\ $end
+$var wire 1 {, \CPU|DEC_instrucao|saida[2]~6_combout\ $end
+$var wire 1 |, \CPU|REG_FLAG_ZERO|DOUT~q\ $end
+$var wire 1 }, \CPU|ULA1|flagless~combout\ $end
+$var wire 1 ~, \CPU|REG_FLAG_LESS|DOUT~q\ $end
+$var wire 1 !- \CPU|DEC_instrucao|saida_desvio[0]~0_combout\ $end
+$var wire 1 "- \CPU|incrementaPC|Add0~6\ $end
+$var wire 1 #- \CPU|incrementaPC|Add0~25_sumout\ $end
+$var wire 1 $- \CPU|MUX_PC|saida_MUX[5]~6_combout\ $end
+$var wire 1 %- \ROM|memROM~30_combout\ $end
+$var wire 1 &- \ROM|memROM~31_combout\ $end
+$var wire 1 '- \ROM|memROM~32_combout\ $end
+$var wire 1 (- \ROM|memROM~33_combout\ $end
+$var wire 1 )- \ROM|memROM~34_combout\ $end
+$var wire 1 *- \CPU|incrementaPC|Add0~1_sumout\ $end
+$var wire 1 +- \CPU|MUX_PC|saida_MUX[3]~0_combout\ $end
+$var wire 1 ,- \ROM|memROM~67_combout\ $end
+$var wire 1 -- \ROM|memROM~68_combout\ $end
+$var wire 1 .- \ROM|memROM~69_combout\ $end
+$var wire 1 /- \ROM|memROM~35_combout\ $end
+$var wire 1 0- \CPU|incrementaPC|Add0~26\ $end
+$var wire 1 1- \CPU|incrementaPC|Add0~9_sumout\ $end
+$var wire 1 2- \CPU|MUX_PC|saida_MUX[6]~2_combout\ $end
+$var wire 1 3- \ROM|memROM~3_combout\ $end
+$var wire 1 4- \ROM|memROM~4_combout\ $end
+$var wire 1 5- \ROM|memROM~5_combout\ $end
+$var wire 1 6- \CPU|incrementaPC|Add0~10\ $end
+$var wire 1 7- \CPU|incrementaPC|Add0~34\ $end
+$var wire 1 8- \CPU|incrementaPC|Add0~29_sumout\ $end
+$var wire 1 9- \CPU|MUX_PC|saida_MUX[8]~7_combout\ $end
+$var wire 1 :- \CPU|incrementaPC|Add0~33_sumout\ $end
+$var wire 1 ;- \CPU|MUX_PC|saida_MUX[7]~8_combout\ $end
+$var wire 1 <- \ROM|memROM~49_combout\ $end
+$var wire 1 =- \KEY[0]~input_o\ $end
+$var wire 1 >- \logicaKeys|KEY_0|KEY|saidaQ~q\ $end
+$var wire 1 ?- \logicaKeys|KEY_0|KEY|saida~combout\ $end
+$var wire 1 @- \logicaKeys|KEY_0|FF0|DOUT~q\ $end
+$var wire 1 A- \logicaKeys|KEY_0|buff|saida[0]~0_combout\ $end
+$var wire 1 B- \RAM|dado_out[0]~6_combout\ $end
+$var wire 1 C- \DEC_Blocos|Equal6~0_combout\ $end
+$var wire 1 D- \logica_LED|comb~0_combout\ $end
+$var wire 1 E- \logica_LED|comb~1_combout\ $end
+$var wire 1 F- \logica_LED|LED8|DOUT~0_combout\ $end
+$var wire 1 G- \logica_LED|LED8|DOUT~q\ $end
+$var wire 1 H- \logica_LED|comb~2_combout\ $end
+$var wire 1 I- \logica_LED|LED9|DOUT~0_combout\ $end
+$var wire 1 J- \logica_LED|LED9|DOUT~q\ $end
+$var wire 1 K- \comp_HEX0|comb~0_combout\ $end
+$var wire 1 L- \comp_HEX0|converSeg|rascSaida7seg[0]~0_combout\ $end
+$var wire 1 M- \comp_HEX0|converSeg|rascSaida7seg[1]~1_combout\ $end
+$var wire 1 N- \comp_HEX0|converSeg|rascSaida7seg[2]~2_combout\ $end
+$var wire 1 O- \comp_HEX0|converSeg|rascSaida7seg[3]~3_combout\ $end
+$var wire 1 P- \comp_HEX0|converSeg|rascSaida7seg[4]~4_combout\ $end
+$var wire 1 Q- \comp_HEX0|converSeg|rascSaida7seg[5]~5_combout\ $end
+$var wire 1 R- \comp_HEX0|converSeg|rascSaida7seg[6]~6_combout\ $end
+$var wire 1 S- \comp_HEX1|comb~0_combout\ $end
+$var wire 1 T- \comp_HEX1|converSeg|rascSaida7seg[0]~0_combout\ $end
+$var wire 1 U- \comp_HEX1|converSeg|rascSaida7seg[1]~1_combout\ $end
+$var wire 1 V- \comp_HEX1|converSeg|rascSaida7seg[2]~2_combout\ $end
+$var wire 1 W- \comp_HEX1|converSeg|rascSaida7seg[3]~3_combout\ $end
+$var wire 1 X- \comp_HEX1|converSeg|rascSaida7seg[4]~4_combout\ $end
+$var wire 1 Y- \comp_HEX1|converSeg|rascSaida7seg[5]~5_combout\ $end
+$var wire 1 Z- \comp_HEX1|converSeg|rascSaida7seg[6]~6_combout\ $end
+$var wire 1 [- \comp_HEX2|comb~0_combout\ $end
+$var wire 1 \- \comp_HEX2|converSeg|rascSaida7seg[0]~0_combout\ $end
+$var wire 1 ]- \comp_HEX2|converSeg|rascSaida7seg[1]~1_combout\ $end
+$var wire 1 ^- \comp_HEX2|converSeg|rascSaida7seg[2]~2_combout\ $end
+$var wire 1 _- \comp_HEX2|converSeg|rascSaida7seg[3]~3_combout\ $end
+$var wire 1 `- \comp_HEX2|converSeg|rascSaida7seg[4]~4_combout\ $end
+$var wire 1 a- \comp_HEX2|converSeg|rascSaida7seg[5]~5_combout\ $end
+$var wire 1 b- \comp_HEX2|converSeg|rascSaida7seg[6]~6_combout\ $end
+$var wire 1 c- \comp_HEX3|comb~0_combout\ $end
+$var wire 1 d- \comp_HEX3|converSeg|rascSaida7seg[0]~0_combout\ $end
+$var wire 1 e- \comp_HEX3|converSeg|rascSaida7seg[1]~1_combout\ $end
+$var wire 1 f- \comp_HEX3|converSeg|rascSaida7seg[2]~2_combout\ $end
+$var wire 1 g- \comp_HEX3|converSeg|rascSaida7seg[3]~3_combout\ $end
+$var wire 1 h- \comp_HEX3|converSeg|rascSaida7seg[4]~4_combout\ $end
+$var wire 1 i- \comp_HEX3|converSeg|rascSaida7seg[5]~5_combout\ $end
+$var wire 1 j- \comp_HEX3|converSeg|rascSaida7seg[6]~6_combout\ $end
+$var wire 1 k- \comp_HEX4|comb~0_combout\ $end
+$var wire 1 l- \comp_HEX4|converSeg|rascSaida7seg[0]~0_combout\ $end
+$var wire 1 m- \comp_HEX4|converSeg|rascSaida7seg[1]~1_combout\ $end
+$var wire 1 n- \comp_HEX4|converSeg|rascSaida7seg[2]~2_combout\ $end
+$var wire 1 o- \comp_HEX4|converSeg|rascSaida7seg[3]~3_combout\ $end
+$var wire 1 p- \comp_HEX4|converSeg|rascSaida7seg[4]~4_combout\ $end
+$var wire 1 q- \comp_HEX4|converSeg|rascSaida7seg[5]~5_combout\ $end
+$var wire 1 r- \comp_HEX4|converSeg|rascSaida7seg[6]~6_combout\ $end
+$var wire 1 s- \comp_HEX5|comb~0_combout\ $end
+$var wire 1 t- \comp_HEX5|converSeg|rascSaida7seg[0]~0_combout\ $end
+$var wire 1 u- \comp_HEX5|converSeg|rascSaida7seg[1]~1_combout\ $end
+$var wire 1 v- \comp_HEX5|converSeg|rascSaida7seg[2]~2_combout\ $end
+$var wire 1 w- \comp_HEX5|converSeg|rascSaida7seg[3]~3_combout\ $end
+$var wire 1 x- \comp_HEX5|converSeg|rascSaida7seg[4]~4_combout\ $end
+$var wire 1 y- \comp_HEX5|converSeg|rascSaida7seg[5]~5_combout\ $end
+$var wire 1 z- \comp_HEX5|converSeg|rascSaida7seg[6]~6_combout\ $end
+$var wire 1 {- \CPU|PC|DOUT\ [8] $end
+$var wire 1 |- \CPU|PC|DOUT\ [7] $end
+$var wire 1 }- \CPU|PC|DOUT\ [6] $end
+$var wire 1 ~- \CPU|PC|DOUT\ [5] $end
+$var wire 1 !. \CPU|PC|DOUT\ [4] $end
+$var wire 1 ". \CPU|PC|DOUT\ [3] $end
+$var wire 1 #. \CPU|PC|DOUT\ [2] $end
+$var wire 1 $. \CPU|PC|DOUT\ [1] $end
+$var wire 1 %. \CPU|PC|DOUT\ [0] $end
+$var wire 1 &. \comp_HEX5|REG|DOUT\ [3] $end
+$var wire 1 '. \comp_HEX5|REG|DOUT\ [2] $end
+$var wire 1 (. \comp_HEX5|REG|DOUT\ [1] $end
+$var wire 1 ). \comp_HEX5|REG|DOUT\ [0] $end
+$var wire 1 *. \comp_HEX1|REG|DOUT\ [3] $end
+$var wire 1 +. \comp_HEX1|REG|DOUT\ [2] $end
+$var wire 1 ,. \comp_HEX1|REG|DOUT\ [1] $end
+$var wire 1 -. \comp_HEX1|REG|DOUT\ [0] $end
+$var wire 1 .. \logica_LED|LED0to7|DOUT\ [7] $end
+$var wire 1 /. \logica_LED|LED0to7|DOUT\ [6] $end
+$var wire 1 0. \logica_LED|LED0to7|DOUT\ [5] $end
+$var wire 1 1. \logica_LED|LED0to7|DOUT\ [4] $end
+$var wire 1 2. \logica_LED|LED0to7|DOUT\ [3] $end
+$var wire 1 3. \logica_LED|LED0to7|DOUT\ [2] $end
+$var wire 1 4. \logica_LED|LED0to7|DOUT\ [1] $end
+$var wire 1 5. \logica_LED|LED0to7|DOUT\ [0] $end
+$var wire 1 6. \comp_HEX2|REG|DOUT\ [3] $end
+$var wire 1 7. \comp_HEX2|REG|DOUT\ [2] $end
+$var wire 1 8. \comp_HEX2|REG|DOUT\ [1] $end
+$var wire 1 9. \comp_HEX2|REG|DOUT\ [0] $end
+$var wire 1 :. \comp_HEX0|REG|DOUT\ [3] $end
+$var wire 1 ;. \comp_HEX0|REG|DOUT\ [2] $end
+$var wire 1 <. \comp_HEX0|REG|DOUT\ [1] $end
+$var wire 1 =. \comp_HEX0|REG|DOUT\ [0] $end
+$var wire 1 >. \comp_HEX3|REG|DOUT\ [3] $end
+$var wire 1 ?. \comp_HEX3|REG|DOUT\ [2] $end
+$var wire 1 @. \comp_HEX3|REG|DOUT\ [1] $end
+$var wire 1 A. \comp_HEX3|REG|DOUT\ [0] $end
+$var wire 1 B. \comp_HEX4|REG|DOUT\ [3] $end
+$var wire 1 C. \comp_HEX4|REG|DOUT\ [2] $end
+$var wire 1 D. \comp_HEX4|REG|DOUT\ [1] $end
+$var wire 1 E. \comp_HEX4|REG|DOUT\ [0] $end
+$var wire 1 F. \CPU|REG_RETORNO|DOUT\ [8] $end
+$var wire 1 G. \CPU|REG_RETORNO|DOUT\ [7] $end
+$var wire 1 H. \CPU|REG_RETORNO|DOUT\ [6] $end
+$var wire 1 I. \CPU|REG_RETORNO|DOUT\ [5] $end
+$var wire 1 J. \CPU|REG_RETORNO|DOUT\ [4] $end
+$var wire 1 K. \CPU|REG_RETORNO|DOUT\ [3] $end
+$var wire 1 L. \CPU|REG_RETORNO|DOUT\ [2] $end
+$var wire 1 M. \CPU|REG_RETORNO|DOUT\ [1] $end
+$var wire 1 N. \CPU|REG_RETORNO|DOUT\ [0] $end
+$var wire 1 O. \interfaceBaseTempo|baseTempo|contador\ [1] $end
+$var wire 1 P. \interfaceBaseTempo|baseTempo|contador\ [0] $end
+$var wire 1 Q. \ROM|ALT_INV_memROM~60_combout\ $end
+$var wire 1 R. \ROM|ALT_INV_memROM~53_combout\ $end
+$var wire 1 S. \ROM|ALT_INV_memROM~49_combout\ $end
+$var wire 1 T. \ROM|ALT_INV_memROM~45_combout\ $end
+$var wire 1 U. \CPU|ULA1|ALT_INV_Add1~29_sumout\ $end
+$var wire 1 V. \CPU|ULA1|ALT_INV_Add1~25_sumout\ $end
+$var wire 1 W. \CPU|ULA1|ALT_INV_Add1~21_sumout\ $end
+$var wire 1 X. \CPU|ULA1|ALT_INV_Add1~17_sumout\ $end
+$var wire 1 Y. \CPU|ULA1|ALT_INV_Add1~13_sumout\ $end
+$var wire 1 Z. \CPU|ULA1|ALT_INV_Add1~9_sumout\ $end
+$var wire 1 [. \CPU|ULA1|ALT_INV_Add1~5_sumout\ $end
+$var wire 1 \. \CPU|incrementaPC|ALT_INV_Add0~33_sumout\ $end
+$var wire 1 ]. \CPU|incrementaPC|ALT_INV_Add0~29_sumout\ $end
+$var wire 1 ^. \CPU|incrementaPC|ALT_INV_Add0~25_sumout\ $end
+$var wire 1 _. \CPU|incrementaPC|ALT_INV_Add0~21_sumout\ $end
+$var wire 1 `. \CPU|incrementaPC|ALT_INV_Add0~17_sumout\ $end
+$var wire 1 a. \CPU|incrementaPC|ALT_INV_Add0~13_sumout\ $end
+$var wire 1 b. \CPU|incrementaPC|ALT_INV_Add0~9_sumout\ $end
+$var wire 1 c. \CPU|incrementaPC|ALT_INV_Add0~5_sumout\ $end
+$var wire 1 d. \CPU|incrementaPC|ALT_INV_Add0~1_sumout\ $end
+$var wire 1 e. \CPU|ULA1|ALT_INV_Add1~1_sumout\ $end
+$var wire 1 f. \CPU|BANCO_REG|ALT_INV_registrador~42_q\ $end
+$var wire 1 g. \CPU|BANCO_REG|ALT_INV_registrador~34_q\ $end
+$var wire 1 h. \CPU|BANCO_REG|ALT_INV_registrador~26_q\ $end
+$var wire 1 i. \CPU|BANCO_REG|ALT_INV_registrador~18_q\ $end
+$var wire 1 j. \CPU|BANCO_REG|ALT_INV_registrador~41_q\ $end
+$var wire 1 k. \CPU|BANCO_REG|ALT_INV_registrador~33_q\ $end
+$var wire 1 l. \CPU|BANCO_REG|ALT_INV_registrador~25_q\ $end
+$var wire 1 m. \CPU|BANCO_REG|ALT_INV_registrador~17_q\ $end
+$var wire 1 n. \CPU|BANCO_REG|ALT_INV_registrador~40_q\ $end
+$var wire 1 o. \CPU|BANCO_REG|ALT_INV_registrador~32_q\ $end
+$var wire 1 p. \CPU|BANCO_REG|ALT_INV_registrador~24_q\ $end
+$var wire 1 q. \CPU|BANCO_REG|ALT_INV_registrador~16_q\ $end
+$var wire 1 r. \CPU|BANCO_REG|ALT_INV_registrador~39_q\ $end
+$var wire 1 s. \CPU|BANCO_REG|ALT_INV_registrador~31_q\ $end
+$var wire 1 t. \CPU|BANCO_REG|ALT_INV_registrador~23_q\ $end
+$var wire 1 u. \CPU|BANCO_REG|ALT_INV_registrador~15_q\ $end
+$var wire 1 v. \CPU|BANCO_REG|ALT_INV_registrador~38_q\ $end
+$var wire 1 w. \CPU|BANCO_REG|ALT_INV_registrador~30_q\ $end
+$var wire 1 x. \CPU|BANCO_REG|ALT_INV_registrador~22_q\ $end
+$var wire 1 y. \CPU|BANCO_REG|ALT_INV_registrador~14_q\ $end
+$var wire 1 z. \CPU|BANCO_REG|ALT_INV_registrador~37_q\ $end
+$var wire 1 {. \CPU|BANCO_REG|ALT_INV_registrador~29_q\ $end
+$var wire 1 |. \CPU|BANCO_REG|ALT_INV_registrador~21_q\ $end
+$var wire 1 }. \CPU|BANCO_REG|ALT_INV_registrador~13_q\ $end
+$var wire 1 ~. \CPU|BANCO_REG|ALT_INV_registrador~36_q\ $end
+$var wire 1 !/ \CPU|BANCO_REG|ALT_INV_registrador~28_q\ $end
+$var wire 1 "/ \CPU|BANCO_REG|ALT_INV_registrador~20_q\ $end
+$var wire 1 #/ \CPU|BANCO_REG|ALT_INV_registrador~12_q\ $end
+$var wire 1 $/ \CPU|PC|ALT_INV_DOUT\ [8] $end
+$var wire 1 %/ \CPU|PC|ALT_INV_DOUT\ [7] $end
+$var wire 1 &/ \CPU|PC|ALT_INV_DOUT\ [6] $end
+$var wire 1 '/ \CPU|PC|ALT_INV_DOUT\ [5] $end
+$var wire 1 (/ \CPU|PC|ALT_INV_DOUT\ [4] $end
+$var wire 1 )/ \CPU|PC|ALT_INV_DOUT\ [3] $end
+$var wire 1 */ \CPU|PC|ALT_INV_DOUT\ [2] $end
+$var wire 1 +/ \CPU|PC|ALT_INV_DOUT\ [1] $end
+$var wire 1 ,/ \CPU|PC|ALT_INV_DOUT\ [0] $end
+$var wire 1 -/ \CPU|BANCO_REG|ALT_INV_registrador~35_q\ $end
+$var wire 1 ./ \CPU|BANCO_REG|ALT_INV_registrador~27_q\ $end
+$var wire 1 // \CPU|BANCO_REG|ALT_INV_registrador~19_q\ $end
+$var wire 1 0/ \CPU|BANCO_REG|ALT_INV_registrador~11_q\ $end
+$var wire 1 1/ \CPU|DEC_instrucao|ALT_INV_Equal14~1_combout\ $end
+$var wire 1 2/ \logica_LED|ALT_INV_comb~2_combout\ $end
+$var wire 1 3/ \logica_LED|ALT_INV_comb~1_combout\ $end
+$var wire 1 4/ \CPU|BANCO_REG|ALT_INV_registrador~50_combout\ $end
+$var wire 1 5/ \CPU|BANCO_REG|ALT_INV_registrador~49_combout\ $end
+$var wire 1 6/ \CPU|BANCO_REG|ALT_INV_registrador~48_combout\ $end
+$var wire 1 7/ \CPU|BANCO_REG|ALT_INV_registrador~47_combout\ $end
+$var wire 1 8/ \CPU|BANCO_REG|ALT_INV_registrador~46_combout\ $end
+$var wire 1 9/ \CPU|BANCO_REG|ALT_INV_registrador~45_combout\ $end
+$var wire 1 :/ \CPU|BANCO_REG|ALT_INV_registrador~44_combout\ $end
+$var wire 1 ;/ \ROM|ALT_INV_memROM~26_combout\ $end
+$var wire 1 </ \ROM|ALT_INV_memROM~25_combout\ $end
+$var wire 1 =/ \ROM|ALT_INV_memROM~24_combout\ $end
+$var wire 1 >/ \ROM|ALT_INV_memROM~23_combout\ $end
+$var wire 1 ?/ \ROM|ALT_INV_memROM~22_combout\ $end
+$var wire 1 @/ \ROM|ALT_INV_memROM~21_combout\ $end
+$var wire 1 A/ \ROM|ALT_INV_memROM~20_combout\ $end
+$var wire 1 B/ \ROM|ALT_INV_memROM~19_combout\ $end
+$var wire 1 C/ \ROM|ALT_INV_memROM~18_combout\ $end
+$var wire 1 D/ \ROM|ALT_INV_memROM~17_combout\ $end
+$var wire 1 E/ \ROM|ALT_INV_memROM~16_combout\ $end
+$var wire 1 F/ \CPU|DEC_instrucao|ALT_INV_Equal14~0_combout\ $end
+$var wire 1 G/ \ROM|ALT_INV_memROM~15_combout\ $end
+$var wire 1 H/ \ROM|ALT_INV_memROM~14_combout\ $end
+$var wire 1 I/ \ROM|ALT_INV_memROM~13_combout\ $end
+$var wire 1 J/ \ROM|ALT_INV_memROM~12_combout\ $end
+$var wire 1 K/ \ROM|ALT_INV_memROM~11_combout\ $end
+$var wire 1 L/ \ROM|ALT_INV_memROM~10_combout\ $end
+$var wire 1 M/ \ROM|ALT_INV_memROM~9_combout\ $end
+$var wire 1 N/ \ROM|ALT_INV_memROM~8_combout\ $end
+$var wire 1 O/ \DEC_Blocos|ALT_INV_Equal6~0_combout\ $end
+$var wire 1 P/ \ROM|ALT_INV_memROM~7_combout\ $end
+$var wire 1 Q/ \ROM|ALT_INV_memROM~6_combout\ $end
+$var wire 1 R/ \ROM|ALT_INV_memROM~5_combout\ $end
+$var wire 1 S/ \ROM|ALT_INV_memROM~4_combout\ $end
+$var wire 1 T/ \ROM|ALT_INV_memROM~3_combout\ $end
+$var wire 1 U/ \CPU|BANCO_REG|ALT_INV_registrador~43_combout\ $end
+$var wire 1 V/ \ROM|ALT_INV_memROM~2_combout\ $end
+$var wire 1 W/ \ROM|ALT_INV_memROM~1_combout\ $end
+$var wire 1 X/ \ROM|ALT_INV_memROM~0_combout\ $end
+$var wire 1 Y/ \comp_HEX5|REG|ALT_INV_DOUT\ [3] $end
+$var wire 1 Z/ \comp_HEX5|REG|ALT_INV_DOUT\ [2] $end
+$var wire 1 [/ \comp_HEX5|REG|ALT_INV_DOUT\ [1] $end
+$var wire 1 \/ \comp_HEX5|REG|ALT_INV_DOUT\ [0] $end
+$var wire 1 ]/ \comp_HEX4|REG|ALT_INV_DOUT\ [3] $end
+$var wire 1 ^/ \comp_HEX4|REG|ALT_INV_DOUT\ [2] $end
+$var wire 1 _/ \comp_HEX4|REG|ALT_INV_DOUT\ [1] $end
+$var wire 1 `/ \comp_HEX4|REG|ALT_INV_DOUT\ [0] $end
+$var wire 1 a/ \comp_HEX3|REG|ALT_INV_DOUT\ [3] $end
+$var wire 1 b/ \comp_HEX3|REG|ALT_INV_DOUT\ [2] $end
+$var wire 1 c/ \comp_HEX3|REG|ALT_INV_DOUT\ [1] $end
+$var wire 1 d/ \comp_HEX3|REG|ALT_INV_DOUT\ [0] $end
+$var wire 1 e/ \comp_HEX2|REG|ALT_INV_DOUT\ [3] $end
+$var wire 1 f/ \comp_HEX2|REG|ALT_INV_DOUT\ [2] $end
+$var wire 1 g/ \comp_HEX2|REG|ALT_INV_DOUT\ [1] $end
+$var wire 1 h/ \comp_HEX2|REG|ALT_INV_DOUT\ [0] $end
+$var wire 1 i/ \comp_HEX1|REG|ALT_INV_DOUT\ [3] $end
+$var wire 1 j/ \comp_HEX1|REG|ALT_INV_DOUT\ [2] $end
+$var wire 1 k/ \comp_HEX1|REG|ALT_INV_DOUT\ [1] $end
+$var wire 1 l/ \comp_HEX1|REG|ALT_INV_DOUT\ [0] $end
+$var wire 1 m/ \comp_HEX0|REG|ALT_INV_DOUT\ [3] $end
+$var wire 1 n/ \comp_HEX0|REG|ALT_INV_DOUT\ [2] $end
+$var wire 1 o/ \comp_HEX0|REG|ALT_INV_DOUT\ [1] $end
+$var wire 1 p/ \comp_HEX0|REG|ALT_INV_DOUT\ [0] $end
+$var wire 1 q/ \logica_LED|LED9|ALT_INV_DOUT~q\ $end
+$var wire 1 r/ \logica_LED|LED8|ALT_INV_DOUT~q\ $end
+$var wire 1 s/ \CPU|REG_FLAG_LESS|ALT_INV_DOUT~q\ $end
+$var wire 1 t/ \CPU|REG_FLAG_ZERO|ALT_INV_DOUT~q\ $end
+$var wire 1 u/ \CPU|DEC_instrucao|ALT_INV_saida[5]~5_combout\ $end
+$var wire 1 v/ \CPU|ULA1|ALT_INV_Equal0~0_combout\ $end
+$var wire 1 w/ \CPU|DEC_instrucao|ALT_INV_saida~4_combout\ $end
+$var wire 1 x/ \RAM|ALT_INV_dado_out[0]~9_combout\ $end
+$var wire 1 y/ \CPU|DEC_instrucao|ALT_INV_saida[6]~3_combout\ $end
+$var wire 1 z/ \CPU|DEC_instrucao|ALT_INV_saida~2_combout\ $end
+$var wire 1 {/ \RAM|ALT_INV_dado_out[0]~8_combout\ $end
+$var wire 1 |/ \RAM|ALT_INV_dado_out[0]~7_combout\ $end
+$var wire 1 }/ \RAM|ALT_INV_dado_out[0]~5_combout\ $end
+$var wire 1 ~/ \logicaKeys|KEY_1|FF0|ALT_INV_DOUT~q\ $end
+$var wire 1 !0 \RAM|ALT_INV_dado_out[0]~4_combout\ $end
+$var wire 1 "0 \logicaKeys|FPGARESET|ALT_INV_saida~1_combout\ $end
+$var wire 1 #0 \logicaKeys|FPGARESET|ALT_INV_saida~0_combout\ $end
+$var wire 1 $0 \interfaceBaseTempo|registraUmSegundo|ALT_INV_DOUT~q\ $end
+$var wire 1 %0 \RAM|ALT_INV_dado_out~3_combout\ $end
+$var wire 1 &0 \RAM|ALT_INV_process_0~0_combout\ $end
+$var wire 1 '0 \RAM|ALT_INV_ram~547_combout\ $end
+$var wire 1 (0 \ROM|ALT_INV_memROM~34_combout\ $end
+$var wire 1 )0 \ROM|ALT_INV_memROM~33_combout\ $end
+$var wire 1 *0 \ROM|ALT_INV_memROM~32_combout\ $end
+$var wire 1 +0 \ROM|ALT_INV_memROM~31_combout\ $end
+$var wire 1 ,0 \ROM|ALT_INV_memROM~30_combout\ $end
+$var wire 1 -0 \RAM|ALT_INV_ram~546_combout\ $end
+$var wire 1 .0 \RAM|ALT_INV_ram~545_combout\ $end
+$var wire 1 /0 \RAM|ALT_INV_ram~519_q\ $end
+$var wire 1 00 \RAM|ALT_INV_ram~263_q\ $end
+$var wire 1 10 \RAM|ALT_INV_ram~511_q\ $end
+$var wire 1 20 \RAM|ALT_INV_ram~255_q\ $end
+$var wire 1 30 \RAM|ALT_INV_ram~544_combout\ $end
+$var wire 1 40 \RAM|ALT_INV_ram~503_q\ $end
+$var wire 1 50 \RAM|ALT_INV_ram~247_q\ $end
+$var wire 1 60 \RAM|ALT_INV_ram~495_q\ $end
+$var wire 1 70 \RAM|ALT_INV_ram~239_q\ $end
+$var wire 1 80 \RAM|ALT_INV_ram~543_combout\ $end
+$var wire 1 90 \RAM|ALT_INV_ram~391_q\ $end
+$var wire 1 :0 \RAM|ALT_INV_ram~135_q\ $end
+$var wire 1 ;0 \RAM|ALT_INV_ram~383_q\ $end
+$var wire 1 <0 \RAM|ALT_INV_ram~127_q\ $end
+$var wire 1 =0 \RAM|ALT_INV_ram~542_combout\ $end
+$var wire 1 >0 \RAM|ALT_INV_ram~375_q\ $end
+$var wire 1 ?0 \RAM|ALT_INV_ram~119_q\ $end
+$var wire 1 @0 \RAM|ALT_INV_ram~367_q\ $end
+$var wire 1 A0 \RAM|ALT_INV_ram~111_q\ $end
+$var wire 1 B0 \RAM|ALT_INV_ram~541_combout\ $end
+$var wire 1 C0 \RAM|ALT_INV_ram~540_combout\ $end
+$var wire 1 D0 \RAM|ALT_INV_ram~455_q\ $end
+$var wire 1 E0 \RAM|ALT_INV_ram~199_q\ $end
+$var wire 1 F0 \RAM|ALT_INV_ram~327_q\ $end
+$var wire 1 G0 \RAM|ALT_INV_ram~71_q\ $end
+$var wire 1 H0 \RAM|ALT_INV_ram~539_combout\ $end
+$var wire 1 I0 \RAM|ALT_INV_ram~439_q\ $end
+$var wire 1 J0 \RAM|ALT_INV_ram~183_q\ $end
+$var wire 1 K0 \RAM|ALT_INV_ram~311_q\ $end
+$var wire 1 L0 \RAM|ALT_INV_ram~55_q\ $end
+$var wire 1 M0 \RAM|ALT_INV_ram~538_combout\ $end
+$var wire 1 N0 \RAM|ALT_INV_ram~447_q\ $end
+$var wire 1 O0 \RAM|ALT_INV_ram~191_q\ $end
+$var wire 1 P0 \RAM|ALT_INV_ram~319_q\ $end
+$var wire 1 Q0 \RAM|ALT_INV_ram~63_q\ $end
+$var wire 1 R0 \RAM|ALT_INV_ram~537_combout\ $end
+$var wire 1 S0 \RAM|ALT_INV_ram~431_q\ $end
+$var wire 1 T0 \RAM|ALT_INV_ram~175_q\ $end
+$var wire 1 U0 \RAM|ALT_INV_ram~303_q\ $end
+$var wire 1 V0 \RAM|ALT_INV_ram~47_q\ $end
+$var wire 1 W0 \RAM|ALT_INV_ram~536_combout\ $end
+$var wire 1 X0 \RAM|ALT_INV_ram~535_combout\ $end
+$var wire 1 Y0 \RAM|ALT_INV_ram~487_q\ $end
+$var wire 1 Z0 \RAM|ALT_INV_ram~231_q\ $end
+$var wire 1 [0 \RAM|ALT_INV_ram~359_q\ $end
+$var wire 1 \0 \RAM|ALT_INV_ram~103_q\ $end
+$var wire 1 ]0 \RAM|ALT_INV_ram~534_combout\ $end
+$var wire 1 ^0 \RAM|ALT_INV_ram~471_q\ $end
+$var wire 1 _0 \RAM|ALT_INV_ram~215_q\ $end
+$var wire 1 `0 \RAM|ALT_INV_ram~343_q\ $end
+$var wire 1 a0 \RAM|ALT_INV_ram~87_q\ $end
+$var wire 1 b0 \RAM|ALT_INV_ram~533_combout\ $end
+$var wire 1 c0 \RAM|ALT_INV_ram~479_q\ $end
+$var wire 1 d0 \RAM|ALT_INV_ram~223_q\ $end
+$var wire 1 e0 \RAM|ALT_INV_ram~351_q\ $end
+$var wire 1 f0 \RAM|ALT_INV_ram~95_q\ $end
+$var wire 1 g0 \RAM|ALT_INV_ram~532_combout\ $end
+$var wire 1 h0 \RAM|ALT_INV_ram~463_q\ $end
+$var wire 1 i0 \RAM|ALT_INV_ram~207_q\ $end
+$var wire 1 j0 \RAM|ALT_INV_ram~335_q\ $end
+$var wire 1 k0 \RAM|ALT_INV_ram~79_q\ $end
+$var wire 1 l0 \RAM|ALT_INV_ram~531_combout\ $end
+$var wire 1 m0 \RAM|ALT_INV_ram~530_combout\ $end
+$var wire 1 n0 \RAM|ALT_INV_ram~423_q\ $end
+$var wire 1 o0 \RAM|ALT_INV_ram~167_q\ $end
+$var wire 1 p0 \RAM|ALT_INV_ram~295_q\ $end
+$var wire 1 q0 \RAM|ALT_INV_ram~39_q\ $end
+$var wire 1 r0 \RAM|ALT_INV_ram~529_combout\ $end
+$var wire 1 s0 \RAM|ALT_INV_ram~407_q\ $end
+$var wire 1 t0 \RAM|ALT_INV_ram~151_q\ $end
+$var wire 1 u0 \RAM|ALT_INV_ram~279_q\ $end
+$var wire 1 v0 \RAM|ALT_INV_ram~23_q\ $end
+$var wire 1 w0 \RAM|ALT_INV_ram~528_combout\ $end
+$var wire 1 x0 \RAM|ALT_INV_ram~415_q\ $end
+$var wire 1 y0 \RAM|ALT_INV_ram~159_q\ $end
+$var wire 1 z0 \RAM|ALT_INV_ram~287_q\ $end
+$var wire 1 {0 \RAM|ALT_INV_ram~31_q\ $end
+$var wire 1 |0 \RAM|ALT_INV_ram~527_combout\ $end
+$var wire 1 }0 \ROM|ALT_INV_memROM~29_combout\ $end
+$var wire 1 ~0 \RAM|ALT_INV_ram~399_q\ $end
+$var wire 1 !1 \RAM|ALT_INV_ram~143_q\ $end
+$var wire 1 "1 \RAM|ALT_INV_ram~271_q\ $end
+$var wire 1 #1 \RAM|ALT_INV_ram~15_q\ $end
+$var wire 1 $1 \switch8|ALT_INV_saida~1_combout\ $end
+$var wire 1 %1 \switch8|ALT_INV_saida~0_combout\ $end
+$var wire 1 &1 \RAM|ALT_INV_dado_out[0]~2_combout\ $end
+$var wire 1 '1 \logicaKeys|KEY_0|buff|ALT_INV_saida[0]~0_combout\ $end
+$var wire 1 (1 \logicaKeys|KEY_0|FF0|ALT_INV_DOUT~q\ $end
+$var wire 1 )1 \ALT_INV_comb~0_combout\ $end
+$var wire 1 *1 \RAM|ALT_INV_dado_out[0]~1_combout\ $end
+$var wire 1 +1 \CPU|DEC_instrucao|ALT_INV_saida[3]~1_combout\ $end
+$var wire 1 ,1 \CPU|DEC_instrucao|ALT_INV_saida[1]~0_combout\ $end
+$var wire 1 -1 \ROM|ALT_INV_memROM~28_combout\ $end
+$var wire 1 .1 \ROM|ALT_INV_memROM~27_combout\ $end
+$var wire 1 /1 \RAM|ALT_INV_ram~241_q\ $end
+$var wire 1 01 \RAM|ALT_INV_ram~113_q\ $end
+$var wire 1 11 \RAM|ALT_INV_ram~571_combout\ $end
+$var wire 1 21 \RAM|ALT_INV_ram~185_q\ $end
+$var wire 1 31 \RAM|ALT_INV_ram~57_q\ $end
+$var wire 1 41 \RAM|ALT_INV_ram~177_q\ $end
+$var wire 1 51 \RAM|ALT_INV_ram~49_q\ $end
+$var wire 1 61 \RAM|ALT_INV_ram~570_combout\ $end
+$var wire 1 71 \RAM|ALT_INV_ram~217_q\ $end
+$var wire 1 81 \RAM|ALT_INV_ram~89_q\ $end
+$var wire 1 91 \RAM|ALT_INV_ram~209_q\ $end
+$var wire 1 :1 \RAM|ALT_INV_ram~81_q\ $end
+$var wire 1 ;1 \RAM|ALT_INV_ram~569_combout\ $end
+$var wire 1 <1 \RAM|ALT_INV_ram~153_q\ $end
+$var wire 1 =1 \RAM|ALT_INV_ram~25_q\ $end
+$var wire 1 >1 \RAM|ALT_INV_ram~145_q\ $end
+$var wire 1 ?1 \RAM|ALT_INV_ram~17_q\ $end
+$var wire 1 @1 \ALT_INV_Data_IN[1]~0_combout\ $end
+$var wire 1 A1 \RAM|ALT_INV_ram~568_combout\ $end
+$var wire 1 B1 \RAM|ALT_INV_ram~567_combout\ $end
+$var wire 1 C1 \RAM|ALT_INV_ram~566_combout\ $end
+$var wire 1 D1 \RAM|ALT_INV_ram~520_q\ $end
+$var wire 1 E1 \RAM|ALT_INV_ram~488_q\ $end
+$var wire 1 F1 \RAM|ALT_INV_ram~504_q\ $end
+$var wire 1 G1 \RAM|ALT_INV_ram~472_q\ $end
+$var wire 1 H1 \RAM|ALT_INV_ram~565_combout\ $end
+$var wire 1 I1 \RAM|ALT_INV_ram~456_q\ $end
+$var wire 1 J1 \RAM|ALT_INV_ram~424_q\ $end
+$var wire 1 K1 \RAM|ALT_INV_ram~440_q\ $end
+$var wire 1 L1 \RAM|ALT_INV_ram~408_q\ $end
+$var wire 1 M1 \RAM|ALT_INV_ram~564_combout\ $end
+$var wire 1 N1 \RAM|ALT_INV_ram~512_q\ $end
+$var wire 1 O1 \RAM|ALT_INV_ram~480_q\ $end
+$var wire 1 P1 \RAM|ALT_INV_ram~496_q\ $end
+$var wire 1 Q1 \RAM|ALT_INV_ram~464_q\ $end
+$var wire 1 R1 \RAM|ALT_INV_ram~563_combout\ $end
+$var wire 1 S1 \RAM|ALT_INV_ram~448_q\ $end
+$var wire 1 T1 \RAM|ALT_INV_ram~416_q\ $end
+$var wire 1 U1 \RAM|ALT_INV_ram~432_q\ $end
+$var wire 1 V1 \RAM|ALT_INV_ram~400_q\ $end
+$var wire 1 W1 \RAM|ALT_INV_ram~562_combout\ $end
+$var wire 1 X1 \RAM|ALT_INV_ram~561_combout\ $end
+$var wire 1 Y1 \RAM|ALT_INV_ram~264_q\ $end
+$var wire 1 Z1 \RAM|ALT_INV_ram~248_q\ $end
+$var wire 1 [1 \RAM|ALT_INV_ram~256_q\ $end
+$var wire 1 \1 \RAM|ALT_INV_ram~240_q\ $end
+$var wire 1 ]1 \RAM|ALT_INV_ram~560_combout\ $end
+$var wire 1 ^1 \RAM|ALT_INV_ram~200_q\ $end
+$var wire 1 _1 \RAM|ALT_INV_ram~184_q\ $end
+$var wire 1 `1 \RAM|ALT_INV_ram~192_q\ $end
+$var wire 1 a1 \RAM|ALT_INV_ram~176_q\ $end
+$var wire 1 b1 \RAM|ALT_INV_ram~559_combout\ $end
+$var wire 1 c1 \RAM|ALT_INV_ram~232_q\ $end
+$var wire 1 d1 \RAM|ALT_INV_ram~216_q\ $end
+$var wire 1 e1 \RAM|ALT_INV_ram~224_q\ $end
+$var wire 1 f1 \RAM|ALT_INV_ram~208_q\ $end
+$var wire 1 g1 \RAM|ALT_INV_ram~558_combout\ $end
+$var wire 1 h1 \RAM|ALT_INV_ram~168_q\ $end
+$var wire 1 i1 \RAM|ALT_INV_ram~152_q\ $end
+$var wire 1 j1 \RAM|ALT_INV_ram~160_q\ $end
+$var wire 1 k1 \RAM|ALT_INV_ram~144_q\ $end
+$var wire 1 l1 \RAM|ALT_INV_ram~557_combout\ $end
+$var wire 1 m1 \RAM|ALT_INV_ram~556_combout\ $end
+$var wire 1 n1 \RAM|ALT_INV_ram~392_q\ $end
+$var wire 1 o1 \RAM|ALT_INV_ram~328_q\ $end
+$var wire 1 p1 \RAM|ALT_INV_ram~376_q\ $end
+$var wire 1 q1 \RAM|ALT_INV_ram~312_q\ $end
+$var wire 1 r1 \RAM|ALT_INV_ram~555_combout\ $end
+$var wire 1 s1 \RAM|ALT_INV_ram~360_q\ $end
+$var wire 1 t1 \RAM|ALT_INV_ram~296_q\ $end
+$var wire 1 u1 \RAM|ALT_INV_ram~344_q\ $end
+$var wire 1 v1 \RAM|ALT_INV_ram~280_q\ $end
+$var wire 1 w1 \RAM|ALT_INV_ram~554_combout\ $end
+$var wire 1 x1 \RAM|ALT_INV_ram~384_q\ $end
+$var wire 1 y1 \RAM|ALT_INV_ram~320_q\ $end
+$var wire 1 z1 \RAM|ALT_INV_ram~368_q\ $end
+$var wire 1 {1 \RAM|ALT_INV_ram~304_q\ $end
+$var wire 1 |1 \RAM|ALT_INV_ram~553_combout\ $end
+$var wire 1 }1 \RAM|ALT_INV_ram~352_q\ $end
+$var wire 1 ~1 \RAM|ALT_INV_ram~288_q\ $end
+$var wire 1 !2 \RAM|ALT_INV_ram~336_q\ $end
+$var wire 1 "2 \RAM|ALT_INV_ram~272_q\ $end
+$var wire 1 #2 \RAM|ALT_INV_ram~552_combout\ $end
+$var wire 1 $2 \RAM|ALT_INV_ram~551_combout\ $end
+$var wire 1 %2 \RAM|ALT_INV_ram~136_q\ $end
+$var wire 1 &2 \RAM|ALT_INV_ram~104_q\ $end
+$var wire 1 '2 \RAM|ALT_INV_ram~120_q\ $end
+$var wire 1 (2 \RAM|ALT_INV_ram~88_q\ $end
+$var wire 1 )2 \RAM|ALT_INV_ram~550_combout\ $end
+$var wire 1 *2 \RAM|ALT_INV_ram~72_q\ $end
+$var wire 1 +2 \RAM|ALT_INV_ram~40_q\ $end
+$var wire 1 ,2 \RAM|ALT_INV_ram~56_q\ $end
+$var wire 1 -2 \RAM|ALT_INV_ram~24_q\ $end
+$var wire 1 .2 \RAM|ALT_INV_ram~549_combout\ $end
+$var wire 1 /2 \RAM|ALT_INV_ram~128_q\ $end
+$var wire 1 02 \RAM|ALT_INV_ram~96_q\ $end
+$var wire 1 12 \RAM|ALT_INV_ram~112_q\ $end
+$var wire 1 22 \RAM|ALT_INV_ram~80_q\ $end
+$var wire 1 32 \RAM|ALT_INV_ram~548_combout\ $end
+$var wire 1 42 \RAM|ALT_INV_ram~64_q\ $end
+$var wire 1 52 \RAM|ALT_INV_ram~32_q\ $end
+$var wire 1 62 \RAM|ALT_INV_ram~48_q\ $end
+$var wire 1 72 \RAM|ALT_INV_ram~16_q\ $end
+$var wire 1 82 \ALT_INV_comb~1_combout\ $end
+$var wire 1 92 \CPU|REG_RETORNO|ALT_INV_DOUT\ [8] $end
+$var wire 1 :2 \CPU|REG_RETORNO|ALT_INV_DOUT\ [7] $end
+$var wire 1 ;2 \CPU|REG_RETORNO|ALT_INV_DOUT\ [6] $end
+$var wire 1 <2 \CPU|REG_RETORNO|ALT_INV_DOUT\ [5] $end
+$var wire 1 =2 \CPU|REG_RETORNO|ALT_INV_DOUT\ [4] $end
+$var wire 1 >2 \CPU|REG_RETORNO|ALT_INV_DOUT\ [3] $end
+$var wire 1 ?2 \CPU|REG_RETORNO|ALT_INV_DOUT\ [2] $end
+$var wire 1 @2 \CPU|REG_RETORNO|ALT_INV_DOUT\ [1] $end
+$var wire 1 A2 \CPU|REG_RETORNO|ALT_INV_DOUT\ [0] $end
+$var wire 1 B2 \ROM|ALT_INV_memROM~35_combout\ $end
+$var wire 1 C2 \CPU|DEC_instrucao|ALT_INV_Equal14~2_combout\ $end
+$var wire 1 D2 \CPU|DEC_instrucao|ALT_INV_saida_desvio[0]~0_combout\ $end
+$var wire 1 E2 \RAM|ALT_INV_ram~602_combout\ $end
+$var wire 1 F2 \RAM|ALT_INV_ram~202_q\ $end
+$var wire 1 G2 \RAM|ALT_INV_ram~170_q\ $end
+$var wire 1 H2 \RAM|ALT_INV_ram~74_q\ $end
+$var wire 1 I2 \RAM|ALT_INV_ram~42_q\ $end
+$var wire 1 J2 \RAM|ALT_INV_ram~601_combout\ $end
+$var wire 1 K2 \RAM|ALT_INV_ram~250_q\ $end
+$var wire 1 L2 \RAM|ALT_INV_ram~218_q\ $end
+$var wire 1 M2 \RAM|ALT_INV_ram~122_q\ $end
+$var wire 1 N2 \RAM|ALT_INV_ram~90_q\ $end
+$var wire 1 O2 \RAM|ALT_INV_ram~600_combout\ $end
+$var wire 1 P2 \RAM|ALT_INV_ram~186_q\ $end
+$var wire 1 Q2 \RAM|ALT_INV_ram~154_q\ $end
+$var wire 1 R2 \RAM|ALT_INV_ram~58_q\ $end
+$var wire 1 S2 \RAM|ALT_INV_ram~26_q\ $end
+$var wire 1 T2 \RAM|ALT_INV_ram~599_combout\ $end
+$var wire 1 U2 \RAM|ALT_INV_ram~598_combout\ $end
+$var wire 1 V2 \RAM|ALT_INV_ram~514_q\ $end
+$var wire 1 W2 \RAM|ALT_INV_ram~482_q\ $end
+$var wire 1 X2 \RAM|ALT_INV_ram~498_q\ $end
+$var wire 1 Y2 \RAM|ALT_INV_ram~466_q\ $end
+$var wire 1 Z2 \RAM|ALT_INV_ram~597_combout\ $end
+$var wire 1 [2 \RAM|ALT_INV_ram~450_q\ $end
+$var wire 1 \2 \RAM|ALT_INV_ram~418_q\ $end
+$var wire 1 ]2 \RAM|ALT_INV_ram~434_q\ $end
+$var wire 1 ^2 \RAM|ALT_INV_ram~402_q\ $end
+$var wire 1 _2 \RAM|ALT_INV_ram~596_combout\ $end
+$var wire 1 `2 \RAM|ALT_INV_ram~386_q\ $end
+$var wire 1 a2 \RAM|ALT_INV_ram~354_q\ $end
+$var wire 1 b2 \RAM|ALT_INV_ram~370_q\ $end
+$var wire 1 c2 \RAM|ALT_INV_ram~338_q\ $end
+$var wire 1 d2 \RAM|ALT_INV_ram~595_combout\ $end
+$var wire 1 e2 \RAM|ALT_INV_ram~322_q\ $end
+$var wire 1 f2 \RAM|ALT_INV_ram~290_q\ $end
+$var wire 1 g2 \RAM|ALT_INV_ram~306_q\ $end
+$var wire 1 h2 \RAM|ALT_INV_ram~274_q\ $end
+$var wire 1 i2 \RAM|ALT_INV_ram~594_combout\ $end
+$var wire 1 j2 \RAM|ALT_INV_ram~593_combout\ $end
+$var wire 1 k2 \RAM|ALT_INV_ram~258_q\ $end
+$var wire 1 l2 \RAM|ALT_INV_ram~194_q\ $end
+$var wire 1 m2 \RAM|ALT_INV_ram~226_q\ $end
+$var wire 1 n2 \RAM|ALT_INV_ram~162_q\ $end
+$var wire 1 o2 \RAM|ALT_INV_ram~592_combout\ $end
+$var wire 1 p2 \RAM|ALT_INV_ram~242_q\ $end
+$var wire 1 q2 \RAM|ALT_INV_ram~178_q\ $end
+$var wire 1 r2 \RAM|ALT_INV_ram~210_q\ $end
+$var wire 1 s2 \RAM|ALT_INV_ram~146_q\ $end
+$var wire 1 t2 \RAM|ALT_INV_ram~591_combout\ $end
+$var wire 1 u2 \RAM|ALT_INV_ram~130_q\ $end
+$var wire 1 v2 \RAM|ALT_INV_ram~66_q\ $end
+$var wire 1 w2 \RAM|ALT_INV_ram~98_q\ $end
+$var wire 1 x2 \RAM|ALT_INV_ram~34_q\ $end
+$var wire 1 y2 \RAM|ALT_INV_ram~590_combout\ $end
+$var wire 1 z2 \RAM|ALT_INV_ram~114_q\ $end
+$var wire 1 {2 \RAM|ALT_INV_ram~50_q\ $end
+$var wire 1 |2 \RAM|ALT_INV_ram~82_q\ $end
+$var wire 1 }2 \RAM|ALT_INV_ram~18_q\ $end
+$var wire 1 ~2 \ALT_INV_Data_IN[2]~1_combout\ $end
+$var wire 1 !3 \RAM|ALT_INV_ram~589_combout\ $end
+$var wire 1 "3 \RAM|ALT_INV_ram~588_combout\ $end
+$var wire 1 #3 \RAM|ALT_INV_ram~587_combout\ $end
+$var wire 1 $3 \RAM|ALT_INV_ram~521_q\ $end
+$var wire 1 %3 \RAM|ALT_INV_ram~393_q\ $end
+$var wire 1 &3 \RAM|ALT_INV_ram~513_q\ $end
+$var wire 1 '3 \RAM|ALT_INV_ram~385_q\ $end
+$var wire 1 (3 \RAM|ALT_INV_ram~586_combout\ $end
+$var wire 1 )3 \RAM|ALT_INV_ram~457_q\ $end
+$var wire 1 *3 \RAM|ALT_INV_ram~329_q\ $end
+$var wire 1 +3 \RAM|ALT_INV_ram~449_q\ $end
+$var wire 1 ,3 \RAM|ALT_INV_ram~321_q\ $end
+$var wire 1 -3 \RAM|ALT_INV_ram~585_combout\ $end
+$var wire 1 .3 \RAM|ALT_INV_ram~489_q\ $end
+$var wire 1 /3 \RAM|ALT_INV_ram~361_q\ $end
+$var wire 1 03 \RAM|ALT_INV_ram~481_q\ $end
+$var wire 1 13 \RAM|ALT_INV_ram~353_q\ $end
+$var wire 1 23 \RAM|ALT_INV_ram~584_combout\ $end
+$var wire 1 33 \RAM|ALT_INV_ram~425_q\ $end
+$var wire 1 43 \RAM|ALT_INV_ram~297_q\ $end
+$var wire 1 53 \RAM|ALT_INV_ram~417_q\ $end
+$var wire 1 63 \RAM|ALT_INV_ram~289_q\ $end
+$var wire 1 73 \RAM|ALT_INV_ram~583_combout\ $end
+$var wire 1 83 \RAM|ALT_INV_ram~582_combout\ $end
+$var wire 1 93 \RAM|ALT_INV_ram~265_q\ $end
+$var wire 1 :3 \RAM|ALT_INV_ram~233_q\ $end
+$var wire 1 ;3 \RAM|ALT_INV_ram~257_q\ $end
+$var wire 1 <3 \RAM|ALT_INV_ram~225_q\ $end
+$var wire 1 =3 \RAM|ALT_INV_ram~581_combout\ $end
+$var wire 1 >3 \RAM|ALT_INV_ram~201_q\ $end
+$var wire 1 ?3 \RAM|ALT_INV_ram~169_q\ $end
+$var wire 1 @3 \RAM|ALT_INV_ram~193_q\ $end
+$var wire 1 A3 \RAM|ALT_INV_ram~161_q\ $end
+$var wire 1 B3 \RAM|ALT_INV_ram~580_combout\ $end
+$var wire 1 C3 \RAM|ALT_INV_ram~137_q\ $end
+$var wire 1 D3 \RAM|ALT_INV_ram~105_q\ $end
+$var wire 1 E3 \RAM|ALT_INV_ram~129_q\ $end
+$var wire 1 F3 \RAM|ALT_INV_ram~97_q\ $end
+$var wire 1 G3 \RAM|ALT_INV_ram~579_combout\ $end
+$var wire 1 H3 \RAM|ALT_INV_ram~73_q\ $end
+$var wire 1 I3 \RAM|ALT_INV_ram~41_q\ $end
+$var wire 1 J3 \RAM|ALT_INV_ram~65_q\ $end
+$var wire 1 K3 \RAM|ALT_INV_ram~33_q\ $end
+$var wire 1 L3 \RAM|ALT_INV_ram~578_combout\ $end
+$var wire 1 M3 \RAM|ALT_INV_ram~577_combout\ $end
+$var wire 1 N3 \RAM|ALT_INV_ram~505_q\ $end
+$var wire 1 O3 \RAM|ALT_INV_ram~441_q\ $end
+$var wire 1 P3 \RAM|ALT_INV_ram~497_q\ $end
+$var wire 1 Q3 \RAM|ALT_INV_ram~433_q\ $end
+$var wire 1 R3 \RAM|ALT_INV_ram~576_combout\ $end
+$var wire 1 S3 \RAM|ALT_INV_ram~473_q\ $end
+$var wire 1 T3 \RAM|ALT_INV_ram~409_q\ $end
+$var wire 1 U3 \RAM|ALT_INV_ram~465_q\ $end
+$var wire 1 V3 \RAM|ALT_INV_ram~401_q\ $end
+$var wire 1 W3 \RAM|ALT_INV_ram~575_combout\ $end
+$var wire 1 X3 \RAM|ALT_INV_ram~377_q\ $end
+$var wire 1 Y3 \RAM|ALT_INV_ram~313_q\ $end
+$var wire 1 Z3 \RAM|ALT_INV_ram~369_q\ $end
+$var wire 1 [3 \RAM|ALT_INV_ram~305_q\ $end
+$var wire 1 \3 \RAM|ALT_INV_ram~574_combout\ $end
+$var wire 1 ]3 \RAM|ALT_INV_ram~345_q\ $end
+$var wire 1 ^3 \RAM|ALT_INV_ram~281_q\ $end
+$var wire 1 _3 \RAM|ALT_INV_ram~337_q\ $end
+$var wire 1 `3 \RAM|ALT_INV_ram~273_q\ $end
+$var wire 1 a3 \RAM|ALT_INV_ram~573_combout\ $end
+$var wire 1 b3 \RAM|ALT_INV_ram~572_combout\ $end
+$var wire 1 c3 \RAM|ALT_INV_ram~249_q\ $end
+$var wire 1 d3 \RAM|ALT_INV_ram~121_q\ $end
+$var wire 1 e3 \RAM|ALT_INV_ram~633_combout\ $end
+$var wire 1 f3 \RAM|ALT_INV_ram~124_q\ $end
+$var wire 1 g3 \RAM|ALT_INV_ram~92_q\ $end
+$var wire 1 h3 \RAM|ALT_INV_ram~116_q\ $end
+$var wire 1 i3 \RAM|ALT_INV_ram~84_q\ $end
+$var wire 1 j3 \RAM|ALT_INV_ram~632_combout\ $end
+$var wire 1 k3 \RAM|ALT_INV_ram~60_q\ $end
+$var wire 1 l3 \RAM|ALT_INV_ram~28_q\ $end
+$var wire 1 m3 \RAM|ALT_INV_ram~52_q\ $end
+$var wire 1 n3 \RAM|ALT_INV_ram~20_q\ $end
+$var wire 1 o3 \ALT_INV_Data_IN[4]~3_combout\ $end
+$var wire 1 p3 \RAM|ALT_INV_ram~631_combout\ $end
+$var wire 1 q3 \RAM|ALT_INV_ram~630_combout\ $end
+$var wire 1 r3 \RAM|ALT_INV_ram~629_combout\ $end
+$var wire 1 s3 \RAM|ALT_INV_ram~523_q\ $end
+$var wire 1 t3 \RAM|ALT_INV_ram~507_q\ $end
+$var wire 1 u3 \RAM|ALT_INV_ram~515_q\ $end
+$var wire 1 v3 \RAM|ALT_INV_ram~499_q\ $end
+$var wire 1 w3 \RAM|ALT_INV_ram~628_combout\ $end
+$var wire 1 x3 \RAM|ALT_INV_ram~459_q\ $end
+$var wire 1 y3 \RAM|ALT_INV_ram~443_q\ $end
+$var wire 1 z3 \RAM|ALT_INV_ram~451_q\ $end
+$var wire 1 {3 \RAM|ALT_INV_ram~435_q\ $end
+$var wire 1 |3 \RAM|ALT_INV_ram~627_combout\ $end
+$var wire 1 }3 \RAM|ALT_INV_ram~395_q\ $end
+$var wire 1 ~3 \RAM|ALT_INV_ram~379_q\ $end
+$var wire 1 !4 \RAM|ALT_INV_ram~387_q\ $end
+$var wire 1 "4 \RAM|ALT_INV_ram~371_q\ $end
+$var wire 1 #4 \RAM|ALT_INV_ram~626_combout\ $end
+$var wire 1 $4 \RAM|ALT_INV_ram~331_q\ $end
+$var wire 1 %4 \RAM|ALT_INV_ram~315_q\ $end
+$var wire 1 &4 \RAM|ALT_INV_ram~323_q\ $end
+$var wire 1 '4 \RAM|ALT_INV_ram~307_q\ $end
+$var wire 1 (4 \RAM|ALT_INV_ram~625_combout\ $end
+$var wire 1 )4 \RAM|ALT_INV_ram~624_combout\ $end
+$var wire 1 *4 \RAM|ALT_INV_ram~267_q\ $end
+$var wire 1 +4 \RAM|ALT_INV_ram~251_q\ $end
+$var wire 1 ,4 \RAM|ALT_INV_ram~139_q\ $end
+$var wire 1 -4 \RAM|ALT_INV_ram~123_q\ $end
+$var wire 1 .4 \RAM|ALT_INV_ram~623_combout\ $end
+$var wire 1 /4 \RAM|ALT_INV_ram~203_q\ $end
+$var wire 1 04 \RAM|ALT_INV_ram~187_q\ $end
+$var wire 1 14 \RAM|ALT_INV_ram~75_q\ $end
+$var wire 1 24 \RAM|ALT_INV_ram~59_q\ $end
+$var wire 1 34 \RAM|ALT_INV_ram~622_combout\ $end
+$var wire 1 44 \RAM|ALT_INV_ram~259_q\ $end
+$var wire 1 54 \RAM|ALT_INV_ram~243_q\ $end
+$var wire 1 64 \RAM|ALT_INV_ram~131_q\ $end
+$var wire 1 74 \RAM|ALT_INV_ram~115_q\ $end
+$var wire 1 84 \RAM|ALT_INV_ram~621_combout\ $end
+$var wire 1 94 \RAM|ALT_INV_ram~195_q\ $end
+$var wire 1 :4 \RAM|ALT_INV_ram~179_q\ $end
+$var wire 1 ;4 \RAM|ALT_INV_ram~67_q\ $end
+$var wire 1 <4 \RAM|ALT_INV_ram~51_q\ $end
+$var wire 1 =4 \RAM|ALT_INV_ram~620_combout\ $end
+$var wire 1 >4 \RAM|ALT_INV_ram~619_combout\ $end
+$var wire 1 ?4 \RAM|ALT_INV_ram~491_q\ $end
+$var wire 1 @4 \RAM|ALT_INV_ram~427_q\ $end
+$var wire 1 A4 \RAM|ALT_INV_ram~475_q\ $end
+$var wire 1 B4 \RAM|ALT_INV_ram~411_q\ $end
+$var wire 1 C4 \RAM|ALT_INV_ram~618_combout\ $end
+$var wire 1 D4 \RAM|ALT_INV_ram~363_q\ $end
+$var wire 1 E4 \RAM|ALT_INV_ram~299_q\ $end
+$var wire 1 F4 \RAM|ALT_INV_ram~347_q\ $end
+$var wire 1 G4 \RAM|ALT_INV_ram~283_q\ $end
+$var wire 1 H4 \RAM|ALT_INV_ram~617_combout\ $end
+$var wire 1 I4 \RAM|ALT_INV_ram~483_q\ $end
+$var wire 1 J4 \RAM|ALT_INV_ram~419_q\ $end
+$var wire 1 K4 \RAM|ALT_INV_ram~467_q\ $end
+$var wire 1 L4 \RAM|ALT_INV_ram~403_q\ $end
+$var wire 1 M4 \RAM|ALT_INV_ram~616_combout\ $end
+$var wire 1 N4 \RAM|ALT_INV_ram~355_q\ $end
+$var wire 1 O4 \RAM|ALT_INV_ram~291_q\ $end
+$var wire 1 P4 \RAM|ALT_INV_ram~339_q\ $end
+$var wire 1 Q4 \RAM|ALT_INV_ram~275_q\ $end
+$var wire 1 R4 \RAM|ALT_INV_ram~615_combout\ $end
+$var wire 1 S4 \RAM|ALT_INV_ram~614_combout\ $end
+$var wire 1 T4 \RAM|ALT_INV_ram~235_q\ $end
+$var wire 1 U4 \RAM|ALT_INV_ram~219_q\ $end
+$var wire 1 V4 \RAM|ALT_INV_ram~227_q\ $end
+$var wire 1 W4 \RAM|ALT_INV_ram~211_q\ $end
+$var wire 1 X4 \RAM|ALT_INV_ram~613_combout\ $end
+$var wire 1 Y4 \RAM|ALT_INV_ram~171_q\ $end
+$var wire 1 Z4 \RAM|ALT_INV_ram~155_q\ $end
+$var wire 1 [4 \RAM|ALT_INV_ram~163_q\ $end
+$var wire 1 \4 \RAM|ALT_INV_ram~147_q\ $end
+$var wire 1 ]4 \RAM|ALT_INV_ram~612_combout\ $end
+$var wire 1 ^4 \RAM|ALT_INV_ram~107_q\ $end
+$var wire 1 _4 \RAM|ALT_INV_ram~91_q\ $end
+$var wire 1 `4 \RAM|ALT_INV_ram~99_q\ $end
+$var wire 1 a4 \RAM|ALT_INV_ram~83_q\ $end
+$var wire 1 b4 \RAM|ALT_INV_ram~611_combout\ $end
+$var wire 1 c4 \RAM|ALT_INV_ram~43_q\ $end
+$var wire 1 d4 \RAM|ALT_INV_ram~27_q\ $end
+$var wire 1 e4 \RAM|ALT_INV_ram~35_q\ $end
+$var wire 1 f4 \RAM|ALT_INV_ram~19_q\ $end
+$var wire 1 g4 \ALT_INV_Data_IN[3]~2_combout\ $end
+$var wire 1 h4 \RAM|ALT_INV_ram~610_combout\ $end
+$var wire 1 i4 \RAM|ALT_INV_ram~609_combout\ $end
+$var wire 1 j4 \RAM|ALT_INV_ram~608_combout\ $end
+$var wire 1 k4 \RAM|ALT_INV_ram~522_q\ $end
+$var wire 1 l4 \RAM|ALT_INV_ram~458_q\ $end
+$var wire 1 m4 \RAM|ALT_INV_ram~490_q\ $end
+$var wire 1 n4 \RAM|ALT_INV_ram~426_q\ $end
+$var wire 1 o4 \RAM|ALT_INV_ram~607_combout\ $end
+$var wire 1 p4 \RAM|ALT_INV_ram~506_q\ $end
+$var wire 1 q4 \RAM|ALT_INV_ram~442_q\ $end
+$var wire 1 r4 \RAM|ALT_INV_ram~474_q\ $end
+$var wire 1 s4 \RAM|ALT_INV_ram~410_q\ $end
+$var wire 1 t4 \RAM|ALT_INV_ram~606_combout\ $end
+$var wire 1 u4 \RAM|ALT_INV_ram~394_q\ $end
+$var wire 1 v4 \RAM|ALT_INV_ram~330_q\ $end
+$var wire 1 w4 \RAM|ALT_INV_ram~362_q\ $end
+$var wire 1 x4 \RAM|ALT_INV_ram~298_q\ $end
+$var wire 1 y4 \RAM|ALT_INV_ram~605_combout\ $end
+$var wire 1 z4 \RAM|ALT_INV_ram~378_q\ $end
+$var wire 1 {4 \RAM|ALT_INV_ram~314_q\ $end
+$var wire 1 |4 \RAM|ALT_INV_ram~346_q\ $end
+$var wire 1 }4 \RAM|ALT_INV_ram~282_q\ $end
+$var wire 1 ~4 \RAM|ALT_INV_ram~604_combout\ $end
+$var wire 1 !5 \RAM|ALT_INV_ram~603_combout\ $end
+$var wire 1 "5 \RAM|ALT_INV_ram~266_q\ $end
+$var wire 1 #5 \RAM|ALT_INV_ram~234_q\ $end
+$var wire 1 $5 \RAM|ALT_INV_ram~138_q\ $end
+$var wire 1 %5 \RAM|ALT_INV_ram~106_q\ $end
+$var wire 1 &5 \RAM|ALT_INV_ram~77_q\ $end
+$var wire 1 '5 \RAM|ALT_INV_ram~109_q\ $end
+$var wire 1 (5 \RAM|ALT_INV_ram~45_q\ $end
+$var wire 1 )5 \RAM|ALT_INV_ram~663_combout\ $end
+$var wire 1 *5 \RAM|ALT_INV_ram~125_q\ $end
+$var wire 1 +5 \RAM|ALT_INV_ram~61_q\ $end
+$var wire 1 ,5 \RAM|ALT_INV_ram~93_q\ $end
+$var wire 1 -5 \RAM|ALT_INV_ram~29_q\ $end
+$var wire 1 .5 \RAM|ALT_INV_ram~662_combout\ $end
+$var wire 1 /5 \RAM|ALT_INV_ram~661_combout\ $end
+$var wire 1 05 \RAM|ALT_INV_ram~517_q\ $end
+$var wire 1 15 \RAM|ALT_INV_ram~485_q\ $end
+$var wire 1 25 \RAM|ALT_INV_ram~501_q\ $end
+$var wire 1 35 \RAM|ALT_INV_ram~469_q\ $end
+$var wire 1 45 \RAM|ALT_INV_ram~660_combout\ $end
+$var wire 1 55 \RAM|ALT_INV_ram~453_q\ $end
+$var wire 1 65 \RAM|ALT_INV_ram~421_q\ $end
+$var wire 1 75 \RAM|ALT_INV_ram~437_q\ $end
+$var wire 1 85 \RAM|ALT_INV_ram~405_q\ $end
+$var wire 1 95 \RAM|ALT_INV_ram~659_combout\ $end
+$var wire 1 :5 \RAM|ALT_INV_ram~389_q\ $end
+$var wire 1 ;5 \RAM|ALT_INV_ram~357_q\ $end
+$var wire 1 <5 \RAM|ALT_INV_ram~373_q\ $end
+$var wire 1 =5 \RAM|ALT_INV_ram~341_q\ $end
+$var wire 1 >5 \RAM|ALT_INV_ram~658_combout\ $end
+$var wire 1 ?5 \RAM|ALT_INV_ram~325_q\ $end
+$var wire 1 @5 \RAM|ALT_INV_ram~293_q\ $end
+$var wire 1 A5 \RAM|ALT_INV_ram~309_q\ $end
+$var wire 1 B5 \RAM|ALT_INV_ram~277_q\ $end
+$var wire 1 C5 \RAM|ALT_INV_ram~657_combout\ $end
+$var wire 1 D5 \RAM|ALT_INV_ram~656_combout\ $end
+$var wire 1 E5 \RAM|ALT_INV_ram~261_q\ $end
+$var wire 1 F5 \RAM|ALT_INV_ram~229_q\ $end
+$var wire 1 G5 \RAM|ALT_INV_ram~133_q\ $end
+$var wire 1 H5 \RAM|ALT_INV_ram~101_q\ $end
+$var wire 1 I5 \RAM|ALT_INV_ram~655_combout\ $end
+$var wire 1 J5 \RAM|ALT_INV_ram~197_q\ $end
+$var wire 1 K5 \RAM|ALT_INV_ram~165_q\ $end
+$var wire 1 L5 \RAM|ALT_INV_ram~69_q\ $end
+$var wire 1 M5 \RAM|ALT_INV_ram~37_q\ $end
+$var wire 1 N5 \RAM|ALT_INV_ram~654_combout\ $end
+$var wire 1 O5 \RAM|ALT_INV_ram~245_q\ $end
+$var wire 1 P5 \RAM|ALT_INV_ram~213_q\ $end
+$var wire 1 Q5 \RAM|ALT_INV_ram~117_q\ $end
+$var wire 1 R5 \RAM|ALT_INV_ram~85_q\ $end
+$var wire 1 S5 \RAM|ALT_INV_ram~653_combout\ $end
+$var wire 1 T5 \RAM|ALT_INV_ram~181_q\ $end
+$var wire 1 U5 \RAM|ALT_INV_ram~149_q\ $end
+$var wire 1 V5 \RAM|ALT_INV_ram~53_q\ $end
+$var wire 1 W5 \RAM|ALT_INV_ram~21_q\ $end
+$var wire 1 X5 \ALT_INV_Data_IN[5]~4_combout\ $end
+$var wire 1 Y5 \RAM|ALT_INV_ram~652_combout\ $end
+$var wire 1 Z5 \RAM|ALT_INV_ram~651_combout\ $end
+$var wire 1 [5 \RAM|ALT_INV_ram~650_combout\ $end
+$var wire 1 \5 \RAM|ALT_INV_ram~524_q\ $end
+$var wire 1 ]5 \RAM|ALT_INV_ram~460_q\ $end
+$var wire 1 ^5 \RAM|ALT_INV_ram~396_q\ $end
+$var wire 1 _5 \RAM|ALT_INV_ram~332_q\ $end
+$var wire 1 `5 \RAM|ALT_INV_ram~649_combout\ $end
+$var wire 1 a5 \RAM|ALT_INV_ram~492_q\ $end
+$var wire 1 b5 \RAM|ALT_INV_ram~428_q\ $end
+$var wire 1 c5 \RAM|ALT_INV_ram~364_q\ $end
+$var wire 1 d5 \RAM|ALT_INV_ram~300_q\ $end
+$var wire 1 e5 \RAM|ALT_INV_ram~648_combout\ $end
+$var wire 1 f5 \RAM|ALT_INV_ram~516_q\ $end
+$var wire 1 g5 \RAM|ALT_INV_ram~452_q\ $end
+$var wire 1 h5 \RAM|ALT_INV_ram~388_q\ $end
+$var wire 1 i5 \RAM|ALT_INV_ram~324_q\ $end
+$var wire 1 j5 \RAM|ALT_INV_ram~647_combout\ $end
+$var wire 1 k5 \RAM|ALT_INV_ram~484_q\ $end
+$var wire 1 l5 \RAM|ALT_INV_ram~420_q\ $end
+$var wire 1 m5 \RAM|ALT_INV_ram~356_q\ $end
+$var wire 1 n5 \RAM|ALT_INV_ram~292_q\ $end
+$var wire 1 o5 \RAM|ALT_INV_ram~646_combout\ $end
+$var wire 1 p5 \RAM|ALT_INV_ram~645_combout\ $end
+$var wire 1 q5 \RAM|ALT_INV_ram~268_q\ $end
+$var wire 1 r5 \RAM|ALT_INV_ram~204_q\ $end
+$var wire 1 s5 \RAM|ALT_INV_ram~260_q\ $end
+$var wire 1 t5 \RAM|ALT_INV_ram~196_q\ $end
+$var wire 1 u5 \RAM|ALT_INV_ram~644_combout\ $end
+$var wire 1 v5 \RAM|ALT_INV_ram~236_q\ $end
+$var wire 1 w5 \RAM|ALT_INV_ram~172_q\ $end
+$var wire 1 x5 \RAM|ALT_INV_ram~228_q\ $end
+$var wire 1 y5 \RAM|ALT_INV_ram~164_q\ $end
+$var wire 1 z5 \RAM|ALT_INV_ram~643_combout\ $end
+$var wire 1 {5 \RAM|ALT_INV_ram~140_q\ $end
+$var wire 1 |5 \RAM|ALT_INV_ram~76_q\ $end
+$var wire 1 }5 \RAM|ALT_INV_ram~132_q\ $end
+$var wire 1 ~5 \RAM|ALT_INV_ram~68_q\ $end
+$var wire 1 !6 \RAM|ALT_INV_ram~642_combout\ $end
+$var wire 1 "6 \RAM|ALT_INV_ram~108_q\ $end
+$var wire 1 #6 \RAM|ALT_INV_ram~44_q\ $end
+$var wire 1 $6 \RAM|ALT_INV_ram~100_q\ $end
+$var wire 1 %6 \RAM|ALT_INV_ram~36_q\ $end
+$var wire 1 &6 \RAM|ALT_INV_ram~641_combout\ $end
+$var wire 1 '6 \RAM|ALT_INV_ram~640_combout\ $end
+$var wire 1 (6 \RAM|ALT_INV_ram~508_q\ $end
+$var wire 1 )6 \RAM|ALT_INV_ram~476_q\ $end
+$var wire 1 *6 \RAM|ALT_INV_ram~500_q\ $end
+$var wire 1 +6 \RAM|ALT_INV_ram~468_q\ $end
+$var wire 1 ,6 \RAM|ALT_INV_ram~639_combout\ $end
+$var wire 1 -6 \RAM|ALT_INV_ram~444_q\ $end
+$var wire 1 .6 \RAM|ALT_INV_ram~412_q\ $end
+$var wire 1 /6 \RAM|ALT_INV_ram~436_q\ $end
+$var wire 1 06 \RAM|ALT_INV_ram~404_q\ $end
+$var wire 1 16 \RAM|ALT_INV_ram~638_combout\ $end
+$var wire 1 26 \RAM|ALT_INV_ram~380_q\ $end
+$var wire 1 36 \RAM|ALT_INV_ram~348_q\ $end
+$var wire 1 46 \RAM|ALT_INV_ram~372_q\ $end
+$var wire 1 56 \RAM|ALT_INV_ram~340_q\ $end
+$var wire 1 66 \RAM|ALT_INV_ram~637_combout\ $end
+$var wire 1 76 \RAM|ALT_INV_ram~316_q\ $end
+$var wire 1 86 \RAM|ALT_INV_ram~284_q\ $end
+$var wire 1 96 \RAM|ALT_INV_ram~308_q\ $end
+$var wire 1 :6 \RAM|ALT_INV_ram~276_q\ $end
+$var wire 1 ;6 \RAM|ALT_INV_ram~636_combout\ $end
+$var wire 1 <6 \RAM|ALT_INV_ram~635_combout\ $end
+$var wire 1 =6 \RAM|ALT_INV_ram~252_q\ $end
+$var wire 1 >6 \RAM|ALT_INV_ram~220_q\ $end
+$var wire 1 ?6 \RAM|ALT_INV_ram~244_q\ $end
+$var wire 1 @6 \RAM|ALT_INV_ram~212_q\ $end
+$var wire 1 A6 \RAM|ALT_INV_ram~634_combout\ $end
+$var wire 1 B6 \RAM|ALT_INV_ram~188_q\ $end
+$var wire 1 C6 \RAM|ALT_INV_ram~156_q\ $end
+$var wire 1 D6 \RAM|ALT_INV_ram~180_q\ $end
+$var wire 1 E6 \RAM|ALT_INV_ram~148_q\ $end
+$var wire 1 F6 \ALT_INV_comb~4_combout\ $end
+$var wire 1 G6 \ALT_INV_comb~3_combout\ $end
+$var wire 1 H6 \ALT_INV_comb~2_combout\ $end
+$var wire 1 I6 \ALT_INV_Data_IN[7]~6_combout\ $end
+$var wire 1 J6 \RAM|ALT_INV_ram~694_combout\ $end
+$var wire 1 K6 \RAM|ALT_INV_ram~693_combout\ $end
+$var wire 1 L6 \RAM|ALT_INV_ram~692_combout\ $end
+$var wire 1 M6 \RAM|ALT_INV_ram~526_q\ $end
+$var wire 1 N6 \RAM|ALT_INV_ram~510_q\ $end
+$var wire 1 O6 \RAM|ALT_INV_ram~518_q\ $end
+$var wire 1 P6 \RAM|ALT_INV_ram~502_q\ $end
+$var wire 1 Q6 \RAM|ALT_INV_ram~691_combout\ $end
+$var wire 1 R6 \RAM|ALT_INV_ram~462_q\ $end
+$var wire 1 S6 \RAM|ALT_INV_ram~446_q\ $end
+$var wire 1 T6 \RAM|ALT_INV_ram~454_q\ $end
+$var wire 1 U6 \RAM|ALT_INV_ram~438_q\ $end
+$var wire 1 V6 \RAM|ALT_INV_ram~690_combout\ $end
+$var wire 1 W6 \RAM|ALT_INV_ram~398_q\ $end
+$var wire 1 X6 \RAM|ALT_INV_ram~382_q\ $end
+$var wire 1 Y6 \RAM|ALT_INV_ram~390_q\ $end
+$var wire 1 Z6 \RAM|ALT_INV_ram~374_q\ $end
+$var wire 1 [6 \RAM|ALT_INV_ram~689_combout\ $end
+$var wire 1 \6 \RAM|ALT_INV_ram~334_q\ $end
+$var wire 1 ]6 \RAM|ALT_INV_ram~318_q\ $end
+$var wire 1 ^6 \RAM|ALT_INV_ram~326_q\ $end
+$var wire 1 _6 \RAM|ALT_INV_ram~310_q\ $end
+$var wire 1 `6 \RAM|ALT_INV_ram~688_combout\ $end
+$var wire 1 a6 \RAM|ALT_INV_ram~687_combout\ $end
+$var wire 1 b6 \RAM|ALT_INV_ram~494_q\ $end
+$var wire 1 c6 \RAM|ALT_INV_ram~430_q\ $end
+$var wire 1 d6 \RAM|ALT_INV_ram~366_q\ $end
+$var wire 1 e6 \RAM|ALT_INV_ram~302_q\ $end
+$var wire 1 f6 \RAM|ALT_INV_ram~686_combout\ $end
+$var wire 1 g6 \RAM|ALT_INV_ram~478_q\ $end
+$var wire 1 h6 \RAM|ALT_INV_ram~414_q\ $end
+$var wire 1 i6 \RAM|ALT_INV_ram~350_q\ $end
+$var wire 1 j6 \RAM|ALT_INV_ram~286_q\ $end
+$var wire 1 k6 \RAM|ALT_INV_ram~685_combout\ $end
+$var wire 1 l6 \RAM|ALT_INV_ram~486_q\ $end
+$var wire 1 m6 \RAM|ALT_INV_ram~422_q\ $end
+$var wire 1 n6 \RAM|ALT_INV_ram~358_q\ $end
+$var wire 1 o6 \RAM|ALT_INV_ram~294_q\ $end
+$var wire 1 p6 \RAM|ALT_INV_ram~684_combout\ $end
+$var wire 1 q6 \RAM|ALT_INV_ram~470_q\ $end
+$var wire 1 r6 \RAM|ALT_INV_ram~406_q\ $end
+$var wire 1 s6 \RAM|ALT_INV_ram~342_q\ $end
+$var wire 1 t6 \RAM|ALT_INV_ram~278_q\ $end
+$var wire 1 u6 \RAM|ALT_INV_ram~683_combout\ $end
+$var wire 1 v6 \RAM|ALT_INV_ram~682_combout\ $end
+$var wire 1 w6 \RAM|ALT_INV_ram~270_q\ $end
+$var wire 1 x6 \RAM|ALT_INV_ram~254_q\ $end
+$var wire 1 y6 \RAM|ALT_INV_ram~262_q\ $end
+$var wire 1 z6 \RAM|ALT_INV_ram~246_q\ $end
+$var wire 1 {6 \RAM|ALT_INV_ram~681_combout\ $end
+$var wire 1 |6 \RAM|ALT_INV_ram~206_q\ $end
+$var wire 1 }6 \RAM|ALT_INV_ram~190_q\ $end
+$var wire 1 ~6 \RAM|ALT_INV_ram~198_q\ $end
+$var wire 1 !7 \RAM|ALT_INV_ram~182_q\ $end
+$var wire 1 "7 \RAM|ALT_INV_ram~680_combout\ $end
+$var wire 1 #7 \RAM|ALT_INV_ram~142_q\ $end
+$var wire 1 $7 \RAM|ALT_INV_ram~126_q\ $end
+$var wire 1 %7 \RAM|ALT_INV_ram~134_q\ $end
+$var wire 1 &7 \RAM|ALT_INV_ram~118_q\ $end
+$var wire 1 '7 \RAM|ALT_INV_ram~679_combout\ $end
+$var wire 1 (7 \RAM|ALT_INV_ram~78_q\ $end
+$var wire 1 )7 \RAM|ALT_INV_ram~62_q\ $end
+$var wire 1 *7 \RAM|ALT_INV_ram~70_q\ $end
+$var wire 1 +7 \RAM|ALT_INV_ram~54_q\ $end
+$var wire 1 ,7 \RAM|ALT_INV_ram~678_combout\ $end
+$var wire 1 -7 \RAM|ALT_INV_ram~677_combout\ $end
+$var wire 1 .7 \RAM|ALT_INV_ram~238_q\ $end
+$var wire 1 /7 \RAM|ALT_INV_ram~174_q\ $end
+$var wire 1 07 \RAM|ALT_INV_ram~110_q\ $end
+$var wire 1 17 \RAM|ALT_INV_ram~46_q\ $end
+$var wire 1 27 \RAM|ALT_INV_ram~676_combout\ $end
+$var wire 1 37 \RAM|ALT_INV_ram~222_q\ $end
+$var wire 1 47 \RAM|ALT_INV_ram~158_q\ $end
+$var wire 1 57 \RAM|ALT_INV_ram~94_q\ $end
+$var wire 1 67 \RAM|ALT_INV_ram~30_q\ $end
+$var wire 1 77 \RAM|ALT_INV_ram~675_combout\ $end
+$var wire 1 87 \RAM|ALT_INV_ram~230_q\ $end
+$var wire 1 97 \RAM|ALT_INV_ram~166_q\ $end
+$var wire 1 :7 \RAM|ALT_INV_ram~102_q\ $end
+$var wire 1 ;7 \RAM|ALT_INV_ram~38_q\ $end
+$var wire 1 <7 \RAM|ALT_INV_ram~674_combout\ $end
+$var wire 1 =7 \RAM|ALT_INV_ram~214_q\ $end
+$var wire 1 >7 \RAM|ALT_INV_ram~150_q\ $end
+$var wire 1 ?7 \RAM|ALT_INV_ram~86_q\ $end
+$var wire 1 @7 \RAM|ALT_INV_ram~22_q\ $end
+$var wire 1 A7 \ALT_INV_Data_IN[6]~5_combout\ $end
+$var wire 1 B7 \RAM|ALT_INV_ram~673_combout\ $end
+$var wire 1 C7 \RAM|ALT_INV_ram~672_combout\ $end
+$var wire 1 D7 \RAM|ALT_INV_ram~671_combout\ $end
+$var wire 1 E7 \RAM|ALT_INV_ram~525_q\ $end
+$var wire 1 F7 \RAM|ALT_INV_ram~493_q\ $end
+$var wire 1 G7 \RAM|ALT_INV_ram~397_q\ $end
+$var wire 1 H7 \RAM|ALT_INV_ram~365_q\ $end
+$var wire 1 I7 \RAM|ALT_INV_ram~670_combout\ $end
+$var wire 1 J7 \RAM|ALT_INV_ram~461_q\ $end
+$var wire 1 K7 \RAM|ALT_INV_ram~429_q\ $end
+$var wire 1 L7 \RAM|ALT_INV_ram~333_q\ $end
+$var wire 1 M7 \RAM|ALT_INV_ram~301_q\ $end
+$var wire 1 N7 \RAM|ALT_INV_ram~669_combout\ $end
+$var wire 1 O7 \RAM|ALT_INV_ram~509_q\ $end
+$var wire 1 P7 \RAM|ALT_INV_ram~477_q\ $end
+$var wire 1 Q7 \RAM|ALT_INV_ram~381_q\ $end
+$var wire 1 R7 \RAM|ALT_INV_ram~349_q\ $end
+$var wire 1 S7 \RAM|ALT_INV_ram~668_combout\ $end
+$var wire 1 T7 \RAM|ALT_INV_ram~445_q\ $end
+$var wire 1 U7 \RAM|ALT_INV_ram~413_q\ $end
+$var wire 1 V7 \RAM|ALT_INV_ram~317_q\ $end
+$var wire 1 W7 \RAM|ALT_INV_ram~285_q\ $end
+$var wire 1 X7 \RAM|ALT_INV_ram~667_combout\ $end
+$var wire 1 Y7 \RAM|ALT_INV_ram~666_combout\ $end
+$var wire 1 Z7 \RAM|ALT_INV_ram~269_q\ $end
+$var wire 1 [7 \RAM|ALT_INV_ram~205_q\ $end
+$var wire 1 \7 \RAM|ALT_INV_ram~237_q\ $end
+$var wire 1 ]7 \RAM|ALT_INV_ram~173_q\ $end
+$var wire 1 ^7 \RAM|ALT_INV_ram~665_combout\ $end
+$var wire 1 _7 \RAM|ALT_INV_ram~253_q\ $end
+$var wire 1 `7 \RAM|ALT_INV_ram~189_q\ $end
+$var wire 1 a7 \RAM|ALT_INV_ram~221_q\ $end
+$var wire 1 b7 \RAM|ALT_INV_ram~157_q\ $end
+$var wire 1 c7 \RAM|ALT_INV_ram~664_combout\ $end
+$var wire 1 d7 \RAM|ALT_INV_ram~141_q\ $end
+$var wire 1 e7 \RAM|ALT_INV_ram~819_combout\ $end
+$var wire 1 f7 \RAM|ALT_INV_ram~817_combout\ $end
+$var wire 1 g7 \RAM|ALT_INV_ram~815_combout\ $end
+$var wire 1 h7 \RAM|ALT_INV_ram~813_combout\ $end
+$var wire 1 i7 \RAM|ALT_INV_ram~811_combout\ $end
+$var wire 1 j7 \RAM|ALT_INV_ram~809_combout\ $end
+$var wire 1 k7 \RAM|ALT_INV_ram~807_combout\ $end
+$var wire 1 l7 \RAM|ALT_INV_ram~805_combout\ $end
+$var wire 1 m7 \RAM|ALT_INV_ram~803_combout\ $end
+$var wire 1 n7 \RAM|ALT_INV_ram~801_combout\ $end
+$var wire 1 o7 \RAM|ALT_INV_ram~799_combout\ $end
+$var wire 1 p7 \RAM|ALT_INV_ram~797_combout\ $end
+$var wire 1 q7 \RAM|ALT_INV_ram~795_combout\ $end
+$var wire 1 r7 \RAM|ALT_INV_ram~793_combout\ $end
+$var wire 1 s7 \RAM|ALT_INV_ram~791_combout\ $end
+$var wire 1 t7 \RAM|ALT_INV_ram~789_combout\ $end
+$var wire 1 u7 \RAM|ALT_INV_ram~787_combout\ $end
+$var wire 1 v7 \RAM|ALT_INV_ram~785_combout\ $end
+$var wire 1 w7 \RAM|ALT_INV_ram~783_combout\ $end
+$var wire 1 x7 \RAM|ALT_INV_ram~781_combout\ $end
+$var wire 1 y7 \RAM|ALT_INV_ram~779_combout\ $end
+$var wire 1 z7 \RAM|ALT_INV_ram~777_combout\ $end
+$var wire 1 {7 \RAM|ALT_INV_ram~775_combout\ $end
+$var wire 1 |7 \RAM|ALT_INV_ram~773_combout\ $end
+$var wire 1 }7 \RAM|ALT_INV_ram~771_combout\ $end
+$var wire 1 ~7 \RAM|ALT_INV_ram~769_combout\ $end
+$var wire 1 !8 \RAM|ALT_INV_ram~767_combout\ $end
+$var wire 1 "8 \RAM|ALT_INV_ram~765_combout\ $end
+$var wire 1 #8 \RAM|ALT_INV_ram~763_combout\ $end
+$var wire 1 $8 \RAM|ALT_INV_ram~761_combout\ $end
+$var wire 1 %8 \RAM|ALT_INV_ram~759_combout\ $end
+$var wire 1 &8 \RAM|ALT_INV_ram~757_combout\ $end
+$var wire 1 '8 \RAM|ALT_INV_ram~755_combout\ $end
+$var wire 1 (8 \RAM|ALT_INV_ram~753_combout\ $end
+$var wire 1 )8 \RAM|ALT_INV_ram~751_combout\ $end
+$var wire 1 *8 \RAM|ALT_INV_ram~749_combout\ $end
+$var wire 1 +8 \RAM|ALT_INV_ram~747_combout\ $end
+$var wire 1 ,8 \RAM|ALT_INV_ram~745_combout\ $end
+$var wire 1 -8 \RAM|ALT_INV_ram~743_combout\ $end
+$var wire 1 .8 \RAM|ALT_INV_ram~741_combout\ $end
+$var wire 1 /8 \RAM|ALT_INV_ram~739_combout\ $end
+$var wire 1 08 \RAM|ALT_INV_ram~737_combout\ $end
+$var wire 1 18 \RAM|ALT_INV_ram~735_combout\ $end
+$var wire 1 28 \RAM|ALT_INV_ram~733_combout\ $end
+$var wire 1 38 \RAM|ALT_INV_ram~731_combout\ $end
+$var wire 1 48 \RAM|ALT_INV_ram~729_combout\ $end
+$var wire 1 58 \RAM|ALT_INV_ram~727_combout\ $end
+$var wire 1 68 \RAM|ALT_INV_ram~725_combout\ $end
+$var wire 1 78 \RAM|ALT_INV_ram~723_combout\ $end
+$var wire 1 88 \RAM|ALT_INV_ram~721_combout\ $end
+$var wire 1 98 \RAM|ALT_INV_ram~719_combout\ $end
+$var wire 1 :8 \RAM|ALT_INV_ram~717_combout\ $end
+$var wire 1 ;8 \RAM|ALT_INV_ram~715_combout\ $end
+$var wire 1 <8 \RAM|ALT_INV_ram~713_combout\ $end
+$var wire 1 =8 \RAM|ALT_INV_ram~711_combout\ $end
+$var wire 1 >8 \RAM|ALT_INV_ram~709_combout\ $end
+$var wire 1 ?8 \RAM|ALT_INV_ram~707_combout\ $end
+$var wire 1 @8 \RAM|ALT_INV_ram~705_combout\ $end
+$var wire 1 A8 \RAM|ALT_INV_ram~703_combout\ $end
+$var wire 1 B8 \RAM|ALT_INV_ram~701_combout\ $end
+$var wire 1 C8 \RAM|ALT_INV_ram~699_combout\ $end
+$var wire 1 D8 \RAM|ALT_INV_ram~697_combout\ $end
+$var wire 1 E8 \RAM|ALT_INV_process_0~1_combout\ $end
+$var wire 1 F8 \RAM|ALT_INV_ram~695_combout\ $end
+$var wire 1 G8 \ALT_INV_KEY[1]~input_o\ $end
+$var wire 1 H8 \ALT_INV_KEY[0]~input_o\ $end
+$var wire 1 I8 \ALT_INV_SW[7]~input_o\ $end
+$var wire 1 J8 \ALT_INV_SW[6]~input_o\ $end
+$var wire 1 K8 \ALT_INV_SW[5]~input_o\ $end
+$var wire 1 L8 \ALT_INV_SW[4]~input_o\ $end
+$var wire 1 M8 \ALT_INV_SW[3]~input_o\ $end
+$var wire 1 N8 \ALT_INV_SW[2]~input_o\ $end
+$var wire 1 O8 \ALT_INV_SW[1]~input_o\ $end
+$var wire 1 P8 \ALT_INV_KEY[3]~input_o\ $end
+$var wire 1 Q8 \ALT_INV_FPGA_RESET_N~input_o\ $end
+$var wire 1 R8 \ALT_INV_SW[8]~input_o\ $end
+$var wire 1 S8 \ALT_INV_KEY[2]~input_o\ $end
+$var wire 1 T8 \ALT_INV_SW[9]~input_o\ $end
+$var wire 1 U8 \ALT_INV_SW[0]~input_o\ $end
+$var wire 1 V8 \ROM|ALT_INV_memROM~75_combout\ $end
+$var wire 1 W8 \ROM|ALT_INV_memROM~74_combout\ $end
+$var wire 1 X8 \ROM|ALT_INV_memROM~73_combout\ $end
+$var wire 1 Y8 \ROM|ALT_INV_memROM~72_combout\ $end
+$var wire 1 Z8 \ROM|ALT_INV_memROM~71_combout\ $end
+$var wire 1 [8 \ROM|ALT_INV_memROM~70_combout\ $end
+$var wire 1 \8 \ROM|ALT_INV_memROM~69_combout\ $end
+$var wire 1 ]8 \ROM|ALT_INV_memROM~68_combout\ $end
+$var wire 1 ^8 \ROM|ALT_INV_memROM~67_combout\ $end
+$var wire 1 _8 \ROM|ALT_INV_memROM~66_combout\ $end
+$var wire 1 `8 \ROM|ALT_INV_memROM~65_combout\ $end
+$var wire 1 a8 \ROM|ALT_INV_memROM~64_combout\ $end
+$var wire 1 b8 \ROM|ALT_INV_memROM~59_combout\ $end
+$var wire 1 c8 \ROM|ALT_INV_memROM~58_combout\ $end
+$var wire 1 d8 \ROM|ALT_INV_memROM~57_combout\ $end
+$var wire 1 e8 \ROM|ALT_INV_memROM~44_combout\ $end
+$var wire 1 f8 \ROM|ALT_INV_memROM~43_combout\ $end
+$var wire 1 g8 \ROM|ALT_INV_memROM~42_combout\ $end
+$var wire 1 h8 \ROM|ALT_INV_memROM~41_combout\ $end
+$var wire 1 i8 \ROM|ALT_INV_memROM~40_combout\ $end
+$var wire 1 j8 \CPU|DEC_instrucao|ALT_INV_saida[1]~7_combout\ $end
+$var wire 1 k8 \ROM|ALT_INV_memROM~39_combout\ $end
+$var wire 1 l8 \ROM|ALT_INV_memROM~38_combout\ $end
+$var wire 1 m8 \logicaKeys|KEY_1|KEY|ALT_INV_saidaQ~q\ $end
+$var wire 1 n8 \interfaceBaseTempo|baseTempo|ALT_INV_contador\ [1] $end
+$var wire 1 o8 \interfaceBaseTempo|baseTempo|ALT_INV_contador\ [0] $end
+$var wire 1 p8 \logicaKeys|KEY_0|KEY|ALT_INV_saidaQ~q\ $end
+$var wire 1 q8 \ROM|ALT_INV_memROM~37_combout\ $end
+$var wire 1 r8 \ROM|ALT_INV_memROM~36_combout\ $end
+$var wire 1 s8 \CPU|ULA1|ALT_INV_flagzero~0_combout\ $end
+$var wire 1 t8 \interfaceBaseTempo|baseTempo|ALT_INV_tick~q\ $end
+$var wire 1 u8 \RAM|ALT_INV_ram~821_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0N
+0O
+0P
+0Q
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0p
+0q
+0r
+0s
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+1!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+1(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+1/!
+00!
+01!
+02!
+03!
+04!
+05!
+16!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+1=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+1D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0{-
+0|-
+0}-
+0~-
+0!.
+0".
+0#.
+0$.
+0%.
+0&.
+0'.
+0(.
+0).
+0*.
+0+.
+0,.
+0-.
+0..
+0/.
+00.
+01.
+02.
+03.
+04.
+05.
+06.
+07.
+08.
+09.
+0:.
+0;.
+0<.
+0=.
+0>.
+0?.
+0@.
+0A.
+0B.
+0C.
+0D.
+0E.
+0F.
+0G.
+0H.
+0I.
+0J.
+0K.
+0L.
+0M.
+0N.
+0O.
+0P.
+1$/
+1%/
+1&/
+1'/
+1(/
+1)/
+1*/
+1+/
+1,/
+1Y/
+1Z/
+1[/
+1\/
+1]/
+1^/
+1_/
+1`/
+1a/
+1b/
+1c/
+1d/
+1e/
+1f/
+1g/
+1h/
+1i/
+1j/
+1k/
+1l/
+1m/
+1n/
+1o/
+1p/
+192
+1:2
+1;2
+1<2
+1=2
+1>2
+1?2
+1@2
+1A2
+1n8
+1o8
+1$
+0%
+0&
+0'
+0(
+0)
+0*
+1+
+0,
+0-
+0.
+0/
+00
+01
+12
+03
+04
+05
+06
+07
+08
+19
+0:
+0;
+0<
+0=
+0>
+0?
+1@
+0A
+0B
+0C
+0D
+0E
+0F
+1G
+0H
+0I
+0J
+0K
+0L
+0M
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0!
+z"
+0#
+0f
+1g
+xh
+1i
+1j
+1k
+1l
+1m
+1n
+0o
+0t
+zU!
+zV!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0_!
+0`!
+0a!
+0b!
+0c!
+0d!
+0e!
+0f!
+1g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+1n!
+0o!
+0p!
+0q!
+0r!
+0s!
+0t!
+1u!
+0v!
+0w!
+0x!
+0y!
+0z!
+0{!
+1|!
+0}!
+0~!
+0!"
+0""
+0#"
+0$"
+1%"
+0&"
+0'"
+0("
+0)"
+0*"
+0+"
+1,"
+0-"
+1."
+0/"
+00"
+01"
+12"
+03"
+04"
+05"
+06"
+17"
+08"
+09"
+1:"
+0;"
+1<"
+0="
+0>"
+0?"
+0@"
+0A"
+0B"
+0C"
+0D"
+0E"
+0F"
+0G"
+0H"
+0I"
+0J"
+0K"
+0L"
+0M"
+1N"
+1O"
+1P"
+1Q"
+1R"
+0S"
+0T"
+0U"
+0V"
+0W"
+0X"
+0Y"
+0Z"
+0["
+0\"
+1]"
+1^"
+1_"
+0`"
+0a"
+0b"
+0c"
+0d"
+1e"
+0f"
+0g"
+0h"
+0i"
+0j"
+0k"
+0l"
+0m"
+0n"
+0o"
+0p"
+0q"
+0r"
+0s"
+0t"
+0u"
+0v"
+0w"
+0x"
+0y"
+0z"
+0{"
+0|"
+0}"
+0~"
+0!#
+0"#
+0##
+0$#
+0%#
+0&#
+0'#
+0(#
+0)#
+0*#
+0+#
+0,#
+0-#
+0.#
+0/#
+00#
+01#
+02#
+03#
+04#
+05#
+06#
+07#
+08#
+09#
+0:#
+0;#
+0<#
+0=#
+0>#
+0?#
+0@#
+0A#
+0B#
+0C#
+0D#
+0E#
+0F#
+0G#
+0H#
+0I#
+0J#
+0K#
+0L#
+0M#
+0N#
+0O#
+0P#
+0Q#
+0R#
+0S#
+0T#
+0U#
+0V#
+0W#
+0X#
+0Y#
+0Z#
+0[#
+0\#
+0]#
+0^#
+0_#
+0`#
+0a#
+0b#
+0c#
+0d#
+0e#
+0f#
+0g#
+0h#
+0i#
+0j#
+0k#
+0l#
+0m#
+0n#
+0o#
+0p#
+0q#
+0r#
+0s#
+0t#
+0u#
+0v#
+0w#
+1x#
+0y#
+0z#
+0{#
+0|#
+0}#
+0~#
+0!$
+0"$
+0#$
+0$$
+0%$
+0&$
+0'$
+0($
+0)$
+0*$
+0+$
+0,$
+0-$
+0.$
+0/$
+00$
+01$
+02$
+03$
+04$
+05$
+06$
+07$
+08$
+09$
+0:$
+0;$
+0<$
+0=$
+0>$
+0?$
+0@$
+0A$
+0B$
+0C$
+0D$
+0E$
+0F$
+0G$
+0H$
+0I$
+0J$
+0K$
+0L$
+0M$
+0N$
+0O$
+0P$
+0Q$
+0R$
+0S$
+0T$
+0U$
+0V$
+0W$
+0X$
+0Y$
+0Z$
+0[$
+0\$
+0]$
+0^$
+0_$
+0`$
+0a$
+0b$
+0c$
+0d$
+0e$
+0f$
+0g$
+0h$
+0i$
+0j$
+0k$
+0l$
+0m$
+0n$
+0o$
+0p$
+0q$
+0r$
+0s$
+0t$
+0u$
+0v$
+0w$
+0x$
+0y$
+0z$
+0{$
+0|$
+0}$
+0~$
+0!%
+0"%
+0#%
+0$%
+0%%
+0&%
+0'%
+0(%
+0)%
+0*%
+0+%
+0,%
+0-%
+0.%
+0/%
+00%
+01%
+02%
+03%
+04%
+05%
+06%
+07%
+08%
+09%
+0:%
+0;%
+0<%
+0=%
+0>%
+0?%
+0@%
+0A%
+0B%
+0C%
+0D%
+0E%
+0F%
+0G%
+0H%
+0I%
+0J%
+0K%
+0L%
+0M%
+0N%
+0O%
+0P%
+0Q%
+0R%
+0S%
+0T%
+0U%
+0V%
+0W%
+0X%
+0Y%
+0Z%
+0[%
+0\%
+0]%
+0^%
+0_%
+0`%
+0a%
+0b%
+0c%
+0d%
+0e%
+0f%
+0g%
+0h%
+0i%
+0j%
+0k%
+0l%
+0m%
+0n%
+0o%
+0p%
+0q%
+0r%
+0s%
+0t%
+0u%
+0v%
+0w%
+0x%
+0y%
+0z%
+0{%
+0|%
+0}%
+0~%
+0!&
+0"&
+0#&
+0$&
+0%&
+0&&
+0'&
+0(&
+0)&
+0*&
+0+&
+0,&
+0-&
+0.&
+0/&
+00&
+01&
+02&
+03&
+04&
+05&
+06&
+07&
+08&
+09&
+0:&
+0;&
+0<&
+0=&
+0>&
+0?&
+0@&
+0A&
+0B&
+0C&
+0D&
+0E&
+0F&
+0G&
+0H&
+0I&
+0J&
+0K&
+0L&
+0M&
+0N&
+0O&
+0P&
+0Q&
+0R&
+0S&
+0T&
+0U&
+0V&
+0W&
+0X&
+0Y&
+0Z&
+0[&
+0\&
+0]&
+0^&
+0_&
+0`&
+0a&
+0b&
+0c&
+0d&
+0e&
+0f&
+0g&
+0h&
+0i&
+0j&
+0k&
+0l&
+0m&
+0n&
+0o&
+0p&
+0q&
+0r&
+0s&
+0t&
+0u&
+0v&
+0w&
+0x&
+0y&
+1z&
+0{&
+0|&
+0}&
+0~&
+0!'
+0"'
+0#'
+0$'
+0%'
+0&'
+0''
+0('
+0)'
+0*'
+0+'
+0,'
+0-'
+0.'
+0/'
+00'
+01'
+02'
+03'
+04'
+05'
+06'
+07'
+08'
+09'
+0:'
+0;'
+0<'
+0='
+0>'
+0?'
+0@'
+0A'
+0B'
+0C'
+0D'
+0E'
+0F'
+0G'
+0H'
+0I'
+0J'
+0K'
+0L'
+0M'
+0N'
+0O'
+0P'
+0Q'
+0R'
+0S'
+0T'
+0U'
+0V'
+0W'
+0X'
+0Y'
+0Z'
+0['
+0\'
+0]'
+0^'
+0_'
+0`'
+0a'
+0b'
+0c'
+0d'
+0e'
+0f'
+0g'
+0h'
+0i'
+0j'
+0k'
+0l'
+0m'
+0n'
+0o'
+0p'
+0q'
+0r'
+0s'
+0t'
+0u'
+0v'
+0w'
+0x'
+0y'
+0z'
+1{'
+0|'
+0}'
+0~'
+0!(
+0"(
+0#(
+0$(
+0%(
+0&(
+0'(
+0((
+0)(
+0*(
+0+(
+0,(
+0-(
+0.(
+0/(
+00(
+01(
+02(
+13(
+14(
+15(
+06(
+17(
+18(
+19(
+1:(
+1;(
+0<(
+1=(
+0>(
+1?(
+0@(
+0A(
+0B(
+0C(
+1D(
+0E(
+1F(
+0G(
+0H(
+0I(
+0J(
+0K(
+0L(
+0M(
+0N(
+0O(
+1P(
+0Q(
+0R(
+0S(
+0T(
+0U(
+0V(
+0W(
+0X(
+0Y(
+1Z(
+0[(
+0\(
+0](
+0^(
+0_(
+0`(
+0a(
+0b(
+0c(
+0d(
+0e(
+0f(
+0g(
+0h(
+0i(
+1j(
+0k(
+0l(
+0m(
+0n(
+0o(
+0p(
+0q(
+0r(
+0s(
+0t(
+0u(
+0v(
+0w(
+0x(
+0y(
+0z(
+0{(
+0|(
+0}(
+0~(
+0!)
+0")
+0#)
+0$)
+0%)
+0&)
+0')
+0()
+0))
+0*)
+0+)
+0,)
+0-)
+0.)
+0/)
+00)
+01)
+02)
+03)
+04)
+05)
+06)
+07)
+08)
+09)
+0:)
+0;)
+0<)
+0=)
+0>)
+0?)
+0@)
+0A)
+0B)
+0C)
+0D)
+0E)
+0F)
+0G)
+0H)
+0I)
+0J)
+0K)
+0L)
+0M)
+0N)
+0O)
+0P)
+0Q)
+0R)
+0S)
+0T)
+0U)
+0V)
+0W)
+0X)
+0Y)
+0Z)
+0[)
+0\)
+0])
+0^)
+0_)
+0`)
+0a)
+0b)
+0c)
+0d)
+0e)
+0f)
+0g)
+0h)
+0i)
+0j)
+0k)
+0l)
+0m)
+1n)
+0o)
+0p)
+0q)
+0r)
+0s)
+0t)
+0u)
+0v)
+0w)
+0x)
+0y)
+0z)
+0{)
+0|)
+0})
+0~)
+0!*
+0"*
+0#*
+0$*
+0%*
+0&*
+0'*
+0(*
+0)*
+0**
+0+*
+0,*
+0-*
+0.*
+0/*
+00*
+01*
+02*
+03*
+04*
+05*
+06*
+07*
+08*
+09*
+0:*
+0;*
+0<*
+0=*
+0>*
+0?*
+0@*
+0A*
+0B*
+0C*
+0D*
+0E*
+0F*
+0G*
+0H*
+0I*
+0J*
+0K*
+0L*
+0M*
+0N*
+0O*
+0P*
+0Q*
+0R*
+0S*
+0T*
+0U*
+0V*
+0W*
+0X*
+0Y*
+0Z*
+0[*
+0\*
+0]*
+0^*
+0_*
+0`*
+0a*
+0b*
+0c*
+0d*
+0e*
+0f*
+0g*
+0h*
+0i*
+0j*
+0k*
+0l*
+0m*
+0n*
+0o*
+0p*
+1q*
+0r*
+0s*
+0t*
+0u*
+0v*
+0w*
+0x*
+0y*
+0z*
+0{*
+0|*
+0}*
+0~*
+0!+
+0"+
+0#+
+0$+
+0%+
+0&+
+0'+
+0(+
+0)+
+0*+
+0++
+0,+
+0-+
+0.+
+0/+
+00+
+01+
+02+
+03+
+04+
+05+
+06+
+07+
+08+
+09+
+0:+
+0;+
+0<+
+0=+
+0>+
+0?+
+0@+
+0A+
+0B+
+0C+
+0D+
+0E+
+0F+
+0G+
+0H+
+0I+
+0J+
+0K+
+0L+
+0M+
+0N+
+0O+
+0P+
+0Q+
+0R+
+0S+
+0T+
+0U+
+0V+
+0W+
+0X+
+0Y+
+0Z+
+0[+
+0\+
+0]+
+0^+
+0_+
+0`+
+0a+
+0b+
+0c+
+0d+
+0e+
+0f+
+0g+
+0h+
+0i+
+0j+
+0k+
+0l+
+0m+
+0n+
+0o+
+0p+
+0q+
+0r+
+0s+
+0t+
+1u+
+0v+
+0w+
+0x+
+0y+
+0z+
+0{+
+0|+
+0}+
+0~+
+0!,
+0",
+0#,
+0$,
+0%,
+0&,
+0',
+0(,
+0),
+0*,
+0+,
+0,,
+0-,
+0.,
+0/,
+00,
+01,
+02,
+03,
+04,
+05,
+06,
+07,
+08,
+09,
+0:,
+0;,
+0<,
+0=,
+0>,
+0?,
+0@,
+0A,
+0B,
+0C,
+0D,
+0E,
+0F,
+0G,
+0H,
+0I,
+0J,
+0K,
+0L,
+0M,
+0N,
+0O,
+0P,
+0Q,
+0R,
+0S,
+0T,
+0U,
+0V,
+0W,
+0X,
+0Y,
+0Z,
+0[,
+0\,
+0],
+0^,
+0_,
+0`,
+0a,
+0b,
+0c,
+0d,
+0e,
+0f,
+0g,
+0h,
+0i,
+0j,
+0k,
+0l,
+0m,
+0n,
+0o,
+0p,
+0q,
+0r,
+0s,
+0t,
+0u,
+0v,
+0w,
+1x,
+0y,
+0z,
+0{,
+0|,
+0},
+0~,
+0!-
+0"-
+0#-
+0$-
+0%-
+1&-
+1'-
+0(-
+0)-
+0*-
+0+-
+0,-
+0--
+0.-
+0/-
+00-
+01-
+02-
+03-
+04-
+05-
+06-
+07-
+08-
+09-
+0:-
+0;-
+0<-
+0=-
+0>-
+0?-
+0@-
+0A-
+1B-
+0C-
+0D-
+0E-
+0F-
+0G-
+0H-
+0I-
+0J-
+0K-
+0L-
+0M-
+0N-
+0O-
+0P-
+0Q-
+1R-
+0S-
+0T-
+0U-
+0V-
+0W-
+0X-
+0Y-
+1Z-
+0[-
+0\-
+0]-
+0^-
+0_-
+0`-
+0a-
+1b-
+0c-
+0d-
+0e-
+0f-
+0g-
+0h-
+0i-
+1j-
+0k-
+0l-
+0m-
+0n-
+0o-
+0p-
+0q-
+1r-
+0s-
+0t-
+0u-
+0v-
+0w-
+0x-
+0y-
+1z-
+1Q.
+0R.
+1S.
+1T.
+0U.
+0V.
+0W.
+0X.
+0Y.
+0Z.
+0[.
+1\.
+1].
+1^.
+1_.
+1`.
+0a.
+1b.
+1c.
+1d.
+0e.
+1f.
+1g.
+1h.
+1i.
+1j.
+1k.
+1l.
+1m.
+1n.
+1o.
+1p.
+1q.
+1r.
+1s.
+1t.
+1u.
+1v.
+1w.
+1x.
+1y.
+1z.
+1{.
+1|.
+1}.
+1~.
+1!/
+1"/
+1#/
+1-/
+1./
+1//
+10/
+11/
+12/
+13/
+14/
+15/
+16/
+17/
+18/
+19/
+1:/
+1;/
+1</
+1=/
+1>/
+1?/
+1@/
+0A/
+0B/
+1C/
+0D/
+1E/
+1F/
+1G/
+1H/
+1I/
+1J/
+1K/
+0L/
+1M/
+0N/
+1O/
+1P/
+1Q/
+1R/
+1S/
+1T/
+1U/
+1V/
+0W/
+0X/
+1q/
+1r/
+1s/
+1t/
+1u/
+1v/
+0w/
+0x/
+0y/
+0z/
+1{/
+1|/
+1}/
+1~/
+1!0
+1"0
+1#0
+1$0
+1%0
+0&0
+1'0
+1(0
+1)0
+0*0
+0+0
+1,0
+1-0
+1.0
+1/0
+100
+110
+120
+130
+140
+150
+160
+170
+180
+190
+1:0
+1;0
+1<0
+1=0
+1>0
+1?0
+1@0
+1A0
+1B0
+1C0
+1D0
+1E0
+1F0
+1G0
+1H0
+1I0
+1J0
+1K0
+1L0
+1M0
+1N0
+1O0
+1P0
+1Q0
+1R0
+1S0
+1T0
+1U0
+1V0
+1W0
+1X0
+1Y0
+1Z0
+1[0
+1\0
+1]0
+1^0
+1_0
+1`0
+1a0
+1b0
+1c0
+1d0
+1e0
+1f0
+1g0
+1h0
+1i0
+1j0
+1k0
+1l0
+1m0
+1n0
+1o0
+1p0
+1q0
+1r0
+1s0
+1t0
+1u0
+1v0
+1w0
+1x0
+1y0
+1z0
+1{0
+1|0
+1}0
+1~0
+1!1
+1"1
+1#1
+1$1
+1%1
+1&1
+1'1
+1(1
+1)1
+1*1
+1+1
+1,1
+1-1
+1.1
+1/1
+101
+111
+121
+131
+141
+151
+161
+171
+181
+191
+1:1
+1;1
+1<1
+1=1
+1>1
+1?1
+1@1
+1A1
+1B1
+1C1
+1D1
+1E1
+1F1
+1G1
+1H1
+1I1
+1J1
+1K1
+1L1
+1M1
+1N1
+1O1
+1P1
+1Q1
+1R1
+1S1
+1T1
+1U1
+1V1
+1W1
+1X1
+1Y1
+1Z1
+1[1
+1\1
+1]1
+1^1
+1_1
+1`1
+1a1
+1b1
+1c1
+1d1
+1e1
+1f1
+1g1
+1h1
+1i1
+1j1
+1k1
+1l1
+1m1
+1n1
+1o1
+1p1
+1q1
+1r1
+1s1
+1t1
+1u1
+1v1
+1w1
+1x1
+1y1
+1z1
+1{1
+1|1
+1}1
+1~1
+1!2
+1"2
+1#2
+1$2
+1%2
+1&2
+1'2
+1(2
+1)2
+1*2
+1+2
+1,2
+1-2
+1.2
+1/2
+102
+112
+122
+132
+142
+152
+162
+172
+182
+1B2
+1C2
+1D2
+1E2
+1F2
+1G2
+1H2
+1I2
+1J2
+1K2
+1L2
+1M2
+1N2
+1O2
+1P2
+1Q2
+1R2
+1S2
+1T2
+1U2
+1V2
+1W2
+1X2
+1Y2
+1Z2
+1[2
+1\2
+1]2
+1^2
+1_2
+1`2
+1a2
+1b2
+1c2
+1d2
+1e2
+1f2
+1g2
+1h2
+1i2
+1j2
+1k2
+1l2
+1m2
+1n2
+1o2
+1p2
+1q2
+1r2
+1s2
+1t2
+1u2
+1v2
+1w2
+1x2
+1y2
+1z2
+1{2
+1|2
+1}2
+1~2
+1!3
+1"3
+1#3
+1$3
+1%3
+1&3
+1'3
+1(3
+1)3
+1*3
+1+3
+1,3
+1-3
+1.3
+1/3
+103
+113
+123
+133
+143
+153
+163
+173
+183
+193
+1:3
+1;3
+1<3
+1=3
+1>3
+1?3
+1@3
+1A3
+1B3
+1C3
+1D3
+1E3
+1F3
+1G3
+1H3
+1I3
+1J3
+1K3
+1L3
+1M3
+1N3
+1O3
+1P3
+1Q3
+1R3
+1S3
+1T3
+1U3
+1V3
+1W3
+1X3
+1Y3
+1Z3
+1[3
+1\3
+1]3
+1^3
+1_3
+1`3
+1a3
+1b3
+1c3
+1d3
+1e3
+1f3
+1g3
+1h3
+1i3
+1j3
+1k3
+1l3
+1m3
+1n3
+1o3
+1p3
+1q3
+1r3
+1s3
+1t3
+1u3
+1v3
+1w3
+1x3
+1y3
+1z3
+1{3
+1|3
+1}3
+1~3
+1!4
+1"4
+1#4
+1$4
+1%4
+1&4
+1'4
+1(4
+1)4
+1*4
+1+4
+1,4
+1-4
+1.4
+1/4
+104
+114
+124
+134
+144
+154
+164
+174
+184
+194
+1:4
+1;4
+1<4
+1=4
+1>4
+1?4
+1@4
+1A4
+1B4
+1C4
+1D4
+1E4
+1F4
+1G4
+1H4
+1I4
+1J4
+1K4
+1L4
+1M4
+1N4
+1O4
+1P4
+1Q4
+1R4
+1S4
+1T4
+1U4
+1V4
+1W4
+1X4
+1Y4
+1Z4
+1[4
+1\4
+1]4
+1^4
+1_4
+1`4
+1a4
+1b4
+1c4
+1d4
+1e4
+1f4
+1g4
+1h4
+1i4
+1j4
+1k4
+1l4
+1m4
+1n4
+1o4
+1p4
+1q4
+1r4
+1s4
+1t4
+1u4
+1v4
+1w4
+1x4
+1y4
+1z4
+1{4
+1|4
+1}4
+1~4
+1!5
+1"5
+1#5
+1$5
+1%5
+1&5
+1'5
+1(5
+1)5
+1*5
+1+5
+1,5
+1-5
+1.5
+1/5
+105
+115
+125
+135
+145
+155
+165
+175
+185
+195
+1:5
+1;5
+1<5
+1=5
+1>5
+1?5
+1@5
+1A5
+1B5
+1C5
+1D5
+1E5
+1F5
+1G5
+1H5
+1I5
+1J5
+1K5
+1L5
+1M5
+1N5
+1O5
+1P5
+1Q5
+1R5
+1S5
+1T5
+1U5
+1V5
+1W5
+1X5
+1Y5
+1Z5
+1[5
+1\5
+1]5
+1^5
+1_5
+1`5
+1a5
+1b5
+1c5
+1d5
+1e5
+1f5
+1g5
+1h5
+1i5
+1j5
+1k5
+1l5
+1m5
+1n5
+1o5
+1p5
+1q5
+1r5
+1s5
+1t5
+1u5
+1v5
+1w5
+1x5
+1y5
+1z5
+1{5
+1|5
+1}5
+1~5
+1!6
+1"6
+1#6
+1$6
+1%6
+1&6
+1'6
+1(6
+1)6
+1*6
+1+6
+1,6
+1-6
+1.6
+1/6
+106
+116
+126
+136
+146
+156
+166
+176
+186
+196
+1:6
+1;6
+1<6
+1=6
+1>6
+1?6
+1@6
+1A6
+1B6
+1C6
+1D6
+1E6
+1F6
+1G6
+1H6
+1I6
+1J6
+1K6
+1L6
+1M6
+1N6
+1O6
+1P6
+1Q6
+1R6
+1S6
+1T6
+1U6
+1V6
+1W6
+1X6
+1Y6
+1Z6
+1[6
+1\6
+1]6
+1^6
+1_6
+1`6
+1a6
+1b6
+1c6
+1d6
+1e6
+1f6
+1g6
+1h6
+1i6
+1j6
+1k6
+1l6
+1m6
+1n6
+1o6
+1p6
+1q6
+1r6
+1s6
+1t6
+1u6
+1v6
+1w6
+1x6
+1y6
+1z6
+1{6
+1|6
+1}6
+1~6
+1!7
+1"7
+1#7
+1$7
+1%7
+1&7
+1'7
+1(7
+1)7
+1*7
+1+7
+1,7
+1-7
+1.7
+1/7
+107
+117
+127
+137
+147
+157
+167
+177
+187
+197
+1:7
+1;7
+1<7
+1=7
+1>7
+1?7
+1@7
+1A7
+1B7
+1C7
+1D7
+1E7
+1F7
+1G7
+1H7
+1I7
+1J7
+1K7
+1L7
+1M7
+1N7
+1O7
+1P7
+1Q7
+1R7
+1S7
+1T7
+1U7
+1V7
+1W7
+1X7
+1Y7
+1Z7
+1[7
+1\7
+1]7
+1^7
+1_7
+1`7
+1a7
+1b7
+1c7
+1d7
+1e7
+1f7
+1g7
+1h7
+1i7
+1j7
+1k7
+1l7
+1m7
+1n7
+1o7
+1p7
+1q7
+1r7
+1s7
+1t7
+1u7
+1v7
+1w7
+1x7
+1y7
+1z7
+1{7
+1|7
+1}7
+1~7
+1!8
+1"8
+1#8
+1$8
+1%8
+1&8
+1'8
+1(8
+1)8
+1*8
+1+8
+1,8
+1-8
+1.8
+1/8
+108
+118
+128
+138
+148
+158
+168
+178
+188
+198
+1:8
+1;8
+1<8
+0=8
+1>8
+1?8
+1@8
+1A8
+1B8
+1C8
+1D8
+1E8
+1F8
+1G8
+1H8
+1I8
+1J8
+1K8
+1L8
+1M8
+1N8
+1O8
+1P8
+1Q8
+1R8
+1S8
+1T8
+1U8
+0V8
+1W8
+0X8
+1Y8
+0Z8
+1[8
+1\8
+1]8
+1^8
+1_8
+1`8
+1a8
+1b8
+1c8
+1d8
+1e8
+1f8
+0g8
+0h8
+1i8
+0j8
+1k8
+1l8
+1m8
+1p8
+1q8
+1r8
+1s8
+1t8
+1u8
+$end
+#10000
+1!
+1o
+1-"
+1%.
+1P.
+1G(
+0//
+0o8
+0,/
+1/"
+02"
+13"
+14"
+0<"
+0Q"
+1@"
+0N"
+1T"
+0?(
+0'-
+1z'
+0{'
+1L(
+0U/
+1*0
+1Z8
+0c8
+1B/
+1a.
+1g8
+0M/
+0K/
+1L/
+0k8
+1K"
+0R"
+04(
+1M(
+08(
+1O(
+0`.
+15"
+1e.
+1L"
+0P(
+1Y(
+1N(
+0Q.
+1[.
+0]"
+1k"
+05(
+0Z(
+1i(
+1Z.
+1w/
+0F/
+1z/
+0j(
+1m)
+0^"
+1A(
+1l"
+0:(
+1Y.
+0n)
+1p*
+0E8
+0u/
+1y/
+1X.
+0F(
+1y#
+0q*
+1t+
+1W.
+0u+
+1w,
+1V.
+0x,
+1U.
+#20000
+0!
+0o
+0-"
+#30000
+1!
+1o
+1-"
+1$.
+0%.
+1.'
+1O.
+0P.
+1o8
+0n8
+0v0
+1,/
+0+/
+07"
+0K"
+1A"
+0/"
+10"
+12"
+04"
+1Q"
+0@"
+1G"
+1H"
+1N"
+0O"
+1c"
+1~'
+1!(
+1%-
+0&-
+12'
+0z'
+1|'
+0r0
+1+0
+0,0
+0?/
+0@/
+0Q/
+1D/
+0B/
+0e8
+0f8
+0a.
+1M/
+0L/
+0l8
+1k8
+1`.
+1h8
+1K"
+0A"
+1W"
+0L"
+1R"
+1I"
+0z&
+1(-
+18'
+0_.
+0`.
+05"
+0P"
+0W"
+0l0
+0)0
+1A/
+0</
+1L"
+1X"
+1_.
+1R.
+1Q.
+1J"
+1)-
+1x'
+1]"
+0k"
+15(
+1j"
+0x#
+08'
+0X"
+0'0
+0(0
+0;/
+1l0
+1=8
+0F8
+0w/
+1F/
+0z/
+0j"
+1|"
+0x'
+1^"
+0A(
+0l"
+1:(
+1m"
+0y#
+1'0
+018
+1F8
+1E8
+1u/
+0y/
+0m"
+1}"
+14(
+0M(
+18(
+09(
+0N(
+1W(
+1P(
+0Y(
+1Q(
+1b(
+1c(
+1j(
+0m)
+1F(
+0}"
+0Y.
+0[.
+0e.
+1n)
+0p*
+1Z(
+0i(
+1X(
+1N(
+0W(
+0Z.
+0X.
+0X(
+0j(
+1q*
+0t+
+0W.
+1Y.
+1u+
+0w,
+0V.
+1x,
+0U.
+#40000
+0!
+0o
+0-"
+#50000
+1!
+1o
+1-"
+1%.
+0O.
+1}'
+0G(
+1S(
+1e(
+0x.
+0"/
+1//
+0t8
+1n8
+0,/
+1'(
+1/"
+03"
+14"
+0Q"
+1@"
+0H"
+0N"
+1S"
+1{'
+0L(
+1V(
+1h(
+0$0
+08/
+0:/
+1U/
+0d8
+1B/
+1e8
+1a.
+0M/
+1K/
+0k8
+0K"
+1A"
+11"
+1k(
+0R"
+1U"
+04(
+08(
+0N(
+1W(
+0P(
+1Y(
+0b(
+1e)
+1j(
+1`.
+15"
+1W"
+0Y.
+1[.
+1e.
+0b8
+0}0
+0T.
+0L"
+1f)
+0Z(
+1i(
+1X(
+0_.
+0Q.
+0|"
+18#
+02'
+1g)
+0f)
+1h*
+0n)
+1V"
+1)%
+1Z.
+0]"
+1k"
+05(
+1X"
+0j(
+1m)
+0r8
+0E/
+1X.
+1r0
+0/8
+118
+1i*
+1Y.
+1w/
+0F/
+1z/
+08#
+1>#
+1[(
+0X(
+1a(
+1Z(
+0i(
+1n)
+0^"
+1A(
+1l"
+0:(
+0X.
+0Z.
+0g7
+1/8
+1j(
+0m)
+1b(
+0E8
+0u/
+1y/
+0Y.
+14(
+18(
+0O(
+19(
+1N(
+0W(
+1P(
+0Q(
+1X(
+0a(
+0Z(
+1i(
+0[(
+0b(
+0c(
+0j(
+1m)
+1f)
+0h*
+0g)
+0F(
+1?#
+1Y.
+1Z.
+0[.
+0e.
+0i*
+0n)
+1p*
+1j(
+1b(
+0e)
+0X(
+0P(
+1[.
+0Y.
+1X.
+0f)
+0q*
+1t+
+1W.
+0u+
+1w,
+1V.
+0x,
+1U.
+#60000
+0!
+0o
+0-"
+#70000
+1!
+1o
+1-"
+0$.
+0%.
+1#.
+1@#
+1]&
+1P.
+0o8
+0[1
+0k2
+0*/
+1,/
+1+/
+1K"
+0A"
+0I"
+0/"
+1Q"
+0@"
+00"
+04"
+0W"
+1B"
+0G"
+0S"
+0T"
+0c"
+0!(
+0=(
+0%-
+13-
+1A#
+1`&
+1z'
+0{'
+0X1
+0j2
+0T/
+1,0
+1V8
+1?/
+1Q/
+1c8
+1d8
+1f8
+1_.
+1M/
+1l8
+0a.
+1k8
+1</
+0`.
+1*-
+0K"
+1W"
+0B"
+1L"
+0J"
+1R"
+01"
+0k(
+0X"
+0U"
+0D(
+0(-
+1B#
+1a&
+0_.
+1`.
+0d.
+05"
+0*-
+0W1
+0i2
+1)0
+1W/
+1b8
+1}0
+1T.
+1;/
+1+-
+0L"
+1X"
+1d.
+1Q.
+0`&
+1u"
+0>#
+0B#
+12'
+0V"
+0)%
+0V(
+0h(
+0)-
+1&%
+1]"
+0k"
+15(
+0+-
+0h4
+1(0
+18/
+1:/
+1r8
+1E/
+0r0
+1i2
+1g7
+0s7
+1X1
+0w/
+1F/
+0z/
+1v"
+0?#
+0&%
+0N(
+1P(
+0Y(
+0b(
+0j(
+1j"
+0u"
+0A#
+0a&
+1^"
+0A(
+0l"
+1:(
+1W1
+1j2
+1s7
+0F8
+1Y.
+0[.
+1h4
+1Z(
+0i(
+1E8
+1u/
+0y/
+1m"
+0v"
+0Z.
+04(
+08(
+1O(
+09(
+1B(
+0m"
+1j(
+0m)
+0Y.
+1e.
+1n)
+0p*
+0P(
+1Y(
+1[.
+0X.
+0Z(
+1i(
+1q*
+0t+
+0W.
+1Z.
+1u+
+0w,
+0j(
+1m)
+1Y.
+0V.
+0n)
+1p*
+1x,
+0U.
+1X.
+0q*
+1t+
+1W.
+0u+
+1w,
+1V.
+0x,
+1U.
+#80000
+0!
+0o
+0-"
+#90000
+1!
+1o
+1-"
+1%.
+1O.
+0P.
+1o8
+0n8
+0,/
+1/"
+02"
+13"
+14"
+0Q"
+1@"
+1G"
+1M"
+1N"
+1T"
+0~'
+1!(
+03-
+0z'
+0|'
+1T/
+0?/
+1@/
+0c8
+0B/
+0C/
+0f8
+1a.
+0M/
+0K/
+1L/
+0k8
+1K"
+0R"
+0`.
+15"
+1L"
+0Q.
+0]"
+1k"
+05(
+1w/
+0F/
+1z/
+0^"
+1A(
+1l"
+0:(
+0E8
+0u/
+1y/
+14(
+18(
+0O(
+19(
+0B(
+1m"
+0e.
+1P(
+0Y(
+0[.
+1Z(
+0i(
+0Z.
+1j(
+0m)
+0Y.
+1n)
+0p*
+0X.
+1q*
+0t+
+0W.
+1u+
+0w,
+0V.
+1x,
+0U.
+#100000
+0!
+0o
+0-"
+#110000
+1!
+1o
+1-"
+1$.
+0%.
+0O.
+0}'
+1t8
+1n8
+1,/
+0+/
+0K"
+1A"
+1I"
+0/"
+1Q"
+0@"
+0M"
+0T"
+0!(
+1%-
+1'-
+1{'
+0*0
+0,0
+1?/
+1c8
+1C/
+0a.
+1k8
+0</
+1`.
+1K"
+0A"
+0W"
+1B"
+0L"
+1J"
+1R"
+1(-
+1_.
+0`.
+1*-
+1W"
+0B"
+0)0
+0;/
+1L"
+0X"
+0_.
+0d.
+0j"
+1y"
+1`&
+1)-
+0*-
+1+-
+1X"
+1d.
+0(0
+0X1
+0A8
+1F8
+0m"
+1z"
+0y"
+1|"
+0+-
+018
+1A8
+0z"
+1}"
+#120000
+0!
+0o
+0-"
+#130000
+1!
+1o
+1-"
+1%.
+1P.
+0o8
+0,/
+1/"
+12"
+1;"
+1<"
+0Q"
+1@"
+1H"
+0N"
+1O"
+1&-
+1z'
+0{'
+0+0
+0D/
+1B/
+0e8
+1a.
+0g8
+0I/
+0L/
+0k8
+0K"
+1A"
+0R"
+1z&
+1`.
+1P"
+0W"
+1B"
+0A/
+0L"
+1_.
+0R.
+1*-
+0|"
+1A$
+0`&
+0X"
+0d.
+1X1
+0)8
+118
+1+-
+0}"
+1B$
+#140000
+0!
+0o
+0-"
+#150000
+1!
+1o
+1-"
+0$.
+0%.
+0#.
+1O.
+0P.
+1".
+0)/
+1o8
+0n8
+1*/
+1,/
+1+/
+1K"
+0A"
+0/"
+1Q"
+0@"
+1W"
+0B"
+1=(
+0z'
+1|'
+03"
+17"
+0<"
+0*-
+1C"
+0G"
+0H"
+1N"
+0O"
+1S"
+1~'
+0;(
+0&-
+0'-
+13-
+0T/
+1*0
+1+0
+1X8
+0@/
+0d8
+1D/
+0B/
+1e8
+1f8
+1d.
+1g8
+0h8
+1K/
+0V8
+0_.
+0a.
+1k8
+0`.
+1D"
+1*-
+0C"
+0K"
+0W"
+1L"
+1R"
+1X"
+1D(
+0+-
+0I"
+0z&
+1U"
+0=(
+1_.
+1`.
+0d.
+0c.
+0P"
+0D"
+1V8
+0b8
+1A/
+1</
+0W/
+1F"
+1+-
+0L"
+0X"
+1c.
+1R.
+1V(
+1h(
+0J"
+1V"
+1)%
+0D(
+1|"
+0A$
+1`&
+0F"
+1W/
+0r8
+0E/
+1;/
+08/
+0:/
+0X1
+1)8
+018
+1N(
+0P(
+1Y(
+1b(
+0j(
+1m)
+0`&
+1u"
+0|"
+1A#
+0V(
+0h(
+1}"
+0B$
+1a&
+18/
+1:/
+0j2
+118
+0s7
+1X1
+1Y.
+1[.
+0n)
+1p*
+0Z(
+1i(
+0W1
+0a&
+1v"
+0}"
+0N(
+1P(
+0Y(
+0b(
+1j(
+0m)
+1Z.
+1X.
+0j(
+1m)
+0q*
+1t+
+0Y.
+0[.
+1W1
+1n)
+0p*
+1Z(
+0i(
+1W.
+1Y.
+0u+
+1w,
+0n)
+1p*
+0Z.
+0X.
+1j(
+0m)
+1q*
+0t+
+1X.
+1V.
+0q*
+1t+
+0x,
+0W.
+0Y.
+1u+
+0w,
+1n)
+0p*
+1U.
+1W.
+0u+
+1w,
+0X.
+0V.
+1q*
+0t+
+1x,
+1V.
+0x,
+0U.
+0W.
+1u+
+0w,
+1U.
+0V.
+1x,
+0U.
+#160000
+0!
+0o
+0-"
+#170000
+1!
+1o
+1-"
+1%.
+0O.
+1}'
+0t8
+1n8
+0,/
+1/"
+13"
+0;"
+0Q"
+1@"
+1G"
+1M"
+0N"
+1O"
+0~'
+1&-
+1'-
+03-
+1{'
+1T/
+0*0
+0+0
+1@/
+0D/
+1B/
+0C/
+0f8
+1a.
+1I/
+0K/
+0k8
+1K"
+0R"
+1z&
+0`.
+1P"
+0A/
+1L"
+0R.
+0u"
+1*$
+18'
+0l0
+0q7
+1s7
+0v"
+1+$
+#180000
+0!
+0o
+0-"
+#190000
+1!
+1o
+1-"
+1$.
+0%.
+1P.
+0o8
+1,/
+0+/
+0K"
+1A"
+1I"
+0/"
+02"
+03"
+1;"
+1<"
+1Q"
+0@"
+1H"
+0O"
+1?(
+0&-
+1z'
+0{'
+1+0
+0Z8
+1D/
+0e8
+0a.
+0g8
+0I/
+1K/
+1L/
+1k8
+0</
+1`.
+1K"
+0A"
+1W"
+0L"
+1J"
+1R"
+0z&
+0_.
+0`.
+0P"
+0W"
+1A/
+0;/
+1L"
+1X"
+1_.
+1R.
+0*$
+1D$
+08'
+1$#
+0D$
+1`&
+0X"
+1l0
+0m7
+1q7
+0X1
+1m7
+0o7
+0+$
+1E$
+1%#
+0E$
+1a&
+0W1
+#200000
+0!
+0o
+0-"
+#210000
+1!
+1o
+1-"
+1%.
+1O.
+0P.
+1o8
+0n8
+0,/
+1/"
+12"
+13"
+0<"
+0Q"
+1@"
+1O"
+0?(
+1&-
+0z'
+0|'
+0+0
+1Z8
+0D/
+1a.
+1g8
+0K/
+0L/
+0k8
+0K"
+1A"
+0R"
+1z&
+1`.
+1P"
+1W"
+0A/
+0L"
+0_.
+0R.
+0$#
+1D$
+0`&
+1X"
+1X1
+0m7
+1o7
+0%#
+1E$
+0a&
+1W1
+#220000
+0!
+0o
+0-"
+#230000
+1!
+1o
+1-"
+0$.
+0%.
+1#.
+0O.
+0}'
+1t8
+1n8
+0*/
+1,/
+1+/
+1K"
+0A"
+0/"
+1Q"
+0@"
+02"
+07"
+0;"
+0W"
+1B"
+0H"
+1N"
+0O"
+0S"
+1!(
+1"(
+0%-
+0'-
+14-
+1{'
+0S/
+1*0
+1,0
+0>/
+0?/
+1d8
+1D/
+0B/
+1e8
+1_.
+1I/
+1h8
+1L/
+0a.
+1k8
+0`.
+0*-
+1C"
+0K"
+1W"
+0B"
+1L"
+1R"
+0X"
+0I"
+0z&
+0U"
+1#(
+1<-
+0(-
+15-
+0_.
+1`.
+1d.
+0P"
+1*-
+0C"
+1D"
+0R/
+1)0
+0S.
+0=/
+1b8
+1A/
+1</
+0+-
+0L"
+1X"
+0c.
+0d.
+1R.
+0J"
+0V"
+0)%
+0D$
+1e$
+02'
+0)-
+0e"
+1C-
+0D"
+1Y#
+0e$
+1`&
+1+-
+1F"
+1c.
+0O/
+1&0
+1(0
+1r0
+0l7
+1m7
+1r8
+1E/
+1;/
+0X1
+1l7
+0n7
+0`&
+0E$
+1f$
+0A#
+1C#
+0Y#
+0l"
+1H-
+1K-
+0F"
+1Z#
+0f$
+02/
+1E8
+1n7
+0D8
+1j2
+1X1
+0Z#
+#240000
+0!
+0o
+0-"
+#250000
+1!
+1o
+1-"
+1%.
+1P.
+0o8
+0,/
+1/"
+12"
+03"
+0Q"
+1@"
+0G"
+0M"
+0N"
+1O"
+1~'
+0&-
+1z'
+0{'
+1+0
+0@/
+0D/
+1B/
+1C/
+1f8
+1a.
+1K/
+0L/
+0k8
+1K"
+0R"
+1z&
+0`.
+1P"
+0A/
+1L"
+0R.
+0C#
+1O$
+1E-
+0H-
+0K-
+1S-
+12/
+03/
+0<8
+1D8
+#260000
+0!
+0o
+0-"
+#270000
+1!
+1o
+1-"
+1$.
+0%.
+1O.
+0P.
+1o8
+0n8
+1,/
+0+/
+17"
+0K"
+1A"
+0/"
+10"
+1Q"
+0@"
+1G"
+1M"
+0O"
+1c"
+0!(
+13-
+0z'
+1|'
+0T/
+1?/
+0Q/
+1D/
+0C/
+0f8
+0a.
+0l8
+1k8
+1`.
+0h8
+1K"
+0A"
+0W"
+1B"
+0L"
+1R"
+1I"
+0z&
+1_.
+0`.
+0P"
+0*-
+1C"
+1W"
+0B"
+1A/
+0</
+1L"
+0X"
+0_.
+1d.
+1R.
+1J"
+1*-
+0C"
+1D"
+1C#
+0O$
+0E-
+1H-
+1K-
+0S-
+0+-
+1X"
+0c.
+0d.
+0;/
+0D"
+02/
+13/
+1<8
+0D8
+0C#
+1I#
+1`&
+0K-
+1[-
+1+-
+1F"
+1c.
+0X1
+0@8
+1D8
+0F"
+#280000
+0!
+0o
+0-"
+#290000
+1!
+1o
+1-"
+1%.
+0O.
+1}'
+0t8
+1n8
+0,/
+1/"
+00"
+02"
+13"
+0Q"
+1@"
+0M"
+1O"
+0c"
+1!(
+1--
+03-
+1{'
+1T/
+0]8
+0?/
+1Q/
+0D/
+1C/
+1a.
+0K/
+1L/
+1l8
+0k8
+0K"
+1A"
+0R"
+1z&
+1`.
+1P"
+0W"
+1B"
+0A/
+0L"
+1_.
+0R.
+0*-
+1C"
+0I#
+1\$
+0`&
+1E-
+0H-
+0[-
+1c-
+0X"
+1d.
+1D"
+12/
+03/
+1X1
+088
+1@8
+0+-
+0c.
+1F"
+#300000
+0!
+0o
+0-"
+#310000
+1!
+1o
+1-"
+1!.
+0$.
+0%.
+0#.
+1P.
+0".
+1)/
+0o8
+1*/
+1,/
+1+/
+0(/
+0D"
+1"-
+1K"
+0A"
+0I"
+1Q"
+0@"
+1W"
+0B"
+1z'
+0{'
+1*-
+0C"
+0O"
+1S"
+0~'
+0!(
+1'-
+0--
+1]8
+0*0
+1?/
+1@/
+0d8
+1D/
+0d.
+0_.
+0a.
+1</
+0`.
+1c.
+1D"
+0"-
+0*-
+0K"
+0W"
+1#-
+0F"
+1L"
+0J"
+1R"
+1X"
+1+-
+0z&
+1U"
+0^.
+1_.
+1`.
+1d.
+0c.
+0P"
+0#-
+0b8
+1A/
+1;/
+1F"
+0+-
+0L"
+0X"
+1$-
+1^.
+1R.
+1O$
+0\$
+1S-
+0c-
+1V"
+1)%
+1((
+1C#
+0O$
+0E-
+1H-
+1K-
+0S-
+0$-
+0#0
+0r8
+0E/
+188
+0<8
+02/
+13/
+1<8
+0D8
+0C#
+1F#
+0H-
+0K-
+1k-
+12/
+0$8
+1D8
+#320000
+0!
+0o
+0-"
+#330000
+1!
+1o
+1-"
+1%.
+1O.
+0P.
+1o8
+0n8
+0,/
+12"
+1<"
+0Q"
+1@"
+1M"
+1N"
+1O"
+1Z"
+1~'
+1<(
+13-
+0z'
+0|'
+0T/
+0W8
+0@/
+0`8
+0D/
+0B/
+0C/
+1a.
+0g8
+0L/
+1K"
+0R"
+1z&
+0`.
+1P"
+0A/
+1L"
+0R.
+0F#
+1U$
+0k-
+1s-
+0z7
+1$8
+#340000
+0!
+0o
+0-"
+#350000
+1!
+1o
+1-"
+1$.
+0%.
+0O.
+0}'
+1t8
+1n8
+1,/
+0+/
+07"
+0K"
+1A"
+1I"
+10"
+03"
+0<"
+1Q"
+0@"
+0O"
+0Z"
+1c"
+0~'
+0<(
+1%-
+1&-
+0'-
+1,-
+03-
+1{'
+1T/
+0^8
+1*0
+0+0
+0,0
+1W8
+1@/
+0Q/
+1`8
+1D/
+0a.
+1g8
+1K/
+0l8
+0</
+1`.
+1h8
+1K"
+0A"
+1W"
+0L"
+1J"
+0((
+11"
+1k(
+1R"
+0z&
+1d"
+1(-
+1.-
+0_.
+0`.
+0P"
+0W"
+0\8
+0)0
+0P/
+1A/
+0}0
+0T.
+1#0
+0;/
+1L"
+1X"
+1_.
+1R.
+0s-
+0U$
+1|$
+1$(
+1)-
+1r*
+1/-
+0C-
+1f#
+0|$
+1`&
+0X"
+1O/
+0B2
+0q8
+0(0
+0H6
+0t7
+1z7
+0X1
+1t7
+0|7
+1A#
+0f#
+1s#
+1a&
+0f7
+1|7
+0j2
+0W1
+1B#
+0i2
+#360000
+0!
+0o
+0-"
+#370000
+1!
+1o
+1-"
+1%.
+1P.
+0o8
+0,/
+13"
+0Q"
+1@"
+1H"
+0M"
+1O"
+1T"
+1<(
+1'-
+1z'
+0{'
+0*0
+0W8
+0c8
+0D/
+1C/
+0e8
+1a.
+0K/
+0K"
+1A"
+0R"
+1z&
+1`.
+1P"
+1W"
+0A/
+0L"
+0_.
+0R.
+0s#
+1!%
+0`&
+1%(
+1X"
+0G6
+1X1
+0u8
+1f7
+0a&
+1&(
+0F6
+1W1
+0'(
+1$0
+#380000
+0!
+0o
+0-"
+#390000
+1!
+1o
+1-"
+0$.
+0%.
+1#.
+1O.
+0P.
+1o8
+0n8
+0*/
+1,/
+1+/
+1K"
+0A"
+1Q"
+0@"
+0<(
+00"
+01"
+02"
+03"
+1<"
+0W"
+1B"
+0H"
+1M"
+0S"
+0T"
+1Z"
+0c"
+0"(
+1=(
+1?(
+0k(
+0%-
+0&-
+0,-
+0z'
+1|'
+1^8
+1+0
+1,0
+1}0
+0Z8
+0V8
+1>/
+1Q/
+0`8
+1c8
+1d8
+0C/
+1e8
+1_.
+0g8
+1K/
+1L/
+1T.
+1l8
+1W8
+0a.
+0`.
+1*-
+0K"
+1W"
+0B"
+1L"
+1R"
+0=(
+0B#
+1e$
+0!%
+0%(
+0X"
+0I"
+0U"
+0d"
+0#(
+0<-
+1D(
+0(-
+0.-
+0_.
+1`.
+0d.
+0*-
+1\8
+1)0
+0W/
+1S.
+1=/
+1P/
+1b8
+1</
+1G6
+1u8
+0l7
+1i2
+1V8
+1+-
+0L"
+1X"
+1d.
+0D(
+0&(
+0J"
+0V"
+0)%
+1D$
+0e$
+12'
+1V(
+1h(
+0$(
+0)-
+0r*
+0/-
+1C-
+0+-
+0O/
+1B2
+1q8
+1(0
+1H6
+08/
+0:/
+0r0
+1l7
+0m7
+1r8
+1E/
+1;/
+1F6
+1W/
+0V(
+0h(
+18'
+1N(
+0P(
+1Y(
+1b(
+0j(
+1m)
+0A#
+1x#
+0D$
+1E-
+03/
+1m7
+0=8
+1j2
+1Y.
+1[.
+0l0
+18/
+1:/
+0n)
+1p*
+0Z(
+1i(
+0N(
+1P(
+0Y(
+0b(
+1j(
+0m)
+1x'
+1Z.
+1X.
+0j(
+1m)
+0q*
+1t+
+0'0
+0Y.
+0[.
+1n)
+0p*
+1Z(
+0i(
+1W.
+1Y.
+0u+
+1w,
+0n)
+1p*
+0Z.
+0X.
+1j(
+0m)
+1q*
+0t+
+1X.
+1V.
+0q*
+1t+
+0x,
+0W.
+0Y.
+1u+
+0w,
+1n)
+0p*
+1U.
+1W.
+0u+
+1w,
+0X.
+0V.
+1q*
+0t+
+1x,
+1V.
+0x,
+0U.
+0W.
+1u+
+0w,
+1U.
+0V.
+1x,
+0U.
+#400000
+0!
+0o
+0-"
+#410000
+1!
+1o
+1-"
+1%.
+0O.
+1}'
+0t8
+1n8
+0,/
+1'(
+12"
+13"
+04"
+0<"
+0Q"
+1@"
+1H"
+0M"
+0O"
+1T"
+0Z"
+1<(
+1>(
+0?(
+1%-
+1&-
+0'-
+04-
+1{'
+0$0
+1S/
+1*0
+0+0
+0,0
+1Z8
+0[8
+0W8
+1`8
+0c8
+1D/
+1C/
+0e8
+1a.
+1g8
+1M/
+0K/
+0L/
+1K"
+0R"
+1I"
+0z&
+1=(
+1@(
+1(-
+05-
+0`.
+05"
+0P"
+1R/
+0)0
+0Y8
+0V8
+1A/
+0</
+1L"
+1R.
+1Q.
+1J"
+1D(
+1E(
+1)-
+1e"
+0C-
+1]"
+0k"
+15(
+1j"
+0x#
+08'
+1D-
+0E-
+1H-
+1O/
+0&0
+0(0
+0V/
+0W/
+0;/
+02/
+13/
+1l0
+1=8
+0F8
+0w/
+1F/
+0z/
+1`&
+0j"
+1|"
+0x'
+1l"
+0D-
+0H-
+1^"
+0A(
+0l"
+1:(
+12/
+0E8
+1'0
+018
+1F8
+0X1
+1E8
+1u/
+0y/
+1}"
+04(
+08(
+1O(
+09(
+1N(
+0P(
+1Q(
+1b(
+1c(
+0j(
+1J(
+0}"
+1Y.
+1[.
+1e.
+1P(
+0[.
+#420000
+0!
+0o
+0-"
+#430000
+1!
+1o
+1-"
+1$.
+0%.
+1P.
+1U(
+1g(
+0v.
+0~.
+0o8
+1,/
+0+/
+0K"
+1A"
+02"
+03"
+1Q"
+0@"
+0G"
+0H"
+0N"
+1!(
+0<(
+0%-
+1z'
+0{'
+1V(
+1h(
+08/
+0:/
+1,0
+1W8
+0?/
+1B/
+1e8
+1f8
+0a.
+1K/
+1L/
+1`.
+1K"
+0A"
+0W"
+1B"
+0L"
+1R"
+0I"
+0=(
+0(-
+0N(
+1W(
+0P(
+1Y(
+0b(
+1e)
+1j(
+1_.
+0`.
+1*-
+1W"
+0B"
+0Y.
+1[.
+1)0
+1V8
+1</
+1L"
+0X"
+1f)
+0Z(
+1i(
+1X(
+0_.
+0d.
+0J"
+1N(
+0W(
+1P(
+0D(
+1b(
+0e)
+0j(
+1m)
+0)-
+0*-
+1Z.
+1+-
+1X"
+1j(
+1d.
+1(0
+1Y.
+1W/
+0[.
+1;/
+0n)
+1p*
+0f)
+0X(
+0Y.
+0`&
+0Q(
+1H(
+0J(
+0V(
+0h(
+1j"
+0|"
+0c(
+0+-
+1X.
+0q*
+1t+
+118
+0F8
+18/
+1:/
+1X1
+1W.
+0N(
+0P(
+0b(
+0j(
+0u+
+1w,
+1V.
+1Y.
+1[.
+0x,
+1U.
+#440000
+0!
+0o
+0-"
+#450000
+1!
+1o
+1-"
+1%.
+1O.
+0P.
+1o8
+0n8
+0,/
+12"
+14"
+1;"
+0Q"
+1@"
+1H"
+1S"
+0T"
+1Z"
+1~'
+0!(
+1"(
+1<(
+0>(
+1,-
+14-
+0z'
+0|'
+0S/
+0^8
+1[8
+0W8
+0>/
+1?/
+0@/
+0`8
+1c8
+0d8
+0e8
+1a.
+0I/
+0M/
+0L/
+0K"
+1A"
+1>"
+0_"
+0R"
+1U"
+1#(
+1<-
+1=(
+0@(
+1.-
+15-
+1`.
+15"
+0W"
+1B"
+0R/
+0\8
+1Y8
+0V8
+0S.
+0=/
+0b8
+1j8
+0G/
+0L"
+1_.
+0Q.
+0]"
+0^"
+05(
+1A(
+1`"
+1V"
+1)%
+1i*
+1q*
+0t+
+0j"
+1C#
+02'
+1((
+1j*
+1D(
+0E(
+1r*
+1/-
+0e"
+1g"
+1*-
+0`"
+1a"
+15(
+0A(
+0X"
+0d.
+0*1
+1&0
+0B2
+0q8
+1V/
+0W/
+0#0
+1r0
+0D8
+1F8
+0W.
+0r8
+0E/
+01/
+0u/
+1w/
+1y/
+1z/
+1u+
+0w,
+1u/
+0w/
+0,1
+11/
+14(
+18(
+0O(
+19(
+0i*
+0q*
+1t+
+0:(
+0C#
+1F#
+0j*
+0H(
+1V(
+1h(
+1+-
+0V.
+1)(
+11(
+1:(
+1F(
+1x,
+08/
+0:/
+0$8
+1D8
+1W.
+0e.
+0u+
+1w,
+1P(
+0Y(
+0U.
+0|/
+0"0
+1N(
+0P(
+1Y(
+1b(
+1j(
+0[.
+1V.
+1*(
+12(
+1Z(
+0i(
+0x,
+0Y.
+1[.
+0Z(
+1i(
+1U.
+0Z.
+0{/
+0!0
+0j(
+1Z.
+0B-
+03(
+1j(
+1Y.
+0Y.
+1x/
+1V!
+04(
+08(
+1O(
+09(
+1U!
+1e.
+1"
+0V!
+1P(
+0[.
+0U!
+0"
+#460000
+0!
+0o
+0-"
+#470000
+1!
+1o
+1-"
+0$.
+0%.
+0#.
+0O.
+0}'
+0S(
+0e(
+1".
+0)/
+1x.
+1"/
+1t8
+1n8
+1*/
+1,/
+1+/
+1K"
+0A"
+1Q"
+0@"
+1W"
+0B"
+0Z"
+0=(
+1{'
+0V(
+0h(
+13"
+04"
+16"
+17"
+0*-
+1C"
+0H"
+1N"
+0S"
+1["
+1!(
+0"(
+1;(
+0<(
+0&-
+0,-
+13-
+04-
+1S/
+0T/
+1^8
+1+0
+1W8
+0X8
+1>/
+0?/
+0_8
+1d8
+0B/
+1e8
+1d.
+0h8
+0i8
+1M/
+0K/
+18/
+1:/
+1V8
+1`8
+0_.
+0a.
+0`.
+0D"
+1"-
+1*-
+0C"
+0K"
+0W"
+1L"
+1R"
+1X"
+0["
+1B(
+0D(
+0N(
+0P(
+0b(
+0j(
+18"
+0+-
+0U"
+1\"
+0a"
+1b"
+0#(
+0<-
+1=(
+0.-
+05-
+1_.
+1`.
+0d.
+1c.
+05"
+1D"
+0"-
+1#-
+1R/
+1\8
+0V8
+1S.
+1=/
+0+1
+1,1
+0-1
+1b8
+0J/
+1Y.
+1[.
+1W/
+1_8
+0F"
+1+-
+0L"
+0X"
+0^.
+0c.
+1Q.
+0\"
+0F(
+19"
+1E"
+0b"
+0V"
+0)%
+05(
+1r"
+0F#
+12'
+0((
+02(
+0B(
+1D(
+0r*
+0/-
+1e"
+0g"
+0#-
+0E"
+1b"
+1{,
+1F"
+1$-
+1^.
+1*1
+0&0
+1B2
+1q8
+0W/
+1{/
+1#0
+0r0
+1$8
+0%8
+1w/
+1r8
+1E/
+1+1
+0.1
+1-1
+0+1
+1A(
+1j"
+0r"
+12(
+0:(
+13(
+1F(
+0)(
+01(
+0$-
+1f"
+16(
+1:(
+1|/
+1"0
+0x/
+0{/
+1%8
+0F8
+0u/
+zV!
+0v/
+0%0
+0F(
+03(
+14(
+18(
+0O(
+19(
+0*(
+02(
+zU!
+1*(
+12(
+09(
+1y,
+1{/
+1!0
+0e.
+1x/
+z"
+0V!
+1P(
+0Y(
+0s8
+0{/
+0!0
+04(
+08(
+1O(
+19(
+0y,
+1B-
+13(
+0[.
+0U!
+0B-
+03(
+1z,
+1Z(
+0i(
+0x/
+1s8
+1e.
+0"
+zV!
+1Q(
+0P(
+1Y(
+0Z.
+1x/
+0V!
+0z,
+14(
+18(
+0O(
+09(
+1j(
+0m)
+1[.
+zU!
+04(
+08(
+1O(
+1[(
+0Z(
+1i(
+0Y.
+0e.
+0U!
+z"
+1V!
+0Q(
+1n)
+0p*
+1P(
+0Y(
+1Z.
+1e.
+0"
+0V!
+19(
+1c(
+0j(
+1m)
+0P(
+1Y(
+0[.
+0X.
+1U!
+09(
+0[(
+1y,
+1Z(
+0i(
+1q*
+0t+
+1[.
+1Y.
+0U!
+1"
+1g)
+1Q(
+0y,
+0Z(
+1i(
+0n)
+1p*
+0W.
+0Z.
+0s8
+0"
+0c(
+0Q(
+1y,
+1u+
+0w,
+1j(
+0m)
+1X.
+1Z.
+1s8
+1[(
+0y,
+1j*
+0q*
+1t+
+0j(
+1m)
+0Y.
+0V.
+0s8
+0[(
+1y,
+0g)
+1n)
+0p*
+1x,
+1Y.
+1W.
+1s8
+1n+
+1c(
+0n)
+1p*
+0u+
+1w,
+0U.
+0X.
+0s8
+0j*
+0c(
+1q*
+0t+
+1V.
+1X.
+1g)
+1q,
+1},
+0x,
+0q*
+1t+
+0W.
+0g)
+0n+
+1u+
+0w,
+1W.
+1U.
+1j*
+0u+
+1w,
+0V.
+0q,
+0},
+0j*
+1z,
+1x,
+1V.
+1n+
+0z,
+0x,
+0U.
+0n+
+1z,
+1U.
+1q,
+0z,
+1},
+0q,
+1z,
+0},
+#480000
+0!
+0o
+0-"
+#490000
+1!
+1o
+1-"
+1%.
+1P.
+1|,
+0t/
+0o8
+0,/
+02"
+14"
+08"
+0;"
+0Q"
+1@"
+1G"
+1Z"
+0!(
+0;(
+1'-
+1--
+03-
+1z'
+0{'
+1T/
+0]8
+0*0
+1X8
+1?/
+0`8
+0f8
+1a.
+1I/
+1J/
+0M/
+1L/
+1K"
+09"
+1`"
+0b"
+0{,
+0>"
+1_"
+0R"
+1["
+0=(
+0`.
+15"
+1V8
+0_8
+0j8
+1G/
+1+1
+01/
+1.1
+1L"
+0Q.
+0f"
+06(
+0:(
+1]"
+15(
+1\"
+0`"
+0D(
+0]"
+05(
+1W/
+11/
+0-1
+0w/
+0z/
+1v/
+1%0
+1w/
+1z/
+0*(
+02(
+0y,
+1^"
+1:(
+0A(
+1!-
+0^"
+1A(
+0:(
+0D2
+1u/
+0y/
+1s8
+1{/
+1!0
+0u/
+1y/
+1B-
+13(
+0z,
+1B(
+0F"
+0L"
+0+-
+0B(
+0x/
+zV!
+14(
+18(
+0O(
+19(
+zU!
+0e.
+z"
+1P(
+0Y(
+0[.
+1Z(
+0i(
+0Z.
+1j(
+0m)
+0Y.
+1n)
+0p*
+0X.
+1q*
+0t+
+0W.
+1u+
+0w,
+0V.
+1x,
+0U.
+#500000
+0!
+0o
+0-"
+#510000
+1!
+1o
+1-"
+0!.
+0%.
+1O.
+0P.
+0".
+1)/
+1o8
+0n8
+1,/
+1(/
+0D"
+0/"
+1Q"
+0@"
+0Z"
+0z'
+1|'
+12"
+03"
+04"
+06"
+18"
+1<"
+0*-
+0G"
+1O"
+0["
+0~'
+1;(
+1?(
+1&-
+0--
+1]8
+0+0
+0Z8
+0X8
+1@/
+1_8
+0D/
+1f8
+1d.
+0g8
+0J/
+1i8
+1M/
+1K/
+0L/
+1`8
+0a.
+1k8
+1c.
+0K"
+08"
+19"
+1z&
+0\"
+1=(
+1`.
+05"
+1P"
+0V8
+1-1
+0A/
+0.1
+1J/
+0R.
+1Q.
+09"
+1k"
+0!-
+1D(
+0k"
+1R"
+0j"
+1x#
+18'
+0W/
+1D2
+0F/
+1.1
+0l0
+0=8
+1F8
+1F/
+1]"
+15(
+1l"
+0l"
+1x'
+0E8
+0w/
+0z/
+0'0
+1E8
+1^"
+0A(
+1:(
+1y#
+0y#
+1u/
+0y/
+1F(
+#520000
+0!
+0o
+0-"
+#530000
+1!
+1o
+1-"
+1%.
+0O.
+1}'
+1G(
+0//
+0t8
+1n8
+0,/
+1/"
+02"
+13"
+14"
+0<"
+0Q"
+1@"
+0N"
+1T"
+0?(
+0'-
+1{'
+1L(
+0U/
+1*0
+1Z8
+0c8
+1B/
+1a.
+1g8
+0M/
+0K/
+1L/
+0k8
+1K"
+0R"
+04(
+1M(
+08(
+1O(
+0`.
+15"
+1e.
+1L"
+0P(
+1Y(
+1N(
+0Q.
+1[.
+0]"
+1k"
+05(
+0Z(
+1i(
+1Z.
+1w/
+0F/
+1z/
+0j(
+1m)
+0^"
+1A(
+1l"
+0:(
+1Y.
+0n)
+1p*
+0E8
+0u/
+1y/
+1X.
+0F(
+1y#
+0q*
+1t+
+1W.
+0u+
+1w,
+1V.
+0x,
+1U.
+#540000
+0!
+0o
+0-"
+#550000
+1!
+1o
+1-"
+1$.
+0%.
+1P.
+0o8
+1,/
+0+/
+07"
+0K"
+1A"
+0/"
+10"
+12"
+04"
+1Q"
+0@"
+1G"
+1H"
+1N"
+0O"
+1c"
+1~'
+1!(
+1%-
+0&-
+1z'
+0{'
+1+0
+0,0
+0?/
+0@/
+0Q/
+1D/
+0B/
+0e8
+0f8
+0a.
+1M/
+0L/
+0l8
+1k8
+1`.
+1h8
+1K"
+0A"
+1W"
+0L"
+1R"
+1I"
+0z&
+1(-
+0_.
+0`.
+05"
+0P"
+0W"
+0)0
+1A/
+0</
+1L"
+1X"
+1_.
+1R.
+1Q.
+1J"
+1)-
+1]"
+0k"
+15(
+1j"
+0x#
+08'
+0X"
+0(0
+0;/
+1l0
+1=8
+0F8
+0w/
+1F/
+0z/
+1`&
+0j"
+1|"
+0x'
+1^"
+0A(
+0l"
+1:(
+1m"
+0y#
+1'0
+018
+1F8
+0X1
+1E8
+1u/
+0y/
+0m"
+1}"
+14(
+0M(
+18(
+09(
+0N(
+1W(
+1P(
+0Y(
+1Q(
+1b(
+1c(
+1j(
+0m)
+1F(
+0}"
+0Y.
+0[.
+0e.
+1n)
+0p*
+1Z(
+0i(
+1X(
+1N(
+0W(
+0Z.
+0X.
+0X(
+0j(
+1q*
+0t+
+0W.
+1Y.
+1u+
+0w,
+0V.
+1x,
+0U.
+#560000
+0!
+0o
+0-"
+#570000
+1!
+1o
+1-"
+1%.
+1O.
+0P.
+0G(
+1S(
+1e(
+0x.
+0"/
+1//
+1o8
+0n8
+0,/
+1/"
+03"
+14"
+0Q"
+1@"
+0H"
+0N"
+1S"
+0z'
+0|'
+0L(
+1V(
+1h(
+08/
+0:/
+1U/
+0d8
+1B/
+1e8
+1a.
+0M/
+1K/
+0k8
+0K"
+1A"
+11"
+1k(
+0R"
+1U"
+04(
+08(
+0N(
+1W(
+0P(
+1Y(
+0b(
+1e)
+1j(
+1`.
+15"
+1W"
+0Y.
+1[.
+1e.
+0b8
+0}0
+0T.
+0L"
+1f)
+0Z(
+1i(
+1X(
+0_.
+0Q.
+0|"
+18#
+02'
+1g)
+0f)
+1h*
+0n)
+1V"
+1)%
+1Z.
+0]"
+1k"
+05(
+1X"
+0j(
+1m)
+0r8
+0E/
+1X.
+1r0
+0/8
+118
+1i*
+1Y.
+1w/
+0F/
+1z/
+08#
+1>#
+1A#
+1a&
+1[(
+0X(
+1a(
+1Z(
+0i(
+1n)
+0^"
+1A(
+1l"
+0:(
+0X.
+0Z.
+0W1
+0j2
+0g7
+1/8
+1j(
+0m)
+1b(
+0E8
+0u/
+1y/
+1B#
+1w&
+0Y.
+14(
+18(
+0O(
+19(
+1N(
+0W(
+1P(
+0Q(
+1X(
+0a(
+0Z(
+1i(
+0[(
+0b(
+0c(
+0j(
+1m)
+1f)
+0h*
+0g)
+0F(
+1?#
+0A1
+0i2
+1Y.
+1Z.
+0[.
+0e.
+1&%
+0i*
+0n)
+1p*
+1j(
+1b(
+0e)
+0X(
+0P(
+1[.
+0Y.
+1X.
+0h4
+0f)
+0q*
+1t+
+1W.
+0u+
+1w,
+1V.
+0x,
+1U.
+#580000
+0!
+0o
+0-"
+#590000
+1!
+1o
+1-"
+0$.
+0%.
+1#.
+0O.
+0}'
+1t8
+1n8
+0*/
+1,/
+1+/
+1K"
+0A"
+0I"
+0/"
+1Q"
+0@"
+00"
+04"
+0W"
+1B"
+0G"
+0S"
+0T"
+0c"
+0!(
+0=(
+0%-
+13-
+1{'
+0T/
+1,0
+1V8
+1?/
+1Q/
+1c8
+1d8
+1f8
+1_.
+1M/
+1l8
+0a.
+1k8
+1</
+0`.
+1*-
+0K"
+1W"
+0B"
+1L"
+0J"
+1R"
+01"
+0k(
+0X"
+0U"
+0D(
+0(-
+0_.
+1`.
+0d.
+05"
+0*-
+1)0
+1W/
+1b8
+1}0
+1T.
+1;/
+1+-
+0L"
+1X"
+1d.
+1Q.
+0`&
+1u"
+0>#
+0B#
+0w&
+12'
+0V"
+0)%
+0V(
+0h(
+0)-
+1]"
+0k"
+15(
+0+-
+1(0
+18/
+1:/
+1r8
+1E/
+0r0
+1A1
+1i2
+1g7
+0s7
+1X1
+0w/
+1F/
+0z/
+1v"
+0?#
+0&%
+0N(
+1P(
+0Y(
+0b(
+0j(
+1j"
+0u"
+0A#
+0a&
+1^"
+0A(
+0l"
+1:(
+1W1
+1j2
+1s7
+0F8
+1Y.
+0[.
+1h4
+1Z(
+0i(
+1E8
+1u/
+0y/
+1m"
+0v"
+0Z.
+04(
+08(
+1O(
+09(
+1B(
+0m"
+1j(
+0m)
+0Y.
+1e.
+1n)
+0p*
+0P(
+1Y(
+1[.
+0X.
+0Z(
+1i(
+1q*
+0t+
+0W.
+1Z.
+1u+
+0w,
+0j(
+1m)
+1Y.
+0V.
+0n)
+1p*
+1x,
+0U.
+1X.
+0q*
+1t+
+1W.
+0u+
+1w,
+1V.
+0x,
+1U.
+#600000
+0!
+0o
+0-"
+#610000
+1!
+1o
+1-"
+1%.
+1P.
+0o8
+0,/
+1/"
+02"
+13"
+14"
+0Q"
+1@"
+1G"
+1M"
+1N"
+1T"
+0~'
+1!(
+03-
+1z'
+0{'
+1T/
+0?/
+1@/
+0c8
+0B/
+0C/
+0f8
+1a.
+0M/
+0K/
+1L/
+0k8
+1K"
+0R"
+0`.
+15"
+1L"
+0Q.
+0]"
+1k"
+05(
+1w/
+0F/
+1z/
+0^"
+1A(
+1l"
+0:(
+0E8
+0u/
+1y/
+14(
+18(
+0O(
+19(
+0B(
+1m"
+0e.
+1P(
+0Y(
+0[.
+1Z(
+0i(
+0Z.
+1j(
+0m)
+0Y.
+1n)
+0p*
+0X.
+1q*
+0t+
+0W.
+1u+
+0w,
+0V.
+1x,
+0U.
+#620000
+0!
+0o
+0-"
+#630000
+1!
+1o
+1-"
+1$.
+0%.
+1O.
+0P.
+1o8
+0n8
+1,/
+0+/
+0K"
+1A"
+1I"
+0/"
+1Q"
+0@"
+0M"
+0T"
+0!(
+1%-
+1'-
+0z'
+1|'
+0*0
+0,0
+1?/
+1c8
+1C/
+0a.
+1k8
+0</
+1`.
+1K"
+0A"
+0W"
+1B"
+0L"
+1J"
+1R"
+1(-
+1_.
+0`.
+1*-
+1W"
+0B"
+0)0
+0;/
+1L"
+0X"
+0_.
+0d.
+0j"
+1y"
+1`&
+1)-
+0*-
+1+-
+1X"
+1d.
+0(0
+0X1
+0A8
+1F8
+0m"
+1z"
+0y"
+1|"
+0+-
+018
+1A8
+0z"
+1}"
+#640000
+0!
+0o
+0-"
+#650000
+1!
+1o
+1-"
+1%.
+0O.
+1}'
+0t8
+1n8
+0,/
+1/"
+12"
+1;"
+1<"
+0Q"
+1@"
+1H"
+0N"
+1O"
+1&-
+1{'
+0+0
+0D/
+1B/
+0e8
+1a.
+0g8
+0I/
+0L/
+0k8
+0K"
+1A"
+0R"
+1z&
+1`.
+1P"
+0W"
+1B"
+0A/
+0L"
+1_.
+0R.
+1*-
+0|"
+1A$
+0`&
+0X"
+0d.
+1X1
+0)8
+118
+1+-
+0}"
+1B$
+#660000
+0!
+0o
+0-"
+#670000
+1!
+1o
+1-"
+0$.
+0%.
+0#.
+1P.
+1".
+0)/
+0o8
+1*/
+1,/
+1+/
+1K"
+0A"
+0/"
+1Q"
+0@"
+1W"
+0B"
+1=(
+1z'
+0{'
+03"
+17"
+0<"
+0*-
+1C"
+0G"
+0H"
+1N"
+0O"
+1S"
+1~'
+0;(
+0&-
+0'-
+13-
+0T/
+1*0
+1+0
+1X8
+0@/
+0d8
+1D/
+0B/
+1e8
+1f8
+1d.
+1g8
+0h8
+1K/
+0V8
+0_.
+0a.
+1k8
+0`.
+1D"
+1*-
+0C"
+0K"
+0W"
+1L"
+1R"
+1X"
+1D(
+0+-
+0I"
+0z&
+1U"
+0=(
+1_.
+1`.
+0d.
+0c.
+0P"
+0D"
+1V8
+0b8
+1A/
+1</
+0W/
+1F"
+1+-
+0L"
+0X"
+1c.
+1R.
+1V(
+1h(
+0J"
+1V"
+1)%
+0D(
+1|"
+0A$
+1`&
+0F"
+1W/
+0r8
+0E/
+1;/
+08/
+0:/
+0X1
+1)8
+018
+1N(
+0P(
+1Y(
+1b(
+0j(
+1m)
+0`&
+1u"
+0|"
+1A#
+0V(
+0h(
+1}"
+0B$
+1a&
+18/
+1:/
+0j2
+118
+0s7
+1X1
+1Y.
+1[.
+0n)
+1p*
+0Z(
+1i(
+0W1
+0a&
+1v"
+0}"
+0N(
+1P(
+0Y(
+0b(
+1j(
+0m)
+1Z.
+1X.
+0j(
+1m)
+0q*
+1t+
+0Y.
+0[.
+1W1
+1n)
+0p*
+1Z(
+0i(
+1W.
+1Y.
+0u+
+1w,
+0n)
+1p*
+0Z.
+0X.
+1j(
+0m)
+1q*
+0t+
+1X.
+1V.
+0q*
+1t+
+0x,
+0W.
+0Y.
+1u+
+0w,
+1n)
+0p*
+1U.
+1W.
+0u+
+1w,
+0X.
+0V.
+1q*
+0t+
+1x,
+1V.
+0x,
+0U.
+0W.
+1u+
+0w,
+1U.
+0V.
+1x,
+0U.
+#680000
+0!
+0o
+0-"
+#690000
+1!
+1o
+1-"
+1%.
+1O.
+0P.
+1o8
+0n8
+0,/
+1/"
+13"
+0;"
+0Q"
+1@"
+1G"
+1M"
+0N"
+1O"
+0~'
+1&-
+1'-
+03-
+0z'
+0|'
+1T/
+0*0
+0+0
+1@/
+0D/
+1B/
+0C/
+0f8
+1a.
+1I/
+0K/
+0k8
+1K"
+0R"
+1z&
+0`.
+1P"
+0A/
+1L"
+0R.
+0u"
+1*$
+18'
+0l0
+0q7
+1s7
+0v"
+1+$
+#700000
+0!
+0o
+0-"
+#710000
+1!
+1o
+1-"
+1$.
+0%.
+0O.
+0}'
+1t8
+1n8
+1,/
+0+/
+0K"
+1A"
+1I"
+0/"
+02"
+03"
+1;"
+1<"
+1Q"
+0@"
+1H"
+0O"
+1?(
+0&-
+1{'
+1+0
+0Z8
+1D/
+0e8
+0a.
+0g8
+0I/
+1K/
+1L/
+1k8
+0</
+1`.
+1K"
+0A"
+1W"
+0L"
+1J"
+1R"
+0z&
+0_.
+0`.
+0P"
+0W"
+1A/
+0;/
+1L"
+1X"
+1_.
+1R.
+0*$
+1D$
+08'
+1$#
+0D$
+1`&
+0X"
+1l0
+0m7
+1q7
+0X1
+1m7
+0o7
+0+$
+1E$
+1%#
+0E$
+1a&
+0W1
+#720000
+0!
+0o
+0-"
+#730000
+1!
+1o
+1-"
+1%.
+1P.
+0o8
+0,/
+1/"
+12"
+13"
+0<"
+0Q"
+1@"
+1O"
+0?(
+1&-
+1z'
+0{'
+0+0
+1Z8
+0D/
+1a.
+1g8
+0K/
+0L/
+0k8
+0K"
+1A"
+0R"
+1z&
+1`.
+1P"
+1W"
+0A/
+0L"
+0_.
+0R.
+0$#
+1D$
+0`&
+1X"
+1X1
+0m7
+1o7
+0%#
+1E$
+0a&
+1W1
+#740000
+0!
+0o
+0-"
+#750000
+1!
+1o
+1-"
+0$.
+0%.
+1#.
+1O.
+0P.
+1o8
+0n8
+0*/
+1,/
+1+/
+1K"
+0A"
+0/"
+1Q"
+0@"
+02"
+07"
+0;"
+0W"
+1B"
+0H"
+1N"
+0O"
+0S"
+1!(
+1"(
+0%-
+0'-
+14-
+0z'
+1|'
+0S/
+1*0
+1,0
+0>/
+0?/
+1d8
+1D/
+0B/
+1e8
+1_.
+1I/
+1h8
+1L/
+0a.
+1k8
+0`.
+0*-
+1C"
+0K"
+1W"
+0B"
+1L"
+1R"
+0X"
+0I"
+0z&
+0U"
+1#(
+1<-
+0(-
+15-
+0_.
+1`.
+1d.
+0P"
+1*-
+0C"
+1D"
+0R/
+1)0
+0S.
+0=/
+1b8
+1A/
+1</
+0+-
+0L"
+1X"
+0c.
+0d.
+1R.
+0J"
+0V"
+0)%
+0D$
+1e$
+02'
+0)-
+0e"
+1C-
+0D"
+1Y#
+0e$
+1`&
+1+-
+1F"
+1c.
+0O/
+1&0
+1(0
+1r0
+0l7
+1m7
+1r8
+1E/
+1;/
+0X1
+1l7
+0n7
+0`&
+0E$
+1f$
+0A#
+1C#
+0Y#
+0l"
+1H-
+1K-
+0F"
+1Z#
+0f$
+02/
+1E8
+1n7
+0D8
+1j2
+1X1
+0Z#
+#760000
+0!
+0o
+0-"
+#770000
+1!
+1o
+1-"
+1%.
+0O.
+1}'
+0t8
+1n8
+0,/
+1/"
+12"
+03"
+0Q"
+1@"
+0G"
+0M"
+0N"
+1O"
+1~'
+0&-
+1{'
+1+0
+0@/
+0D/
+1B/
+1C/
+1f8
+1a.
+1K/
+0L/
+0k8
+1K"
+0R"
+1z&
+0`.
+1P"
+0A/
+1L"
+0R.
+0C#
+1O$
+1E-
+0H-
+0K-
+1S-
+12/
+03/
+0<8
+1D8
+#780000
+0!
+0o
+0-"
+#790000
+1!
+1o
+1-"
+1$.
+0%.
+1P.
+0o8
+1,/
+0+/
+17"
+0K"
+1A"
+0/"
+10"
+1Q"
+0@"
+1G"
+1M"
+0O"
+1c"
+0!(
+13-
+1z'
+0{'
+0T/
+1?/
+0Q/
+1D/
+0C/
+0f8
+0a.
+0l8
+1k8
+1`.
+0h8
+1K"
+0A"
+0W"
+1B"
+0L"
+1R"
+1I"
+0z&
+1_.
+0`.
+0P"
+0*-
+1C"
+1W"
+0B"
+1A/
+0</
+1L"
+0X"
+0_.
+1d.
+1R.
+1J"
+1*-
+0C"
+1D"
+1C#
+0O$
+0E-
+1H-
+1K-
+0S-
+0+-
+1X"
+0c.
+0d.
+0;/
+0D"
+02/
+13/
+1<8
+0D8
+0C#
+1I#
+1`&
+0K-
+1[-
+1+-
+1F"
+1c.
+0X1
+0@8
+1D8
+0F"
+#800000
+0!
+0o
+0-"
+#810000
+1!
+1o
+1-"
+1%.
+1O.
+0P.
+1o8
+0n8
+0,/
+1/"
+00"
+02"
+13"
+0Q"
+1@"
+0M"
+1O"
+0c"
+1!(
+1--
+03-
+0z'
+0|'
+1T/
+0]8
+0?/
+1Q/
+0D/
+1C/
+1a.
+0K/
+1L/
+1l8
+0k8
+0K"
+1A"
+0R"
+1z&
+1`.
+1P"
+0W"
+1B"
+0A/
+0L"
+1_.
+0R.
+0*-
+1C"
+0I#
+1\$
+0`&
+1E-
+0H-
+0[-
+1c-
+0X"
+1d.
+1D"
+12/
+03/
+1X1
+088
+1@8
+0+-
+0c.
+1F"
+#820000
+0!
+0o
+0-"
+#830000
+1!
+1o
+1-"
+1!.
+0$.
+0%.
+0#.
+0O.
+0}'
+0".
+1)/
+1t8
+1n8
+1*/
+1,/
+1+/
+0(/
+0D"
+1"-
+1K"
+0A"
+0I"
+1Q"
+0@"
+1W"
+0B"
+1{'
+1*-
+0C"
+0O"
+1S"
+0~'
+0!(
+1'-
+0--
+1]8
+0*0
+1?/
+1@/
+0d8
+1D/
+0d.
+0_.
+0a.
+1</
+0`.
+1c.
+1D"
+0"-
+0*-
+0K"
+0W"
+1#-
+0F"
+1L"
+0J"
+1R"
+1X"
+1+-
+0z&
+1U"
+0^.
+1_.
+1`.
+1d.
+0c.
+0P"
+0#-
+0b8
+1A/
+1;/
+1F"
+0+-
+0L"
+0X"
+1$-
+1^.
+1R.
+1O$
+0\$
+1S-
+0c-
+1V"
+1)%
+1((
+1C#
+0O$
+0E-
+1H-
+1K-
+0S-
+0$-
+0#0
+0r8
+0E/
+188
+0<8
+02/
+13/
+1<8
+0D8
+0C#
+1F#
+0H-
+0K-
+1k-
+12/
+0$8
+1D8
+#840000
+0!
+0o
+0-"
+#850000
+1!
+1o
+1-"
+1%.
+1P.
+0o8
+0,/
+12"
+1<"
+0Q"
+1@"
+1M"
+1N"
+1O"
+1Z"
+1~'
+1<(
+13-
+1z'
+0{'
+0T/
+0W8
+0@/
+0`8
+0D/
+0B/
+0C/
+1a.
+0g8
+0L/
+1K"
+0R"
+1z&
+0`.
+1P"
+0A/
+1L"
+0R.
+0F#
+1U$
+0k-
+1s-
+0z7
+1$8
+#860000
+0!
+0o
+0-"
+#870000
+1!
+1o
+1-"
+1$.
+0%.
+1O.
+0P.
+1o8
+0n8
+1,/
+0+/
+07"
+0K"
+1A"
+1I"
+10"
+03"
+0<"
+1Q"
+0@"
+0O"
+0Z"
+1c"
+0~'
+0<(
+1%-
+1&-
+0'-
+1,-
+03-
+0z'
+1|'
+1T/
+0^8
+1*0
+0+0
+0,0
+1W8
+1@/
+0Q/
+1`8
+1D/
+0a.
+1g8
+1K/
+0l8
+0</
+1`.
+1h8
+1K"
+0A"
+1W"
+0L"
+1J"
+0((
+11"
+1k(
+1R"
+0z&
+1d"
+1(-
+1.-
+0_.
+0`.
+0P"
+0W"
+0\8
+0)0
+0P/
+1A/
+0}0
+0T.
+1#0
+0;/
+1L"
+1X"
+1_.
+1R.
+0s-
+0U$
+1|$
+1$(
+1)-
+1r*
+1/-
+0C-
+1f#
+0|$
+1`&
+0X"
+1O/
+0B2
+0q8
+0(0
+0H6
+0t7
+1z7
+0X1
+1t7
+0|7
+1A#
+0f#
+1s#
+1a&
+0f7
+1|7
+0j2
+0W1
+1B#
+0i2
+#880000
+0!
+0o
+0-"
+#890000
+1!
+1o
+1-"
+1%.
+0O.
+1}'
+0t8
+1n8
+0,/
+13"
+0Q"
+1@"
+1H"
+0M"
+1O"
+1T"
+1<(
+1'-
+1{'
+0*0
+0W8
+0c8
+0D/
+1C/
+0e8
+1a.
+0K/
+0K"
+1A"
+0R"
+1z&
+1`.
+1P"
+1W"
+0A/
+0L"
+0_.
+0R.
+0s#
+1!%
+0`&
+1%(
+1X"
+0G6
+1X1
+0u8
+1f7
+0a&
+1&(
+0F6
+1W1
+0'(
+1$0
+#900000
+0!
+0o
+0-"
+#910000
+1!
+1o
+1-"
+0$.
+0%.
+1#.
+1P.
+0o8
+0*/
+1,/
+1+/
+1K"
+0A"
+1Q"
+0@"
+0<(
+00"
+01"
+02"
+03"
+1<"
+0W"
+1B"
+0H"
+1M"
+0S"
+0T"
+1Z"
+0c"
+0"(
+1=(
+1?(
+0k(
+0%-
+0&-
+0,-
+1z'
+0{'
+1^8
+1+0
+1,0
+1}0
+0Z8
+0V8
+1>/
+1Q/
+0`8
+1c8
+1d8
+0C/
+1e8
+1_.
+0g8
+1K/
+1L/
+1T.
+1l8
+1W8
+0a.
+0`.
+1*-
+0K"
+1W"
+0B"
+1L"
+1R"
+0=(
+0B#
+1e$
+0!%
+0%(
+0X"
+0I"
+0U"
+0d"
+0#(
+0<-
+1D(
+0(-
+0.-
+0_.
+1`.
+0d.
+0*-
+1\8
+1)0
+0W/
+1S.
+1=/
+1P/
+1b8
+1</
+1G6
+1u8
+0l7
+1i2
+1V8
+1+-
+0L"
+1X"
+1d.
+0D(
+0&(
+0J"
+0V"
+0)%
+1D$
+0e$
+12'
+1V(
+1h(
+0$(
+0)-
+0r*
+0/-
+1C-
+0+-
+0O/
+1B2
+1q8
+1(0
+1H6
+08/
+0:/
+0r0
+1l7
+0m7
+1r8
+1E/
+1;/
+1F6
+1W/
+0V(
+0h(
+18'
+1N(
+0P(
+1Y(
+1b(
+0j(
+1m)
+0A#
+1x#
+0D$
+1E-
+03/
+1m7
+0=8
+1j2
+1Y.
+1[.
+0l0
+18/
+1:/
+0n)
+1p*
+0Z(
+1i(
+0N(
+1P(
+0Y(
+0b(
+1j(
+0m)
+1x'
+1Z.
+1X.
+0j(
+1m)
+0q*
+1t+
+0'0
+0Y.
+0[.
+1n)
+0p*
+1Z(
+0i(
+1W.
+1Y.
+0u+
+1w,
+0n)
+1p*
+0Z.
+0X.
+1j(
+0m)
+1q*
+0t+
+1X.
+1V.
+0q*
+1t+
+0x,
+0W.
+0Y.
+1u+
+0w,
+1n)
+0p*
+1U.
+1W.
+0u+
+1w,
+0X.
+0V.
+1q*
+0t+
+1x,
+1V.
+0x,
+0U.
+0W.
+1u+
+0w,
+1U.
+0V.
+1x,
+0U.
+#920000
+0!
+0o
+0-"
+#930000
+1!
+1o
+1-"
+1%.
+1O.
+0P.
+1o8
+0n8
+0,/
+12"
+13"
+04"
+0<"
+0Q"
+1@"
+1H"
+0M"
+0O"
+1T"
+0Z"
+1<(
+1>(
+0?(
+1%-
+1&-
+0'-
+04-
+0z'
+0|'
+1S/
+1*0
+0+0
+0,0
+1Z8
+0[8
+0W8
+1`8
+0c8
+1D/
+1C/
+0e8
+1a.
+1g8
+1M/
+0K/
+0L/
+1K"
+0R"
+1I"
+0z&
+1=(
+1@(
+1(-
+05-
+0`.
+05"
+0P"
+1R/
+0)0
+0Y8
+0V8
+1A/
+0</
+1L"
+1R.
+1Q.
+1J"
+1D(
+1E(
+1)-
+1e"
+0C-
+1]"
+0k"
+15(
+1j"
+0x#
+08'
+1D-
+0E-
+1H-
+1O/
+0&0
+0(0
+0V/
+0W/
+0;/
+02/
+13/
+1l0
+1=8
+0F8
+0w/
+1F/
+0z/
+1`&
+1V(
+1h(
+0j"
+1|"
+0x'
+1l"
+0D-
+0H-
+1^"
+0A(
+0l"
+1:(
+12/
+0E8
+1'0
+018
+1F8
+08/
+0:/
+0X1
+1E8
+1u/
+0y/
+1N(
+0P(
+1Y(
+1b(
+0j(
+1m)
+1}"
+04(
+08(
+1O(
+09(
+0N(
+1W(
+1P(
+0Y(
+1Q(
+0b(
+1e)
+1c(
+1j(
+0m)
+1J(
+0}"
+1Y.
+1[.
+0n)
+1p*
+0Z(
+1i(
+0Y.
+0[.
+1e.
+1n)
+0p*
+1f)
+1Z(
+0i(
+1X(
+0P(
+1Y(
+1Z.
+1X.
+0j(
+1m)
+0q*
+1t+
+1[.
+0Z.
+0X.
+0Z(
+1i(
+1j(
+0m)
+1q*
+0t+
+1W.
+1Y.
+0u+
+1w,
+0n)
+1p*
+0W.
+0Y.
+1Z.
+1u+
+0w,
+1n)
+0p*
+0j(
+1m)
+1X.
+1V.
+0q*
+1t+
+0x,
+1Y.
+0X.
+0V.
+0n)
+1p*
+1q*
+0t+
+1x,
+1U.
+1W.
+0u+
+1w,
+0U.
+0W.
+1X.
+1u+
+0w,
+0q*
+1t+
+1V.
+0x,
+1W.
+0V.
+0u+
+1w,
+1x,
+1U.
+0U.
+1V.
+0x,
+1U.
+#940000
+0!
+0o
+0-"
+#950000
+1!
+1o
+1-"
+1$.
+0%.
+0O.
+0}'
+1t8
+1n8
+1,/
+0+/
+0K"
+1A"
+02"
+03"
+1Q"
+0@"
+0G"
+0H"
+0N"
+1!(
+0<(
+0%-
+1{'
+1,0
+1W8
+0?/
+1B/
+1e8
+1f8
+0a.
+1K/
+1L/
+1`.
+1K"
+0A"
+0W"
+1B"
+0L"
+1R"
+0I"
+0=(
+0(-
+1_.
+0`.
+1*-
+1W"
+0B"
+1)0
+1V8
+1</
+1L"
+0X"
+0_.
+0d.
+0J"
+1N(
+0W(
+1P(
+0D(
+1b(
+0e)
+1j(
+0)-
+0*-
+1+-
+1X"
+1d.
+1(0
+0Y.
+1W/
+0[.
+1;/
+0f)
+0X(
+0`&
+0Q(
+1H(
+0J(
+0V(
+0h(
+1j"
+0|"
+0c(
+0+-
+118
+0F8
+18/
+1:/
+1X1
+0N(
+0P(
+0b(
+0j(
+1Y.
+1[.
+#960000
+0!
+0o
+0-"
+#970000
+1!
+1o
+1-"
+1%.
+1P.
+0o8
+0,/
+12"
+14"
+1;"
+0Q"
+1@"
+1H"
+1S"
+0T"
+1Z"
+1~'
+0!(
+1"(
+1<(
+0>(
+1,-
+14-
+1z'
+0{'
+0S/
+0^8
+1[8
+0W8
+0>/
+1?/
+0@/
+0`8
+1c8
+0d8
+0e8
+1a.
+0I/
+0M/
+0L/
+0K"
+1A"
+1>"
+0_"
+0R"
+1U"
+1#(
+1<-
+1=(
+0@(
+1.-
+15-
+1`.
+15"
+0W"
+1B"
+0R/
+0\8
+1Y8
+0V8
+0S.
+0=/
+0b8
+1j8
+0G/
+0L"
+1_.
+0Q.
+0]"
+0^"
+05(
+1A(
+1`"
+1V"
+1)%
+1i*
+1q*
+0t+
+0j"
+1C#
+02'
+1((
+1j*
+1D(
+0E(
+1r*
+1/-
+0e"
+1g"
+1*-
+0`"
+1a"
+15(
+0A(
+0X"
+0d.
+0*1
+1&0
+0B2
+0q8
+1V/
+0W/
+0#0
+1r0
+0D8
+1F8
+0W.
+0r8
+0E/
+01/
+0u/
+1w/
+1y/
+1z/
+1u+
+0w,
+1u/
+0w/
+0,1
+11/
+14(
+18(
+0O(
+19(
+0i*
+0q*
+1t+
+0:(
+0C#
+1F#
+0j*
+0H(
+1V(
+1h(
+1+-
+0V.
+1)(
+11(
+1:(
+1F(
+1x,
+08/
+0:/
+0$8
+1D8
+1W.
+0e.
+0u+
+1w,
+1P(
+0Y(
+0U.
+0|/
+0"0
+1N(
+0P(
+1Y(
+1b(
+1j(
+0[.
+1V.
+1*(
+12(
+1Z(
+0i(
+0x,
+0Y.
+1[.
+0Z(
+1i(
+1U.
+0Z.
+0{/
+0!0
+0j(
+1Z.
+0B-
+03(
+1j(
+1Y.
+0Y.
+1x/
+1V!
+04(
+08(
+1O(
+09(
+1U!
+1e.
+1"
+0V!
+1P(
+0[.
+0U!
+0"
+#980000
+0!
+0o
+0-"
+#990000
+1!
+1o
+1-"
+0$.
+0%.
+0#.
+1O.
+0P.
+0S(
+0e(
+1".
+0)/
+1x.
+1"/
+1o8
+0n8
+1*/
+1,/
+1+/
+1K"
+0A"
+1Q"
+0@"
+1W"
+0B"
+0Z"
+0=(
+0z'
+1|'
+0V(
+0h(
+13"
+04"
+16"
+17"
+0*-
+1C"
+0H"
+1N"
+0S"
+1["
+1!(
+0"(
+1;(
+0<(
+0&-
+0,-
+13-
+04-
+1S/
+0T/
+1^8
+1+0
+1W8
+0X8
+1>/
+0?/
+0_8
+1d8
+0B/
+1e8
+1d.
+0h8
+0i8
+1M/
+0K/
+18/
+1:/
+1V8
+1`8
+0_.
+0a.
+0`.
+0D"
+1"-
+1*-
+0C"
+0K"
+0W"
+1L"
+1R"
+1X"
+0["
+1B(
+0D(
+0N(
+0P(
+0b(
+0j(
+18"
+0+-
+0U"
+1\"
+0a"
+1b"
+0#(
+0<-
+1=(
+0.-
+05-
+1_.
+1`.
+0d.
+1c.
+05"
+1D"
+0"-
+1#-
+1R/
+1\8
+0V8
+1S.
+1=/
+0+1
+1,1
+0-1
+1b8
+0J/
+1Y.
+1[.
+1W/
+1_8
+0F"
+1+-
+0L"
+0X"
+0^.
+0c.
+1Q.
+0\"
+0F(
+19"
+1E"
+0b"
+0V"
+0)%
+05(
+1r"
+0F#
+12'
+0((
+02(
+0B(
+1D(
+0r*
+0/-
+1e"
+0g"
+0#-
+0E"
+1b"
+1{,
+1F"
+1$-
+1^.
+1*1
+0&0
+1B2
+1q8
+0W/
+1{/
+1#0
+0r0
+1$8
+0%8
+1w/
+1r8
+1E/
+1+1
+0.1
+1-1
+0+1
+1A(
+1j"
+0r"
+12(
+0:(
+13(
+1F(
+0)(
+01(
+0$-
+1f"
+16(
+1:(
+1|/
+1"0
+0x/
+0{/
+1%8
+0F8
+0u/
+zV!
+0v/
+0%0
+0F(
+03(
+14(
+18(
+0O(
+19(
+0*(
+02(
+zU!
+1*(
+12(
+09(
+1y,
+1{/
+1!0
+0e.
+1x/
+z"
+0V!
+1P(
+0Y(
+0s8
+0{/
+0!0
+04(
+08(
+1O(
+19(
+0y,
+1B-
+13(
+0[.
+0U!
+0B-
+03(
+1z,
+1Z(
+0i(
+0x/
+1s8
+1e.
+0"
+zV!
+1Q(
+0P(
+1Y(
+0Z.
+1x/
+0V!
+0z,
+14(
+18(
+0O(
+09(
+1j(
+0m)
+1[.
+zU!
+04(
+08(
+1O(
+1[(
+0Z(
+1i(
+0Y.
+0e.
+0U!
+z"
+1V!
+0Q(
+1n)
+0p*
+1P(
+0Y(
+1Z.
+1e.
+0"
+0V!
+19(
+1c(
+0j(
+1m)
+0P(
+1Y(
+0[.
+0X.
+1U!
+09(
+0[(
+1y,
+1Z(
+0i(
+1q*
+0t+
+1[.
+1Y.
+0U!
+1"
+1g)
+1Q(
+0y,
+0Z(
+1i(
+0n)
+1p*
+0W.
+0Z.
+0s8
+0"
+0c(
+0Q(
+1y,
+1u+
+0w,
+1j(
+0m)
+1X.
+1Z.
+1s8
+1[(
+0y,
+1j*
+0q*
+1t+
+0j(
+1m)
+0Y.
+0V.
+0s8
+0[(
+1y,
+0g)
+1n)
+0p*
+1x,
+1Y.
+1W.
+1s8
+1n+
+1c(
+0n)
+1p*
+0u+
+1w,
+0U.
+0X.
+0s8
+0j*
+0c(
+1q*
+0t+
+1V.
+1X.
+1g)
+1q,
+1},
+0x,
+0q*
+1t+
+0W.
+0g)
+0n+
+1u+
+0w,
+1W.
+1U.
+1j*
+0u+
+1w,
+0V.
+0q,
+0},
+0j*
+1z,
+1x,
+1V.
+1n+
+0z,
+0x,
+0U.
+0n+
+1z,
+1U.
+1q,
+0z,
+1},
+0q,
+1z,
+0},
+#1000000
