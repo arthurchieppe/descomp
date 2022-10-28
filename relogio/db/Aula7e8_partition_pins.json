@@ -220,15 +220,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "FPGA_RESET_N",
+					"strict" : false
+				},
+				{
 					"name" : "KEY[2]",
 					"strict" : false
 				},
 				{
 					"name" : "KEY[3]",
-					"strict" : false
-				},
-				{
-					"name" : "FPGA_RESET_N",
 					"strict" : false
 				},
 				{
