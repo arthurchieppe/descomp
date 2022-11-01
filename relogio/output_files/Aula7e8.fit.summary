@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Oct 27 19:35:58 2022
+Fitter Status : Successful - Tue Nov 01 15:14:46 2022
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Aula7e8
 Top-level Entity Name : relogio
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 420 / 18,480 ( 2 % )
-Total registers : 644
+Logic utilization (in ALMs) : 443 / 18,480 ( 2 % )
+Total registers : 675
 Total pins : 68 / 224 ( 30 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )

@@ -211,10 +211,10 @@ interfaceBaseTempo1Seg : entity work.divisorGenerico_e_Interface generic map (di
               port map (clk => CLK,
               habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(5) and saida_decoder_blocos(5),
               limpaLeitura => hab_wr and saida_decoder_blocos(7) and saida_decoder_enderecos(2),
-              leituraUmSegundo => Data_IN
+              leituraUmSegundo => Data_IN 	
 				  );
 
-interfaceBaseTempoAcel : entity work.divisorGenerico_e_Interface generic map (divisorTopLevel => 12500000, larguraDados => larguraDados)
+interfaceBaseTempoAcel : entity work.divisorGenerico_e_Interface generic map (divisorTopLevel => 6250000, larguraDados => larguraDados)
               port map (clk => CLK,
               habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(6) and saida_decoder_blocos(5),
               limpaLeitura => hab_wr and saida_decoder_blocos(7) and saida_decoder_enderecos(1),

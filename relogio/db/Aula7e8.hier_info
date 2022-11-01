@@ -2008,7 +2008,6 @@ clk => contador[19].CLK
 clk => contador[20].CLK
 clk => contador[21].CLK
 clk => contador[22].CLK
-clk => contador[23].CLK
 saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
 
 
