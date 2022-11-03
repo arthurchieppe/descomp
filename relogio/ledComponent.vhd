@@ -22,19 +22,28 @@ architecture arch_name of ledComponent is
 	signal saida_led9: std_logic;
 	signal saida_led8: std_logic;
 	signal saida_led0to7: std_logic_vector(larguraDados - 1 downto 0);
+
+	signal hab9 : std_logic;
+	signal hab8 : std_logic;
+	signal hab0to7 : std_logic;
+
 begin
 
+hab9    <= (habilita_led and wr and dec_bloco and dec_ende(2));
+hab8    <= (habilita_led and wr and dec_bloco and dec_ende(1));
+hab0to7 <= (habilita_led and wr and dec_bloco and dec_ende(0));
+
 LED9: entity work.flipFlopGenerico
-   	  port map (CLK => CLK, DIN => Data_OUT(0), ENABLE => (habilita_led and wr and dec_bloco and dec_ende(2)),  RST => '0', DOUT => saida_led9);
+   	  port map (CLK => CLK, DIN => Data_OUT(0), ENABLE => hab9,  RST => '0', DOUT => saida_led9);
 
 LED8: entity work.flipFlopGenerico
-   	  port map (CLK => CLK, DIN => Data_OUT(0), ENABLE => (habilita_led and wr and dec_bloco and dec_ende(1)),  RST => '0', DOUT => saida_led8);
+   	  port map (CLK => CLK, DIN => Data_OUT(0), ENABLE => hab8,  RST => '0', DOUT => saida_led8);
 
 LED0to7: entity work.registradorGenerico generic map (larguraDados => larguraDados)
-   	  port map (CLK => CLK, DIN => Data_OUT, ENABLE => (habilita_led and wr and dec_bloco and dec_ende(0)),  RST => '0', DOUT => saida_led0to7);
-		  
-saida_led(9) <= saida_led9;
-saida_led(8) <= saida_led8;
+   	  port map (CLK => CLK, DIN => Data_OUT, ENABLE => hab0to7,  RST => '0', DOUT => saida_led0to7);
+
+saida_led(9)          <= saida_led9;
+saida_led(8)          <= saida_led8;
 saida_led(7 downto 0) <= saida_led0to7;
 
 end architecture;
