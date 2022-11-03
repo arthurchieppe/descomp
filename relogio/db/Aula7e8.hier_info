@@ -10,6 +10,7 @@ CLOCK_50 => hexcomponent:comp_HEX4.CLK
 CLOCK_50 => hexcomponent:comp_HEX5.CLK
 CLOCK_50 => logicakeys:logicaKeys.CLK
 CLOCK_50 => divisorgenerico_e_interface:interfaceBaseTempo1Seg.clk
+CLOCK_50 => divisorgenerico_e_interface:interfaceBaseTempoAcel.clk
 KEY[0] => logicakeys:logicaKeys.key0
 KEY[1] => logicakeys:logicaKeys.key1
 KEY[2] => logicakeys:logicaKeys.key2
@@ -1604,15 +1605,43 @@ saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|buffer_3_state_1portas:switch8
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|buffer_3_state_1portas:switch9
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|logicaKeys:logicaKeys
@@ -1628,21 +1657,32 @@ hab_rd => comb.IN0
 hab_rd => comb.IN0
 hab_rd => comb.IN0
 hab_rd => comb.IN0
-hab_rst511 => keydebounce:KEY_0.clear_read
-hab_rst511 => keydebounce:KEY_1.clear_read
+hab_wr => comb.IN0
+hab_wr => comb.IN0
 decoder_enderecos[0] => comb.IN1
 decoder_enderecos[1] => comb.IN1
 decoder_enderecos[2] => comb.IN1
 decoder_enderecos[3] => comb.IN1
 decoder_enderecos[4] => comb.IN1
+decoder_enderecos[5] => ~NO_FANOUT~
+decoder_enderecos[6] => comb.IN1
+decoder_enderecos[7] => comb.IN1
 decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
 decoder_bloco => comb.IN1
-key2Out <= buffer_3_state_1portas:KEY_2.saida
-key3Out <= buffer_3_state_1portas:KEY_3.saida
-keyFPGAResetOut <= buffer_3_state_1portas:FPGARESET.saida
+decoder_bloco_reset => comb.IN1
+decoder_bloco_reset => comb.IN1
+address[0] => ~NO_FANOUT~
+address[1] => ~NO_FANOUT~
+address[2] => ~NO_FANOUT~
+address[3] => ~NO_FANOUT~
+address[4] => ~NO_FANOUT~
+address[5] => ~NO_FANOUT~
+address[6] => ~NO_FANOUT~
+address[7] => ~NO_FANOUT~
+address[8] => ~NO_FANOUT~
 key0Out[0] <= keydebounce:KEY_0.key_out[0]
 key0Out[1] <= keydebounce:KEY_0.key_out[1]
 key0Out[2] <= keydebounce:KEY_0.key_out[2]
@@ -1659,6 +1699,30 @@ key1Out[4] <= keydebounce:KEY_1.key_out[4]
 key1Out[5] <= keydebounce:KEY_1.key_out[5]
 key1Out[6] <= keydebounce:KEY_1.key_out[6]
 key1Out[7] <= keydebounce:KEY_1.key_out[7]
+key2Out[0] <= buffer_3_state_1portas:KEY_2.saida[0]
+key2Out[1] <= buffer_3_state_1portas:KEY_2.saida[1]
+key2Out[2] <= buffer_3_state_1portas:KEY_2.saida[2]
+key2Out[3] <= buffer_3_state_1portas:KEY_2.saida[3]
+key2Out[4] <= buffer_3_state_1portas:KEY_2.saida[4]
+key2Out[5] <= buffer_3_state_1portas:KEY_2.saida[5]
+key2Out[6] <= buffer_3_state_1portas:KEY_2.saida[6]
+key2Out[7] <= buffer_3_state_1portas:KEY_2.saida[7]
+key3Out[0] <= buffer_3_state_1portas:KEY_3.saida[0]
+key3Out[1] <= buffer_3_state_1portas:KEY_3.saida[1]
+key3Out[2] <= buffer_3_state_1portas:KEY_3.saida[2]
+key3Out[3] <= buffer_3_state_1portas:KEY_3.saida[3]
+key3Out[4] <= buffer_3_state_1portas:KEY_3.saida[4]
+key3Out[5] <= buffer_3_state_1portas:KEY_3.saida[5]
+key3Out[6] <= buffer_3_state_1portas:KEY_3.saida[6]
+key3Out[7] <= buffer_3_state_1portas:KEY_3.saida[7]
+keyFPGAResetOut[0] <= buffer_3_state_1portas:FPGARESET.saida[0]
+keyFPGAResetOut[1] <= buffer_3_state_1portas:FPGARESET.saida[1]
+keyFPGAResetOut[2] <= buffer_3_state_1portas:FPGARESET.saida[2]
+keyFPGAResetOut[3] <= buffer_3_state_1portas:FPGARESET.saida[3]
+keyFPGAResetOut[4] <= buffer_3_state_1portas:FPGARESET.saida[4]
+keyFPGAResetOut[5] <= buffer_3_state_1portas:FPGARESET.saida[5]
+keyFPGAResetOut[6] <= buffer_3_state_1portas:FPGARESET.saida[6]
+keyFPGAResetOut[7] <= buffer_3_state_1portas:FPGARESET.saida[7]
 data_add_out5 => comb.IN1
 data_add_out5 => comb.IN1
 data_add_out5 => comb.IN1
@@ -1781,28 +1845,84 @@ saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|logicaKeys:logicaKeys|buffer_3_state_1portas:KEY_2
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|logicaKeys:logicaKeys|buffer_3_state_1portas:KEY_3
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|logicaKeys:logicaKeys|buffer_3_state_1portas:FPGARESET
-entrada => saida.DATAIN
-habilita => saida.OE
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada => saida[0].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|divisorGenerico_e_Interface:interfaceBaseTempo1Seg
 clk => divisorgenerico:baseTempo.clk
-habilitaLeitura => leituraUmSegundo.OE
+habilitaLeitura => leituraUmSegundo[0].OE
+habilitaLeitura => leituraUmSegundo[1].OE
+habilitaLeitura => leituraUmSegundo[2].OE
+habilitaLeitura => leituraUmSegundo[3].OE
+habilitaLeitura => leituraUmSegundo[4].OE
+habilitaLeitura => leituraUmSegundo[5].OE
+habilitaLeitura => leituraUmSegundo[6].OE
+habilitaLeitura => leituraUmSegundo[7].OE
 limpaLeitura => flipflopgenerico:registraUmSegundo.RST
-leituraUmSegundo <= leituraUmSegundo.DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[0] <= leituraUmSegundo[0].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[1] <= leituraUmSegundo[1].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[2] <= leituraUmSegundo[2].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[3] <= leituraUmSegundo[3].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[4] <= leituraUmSegundo[4].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[5] <= leituraUmSegundo[5].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[6] <= leituraUmSegundo[6].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[7] <= leituraUmSegundo[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo
@@ -1835,6 +1955,63 @@ saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio|divisorGenerico_e_Interface:interfaceBaseTempo1Seg|flipFlopGenerico:registraUmSegundo
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
+
+
+|relogio|divisorGenerico_e_Interface:interfaceBaseTempoAcel
+clk => divisorgenerico:baseTempo.clk
+habilitaLeitura => leituraUmSegundo[0].OE
+habilitaLeitura => leituraUmSegundo[1].OE
+habilitaLeitura => leituraUmSegundo[2].OE
+habilitaLeitura => leituraUmSegundo[3].OE
+habilitaLeitura => leituraUmSegundo[4].OE
+habilitaLeitura => leituraUmSegundo[5].OE
+habilitaLeitura => leituraUmSegundo[6].OE
+habilitaLeitura => leituraUmSegundo[7].OE
+limpaLeitura => flipflopgenerico:registraUmSegundo.RST
+leituraUmSegundo[0] <= leituraUmSegundo[0].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[1] <= leituraUmSegundo[1].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[2] <= leituraUmSegundo[2].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[3] <= leituraUmSegundo[3].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[4] <= leituraUmSegundo[4].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[5] <= leituraUmSegundo[5].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[6] <= leituraUmSegundo[6].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[7] <= leituraUmSegundo[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio|divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo
+clk => tick.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => contador[19].CLK
+clk => contador[20].CLK
+clk => contador[21].CLK
+clk => contador[22].CLK
+saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio|divisorGenerico_e_Interface:interfaceBaseTempoAcel|flipFlopGenerico:registraUmSegundo
 DIN => DOUT~reg0.DATAIN
 DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ENABLE => DOUT~reg0.ENA

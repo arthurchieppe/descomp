@@ -3,12 +3,12 @@ USE ieee.std_logic_1164.ALL;
 use ieee.numeric_std.all;
 
 entity divisorGenerico_e_Interface is
-generic (divisorTopLevel : natural := 12500000);
+generic (divisorTopLevel : natural := 12500000; larguraDados : natural := 8);
 
    port(clk      :   in std_logic;
       habilitaLeitura : in std_logic;
       limpaLeitura : in std_logic;
-      leituraUmSegundo :   out std_logic
+      leituraUmSegundo : out std_logic_vector(larguraDados-1 downto 0)
    );
 end entity;
 
@@ -27,6 +27,6 @@ registraUmSegundo: entity work.flipFlopGenerico
          RST => limpaLeitura);
 
 -- Faz o tristate de saida:
-leituraUmSegundo <= sinalUmSegundo when habilitaLeitura = '1' else 'Z';
+leituraUmSegundo <= ("0000000" & sinalUmSegundo) when habilitaLeitura = '1' else "ZZZZZZZZ";
 
 end architecture interface;

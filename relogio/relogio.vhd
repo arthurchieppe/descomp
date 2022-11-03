@@ -168,20 +168,23 @@ switch8entradas: entity work.buffer_3_state_8portas
 			);
 			
 switch8: entity work.buffer_3_state_1portas
+			generic map (larguraDados => larguraDados)
 			port map (
 			entrada => SW(8),
-			saida => Data_IN(0),
+			saida => Data_IN,
 			habilita => (not data_add_out(5)) and hab_rd and saida_decoder_enderecos(1) and saida_decoder_blocos(5)
 			);
 			
 switch9: entity work.buffer_3_state_1portas
+			generic map (larguraDados => larguraDados)
 			port map (
 			entrada => SW(9),
-			saida => Data_IN(0),
+			saida => Data_IN,
 			habilita => (not data_add_out(5)) and hab_rd and saida_decoder_enderecos(2) and saida_decoder_blocos(5)
 			);
 			
-logicaKeys: entity work.logicaKeys 
+logicaKeys: entity work.logicaKeys
+			generic map (larguraDados => larguraDados)
 			port map(
 			CLK => CLK, 
 			key0 => KEY(0),
@@ -190,31 +193,33 @@ logicaKeys: entity work.logicaKeys
 			key3 => KEY(3),
 			FPGA_reset => FPGA_RESET_N,
 			hab_rd => hab_rd,
-			hab_rst511 => data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and data_add_out(8) and hab_wr,  
-			decoder_enderecos => saida_decoder_enderecos(4 downto 0),
+			hab_wr =>hab_wr,
+			address => data_add_out,  
+			decoder_enderecos => saida_decoder_enderecos(larguraDados-1 downto 0),
 			decoder_bloco => saida_decoder_blocos(5),
-			key2Out => Data_IN(0),
-			key3Out => Data_IN(0),
-			keyFPGAResetOut => Data_IN(0),
+			decoder_bloco_reset => saida_decoder_blocos(7),
+			key2Out => Data_IN,
+			key3Out => Data_IN,
+			keyFPGAResetOut => Data_IN,
 			key0Out => Data_IN,
 			key1Out => Data_IN,
 
 			data_add_out5 => data_add_out(5)
 			);
 
-interfaceBaseTempo1Seg : entity work.divisorGenerico_e_Interface generic map (divisorTopLevel => 12500000)
+interfaceBaseTempo1Seg : entity work.divisorGenerico_e_Interface generic map (divisorTopLevel => 12500000, larguraDados => larguraDados)
               port map (clk => CLK,
               habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(5) and saida_decoder_blocos(5),
-              limpaLeitura => data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and data_add_out(8) and hab_wr,
-              leituraUmSegundo => Data_IN(0)
+              limpaLeitura => hab_wr and saida_decoder_blocos(7) and saida_decoder_enderecos(2),
+              leituraUmSegundo => Data_IN 	
 				  );
 
---interfaceBaseTempoAcel : entity work.divisorGenerico_e_Interface generic map (divisorTopLevel => 12500000)
---              port map (clk => CLK,
---              habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(6) and saida_decoder_blocos(5),
---              limpaLeitura => data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and data_add_out(8) and hab_wr,
---              leituraUmSegundo => Data_IN(0)
---				  );
+interfaceBaseTempoAcel : entity work.divisorGenerico_e_Interface generic map (divisorTopLevel => 6250000, larguraDados => larguraDados)
+              port map (clk => CLK,
+              habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(6) and saida_decoder_blocos(5),
+              limpaLeitura => hab_wr and saida_decoder_blocos(7) and saida_decoder_enderecos(1),
+              leituraUmSegundo => Data_IN
+				  );
 			
 
 LEDR <= saida_led;

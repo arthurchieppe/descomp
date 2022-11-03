@@ -1,0 +1,119 @@
+LDI %R1 $1         	#Setup 
+STA %R1 @1          #Posicao fixa de memoria fixa = 30
+LDI %R1 $10     
+STA %R1 @30         #Posicao de memória fixa = 10
+LDI %R0 $0       
+STA %R0 @0
+STA %R0 @10
+STA %R0 @11
+STA %R0 @12
+STA %R0 @13
+STA %R0 @14
+STA %R0 @15
+STA %R0 @288
+STA %R0 @289
+STA %R0 @290
+STA %R0 @291
+STA %R0 @292
+STA %R0 @293
+STA %R0 @510
+STA %R0 @511
+STA %R0 @257
+LDI %R3 $10        	#Registrador fixo de 10 no setup
+LDI %R2 $0        	#Registrador das unidades
+
+
+LOOP:
+LDA %R1 @356        #Checa botao de reset
+CEQ %R1 @0
+JEQ @0              #Se botao for pressionado vai para o inicio do programa
+LDA %R1 @352    	#Checa pro botao de incremento
+CEQ %R1 @0
+JEQ @CONTINUA       #Se nao foi apertado vai para continua
+LDI %R0 $0          #Se foi apertado, incrementa
+STA %R0 @511
+ADDI %R2 $1
+STA %R2 @10
+CONTINUA:
+CLT %R2 @30
+JLT @SALVA_HEX  	#Se for menor que 10 salva no hex, caso contrario chama subrotina de overflow
+JSR @OVERFLOW
+SALVA_HEX:
+STA %R2 @288
+JMP @LOOP
+
+
+OVERFLOW:       #Subrotina de overflow
+LDI %R2 $0
+STA %R2 @10
+STA %R2 @288
+LDA %R0 @11 	#Incrementa HEX1 e checa se é menor que 10, se for menor sai da subrotina
+ADDI %R0 $1
+STA %R0 @11
+CEQ %R3 @11
+JEQ @HEX2
+STA %R0 @289
+JMP @RETURN
+
+HEX2:       #Incrementa HEX2 e checa se é menor que 10, se for menor sai da subrotina
+LDI %R0 $0
+STA %R0 @289
+STA %R0 @11
+LDA %R0 @12
+ADDI %R0 $1
+STA %R0 @12
+CEQ %R3 @12
+JEQ @HEX3
+STA %R0 @290
+JMP @RETURN
+
+HEX3:           #Incrementa HEX3 e checa se é menor que 10, se for menor sai da subrotina
+LDI %R0 $0
+STA %R0 @290
+STA %R0 @12
+LDA %R0 @13
+ADDI %R0 $1
+STA %R0 @13
+CEQ %R3 @13
+JEQ @HEX4
+STA %R0 @291
+JMP @RETURN
+
+HEX4:       #Incrementa HEX4 e checa se é menor que 10, se for menor sai da subrotina
+LDI %R0 $0
+STA %R0 @291
+STA %R0 @13
+LDA %R0 @14
+ADDI %R0 $1
+STA %R0 @14
+CEQ %R3 @14
+JEQ @HEX5
+STA %R0 @295
+JMP @RETURN
+
+HEX5:       #Incrementa HEX5 e checa se é menor que 10, se for menor sai da subrotina
+LDI %R0 $0
+STA %R0 @292
+STA %R0 @14
+LDA %R0 @15
+ADDI %R0 $1
+STA %R0 @15
+CEQ %R3 @15 	# Adicionar JEQ para overflow de 999999
+JEQ @ATINGIU_LIMITE   #Se ao incrementar HEX5 == 10, vai para LABEL de overflow geral
+JMP @RETURN
+
+ATINGIU_LIMITE:
+LDI %R0 $0
+STA %R0 @293
+STA %R0 @15
+LDI %R0 $1
+STA %R0 @257
+
+ESPERA_RESET:       #Após overflow geral, espera aperto do botao de reset e impede incremento
+LDA %R1 @356    
+CEQ %R1 @0
+JEQ @0
+JMP @ESPERA_RESET
+
+RETURN:            #Sai da subrotina de overflow
+RET 
