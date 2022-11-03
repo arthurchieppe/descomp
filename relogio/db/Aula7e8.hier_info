@@ -1999,13 +1999,6 @@ clk => contador[9].CLK
 clk => contador[10].CLK
 clk => contador[11].CLK
 clk => contador[12].CLK
-clk => contador[13].CLK
-clk => contador[14].CLK
-clk => contador[15].CLK
-clk => contador[16].CLK
-clk => contador[17].CLK
-clk => contador[18].CLK
-clk => contador[19].CLK
 saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
 
 
