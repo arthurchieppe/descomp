@@ -3,243 +3,243 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -10.118
-TNS   : -4286.147
+Slack : -9.944
+TNS   : -4137.655
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.450
+Slack : 0.440
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : -6.572
-TNS   : -6.572
+Slack : -6.890
+TNS   : -6.890
 
 Type  : Slow 1100mV 85C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : -6.234
-TNS   : -6.234
+Slack : -6.808
+TNS   : -6.808
 
 Type  : Slow 1100mV 85C Model Recovery 'KEY[0]'
-Slack : -3.600
-TNS   : -3.600
+Slack : -3.823
+TNS   : -3.823
 
 Type  : Slow 1100mV 85C Model Recovery 'KEY[1]'
-Slack : -3.416
-TNS   : -3.416
-
-Type  : Slow 1100mV 85C Model Removal 'KEY[1]'
-Slack : 0.514
-TNS   : 0.000
+Slack : -3.771
+TNS   : -3.771
 
 Type  : Slow 1100mV 85C Model Removal 'KEY[0]'
-Slack : 0.834
+Slack : 0.746
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'KEY[1]'
+Slack : 0.776
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : 3.191
+Slack : 3.881
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : 3.572
+Slack : 3.981
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[1]'
-Slack : -0.773
-TNS   : -1.339
+Slack : -0.850
+TNS   : -1.480
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.583
-TNS   : -1.121
+Slack : -0.734
+TNS   : -1.272
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.538
-TNS   : -591.138
+Slack : -0.619
+TNS   : -595.058
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
 Slack : -0.538
-TNS   : -0.834
+TNS   : -0.802
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
 Slack : -0.538
-TNS   : -0.823
+TNS   : -0.789
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -10.008
-TNS   : -4172.810
+Slack : -9.890
+TNS   : -4062.569
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.427
+Slack : 0.446
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : -6.727
-TNS   : -6.727
+Slack : -7.002
+TNS   : -7.002
 
 Type  : Slow 1100mV 0C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : -6.392
-TNS   : -6.392
+Slack : -6.921
+TNS   : -6.921
 
 Type  : Slow 1100mV 0C Model Recovery 'KEY[0]'
-Slack : -3.896
-TNS   : -3.896
+Slack : -4.042
+TNS   : -4.042
 
 Type  : Slow 1100mV 0C Model Recovery 'KEY[1]'
-Slack : -3.752
-TNS   : -3.752
-
-Type  : Slow 1100mV 0C Model Removal 'KEY[1]'
-Slack : 0.693
-TNS   : 0.000
+Slack : -3.978
+TNS   : -3.978
 
 Type  : Slow 1100mV 0C Model Removal 'KEY[0]'
-Slack : 1.067
+Slack : 0.860
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'KEY[1]'
+Slack : 0.877
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : 3.296
+Slack : 3.977
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : 3.673
+Slack : 4.086
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[1]'
-Slack : -0.853
-TNS   : -1.550
+Slack : -0.892
+TNS   : -1.624
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.623
-TNS   : -1.161
+Slack : -0.809
+TNS   : -1.461
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.555
-TNS   : -523.673
+Slack : -0.626
+TNS   : -527.340
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
 Slack : -0.538
-TNS   : -0.826
+TNS   : -0.796
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
 Slack : -0.538
-TNS   : -0.816
+TNS   : -0.780
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -4.954
-TNS   : -2029.518
+Slack : -4.786
+TNS   : -1916.508
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.093
+Slack : 0.188
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : -2.991
-TNS   : -2.991
+Slack : -3.128
+TNS   : -3.128
 
 Type  : Fast 1100mV 85C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : -2.806
-TNS   : -2.806
+Slack : -3.084
+TNS   : -3.084
 
 Type  : Fast 1100mV 85C Model Recovery 'KEY[0]'
-Slack : -1.648
-TNS   : -1.648
+Slack : -1.738
+TNS   : -1.738
 
 Type  : Fast 1100mV 85C Model Recovery 'KEY[1]'
-Slack : -1.584
-TNS   : -1.584
+Slack : -1.649
+TNS   : -1.649
 
 Type  : Fast 1100mV 85C Model Removal 'KEY[1]'
-Slack : 0.278
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'KEY[0]'
-Slack : 0.375
+Slack : 0.474
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : 1.356
+Slack : 1.757
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : 1.564
+Slack : 1.814
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[1]'
-Slack : -0.850
-TNS   : -2.124
+Slack : -0.881
+TNS   : -2.178
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.719
-TNS   : -1.718
+Slack : -0.804
+TNS   : -1.956
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.640
-TNS   : -304.698
+Slack : -0.680
+TNS   : -306.994
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : 0.028
+Slack : 0.109
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : 0.056
+Slack : 0.124
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -4.368
-TNS   : -1772.427
+Slack : -4.266
+TNS   : -1665.471
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -0.053
-TNS   : -0.319
+Slack : 0.033
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : -2.798
-TNS   : -2.798
+Slack : -2.922
+TNS   : -2.922
 
 Type  : Fast 1100mV 0C Model Recovery 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : -2.633
-TNS   : -2.633
+Slack : -2.885
+TNS   : -2.885
 
 Type  : Fast 1100mV 0C Model Recovery 'KEY[0]'
-Slack : -1.506
-TNS   : -1.506
+Slack : -1.613
+TNS   : -1.613
 
 Type  : Fast 1100mV 0C Model Recovery 'KEY[1]'
-Slack : -1.444
-TNS   : -1.444
+Slack : -1.518
+TNS   : -1.518
 
 Type  : Fast 1100mV 0C Model Removal 'KEY[1]'
-Slack : 0.292
+Slack : 0.347
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'KEY[0]'
-Slack : 0.401
+Slack : 0.445
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : 1.318
+Slack : 1.669
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : 1.503
+Slack : 1.716
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[1]'
-Slack : -0.862
-TNS   : -2.279
+Slack : -0.861
+TNS   : -2.273
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.743
-TNS   : -1.917
+Slack : -0.821
+TNS   : -2.136
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.682
-TNS   : -362.577
+Slack : -0.696
+TNS   : -365.494
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempoAcel|divisorGenerico:baseTempo|tick'
-Slack : 0.045
+Slack : 0.125
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divisorGenerico_e_Interface:interfaceBaseTempo1Seg|divisorGenerico:baseTempo|tick'
-Slack : 0.076
+Slack : 0.133
 TNS   : 0.000
 
 ------------------------------------------------------------

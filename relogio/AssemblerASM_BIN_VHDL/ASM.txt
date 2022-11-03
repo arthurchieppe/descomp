@@ -29,7 +29,6 @@ LDA %R1 @356        #Checa botao de reset
 CEQ %R1 @0
 JEQ @0              #Se botao for pressionado vai para o inicio do programa
 
-BASE_NORMAL:
 LDA %R1 @357    	#Checa pro botao de incremento
 CEQ %R1 @0
 JEQ @CONTINUA         #Se nao foi apertado vai para continua
@@ -37,8 +36,7 @@ JMP @INCREMENTA
 
 INCREMENTA:
 LDI %R0 $1          #Se foi apertado, incrementa
-STA %R0 @506        
-STA %R0 @505
+STA %R0 @511        
 ADDI %R2 $1
 STA %R2 @10
 
