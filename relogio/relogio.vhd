@@ -32,7 +32,7 @@ architecture arquitetura of relogio is
 	signal saida_decoder_blocos: std_logic_vector (larguraDados-1 downto 0);
 	signal saida_decoder_enderecos: std_logic_vector (larguraDados-1 downto 0);
 	signal saida_led: std_logic_vector (9 downto 0);
-
+	signal saidaSW8: std_logic_vector (larguraDados-1 downto 0);
 begin
 
 gravar:  if simulacao generate
@@ -171,7 +171,7 @@ switch8: entity work.buffer_3_state_1portas
 			generic map (larguraDados => larguraDados)
 			port map (
 			entrada => SW(8),
-			saida => Data_IN,
+			saida => saidaSW8,
 			habilita => (not data_add_out(5)) and hab_rd and saida_decoder_enderecos(1) and saida_decoder_blocos(5)
 			);
 			
@@ -207,17 +207,18 @@ logicaKeys: entity work.logicaKeys
 			data_add_out5 => data_add_out(5)
 			);
 
+
 interfaceBaseTempo1Seg : entity work.divisorGenerico_e_Interface generic map (divisorTopLevel => 12500000, larguraDados => larguraDados)
               port map (clk => CLK,
-              habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(5) and saida_decoder_blocos(5),
-              limpaLeitura => hab_wr and saida_decoder_blocos(7) and saida_decoder_enderecos(2),
-              leituraUmSegundo => Data_IN 	
+              habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(5) and saida_decoder_blocos(5) and (not saidaSW8(0)),
+              limpaLeitura => hab_wr and data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and data_add_out(8), 
+              leituraUmSegundo => Data_IN
 				  );
 
 interfaceBaseTempoAcel : entity work.divisorGenerico_e_Interface generic map (divisorTopLevel => 6250000, larguraDados => larguraDados)
               port map (clk => CLK,
-              habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(6) and saida_decoder_blocos(5),
-              limpaLeitura => hab_wr and saida_decoder_blocos(7) and saida_decoder_enderecos(1),
+              habilitaLeitura => data_add_out(5) and hab_rd and saida_decoder_enderecos(5) and saida_decoder_blocos(5) and saidaSW8(0),
+              limpaLeitura => hab_wr and data_add_out(0) and data_add_out(1) and data_add_out(2) and data_add_out(3) and data_add_out(4) and data_add_out(5) and data_add_out(6) and data_add_out(7) and data_add_out(8),
               leituraUmSegundo => Data_IN
 				  );
 			
