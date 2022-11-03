@@ -1,7 +1,13 @@
 LDI %R1 $1         	#Setup 
-STA %R1 @1          #Posicao fixa de memoria fixa = 30
+STA %R1 @1          
 LDI %R1 $10     
 STA %R1 @30         #Posicao de memória fixa = 10
+LDI %R1 $2         #Posicao de memoria fixa = 2
+STA %R1 @2  
+LDI %R1 $4         #Posicao de memoria fixa = 4
+STA %R1 @4
+LDI %R1 $6         #Posicao de memoria fixa = 6
+STA %R1 @6  
 LDI %R0 $0       
 STA %R0 @0
 STA %R0 @10
@@ -21,7 +27,6 @@ STA %R0 @511
 STA %R0 @257
 STA %R0 @506        #Se foi apertado, incrementa
 STA %R0 @505
-LDI %R3 $10        	#Registrador fixo de 10 no setup
 LDI %R2 $0        	#Registrador das unidades
 
 LOOP:
@@ -55,10 +60,10 @@ STA %R2 @10
 STA %R2 @288
 LDA %R0 @11 	#Incrementa HEX1 e checa se é menor que 10, se for menor sai da subrotina
 ADDI %R0 $1
-STA %R0 @11
-CEQ %R3 @11
+CEQ %R0 @6
 JEQ @HEX2
 STA %R0 @289
+STA %R0 @11
 JMP @RETURN
 
 HEX2:       #Incrementa HEX2 e checa se é menor que 10, se for menor sai da subrotina
@@ -67,9 +72,9 @@ STA %R0 @289
 STA %R0 @11
 LDA %R0 @12
 ADDI %R0 $1
-STA %R0 @12
-CEQ %R3 @12
+CEQ %R0 @30
 JEQ @HEX3
+STA %R0 @12
 STA %R0 @290
 JMP @RETURN
 
@@ -79,9 +84,9 @@ STA %R0 @290
 STA %R0 @12
 LDA %R0 @13
 ADDI %R0 $1
-STA %R0 @13
-CEQ %R3 @13
+CEQ %R0 @6
 JEQ @HEX4
+STA %R0 @13
 STA %R0 @291
 JMP @RETURN
 
@@ -91,11 +96,19 @@ STA %R0 @291
 STA %R0 @13
 LDA %R0 @14
 ADDI %R0 $1
-STA %R0 @14
-CEQ %R3 @14
+CEQ %R0 @30
 JEQ @HEX5
-STA %R0 @295
+STA %R0 @14
+STA %R0 @292
+CEQ %R0 @4
+JEQ @ATINGIU_4
 JMP @RETURN
+
+ATINGIU_4:
+LDA %R0 @15             #Ao HEX5 chegar em 2, checa se hex4 esta abaixo de 4
+CEQ %R0 @2
+JNE @RETURN
+JMP @LIMPA
 
 HEX5:       #Incrementa HEX5 e checa se é menor que 10, se for menor sai da subrotina
 LDI %R0 $0
@@ -104,22 +117,19 @@ STA %R0 @14
 LDA %R0 @15
 ADDI %R0 $1
 STA %R0 @15
-CEQ %R3 @15 	# Adicionar JEQ para overflow de 999999
-JEQ @ATINGIU_LIMITE   #Se ao incrementar HEX5 == 10, vai para LABEL de overflow geral
+STA %R0 @293
 JMP @RETURN
 
-ATINGIU_LIMITE:
+
+LIMPA:
 LDI %R0 $0
 STA %R0 @293
 STA %R0 @15
-LDI %R0 $1
-STA %R0 @257
-
-ESPERA_RESET:       #Após overflow geral, espera aperto do botao de reset e impede incremento
-LDA %R1 @356    
-CEQ %R1 @0
-JEQ @0
-JMP @ESPERA_RESET
+STA %R0 @292
+STA %R0 @14
 
 RETURN:            #Sai da subrotina de overflow
 RET 
+
+
+
