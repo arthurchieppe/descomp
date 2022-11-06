@@ -18,7 +18,7 @@ STA %R0 @14
 STA %R0 @15
 STA %R0 @288
 STA %R0 @289
-STA %R0 @290
+STA %R0 @290    
 STA %R0 @291
 STA %R0 @292
 STA %R0 @293
@@ -34,6 +34,12 @@ LDA %R1 @356        #Checa botao de reset
 CEQ %R1 @0
 JEQ @0              #Se botao for pressionado vai para o inicio do programa
 
+LDA %R1 @352           #CHECA SE USUARIO QUER MUDAR HORARIO
+CEQ %R1 @0
+JEQ @CHECA_INCREMENTO
+JSR @ACERTA_HORARIO
+
+CHECA_INCREMENTO:
 LDA %R1 @357    	#Checa pro botao de incremento
 CEQ %R1 @0
 JEQ @CONTINUA         #Se nao foi apertado vai para continua
@@ -120,7 +126,6 @@ STA %R0 @15
 STA %R0 @293
 JMP @RETURN
 
-
 LIMPA:
 LDI %R0 $0
 STA %R0 @293
@@ -131,5 +136,46 @@ STA %R0 @14
 RETURN:            #Sai da subrotina de overflow
 RET 
 
+ACERTA_HORARIO:
+LDI %R0 $1
+STA %R0 @510        #LIMPA KEY0
+STA %R0 @256
 
+LOOP_SEGUNDOS:
+STA %R2 @288
+STA %R2 @10
+LDA %R0 @353           
+CEQ %R0 @1
+JEQ @INCREMENTA_SEGUNDOS
+LDA %R0 @352 
+CEQ %R0 @1
+JEQ @RETURN_HORARIO
+JMP @LOOP_SEGUNDOS
 
+INCREMENTA_SEGUNDOS:
+LDI %R0 $1
+STA %R0 @509
+ADDI %R2 $1
+CLT %R2 @30
+JLT @LOOP_SEGUNDOS
+LDI %R2 $0
+LDA %R3 @11
+ADDI %R3 $1
+
+CLT %R3 @6
+STA %R3 @289
+STA %R3 @11
+JLT @LOOP_SEGUNDOS
+LDI %R2 $0
+STA %R2 @288
+STA %R2 @10
+STA %R2 @289
+STA %R2 @11
+JMP @LOOP_SEGUNDOS
+
+RETURN_HORARIO:
+LDI %R0 $1
+STA %R0 @510 
+LDI %R0 $0
+STA %R0 @256
+RET

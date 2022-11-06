@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/agchi/Downloads/descomp-c6cc01c8031ee801f3e3f18220e1d5be3e8dca60/descomp-c6cc01c8031ee801f3e3f18220e1d5be3e8dca60/relogio/output_files/") File("Aula7e8.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/descomp/relogio/output_files/") File("Aula7e8.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

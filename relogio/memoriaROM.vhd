@@ -54,7 +54,7 @@ tmp(16) := x"5" & "00" & std_logic_vector(to_unsigned(14, addrWidth));	-- STA %R
 tmp(17) := x"5" & "00" & std_logic_vector(to_unsigned(15, addrWidth));	-- STA %R0 @15
 tmp(18) := x"5" & "00" & std_logic_vector(to_unsigned(288, addrWidth));	-- STA %R0 @288
 tmp(19) := x"5" & "00" & std_logic_vector(to_unsigned(289, addrWidth));	-- STA %R0 @289
-tmp(20) := x"5" & "00" & std_logic_vector(to_unsigned(290, addrWidth));	-- STA %R0 @290
+tmp(20) := x"5" & "00" & std_logic_vector(to_unsigned(290, addrWidth));	-- STA %R0 @290    
 tmp(21) := x"5" & "00" & std_logic_vector(to_unsigned(291, addrWidth));	-- STA %R0 @291
 tmp(22) := x"5" & "00" & std_logic_vector(to_unsigned(292, addrWidth));	-- STA %R0 @292
 tmp(23) := x"5" & "00" & std_logic_vector(to_unsigned(293, addrWidth));	-- STA %R0 @293
@@ -146,7 +146,7 @@ tmp(108) := x"5" & "00" & std_logic_vector(to_unsigned(14, addrWidth));	-- STA %
 tmp(109) := x"A" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- RET 
 tmp(110) := x"4" & "00" & std_logic_vector(to_unsigned(1, addrWidth));	-- LDI %R0 $1
 tmp(111) := x"5" & "00" & std_logic_vector(to_unsigned(510, addrWidth));	-- STA %R0 @510        	#LIMPA KEY0
-tmp(112) := x"5" & "00" & std_logic_vector(to_unsigned(257, addrWidth));	-- STA %R0 @257
+tmp(112) := x"5" & "00" & std_logic_vector(to_unsigned(256, addrWidth));	-- STA %R0 @256
 tmp(113) := x"5" & "10" & std_logic_vector(to_unsigned(288, addrWidth));	-- STA %R2 @288
 tmp(114) := x"5" & "10" & std_logic_vector(to_unsigned(10, addrWidth));	-- STA %R2 @10
 tmp(115) := x"1" & "00" & std_logic_vector(to_unsigned(353, addrWidth));	-- LDA %R0 @353           
@@ -177,8 +177,9 @@ tmp(139) := x"6" & "00" & std_logic_vector(to_unsigned(113, addrWidth));	-- JMP 
 tmp(140) := x"4" & "00" & std_logic_vector(to_unsigned(1, addrWidth));	-- LDI %R0 $1
 tmp(141) := x"5" & "00" & std_logic_vector(to_unsigned(510, addrWidth));	-- STA %R0 @510 
 tmp(142) := x"4" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- LDI %R0 $0
-tmp(143) := x"5" & "00" & std_logic_vector(to_unsigned(257, addrWidth));	-- STA %R0 @257
+tmp(143) := x"5" & "00" & std_logic_vector(to_unsigned(256, addrWidth));	-- STA %R0 @256
 tmp(144) := x"A" & "00" & std_logic_vector(to_unsigned(0, addrWidth));	-- RET
+
 
 
 
