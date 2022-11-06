@@ -11,6 +11,7 @@ entity logicaKeys is
 		decoder_enderecos : in std_logic_vector (larguraDados-1 downto 0);
 		decoder_bloco : in std_logic;
 		decoder_bloco_reset: in std_logic;
+--		saida : out std_logic_vector (7 downto 0);
 		address: in std_logic_vector(larguraEnderecos-1 downto 0);
 		key0Out, key1Out, key2Out, key3Out, keyFPGAResetOut: out std_logic_vector(7 downto 0);
 		data_add_out5 : in std_logic
@@ -25,18 +26,18 @@ architecture comportamento of logicaKeys is
 	signal hab2 : std_logic;
 	signal hab3 : std_logic;
 	signal habReset : std_logic;
-begin 
+ begin 
  
 hab0   <= data_add_out5 and hab_rd and decoder_enderecos(0) and decoder_bloco;
-clear0 <= hab_wr and decoder_bloco_reset and decoder_enderecos(7);
+clear0 <= '1' when to_integer(unsigned(address)) = 510 else '0';
  
 hab1   <= data_add_out5 and hab_rd and decoder_enderecos(1) and decoder_bloco;
-clear1 <= hab_wr and decoder_bloco_reset and decoder_enderecos(6);
+clear1 <= '1' when to_integer(unsigned(address)) = 509 else '0';
 
 hab2   <= data_add_out5 and hab_rd and decoder_enderecos(2) and decoder_bloco;
 hab3   <= data_add_out5 and hab_rd and decoder_enderecos(3) and decoder_bloco;
 habReset   <= data_add_out5 and hab_rd and decoder_enderecos(4) and decoder_bloco;
-
+ 
 KEY_0: entity work.keyDebounce
 			port map (
 			clk => CLK,
@@ -45,13 +46,13 @@ KEY_0: entity work.keyDebounce
 			clear_read => clear0,
 			key_out => key0Out
 			);
-			
+
 KEY_1: entity work.keyDebounce
 			port map (
 			clk => CLK,
 			key_in => key1,
-			hab_key => hab0,
-			clear_read => clear0,
+			hab_key => hab1,
+			clear_read => clear1,
 			key_out => key1Out
 			);
 
@@ -60,7 +61,7 @@ KEY_2: entity work.buffer_3_state_1portas
 			port map (
 			entrada => key2,
 			saida => key2Out,
-			habilita => hab2
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(2) and decoder_bloco
 			);
 			
 KEY_3: entity work.buffer_3_state_1portas
@@ -68,7 +69,7 @@ KEY_3: entity work.buffer_3_state_1portas
 			port map (
 			entrada => key3,
 			saida => key3Out,
-			habilita => hab3
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(3) and decoder_bloco
 			);
 			
 			
@@ -77,7 +78,7 @@ FPGARESET: entity work.buffer_3_state_1portas
 			port map (
 			entrada => FPGA_reset,
 			saida => keyFPGAResetOut,
-			habilita => habReset
+			habilita => data_add_out5 and hab_rd and decoder_enderecos(4) and decoder_bloco
 			);
 
 
