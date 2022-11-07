@@ -27,64 +27,63 @@ STA %R0 @511
 STA %R0 @257
 STA %R0 @506        
 STA %R0 @505
-LDI %R2 $0        	#Registrador das unidades
+LDI %R2 $0        	 # Registrador das unidades
 
 LOOP:
-LDA %R1 @356        #Checa botao de reset
+LDA %R1 @356         # Verifica FPGA_RESET
 CEQ %R1 @0
-JEQ @0              #Se botao for pressionado vai para o inicio do programa
-
-LDA %R1 @352           #CHECA SE USUARIO QUER MUDAR HORARIO
+JEQ @0               # Se botao for pressionado vai para o inicio do programa
+LDA %R1 @352         # Verifica se usuario deseja mudar horario (pressionando KEY0)
 CEQ %R1 @0
 JEQ @CHECA_INCREMENTO
 JSR @ACERTA_HORARIO
 
 CHECA_INCREMENTO:
-LDA %R1 @357    	#Checa pro botao de incremento
+LDA %R1 @357         # Checa se base de tempo permite incrementa
 CEQ %R1 @0
-JEQ @CONTINUA         #Se nao foi apertado vai para continua
-JMP @INCREMENTA
+JEQ @CONTINUA        
 
 INCREMENTA:
-LDI %R0 $1          #Se foi apertado, incrementa
+LDI %R0 $1           # Incrementa 1 ao tempo contado 
 STA %R0 @511        
 ADDI %R2 $1
 STA %R2 @10
 
 CONTINUA:
 CLT %R2 @30
-JLT @SALVA_HEX  	#Se for menor que 10 salva no hex, caso contrario chama subrotina de overflow
+JLT @SALVA_HEX  	 # Se for menor que 10 salva no hex, caso contrario chama subrotina de overflow
 JSR @OVERFLOW
+
 SALVA_HEX:
 STA %R2 @288
 JMP @LOOP
 
 
-OVERFLOW:       #Subrotina de overflow
+OVERFLOW:            # Incrementa HEX1 e checa se é menor que 10, se for menor sai da subrotina
 LDI %R2 $0
 STA %R2 @10
 STA %R2 @288
-LDA %R0 @11 	#Incrementa HEX1 e checa se é menor que 10, se for menor sai da subrotina
-ADDI %R0 $1
+LDA %R0 @11 	     
+ADDI %R0 $1          
 CEQ %R0 @6
 JEQ @HEX2
 STA %R0 @289
 STA %R0 @11
 JMP @RETURN
 
-HEX2:       #Incrementa HEX2 e checa se é menor que 10, se for menor sai da subrotina
+HEX2:                # Incrementa HEX2 e checa se é menor que 10, se for menor sai da subrotina
 LDI %R0 $0
 STA %R0 @289
 STA %R0 @11
 LDA %R0 @12
-ADDI %R0 $1
+ADDI %R0 $1          
 CEQ %R0 @30
 JEQ @HEX3
 STA %R0 @12
 STA %R0 @290
 JMP @RETURN
 
-HEX3:           #Incrementa HEX3 e checa se é menor que 10, se for menor sai da subrotina
+HEX3:                # Incrementa HEX3 e checa se é menor que 10, se for menor sai da subrotina
 LDI %R0 $0
 STA %R0 @290
 STA %R0 @12
@@ -96,7 +95,7 @@ STA %R0 @13
 STA %R0 @291
 JMP @RETURN
 
-HEX4:       #Incrementa HEX4 e checa se é menor que 10, se for menor sai da subrotina
+HEX4:                # Incrementa HEX4 e checa se é menor que 10, se for menor sai da subrotina
 LDI %R0 $0
 STA %R0 @291
 STA %R0 @13
@@ -110,13 +109,13 @@ CEQ %R0 @4
 JEQ @ATINGIU_4
 JMP @RETURN
 
-ATINGIU_4:
-LDA %R0 @15             #Ao HEX5 chegar em 2, checa se hex4 esta abaixo de 4
+ATINGIU_4:            # Ao HEX5 chegar em 2, checa se hex4 esta abaixo de 4 (Obejetivo, verificar as 24h)
+LDA %R0 @15             
 CEQ %R0 @2
 JNE @RETURN
 JMP @LIMPA
 
-HEX5:       #Incrementa HEX5 e checa se é menor que 10, se for menor sai da subrotina
+HEX5:                 # Incrementa HEX5 e checa se é menor que 10, se for menor sai da subrotina
 LDI %R0 $0
 STA %R0 @292
 STA %R0 @14
@@ -126,38 +125,38 @@ STA %R0 @15
 STA %R0 @293
 JMP @RETURN
 
-LIMPA:
+LIMPA:                # Zera os HEX referente a horas 
 LDI %R0 $0
 STA %R0 @293
 STA %R0 @15
 STA %R0 @292
 STA %R0 @14
 
-RETURN:            #Sai da subrotina de overflow
+RETURN:               # Sai da subrotina de overflow
 RET 
 
-ACERTA_HORARIO:
+ACERTA_HORARIO:       # Subrotina de acertar horario
 LDI %R0 $1
-STA %R0 @510        #LIMPA KEY0
-STA %R0 @256
+STA %R0 @510          # LIMPA KEY0
+STA %R0 @256          # Acende LED0, indicando para o usuario que esta alterando os segundos
 
 LOOP_SEGUNDOS:
 STA %R2 @288
 STA %R2 @10
 LDA %R0 @353           
 CEQ %R0 @1
-JEQ @INCREMENTA_SEGUNDOS
+JEQ @INCREMENTA_SEGUNDOS        # Se KEY1 for pressioando, incrementa os segundos.
 LDA %R0 @352 
 CEQ %R0 @1
-JEQ @SETUP_MINUTOS          
+JEQ @SETUP_MINUTOS              # Se KEY0 for pressionado, vai para o ajuste de minutos. 
 JMP @LOOP_SEGUNDOS
 
-INCREMENTA_SEGUNDOS:
+INCREMENTA_SEGUNDOS:            # Logica para incrementar os segundos, de forma a nao estourar os valores possiveis.
 LDI %R0 $1
 STA %R0 @509
 ADDI %R2 $1
 CLT %R2 @30
-JLT @LOOP_SEGUNDOS
+JLT @LOOP_SEGUNDOS              # Se valor nao exceder 9, continua o loop.
 LDI %R2 $0
 LDA %R3 @11
 ADDI %R3 $1
@@ -165,7 +164,7 @@ ADDI %R3 $1
 CLT %R3 @6
 STA %R3 @289
 STA %R3 @11
-JLT @LOOP_SEGUNDOS
+JLT @LOOP_SEGUNDOS              # Se a dezena do segundo exceder 5, zera tanto dezena quanto unidades
 LDI %R2 $0
 STA %R2 @288
 STA %R2 @10
@@ -173,9 +172,9 @@ STA %R2 @289
 STA %R2 @11
 JMP @LOOP_SEGUNDOS
 
-SETUP_MINUTOS:
+SETUP_MINUTOS:                  # Desliga o LED0 e acende o LED1, sinalizando ao usuario que esta alterando os minutos.
 LDI %R0 $1
-STA %R0 @510        #LIMPA KEY0
+STA %R0 @510                    # LIMPA KEY0
 LDI %R0 $2
 STA %R0 @256
 JMP @LOOP_MINUTOS
@@ -214,9 +213,9 @@ STA %R0 @291
 STA %R0 @13
 JMP @LOOP_MINUTOS
 
-SETUP_HORAS:
+SETUP_HORAS:                      # Liga o LED3, indicando ao usuario que esta alterando as horas.
 LDI %R0 $1
-STA %R0 @510        #LIMPA KEY0
+STA %R0 @510                      # LIMPA KEY0
 LDI %R0 $4
 STA %R0 @256
 JMP @LOOP_HORAS
@@ -239,7 +238,7 @@ ADDI %R0 $1
 CEQ %R0 @4
 STA %R0 @292
 STA %R0 @14
-JEQ @ATINGIU_4_SET
+JEQ @ATINGIU_4_SET                 # Quando a unidade das horas atingir 4, verifica se as dezenas tem valor igual a 2. Se sim, reseta.
 CLT %R0 @30
 STA %R0 @292
 STA %R0 @14
@@ -254,7 +253,7 @@ STA %R3 @15
 JMP @LOOP_HORAS
 
 ATINGIU_4_SET:
-LDA %R1 @15             #Ao HEX5 chegar em 2, checa se hex4 esta abaixo de 4
+LDA %R1 @15                         # Ao HEX5 chegar em 2, checa se hex4 esta abaixo de 4
 CEQ %R1 @2
 JNE @LOOP_HORAS
 LDI %R1 $0
@@ -264,7 +263,7 @@ STA %R1 @293
 STA %R1 @15
 JMP @LOOP_HORAS
 
-RETURN_HORARIO:
+RETURN_HORARIO:                     # Desliga os LEDS e limpa leitura do botao.
 LDI %R0 $1
 STA %R0 @510 
 LDI %R0 $0
