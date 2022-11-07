@@ -1,4 +1,8 @@
-	library IEEE;
+-- Grupo:
+-- * Arthur Gomes Chieppe
+-- * Vinicius Grando Eller
+
+library IEEE;
 use IEEE.std_logic_1164.all;
 use ieee.numeric_std.all;
 

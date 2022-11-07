@@ -1,0 +1,38 @@
+Quartus Prime Archive log --	C:/descomp/relogio/relogio.qarlog
+
+Archive:	C:/descomp/relogio/relogio.qar
+Date:		Sun Nov 06 22:56:59 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/descomp/relogio/Aula7e8.qsf
+C:/descomp/relogio/CPU.vhd
+C:/descomp/relogio/ULASomaSub.vhd
+C:/descomp/relogio/Waveform.vwf
+C:/descomp/relogio/assignment_defaults.qdf
+C:/descomp/relogio/bancoRegistradoresArqRegMem.vhd
+C:/descomp/relogio/buffer_3_state_1portas.vhd
+C:/descomp/relogio/buffer_3_state_8portas.vhd
+C:/descomp/relogio/conversorHex7Seg.vhd
+C:/descomp/relogio/decoder3x8.vhd
+C:/descomp/relogio/decoderGeneric.vhd
+C:/descomp/relogio/divisorGenerico.vhd
+C:/descomp/relogio/divisorGenerico_e_Interface.vhd
+C:/descomp/relogio/edgeDetector.vhd
+C:/descomp/relogio/flipFlopGenerico.vhd
+C:/descomp/relogio/hexComponent.vhd
+C:/descomp/relogio/keyDebounce.vhd
+C:/descomp/relogio/ledComponent.vhd
+C:/descomp/relogio/logicaKeys.vhd
+C:/descomp/relogio/memoriaRAM.vhd
+C:/descomp/relogio/memoriaROM.vhd
+C:/descomp/relogio/muxGenerico2x1.vhd
+C:/descomp/relogio/muxGenericoNx1.vhd
+C:/descomp/relogio/registradorGenerico.vhd
+C:/descomp/relogio/relogio.qpf
+C:/descomp/relogio/relogio.vhd
+C:/descomp/relogio/somaConstante.vhd
+	======= Total: 27 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
