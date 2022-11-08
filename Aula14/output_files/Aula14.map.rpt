@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula14
-Mon Nov 07 23:18:15 2022
+Tue Nov 08 11:10:44 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 07 23:18:15 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 08 11:10:44 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula14                                      ;
 ; Top-level Entity Name           ; Aula14                                      ;
@@ -213,14 +213,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1471           ;
+; Estimate of Logic utilization (ALMs needed) ; 1477           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1044           ;
+; Combinational ALUT usage for logic          ; 1074           ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 747            ;
-;     -- 5 input functions                    ; 7              ;
-;     -- 4 input functions                    ; 70             ;
-;     -- <=3 input functions                  ; 220            ;
+;     -- 6 input functions                    ; 748            ;
+;     -- 5 input functions                    ; 8              ;
+;     -- 4 input functions                    ; 96             ;
+;     -- <=3 input functions                  ; 222            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 2120           ;
 ;                                             ;                ;
@@ -230,8 +230,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 2120           ;
-; Total fan-out                               ; 12058          ;
-; Average fan-out                             ; 3.38           ;
+; Total fan-out                               ; 12195          ;
+; Average fan-out                             ; 3.39           ;
 +---------------------------------------------+----------------+
 
 
@@ -240,13 +240,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name         ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+---------------------+--------------+
-; |Aula14                               ; 1044 (8)            ; 2120 (0)                  ; 0                 ; 0          ; 203  ; 0            ; |Aula14                                  ; Aula14              ; work         ;
+; |Aula14                               ; 1074 (8)            ; 2120 (0)                  ; 0                 ; 0          ; 203  ; 0            ; |Aula14                                  ; Aula14              ; work         ;
 ;    |RAMMIPS:RAM|                      ; 833 (833)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |Aula14|RAMMIPS:RAM                      ; RAMMIPS             ; work         ;
 ;    |ROMMIPS:ROM|                      ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|ROMMIPS:ROM                      ; ROMMIPS             ; work         ;
 ;    |ULASomaSub:ULA|                   ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|ULASomaSub:ULA                   ; ULASomaSub          ; work         ;
 ;    |bancReg:REGS|                     ; 132 (132)           ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |Aula14|bancReg:REGS                     ; bancReg             ; work         ;
-;    |decoderGeneric:decoderInstrucoes| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|decoderGeneric:decoderInstrucoes ; decoderGeneric      ; work         ;
-;    |muxGenerico2x1:MUX_ULA|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|muxGenerico2x1:MUX_ULA           ; muxGenerico2x1      ; work         ;
+;    |decoderGeneric:decoderInstrucoes| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|decoderGeneric:decoderInstrucoes ; decoderGeneric      ; work         ;
+;    |muxGenerico2x1:MUX_ULA|           ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|muxGenerico2x1:MUX_ULA           ; muxGenerico2x1      ; work         ;
 ;    |registradorGenerico:PC|           ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|registradorGenerico:PC           ; registradorGenerico ; work         ;
 ;    |somaConstante:SOMA_PC|            ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|somaConstante:SOMA_PC            ; somaConstante       ; work         ;
 ;    |somadorGenerico:SOMA_PC_IMEDIATO| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula14|somadorGenerico:SOMA_PC_IMEDIATO ; somadorGenerico     ; work         ;
@@ -1639,23 +1639,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 2112                        ;
 ;     SLD               ; 8                           ;
 ; arriav_io_obuf        ; 32                          ;
-; arriav_lcell_comb     ; 1047                        ;
+; arriav_lcell_comb     ; 1077                        ;
 ;     arith             ; 49                          ;
-;         1 data inputs ; 14                          ;
-;         4 data inputs ; 33                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 32                          ;
 ;         5 data inputs ; 2                           ;
-;     normal            ; 998                         ;
+;     normal            ; 1028                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 19                          ;
-;         2 data inputs ; 136                         ;
-;         3 data inputs ; 53                          ;
-;         4 data inputs ; 37                          ;
-;         5 data inputs ; 5                           ;
-;         6 data inputs ; 747                         ;
+;         2 data inputs ; 138                         ;
+;         3 data inputs ; 52                          ;
+;         4 data inputs ; 64                          ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 748                         ;
 ; boundary_port         ; 203                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.70                       ;
-; Average LUT depth     ; 6.16                        ;
+; Average LUT depth     ; 6.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1674,7 +1676,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 07 23:18:05 2022
+    Info: Processing started: Tue Nov 08 11:10:34 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula14 -c Aula14
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1779,30 +1781,17 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 20
     Warning (13410): Pin "OPCODE_TOP[4]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 21
     Warning (13410): Pin "IMEDIATO_TOP[2]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[3]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[4]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[5]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[6]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[7]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[8]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[9]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[10]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[11]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[12]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[13]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[14]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
-    Warning (13410): Pin "IMEDIATO_TOP[15]" is stuck at GND File: C:/descomp/Aula14/Aula14.vhd Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 534 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3342 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3372 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 202 output pins
-    Info (21061): Implemented 3139 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 4879 megabytes
-    Info: Processing ended: Mon Nov 07 23:18:15 2022
+    Info (21061): Implemented 3169 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Tue Nov 08 11:10:44 2022
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:21
 

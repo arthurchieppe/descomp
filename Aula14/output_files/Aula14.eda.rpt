@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Aula14
-Mon Nov 07 23:25:33 2022
+Tue Nov 08 11:10:51 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Nov 07 23:25:33 2022 ;
+; EDA Netlist Writer Status ; Successful - Tue Nov 08 11:10:51 2022 ;
 ; Revision Name             ; Aula14                                ;
 ; Top-level Entity Name     ; Aula14                                ;
 ; Family                    ; Cyclone V                             ;
@@ -95,14 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Nov 07 23:25:33 2022
+    Info: Processing started: Tue Nov 08 11:10:51 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/descomp/Aula14/simulation/qsim/ Aula14 -c Aula14
 Info (119006): Selected device 5CEBA4F23C7 for design "Aula14"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Aula14.vho in folder "C:/descomp/Aula14/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4728 megabytes
-    Info: Processing ended: Mon Nov 07 23:25:33 2022
+    Info: Peak virtual memory: 4726 megabytes
+    Info: Processing ended: Tue Nov 08 11:10:51 2022
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
