@@ -20,6 +20,13 @@ DATA_RADIX=HEX;
 
 CONTENT BEGIN
 --endereco : dado;
-    0    :   012A4020;
-    1    :   012A4022;
+    0    :   8C0C0000;    -- lw  $t4,  0x0($zero)  
+    1    :   11090001;    -- beq  $t0, $t1, 0x1
+    2    :   11090003;    -- beq  $t0, $t1, 0x3
+    3    :   AD0A0000;    -- sw  $t2,  0x0($t0)
+    4    :   110A0002;    -- beq  $t0, $t2, 0x2
+    5    :   110C0001;    -- beq  $t0, $t4, 0x1
+    6    :   AD090000;    -- sw  $t1,  0x0($t0)
+
+
 END;

@@ -10,13 +10,18 @@ entity Aula14 is
 		  larguraEndBancoRegs : natural := 5
   );
   port   (
-    CLOCK_50 : in std_logic;
-    RD_OUT   : out std_logic_vector(larguraEndBancoRegs - 1 downto 0);
+    CLOCK_50     : in std_logic;
+    
+    RS_END_TOP   : out std_logic_vector(larguraEndBancoRegs - 1 downto 0);
+    RT_END_TOP   : out std_logic_vector(larguraEndBancoRegs - 1 downto 0);
+    RS_OUT_TOP   : out std_logic_vector(larguraDados - 1 downto 0);
+    RT_OUT_TOP   : out std_logic_vector(larguraDados - 1 downto 0);
     ULA_OUT_TOP  : out std_logic_vector(larguraDados - 1 downto 0);
-    LEDR  : out std_logic_vector(9 downto 0)
-    ENTRADA_RAM: out std_logic_vector(larguraDados - 1 downto 0);
-    SAIDA_RAM: out std_logic_vector(larguraDados - 1 downto 0);
-    SW: in std_logic_vector(9 downto 0);
+    LEDR         : out std_logic_vector(9 downto 0);
+    OPCODE_TOP   : out std_logic_vector(5 downto 0);
+    ENTRADA_RAM  : out std_logic_vector(larguraDados - 1 downto 0);
+    SAIDA_RAM    : out std_logic_vector(larguraDados - 1 downto 0);
+    IMEDIATO_TOP : out std_logic_vector(15 downto 0)
   );
 end entity;
 
@@ -31,8 +36,9 @@ architecture arquitetura of Aula14 is
     signal rt_out                 : std_logic_vector(larguraEnderecos - 1 downto 0);
     signal EstendeImediato        : std_logic_vector(larguraEnderecos - 1 downto 0);
     signal saidaMuxBEQ            : std_logic_vector(larguraEnderecos - 1 downto 0);
+    signal saidaMuxULA            : std_logic_vector(larguraEnderecos - 1 downto 0);
     signal saidaRAM               : std_logic_vector(larguraDados - 1 downto 0);
-    signal saidaDecoderInstrucoes : std_logic_vector(4 downto 0);
+    signal saidaDecoderInstrucoes : std_logic_vector(5 downto 0);
 
     signal Rs              : std_logic_vector(larguraEndBancoRegs - 1 downto 0);
     signal Rt              : std_logic_vector(larguraEndBancoRegs - 1 downto 0);
@@ -45,20 +51,22 @@ architecture arquitetura of Aula14 is
     signal habWR_REG3      : std_logic;
     signal BEQ             : std_logic;
     signal seletor_MUX_BEQ : std_logic;
+    signal seletor_MUX_ULA : std_logic;
     signal ImediatoShift   : std_logic_vector(larguraEnderecos - 1 downto 0);
 
 begin
 
-Rs          <= ROM_out (25 downto 21);
-Rt          <= ROM_out (20 downto 16);
-Rd          <= ROM_out (15 downto 11);
-Imediato    <= ROM_out (15 downto  0);
-OpCode      <= ROM_out (31 downto 26);
-habWR_RAM   <= saidaDecoderInstrucoes(0);
-habRD_RAM   <= saidaDecoderInstrucoes(1);
-BEQ         <= saidaDecoderInstrucoes(2);
-operacaoULA <= saidaDecoderInstrucoes(3);
-habWR_REG3  <= saidaDecoderInstrucoes(4);
+Rs              <= ROM_out (25 downto 21);
+Rt              <= ROM_out (20 downto 16);
+Rd              <= ROM_out (15 downto 11);
+Imediato        <= ROM_out (15 downto  0);
+OpCode          <= ROM_out (31 downto 26);
+habWR_RAM       <= saidaDecoderInstrucoes(0);
+habRD_RAM       <= saidaDecoderInstrucoes(1);
+BEQ             <= saidaDecoderInstrucoes(2);
+operacaoULA     <= saidaDecoderInstrucoes(3);
+seletor_MUX_ULA <= saidaDecoderInstrucoes(4);
+habWR_REG3      <= saidaDecoderInstrucoes(5);
 
 
 CLK <= CLOCK_50;
@@ -97,6 +105,14 @@ MUX_BEQ: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
     saida_MUX    => saidaMuxBEQ
     );
 
+MUX_ULA: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
+    port map(
+    entradaA_MUX => rt_out,
+    entradaB_MUX => EstendeImediato,
+    seletor_MUX  => seletor_MUX_ULA,
+    saida_MUX    => saidaMuxULA
+    );
+
 REGS: entity work.bancReg generic map(larguraDados => larguraDados, larguraEndBancoRegs => larguraEndBancoRegs)
     port map (
     clk          => CLK,
@@ -118,7 +134,7 @@ ROM: entity work.ROMMIPS generic map(dataWidth => larguraDados, addrWidth => lar
 ULA: entity work.ULASomaSub generic map(larguraDados => larguraDados)
     port map (
     entradaA => rs_out,
-    entradaB => EstendeImediato,
+    entradaB => saidaMuxULA,
     saida    => ULA_out,
     seletor  => operacaoULA    
     );
@@ -146,9 +162,15 @@ EstendeSinal : entity work.estendeSinalGenerico generic map (larguraDadoEntrada 
     estendeSinal_OUT =>  EstendeImediato
     );
 
-RD_OUT <= Rd;
-LEDR <= PC_out(9 downto 0);
+RS_END_TOP  <= Rs;
+RT_END_TOP  <= Rt;    
+RS_OUT_TOP  <= rs_out;
+RT_OUT_TOP  <= rt_out;
+LEDR        <= PC_out(9 downto 0);
 ULA_OUT_TOP <= ULA_out(31 downto 0);
 ENTRADA_RAM <= rt_out;
+SAIDA_RAM   <= saidaRAM;
+OPCODE_TOP  <= opcode;
+IMEDIATO_TOP <= Imediato;
 
 end architecture;
