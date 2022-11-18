@@ -1,0 +1,103 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/descomp/ULA/simulation/qsim
+Eulamips
+Z1 w1668813862
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+!i122 16
+R0
+Z9 8ULAMIPS.vho
+Z10 FULAMIPS.vho
+l0
+L37 1
+VJ_7RfGGGCSMVmQHik7:4c2
+!s100 =U<U?nOjoibZ@`[m@A6C90
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1668813865
+!i10b 1
+Z13 !s108 1668813864.000000
+Z14 !s90 -work|work|ULAMIPS.vho|
+Z15 !s107 ULAMIPS.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 7 ulamips 0 22 J_7RfGGGCSMVmQHik7:4c2
+!i122 16
+l425
+L46 4082
+Vo>k_o`XhT42>GGBI_`a8U3
+!s100 792jAoFl=mPikz`B@ilI91
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Eulamips_vhd_vec_tst
+Z18 w1668813859
+R6
+R7
+!i122 17
+R0
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
+l0
+L32 1
+V9dSCV04YS1JlmS>fd6I4X3
+!s100 :9Q>Olcg`JcBO^NZC8c2h1
+R11
+32
+R12
+!i10b 1
+Z21 !s108 1668813865.000000
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
+!i113 1
+R16
+R17
+Aulamips_arch
+R6
+R7
+Z24 DEx4 work 19 ulamips_vhd_vec_tst 0 22 9dSCV04YS1JlmS>fd6I4X3
+!i122 17
+l49
+Z25 L34 447
+Z26 V56EZeiAW3?cn^Hel:=GP@1
+Z27 !s100 9fOkQZOQZcaW4c9IU>jM62
+R11
+32
+R12
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R16
+R17
