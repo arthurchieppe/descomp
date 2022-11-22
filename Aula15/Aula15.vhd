@@ -12,6 +12,7 @@ entity Aula15 is
   );
   port   (
     CLOCK_50     : in std_logic;
+    FPGA_RESET_N     : in std_logic;
     KEY: in std_logic_vector(3 downto 0);
     SW: in std_logic_vector(9 downto 0);
     LEDR         : out std_logic_vector(9 downto 0);
@@ -213,6 +214,8 @@ EstendeSinal : entity work.estendeSinalGenerico generic map (larguraDadoEntrada 
     estendeSinal_OUT =>  EstendeImediato
     );
 
+
+seletor_MUX_HEX <= SW(0);
 MUX_HEX_LEDS: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
     port map(
     entradaA_MUX => PC_out,
@@ -220,10 +223,9 @@ MUX_HEX_LEDS: entity work.muxGenerico2x1 generic map (larguraDados => larguraDad
     seletor_MUX  => seletor_MUX_HEX,
     saida_MUX    => saidaMux_hex
     );
-
 COMP_HEX0: entity work.conversorHex7Seg 
     port map(
-    dadoHex   => saidaMux_hex(11 downto 8),
+    dadoHex   => saidaMux_hex(3 downto 0),
     apaga     => '0',
     negativo  => '0',
     overFlow  => '0',
@@ -231,7 +233,7 @@ COMP_HEX0: entity work.conversorHex7Seg
     );
 COMP_HEX1: entity work.conversorHex7Seg 
     port map(
-    dadoHex   => saidaMux_hex(15 downto 12),
+    dadoHex   => saidaMux_hex(7 downto 4),
     apaga     => '0',
     negativo  => '0',
     overFlow  => '0',
@@ -239,7 +241,7 @@ COMP_HEX1: entity work.conversorHex7Seg
     );
 COMP_HEX2: entity work.conversorHex7Seg 
     port map(
-    dadoHex   => saidaMux_hex(19 downto 16),
+    dadoHex   => saidaMux_hex(11 downto 8),
     apaga     => '0',
     negativo  => '0',
     overFlow  => '0',
@@ -247,7 +249,7 @@ COMP_HEX2: entity work.conversorHex7Seg
     );
 COMP_HEX3: entity work.conversorHex7Seg 
     port map(
-    dadoHex   => saidaMux_hex(23 downto 20),
+    dadoHex   => saidaMux_hex(15 downto 12),
     apaga     => '0',
     negativo  => '0',
     overFlow  => '0',
@@ -255,7 +257,7 @@ COMP_HEX3: entity work.conversorHex7Seg
     );
 COMP_HEX4: entity work.conversorHex7Seg 
     port map(
-    dadoHex   => saidaMux_hex(27 downto 24),
+    dadoHex   => saidaMux_hex(19 downto 16),
     apaga     => '0',
     negativo  => '0',
     overFlow  => '0',
@@ -263,14 +265,15 @@ COMP_HEX4: entity work.conversorHex7Seg
     );
 COMP_HEX5: entity work.conversorHex7Seg 
     port map(
-    dadoHex   => saidaMux_hex(31 downto 28),
+    dadoHex   => saidaMux_hex(23 downto 20),
     apaga     => '0',
     negativo  => '0',
     overFlow  => '0',
     saida7seg => HEX5
     );
 
-LEDR (3 downto 0) <= saidaMux_hex(3 downto 0);
-LEDR (7 downto 4) <= saidaMux_hex(7 downto 4);
+LEDR (3 downto 0) <= saidaMux_hex(27 downto 24);
+LEDR (7 downto 4) <= saidaMux_hex(31 downto 28);
+LEDR (9 downto 8) <= "00";
 
 end architecture;

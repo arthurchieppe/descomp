@@ -20,6 +20,6 @@ saida <= "011010000" when entrada = tipoR else
          "001101010" when entrada = LW  else
          "000100001" when entrada = SW else
          "000000100" when entrada = BEQ else
-         "100000000" when entrada = BEQ else
+         "100000000" when entrada = JMP else
          "000000000";
 end architecture;
