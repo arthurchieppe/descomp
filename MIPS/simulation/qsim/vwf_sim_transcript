@@ -26,12 +26,12 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Dec 06 16:40:40 2022
+    Info: Processing started: Tue Dec 06 18:16:33 2022
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS -c MIPS --vector_source=C:/descomp/MIPS/Waveform.vwf --testbench_file=C:/descomp/MIPS/simulation/qsim/Waveform.vwf.vht
 Info (119006): Selected device 5CEBA4F23C7 for design "MIPS"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
- bench files
+gnoring output pin "rsouta[27]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -56,14 +56,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Dec 06 16:40:41 2022
+    Info: Processing started: Tue Dec 06 18:16:34 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/descomp/MIPS/simulation/qsim/ MIPS -c MIPS
 Info (119006): Selected device 5CEBA4F23C7 for design "MIPS"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file MIPS.vho in folder "C:/descomp/MIPS/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4732 megabytes
-    Info: Processing ended: Tue Dec 06 16:40:42 2022
+    Info: Peak virtual memory: 4728 megabytes
+    Info: Processing ended: Tue Dec 06 18:16:35 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -88,7 +88,7 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:40:43 on Dec 06,2022
+# Start time: 18:16:36 on Dec 06,2022
 # vcom -work work MIPS.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -103,11 +103,11 @@ Reading pref.tcl
 # -- Compiling entity MIPS
 # -- Compiling architecture structure of MIPS
 
-# End time: 16:40:45 on Dec 06,2022, Elapsed time: 0:00:02
+# End time: 18:16:38 on Dec 06,2022, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:40:45 on Dec 06,2022
+# Start time: 18:16:38 on Dec 06,2022
 # vcom -work work Waveform.vwf.vht 
 
 # -- Loading package STANDARD
@@ -115,11 +115,11 @@ Reading pref.tcl
 # -- Loading package std_logic_1164
 # -- Compiling entity MIPS_vhd_vec_tst
 # -- Compiling architecture MIPS_arch of MIPS_vhd_vec_tst
-# End time: 16:40:46 on Dec 06,2022, Elapsed time: 0:00:01
+# End time: 18:16:38 on Dec 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MIPS_vhd_vec_tst 
-# Start time: 16:40:46 on Dec 06,2022
+# Start time: 18:16:38 on Dec 06,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -137,7 +137,7 @@ Reading pref.tcl
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 877046 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 882531 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
 
@@ -145,9 +145,7 @@ Reading pref.tcl
 
 # Simulation time: 0 ps
 
-# Simulation time: 0 ps
-
-# End time: 16:40:55 on Dec 06,2022, Elapsed time: 0:00:09
+# End time: 18:16:47 on Dec 06,2022, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -160,7 +158,7 @@ Reading C:/descomp/MIPS/simulation/qsim/MIPS.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/descomp/MIPS/simulation/qsim/MIPS_20221206164055.sim.vwf
+Writing the resulting VWF to C:/descomp/MIPS/simulation/qsim/MIPS_20221206181647.sim.vwf
 
 Finished VCD to VWF conversion.
 

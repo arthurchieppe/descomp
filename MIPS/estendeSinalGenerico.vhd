@@ -16,9 +16,7 @@ entity estendeSinalGenerico is
 end entity;
 
 architecture comportamento of estendeSinalGenerico is
-begin
-
-    estendeSinal_OUT <=  "0000000000000000" & estendeSinal_IN when (seletor = '1') else
-                        (larguraDadoSaida-1 downto larguraDadoEntrada => estendeSinal_IN(larguraDadoEntrada-1) ) & estendeSinal_IN;
+    begin
+    estendeSinal_OUT <=  "0000000000000000" & estendeSinal_IN when (seletor = '1') else (larguraDadoSaida-1 downto larguraDadoEntrada => estendeSinal_IN(larguraDadoEntrada-1) ) & estendeSinal_IN;
 
 end architecture;

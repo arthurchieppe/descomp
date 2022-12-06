@@ -2,8 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity decoderGeneric is
-  port ( entrada : in std_logic_vector(5 downto 0);
-         JR_ins  : in std_logic;
+  port ( opCode : in std_logic_vector(5 downto 0);
+         funct  : in std_logic_vector(5 downto 0);
          saida : out std_logic_vector(13 downto 0)
   );
 end entity;
@@ -22,20 +22,22 @@ architecture comportamento of decoderGeneric is
   constant SLTI  : std_logic_vector(5 downto 0) := "001010";
   constant BNE   : std_logic_vector(5 downto 0) := "000101";
   constant JAL   : std_logic_vector(5 downto 0) := "000011";
+  constant JR   : std_logic_vector(5 downto 0) := "001000";
 
   begin
-saida <= "00010101000000" when entrada = tipoR else
-         "00000110010010" when entrada = LW    else
-         "00000010000001" when entrada = SW    else
-         "00000000001000" when entrada = BEQ   else
-         "01000000000000" when entrada = JMP   else
-         "00000100110000" when entrada = LUI   else
-         "00000110000000" when entrada = ADDI  else
-         "00001110000000" when entrada = ANDI  else
-         "00001110000000" when entrada = ORI   else
-         "00001110000000" when entrada = SLTI  else
-         "00000000000100" when entrada = BNE   else
-         "01100100100000" when entrada = JAL   else
-         "10010101000000" when (entrada = tipoR) and (JR_ins = '1') else
+  
+saida <= "10000001000000" when (opCode = tipoR) and (funct = JR) else
+         "00000110010010" when opCode = LW    else
+         "00000010000001" when opCode = SW    else
+         "00000000001000" when opCode = BEQ   else
+         "01000000000000" when opCode = JMP   else
+         "00000100110000" when opCode = LUI   else
+         "00000110000000" when opCode = ADDI  else
+         "00001110000000" when opCode = ANDI  else
+         "00001110000000" when opCode = ORI   else
+         "00000110000000" when opCode = SLTI  else
+         "00000000000100" when opCode = BNE   else
+         "01100100100000" when opCode = JAL   else
+         "00010101000000" when opCode = tipoR else
          "00000000000000";
 end architecture;

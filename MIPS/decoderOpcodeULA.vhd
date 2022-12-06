@@ -27,5 +27,5 @@ saida <= "0000" when (entrada = LUI) or (entrada = JAL) or (entrada = ANDI)  els
          "0010" when (entrada = SW) or (entrada = ADDI) else   -- case_SOMA
          "0110" when (entrada = BEQ) or (entrada = BNE) else   -- case_SUBTRAÇÃO
          "0111" when (entrada = JMP) or (entrada = SLTI)  else -- case_SLT
-         "1111";
+         "0000";
 end architecture;

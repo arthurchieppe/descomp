@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "12/06/2022 16:40:41"
+-- Generated on "12/06/2022 18:16:33"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          MIPS
 -- 
@@ -44,6 +44,7 @@ SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL LEDR : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL rsouta : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL T0 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT MIPS
@@ -58,6 +59,7 @@ COMPONENT MIPS
 	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+	rsouta : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 	T0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
@@ -76,6 +78,7 @@ BEGIN
 	HEX5 => HEX5,
 	KEY => KEY,
 	LEDR => LEDR,
+	rsouta => rsouta,
 	SW => SW,
 	T0 => T0
 	);

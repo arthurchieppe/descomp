@@ -17,6 +17,7 @@ entity MIPS is
     SW: in std_logic_vector(9 downto 0);
     LEDR         : out std_logic_vector(9 downto 0);
     T0: out std_logic_vector(31 downto 0);
+    rsouta: out std_logic_vector(31 downto 0);
     HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0)
   );
 end entity;
@@ -224,8 +225,8 @@ RAM: entity work.RAMMIPS generic map(dataWidth => larguraDados, addrWidth => lar
 
 decoderInstrucoes :  entity work.decoderGeneric
     port map(
-    entrada => OpCode,
-    JR_ins => seletor_MUX_JR,
+    opCode => OpCode,
+    funct => Imediato (5 downto 0),
     saida   => saidaDecoderInstrucoes
     );
 
@@ -305,6 +306,7 @@ COMP_HEX5: entity work.conversorHex7Seg
 LEDR (3 downto 0) <= saidaMux_hex(27 downto 24);
 LEDR (7 downto 4) <= saidaMux_hex(31 downto 28);
 LEDR (9 downto 8) <= "00";
-T0 <= saidaMux_ULAmem;
+T0 <= PC_out;
+rsouta <= saidaMux_jr;
 
 end architecture;

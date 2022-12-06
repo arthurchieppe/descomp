@@ -22,6 +22,6 @@ saida <= "0000" when (entrada = AND_func) or (entrada = JR_func)  else  -- case_
          "0010" when entrada = ADD_func else -- case_SOMA
          "0110" when entrada = SUB_func else -- case_SUBTRAÇÃO
          "0111" when entrada = SLT_func  else -- case_SLT
-         "1111";
+         "0000";
 
 end architecture;
