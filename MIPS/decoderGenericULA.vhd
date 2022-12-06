@@ -28,6 +28,6 @@ decoderFunct :  entity work.decoderFunctULA
   saida   => DECfunct
   );
 
-ULActrl <= DECfunct when tipoR = '1' else DECopcod
+ULActrl <= DECfunct when tipoR = '1' else DECopcod;
 
 end architecture;

@@ -17,17 +17,11 @@ architecture comportamento of decoderFunctULA is
 
   begin
 
-case_AND       <= (entrada = AND_func) or (entrada = JR_func)
-case_OR        <= (entrada = OR_func)  
-case_SOMA      <= (entrada = ADD_func) 
-case_SUBTRAÇÃO <= (entrada = SUB_func) 
-case_SLT       <= (entrada = SLT_func) 
-
-saida <= "0000" when case_AND        else 
-         "0001" when case_OR         else 
-         "0010" when case_SOMA       else 
-         "0110" when case_SUBTRAÇÃO  else  
-         "0111" when case_SLT        else 
+saida <= "0000" when (entrada = AND_func) or (entrada = JR_func)  else  -- case_AND
+         "0001" when entrada = OR_func  else -- case_OR
+         "0010" when entrada = ADD_func else -- case_SOMA
+         "0110" when entrada = SUB_func else -- case_SUBTRAÇÃO
+         "0111" when entrada = SLT_func  else -- case_SLT
          "1111";
 
 end architecture;

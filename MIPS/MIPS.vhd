@@ -16,6 +16,7 @@ entity MIPS is
     KEY: in std_logic_vector(3 downto 0);
     SW: in std_logic_vector(9 downto 0);
     LEDR         : out std_logic_vector(9 downto 0);
+    T0: out std_logic_vector(31 downto 0);
     HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0)
   );
 end entity;
@@ -132,14 +133,9 @@ MUX_BEQ: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
     seletor_MUX  => seletor_MUX_BEQ,
     saida_MUX    => saidaMuxBEQ
     );
-
-MUX_ZERO_BEQ: entity work.muxGenerico2x1 generic map (larguraDados => '1')
-    port map(
-    entradaA_MUX => not zeroFlag,
-    entradaB_MUX => zeroFlag,
-    seletor_MUX  => BEQ,
-    saida_MUX    => saidaMuxZeroBEQ
-    );
+	 
+-- MUX_ZERO_BEQ
+saidaMuxZeroBEQ <= zeroFlag when BEQ = '1' else not zeroFlag;
     
 LUI_instruction (31 downto 16) <= Imediato;
 LUI_instruction (15 downto 0)  <= "0000000000000000";
@@ -165,8 +161,8 @@ MUX_RT_RD: entity work.muxGenerico4x1 generic map (larguraDados => larguraEndBan
     port map(
     entradaA_MUX => Rt,
     entradaB_MUX => Rd,
-    entradaB_MUX => "11111",
-    entradaB_MUX => "00000",
+    entradaC_MUX => "11111",
+    entradaD_MUX => "00000",
     seletor_MUX  => seletor_MUX_Rt_Rd,
     saida_MUX    => saidaMux_rtrd
     );
@@ -180,7 +176,7 @@ MUX_JMP: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
     saida_MUX    => saidaMux_jump
     );
 
-MUX_JMP: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
+MUX_JR: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
     port map(
     entradaA_MUX => saidaMux_jump,
     entradaB_MUX => rs_out,
@@ -244,8 +240,8 @@ decoderULA :  entity work.decoderGenericULA
 EstendeSinal : entity work.estendeSinalGenerico generic map (larguraDadoEntrada => 16, larguraDadoSaida => larguraEnderecos)
     port map (
     estendeSinal_IN  => Imediato, 
-    estendeSinal_OUT => EstendeImediato
-    seletor          => ORI_ANDI,
+    estendeSinal_OUT => EstendeImediato,
+    seletor          => ORI_ANDI
     );
 
 
@@ -309,5 +305,6 @@ COMP_HEX5: entity work.conversorHex7Seg
 LEDR (3 downto 0) <= saidaMux_hex(27 downto 24);
 LEDR (7 downto 4) <= saidaMux_hex(31 downto 28);
 LEDR (9 downto 8) <= "00";
+T0 <= saidaMux_ULAmem;
 
 end architecture;

@@ -20,24 +20,12 @@ architecture comportamento of decoderOpcodeULA is
   constant BNE   : std_logic_vector(5 downto 0) := "000101";
   constant JAL   : std_logic_vector(5 downto 0) := "000011";
   
-  signal case_AND       : std_logic;
-  signal case_OR        : std_logic;
-  signal case_SOMA      : std_logic;
-  signal case_SUBTRAÇÃO : std_logic;
-  signal case_SLT       : std_logic; 
-  
-  begin
+begin
 
-case_AND       <= (entrada = LUI) or (entrada = JAL) or (entrada = ANDI)
-case_OR        <= (entrada = LW)  or (entrada = ORI)
-case_SOMA      <= (entrada = SW)  or (entrada = ADDI)
-case_SUBTRAÇÃO <= (entrada = BEQ) or (entrada = BNE)
-case_SLT       <= (entrada = JMP) or (entrada = SLTI)
-
-saida <= "0000" when case_AND        else 
-         "0001" when case_OR         else 
-         "0010" when case_SOMA       else 
-         "0110" when case_SUBTRAÇÃO  else  
-         "0111" when case_SLT        else 
+saida <= "0000" when (entrada = LUI) or (entrada = JAL) or (entrada = ANDI)  else -- case_AND
+         "0001" when (entrada = LW) or (entrada = ORI)  else   -- case_OR 
+         "0010" when (entrada = SW) or (entrada = ADDI) else   -- case_SOMA
+         "0110" when (entrada = BEQ) or (entrada = BNE) else   -- case_SUBTRAÇÃO
+         "0111" when (entrada = JMP) or (entrada = SLTI)  else -- case_SLT
          "1111";
 end architecture;

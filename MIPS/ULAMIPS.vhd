@@ -12,7 +12,7 @@ entity ULAMIPS is
         entradaB : in std_logic_vector((larguraDados - 1) downto 0);
         decoder  : in std_logic_vector(3 downto 0);
         saida    : out std_logic_vector((larguraDados - 1) downto 0);
-        zeroFlag : out std_logic;
+        zeroFlag : out std_logic
     );
 end entity;
 
