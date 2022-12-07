@@ -10,6 +10,7 @@ end entity;
 architecture comportamento of decoderFunctULA is
   constant AND_func : std_logic_vector(5 downto 0)  := "100100";
   constant OR_func  : std_logic_vector(5 downto 0)  := "100101";
+  constant NOR_func : std_logic_vector(5 downto 0)  := "100111";
   constant ADD_func : std_logic_vector(5 downto 0)  := "100000";
   constant SUB_func : std_logic_vector(5 downto 0)  := "100010";
   constant SLT_func : std_logic_vector(5 downto 0)  := "101010";
@@ -22,6 +23,7 @@ saida <= "0000" when (entrada = AND_func) or (entrada = JR_func)  else  -- case_
          "0010" when entrada = ADD_func else -- case_SOMA
          "0110" when entrada = SUB_func else -- case_SUBTRAÇÃO
          "0111" when entrada = SLT_func  else -- case_SLT
+         "1100" when entrada = NOR_func  else -- NOR
          "0000";
 
 end architecture;

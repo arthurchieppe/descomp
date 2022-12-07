@@ -306,7 +306,7 @@ COMP_HEX5: entity work.conversorHex7Seg
 LEDR (3 downto 0) <= saidaMux_hex(27 downto 24);
 LEDR (7 downto 4) <= saidaMux_hex(31 downto 28);
 LEDR (9 downto 8) <= "00";
-T0 <= PC_out;
-rsouta <= saidaMux_jr;
+T0 <= saidaMux_rtIme;
+rsouta <= ULA_out;
 
 end architecture;

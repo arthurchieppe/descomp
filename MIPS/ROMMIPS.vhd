@@ -15,10 +15,10 @@ end entity;
 architecture assincrona OF ROMMIPS IS
   type blocoMemoria IS ARRAY(0 TO 2**memoryAddrWidth - 1) OF std_logic_vector(dataWidth-1 downto 0);
 
-  signal memROM: blocoMemoria;
+  -- signal memROM: blocoMemoria;
   attribute ram_init_file : string;
   attribute ram_init_file of memROM:
-  signal is "ROMcontent.mif";
+  signal is "ROMcontentExtras.mif";
 
 -- Utiliza uma quantidade menor de endereços locais:
    signal EnderecoLocal : std_logic_vector(memoryAddrWidth-1 downto 0);
