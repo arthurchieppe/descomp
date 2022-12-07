@@ -12,12 +12,11 @@ entity MIPS is
   );
   port   (
     CLOCK_50     : in std_logic;
-    FPGA_RESET_N     : in std_logic;
-    KEY: in std_logic_vector(3 downto 0);
-    SW: in std_logic_vector(9 downto 0);
+    KEY          : in std_logic_vector(3 downto 0);
+    SW           : in std_logic_vector(9 downto 0);
     LEDR         : out std_logic_vector(9 downto 0);
-    T0: out std_logic_vector(31 downto 0);
-    rsouta: out std_logic_vector(31 downto 0);
+    ULA_out_view : out std_logic_vector(31 downto 0);
+    PC_out_view  : out std_logic_vector(31 downto 0);
     HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0)
   );
 end entity;
@@ -39,9 +38,10 @@ architecture arquitetura of MIPS is
     signal saidaMux_rtrd          : std_logic_vector(larguraEndBancoRegs - 1 downto 0);
     signal saidaMux_jump          : std_logic_vector(larguraEnderecos - 1 downto 0);
     signal saidaMux_jr            : std_logic_vector(larguraEnderecos - 1 downto 0);
+    signal saidaMUX_RS_SHAMT      : std_logic_vector(larguraEnderecos - 1 downto 0);
     signal saidaRAM               : std_logic_vector(larguraDados - 1 downto 0);
     signal saidaDecoderInstrucoes : std_logic_vector(13 downto 0);
-    signal operacaoULA            : std_logic_vector(3 downto 0);
+    signal operacaoULA            : std_logic_vector(5 downto 0);
     signal zeroFlag               : std_logic;
 
     signal Rs                 : std_logic_vector(larguraEndBancoRegs - 1 downto 0);
@@ -49,6 +49,7 @@ architecture arquitetura of MIPS is
     signal Rd                 : std_logic_vector(larguraEndBancoRegs - 1 downto 0);
     signal Imediato           : std_logic_vector(15 downto 0);
     signal OpCode             : std_logic_vector(5 downto 0);
+    signal Shamnt             : std_logic_vector(larguraDados - 1 downto 0);
 
     -- Unidade Controle FD
     signal habWR_RAM          : std_logic;
@@ -184,6 +185,15 @@ MUX_JR: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
     seletor_MUX  => seletor_MUX_JR,
     saida_MUX    => saidaMux_jr
     );
+    
+Shamnt <=  "000000000000000000000000000" & ROM_out(10 downto 6);
+MUX_RT_SHAMT: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
+    port map(
+    entradaA_MUX => rs_out,
+    entradaB_MUX => Shamnt,
+    seletor_MUX  => operacaoULA(5) or operacaoULA(4),
+    saida_MUX    => saidaMUX_RS_SHAMT  
+    );
 
 REGS: entity work.bancReg generic map(larguraDados => larguraDados, larguraEndBancoRegs => larguraEndBancoRegs)
     port map (
@@ -205,12 +215,13 @@ ROM: entity work.ROMMIPS generic map(dataWidth => larguraDados, addrWidth => lar
 
 ULA: entity work.ULAMIPS generic map(larguraDados => larguraDados)
     port map (
-    entradaA => rs_out,
+    entradaA => saidaMUX_RS_SHAMT,
     entradaB => saidaMux_rtIme,
     saida    => ULA_out,
     zeroFlag => zeroFlag,
     decoder  => operacaoULA    
     );
+
 
 RAM: entity work.RAMMIPS generic map(dataWidth => larguraDados, addrWidth => larguraEnderecos, memoryAddrWidth => 6)   
     port map (
@@ -305,8 +316,7 @@ COMP_HEX5: entity work.conversorHex7Seg
 
 LEDR (3 downto 0) <= saidaMux_hex(27 downto 24);
 LEDR (7 downto 4) <= saidaMux_hex(31 downto 28);
-LEDR (9 downto 8) <= "00";
-T0 <= saidaMux_rtIme;
-rsouta <= ULA_out;
+ULA_out_view <= ULA_out;
+PC_out_view  <= PC_out;
 
 end architecture;
